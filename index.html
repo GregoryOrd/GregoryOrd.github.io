@@ -26,6 +26,12 @@
 				
 				var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
 				document.getElementById("info").style.paddingBottom = paddingBottomStr;
+				if(screen.height >= 768){
+					document.getElementById("info").style.paddingTop = "15px";
+				}
+				else{
+					document.getElementById("info").style.paddingTop = "0px";
+				}
 				
 				if(screen.width < 350){
 					document.getElementById("footerMessage").style.height = "65px";
