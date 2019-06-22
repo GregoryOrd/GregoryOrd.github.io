@@ -16,6 +16,7 @@
 				width: 90%;
 				height: auto;
 			}
+			
 					
 		</style>
 		<script>
@@ -25,6 +26,13 @@
 				
 				var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
 				document.getElementById("info").style.paddingBottom = paddingBottomStr;
+				
+				if(screen.width < 350){
+					document.getElementById("footerMessage").style.height = "65px";
+				}
+				else{
+					document.getElementById("footerMessage").style.height = "auto";
+				}
 				
 				if(screen.width < 450){
 					var pic1 = document.getElementById("pic1");
@@ -104,9 +112,9 @@
 
 		<footer>
 			<nav class="navbar navbar-inverse navbar-fixed-bottom">
-			  <div id="NavigationBar" class="container-fluid">
+			  <div id="NavigationBar2" class="container-fluid">
 				<div class="navbar-header navbar-right">
-				  <a class="navbar-brand" href="#">Developer, Runner, All Around Good Guy</a>
+				  <a class="navbar-brand" href="#" id="footerMessage">Developer, Runner, All Around Good Guy</a>
 				</div>
 			  </div>
 			</nav>
