@@ -10,13 +10,20 @@
 			body{
 				text-align: center;
 				background-color: #e6e6ff;
-			}			
+			}
+			img{
+				width: 120%;
+				height: auto;
+			}
+					
 		</style>
 		<script>
 			function sizing(){
-			    var canSee = $("#myNavbar").is(":visible");
 				var paddingTopStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
-				document.getElementById("info").style.paddingTop = paddingTopStr;
+				document.getElementById("photoRow").style.paddingTop = paddingTopStr;
+				
+				var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
+				document.getElementById("info").style.paddingBottom = paddingBottomStr;
 			}
 		</script>
 	</head>
@@ -30,12 +37,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				  </button>
-				  <a class="navbar-brand" href="#">Resume and Portfolio Website</a>
+				  <a class="navbar-brand" href="#">Software Portfolio Website</a>
 				</div>
 				<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 					<ul id="navBarList" class="nav navbar-nav navbar-right">
 					  <li class="nav-item active"><a href="#">Home</a></li>
-					  <li class="nav-item"><a href="#">About</a></li>
+					  <li class="nav-item"><a href="about.html">About</a></li>
 					  <li class="nav-item"><a href="#">Education/Courses</a></li>
 					  <li class="nav-item"><a href="#">Projects and Industry Experience</a></li>
 					  <li class="nav-item"><a href="#">Contact</a></li>
@@ -44,12 +51,22 @@
 			  </div>
 			</nav>
 		</header>
+		<div id="photoRow" class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-2"><img src="IMG_2113.jpg"/></div>
+			<div class="col-xs-2"><img src="IMG_1234.png"/></div>
+			<div class="col-xs-2"><img src="IMG_3298.jpg"/></div>
+			<div class="col-xs-2"><img src="IMG_2991.jpg"/></div>
+			<div class="col-xs-2"></div>
+		</div>
+		
 		<div class="row">
 			<div class="col-sm-2"><p> </p></div>
 			<div class="col-sm-8">
 				<div id="info">
 					<h1>Gregory Ord</h1>
 					<h3>BSc. Software Engineering (Student)</h3>
+					<h3>DINOS XC / T&F</h3>
 					<h3>University of Calgary</h3>
 				</div>
 			</div>
