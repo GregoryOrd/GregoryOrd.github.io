@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">.
+	
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		
@@ -13,20 +15,8 @@
 		<script>
 			function sizing(){
 			    var canSee = $("#myNavbar").is(":visible");
-				var screenH = screen.height;
-				var paddingTopStr = (screenH / 2.5).toString() + "px";
+				var paddingTopStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
 				document.getElementById("info").style.paddingTop = paddingTopStr;
-			}
-			function navButtonReadjust(){
-				var canSee = $("#myNavbar").is(":visible");
-				if(canSee == false){
-					var paaddingTopStr = (document.getElementById("info").style.paddingTop + 20).toString() + "px";
-					document.getElementById("info").style.paddingTop = paaddingTopStr
-				}
-				if(canSee == true){
-					var paaddingTopStr = (document.getElementById("info").style.paddingTop - 20).toString() + "px";
-					document.getElementById("info").style.paddingTop = paaddingTopStr
-				}
 			}
 		</script>
 	</head>
@@ -34,7 +24,7 @@
 		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
 		  <div id="NavigationBar" class="container-fluid">
 			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" onclick="navButtonReadjust();" data-toggle="collapse" data-target="#myNavbar">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span> 
