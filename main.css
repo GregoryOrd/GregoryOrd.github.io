@@ -1,0 +1,31 @@
+body{
+	text-align: center;
+	background-color: #e6e6ff;
+}
+.photorow img{
+	padding-top: 3vh;
+	width: 90%;
+	height: auto;
+}
+
+.aboutText{
+	padding-top: 7vh;
+	margin-right: 0vh;
+	text-align: left;
+	padding-bottom: 15vh;
+	font-size: 16px;
+}
+
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#skyLine{
+	padding-left: 0vh;
+	padding-top: 3vh;
+	padding-bottom: 2vh;
+}
