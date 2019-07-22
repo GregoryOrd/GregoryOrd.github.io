@@ -9,26 +9,32 @@
 		<script>
 			function sizing(){
 				if(screen.width < 840 && screen.width > 770){
+				alert("A");
 					document.getElementById("aboutTextDiv").style.paddingTop = "25vh";
 				}
 				else{
+				alert("B");
 					document.getElementById("aboutTextDiv").style.paddingTop = "";
 					document.getElementById("skyLine").style.paddingTop = "";
 				}
 				//iPhone5/SE specs
 				if(screen.width == 568 && screen.height == 320){
+				alert("C");
 					document.getElementById("skyLine").style.display = "";
 					document.getElementById("skyLine").style.paddingTop = "5vh";
 				}
 				else if(screen.width * screen.height < 207756 || screen.width < 420){
+				alert("D");
 					document.getElementById("skyLine").style.display = "none";
 					document.getElementById("skyLine").style.paddingTop = "";
 				}
 				else if(screen.height > 768){
+				alert("E");
 					document.getElementById("skyLine").style.height = "17vh";
 					document.getElementById("skyLine").style.width = "auto";
 				}
 				else{
+				alert("F");
 					document.getElementById("skyLine").style.display = "";
 					document.getElementById("skyLine").style.paddingTop = "";
 					document.getElementById("skyLine").style.height = "40vh";
@@ -69,14 +75,14 @@
 					</p>
 					<h3 id="aboutTitle">Journey to Software Development in Calgary</h3>
 					<p>
-						Born and raised in Ontario, Greg was always an active and athletic child.
-						His elementary school days revolved around games of hockey on the backyard rink or throwing the lacrosse ball around with friends at the park after school. Moving into highschool, his sporting endeavours shifted and running become his full time sport. A few years later, this sport led him to Calgary where he joined the University of Calgary Dinos Mens Track and Cross-Country teams. 	
+						Born and raised in Ontario, I was always an active and athletic child.
+						My elementary school days revolved around games of hockey on the backyard rink or throwing the lacrosse ball around with friends at the park. Moving into highschool, my sporting endeavours shifted and running become my full time sport. This sport led me to Calgary where I joined the University of Calgary Dinos Mens Track and Cross-Country teams. 	
 					</p>
 					<p>
-						Upon arrival on the U of C campus in September of 2016, Greg began studying towards an undergraduate degree in engineering with the intent on applying to either the Electrical or Mechanical Engineering program. After taking the first year programming for engineering course, that plan quickly changed. Greg walked out of the course's final exam saying, "Wow, that exam was acutally fun!", and a passion for software was born.
+						Upon arrival on the U of C campus in September of 2016, I began studying towards an undergraduate degree in engineering with the intent on applying to either the Electrical or Mechanical Engineering program. After taking the first year programming for engineering course, that plan quickly changed. I walked out of the course's final exam saying, "Wow, that exam was acutally fun!", and a passion for software was born.
 					</p>
 					<p>
-						Greg has since begun studying in the Software Engineering program at the University of Calgary's Schulich School of Engineering, and has spend the last three years soaking up as much software and programming related knowledge as possible. Having reached a level where his some of his work is interacting with the world, Greg is excited to continue developing his skills and advance what is still an early career producing reliable, high-quality software.
+						I have since been studying in the Software Engineering program at the University of Calgary's Schulich School of Engineering, and have spent the last three years soaking up as much software and programming related knowledge as possible. Having reached a level where some of my work is interacting with the world, I am excited to continue developing my skills and advance what is still an early career producing reliable, high-quality software.
 					</p>
 				</div>
 				<div class="col-xs-2"></div>
