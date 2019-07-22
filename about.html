@@ -6,6 +6,12 @@
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="main.css"/>
+		
+		<script>
+			window.onorientationchange = function(){
+				location.reload();
+			}
+		</script>
 		<script>
 			function sizing(){
 				if(screen.height >= 768 && screen.width > 700){
@@ -29,8 +35,8 @@
 				else if((window.orientation == 0) && screen.width * screen.height < 190000){
 					document.getElementById("skyLine").style.display = "";
 					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "0vh";
-					document.getElementById("skyLine").style.height = "17vh";
+					document.getElementById("skyLine").style.paddingLeft = "1vh";
+					document.getElementById("skyLine").style.height = "20vh";
 					document.getElementById("skyLine").style.width = "auto";
 				}
 				else if(window.orientation == 0 && screen.width * screen.height < 340000){
