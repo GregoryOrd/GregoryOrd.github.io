@@ -2,10 +2,16 @@ body{
 	text-align: center;
 	background-color: #e6e6ff;
 }
-.photorow img{
-	padding-top: 3vh;
-	width: 90%;
-	height: auto;
+
+#hiddenInfo{
+	float: left;
+	width: 50%;
+	padding-top: 7vh;
+	display: none;
+}
+
+#info{
+	padding-top = 9vh;
 }
 
 .aboutText{
@@ -38,4 +44,30 @@ body{
 	padding-left: 0vh;
 	padding-top: 3vh;
 	padding-bottom: 2vh;
+}
+
+#cf2 {
+  position:relative;
+  padding-left: 0px;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+#cf2 img {
+  height: 55vh;
+  width: auto;
+  position: absolute;
+  right: 12vh;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
+  opacity:0;
+}
+
+#cf2 img.nontransparent {
+opacity:1;
+}
+#cf_onclick {
+cursor:pointer;
 }
