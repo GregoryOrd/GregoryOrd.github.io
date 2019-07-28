@@ -14,46 +14,6 @@ body{
 	padding-top = 9vh;
 }
 
-.buttonRow{
-	padding-top: 10vh;
-}
-
-th{
-	text-align: center !important;
-	width: 50%;
-}
-
-td{
-
-}
-
-table{
-	width: 100%;
-}
-
-#year1{
-	border: solid;
-}
-
-#year2{
-	border: solid;
-}
-
-#year3{
-	border: solid;
-}
-
-#year4{
-	border: solid;
-}
-
-#year5{
-	border: solid;
-}
-#internshipYear{
-	border: solid;
-}
-
 .aboutText{
 	padding-top: 0vh;
 	padding-left: 25px !important;
