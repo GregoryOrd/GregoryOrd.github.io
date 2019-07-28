@@ -66,19 +66,47 @@
 				}
 				
 				if(screen.height >= 768 && screen.width > 700){
-					alert("a");
+					//alert("a");
 				}
 				else{
-					alert("b");
+					//alert("b");
 				}
 				var selector = "#cf2 img";
 				var imgs = document.querySelectorAll(selector);
 				//alert(window.orientation);
 				if(screen.width < 840 && screen.width > 770){
-					alert("c");
+					if(window.orientation == 90 || window.orientation == -90){
+						var hiddenInfo = document.getElementById("hiddenInfo");
+						hiddenInfo.style.display = "block";
+						hiddenInfo.style.width = "150%";
+						var lineBreaks = document.getElementsByTagName("br");
+						var j = 0;
+						for(j; j < lineBreaks.length; j++){
+							lineBreaks[j].hidden = true;
+						}
+						document.getElementById("info").hidden = true;
+						//alert("c1");
+					}
+					else{
+						//alert("c2");
+					}
 				}
 				else{
-					alert("d");
+					if((window.orientation == 90 || window.orientation == -90)&& screen.width*screen.height < 786432){
+						var hiddenInfo = document.getElementById("hiddenInfo")
+						hiddenInfo.style.display = "block";
+						hiddenInfo.style.width = "150%";
+						var lineBreaks = document.getElementsByTagName("br");
+						var j = 0;
+						for(j; j < lineBreaks.length; j++){
+							lineBreaks[j].hidden = true;
+						}
+						document.getElementById("info").hidden = true;
+						//alert("d1");
+					}
+					else{
+						//alert("d2");
+					}
 				}
 				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
 					var hiddenInfo = document.getElementById("hiddenInfo")
@@ -91,7 +119,7 @@
 					}
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "4vh";
+						imgs[i].style.right = "4vw";
 						imgs[i].style.height = "58vh";
 						imgs[i].style.paddingTop = "1vh";
 					}
@@ -101,12 +129,12 @@
 						lineBreaks[j].hidden = true;
 					}
 					document.getElementById("info").hidden = true;
-					alert("e");
+					//alert("e");
 				}
 				else if((window.orientation == 0) && screen.width * screen.height < 190000){
 					var i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "24vh";
+						imgs[i].style.right = "39vw";
 						imgs[i].style.height = "45vh";
 						imgs[i].style.marginBottom = "0vh";
 						imgs[i].style.paddingBottom = "0vh";
@@ -118,37 +146,38 @@
 					for(j; j < lineBreaks.length; j++){
 						lineBreaks[j].hidden = true;
 					}
-					alert("f");
+					//alert("f");
 				}
 				else if(window.orientation == 0 && screen.width * screen.height < 340000){
 					if(screen.width > 400 && screen.height < 800){
-						alert("g1");
+						//alert("g1");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "14vh";
+							imgs[i].style.right = "8vw";
 						}
-						document.getElementById("info").style.paddingTop = "8vh";
+						document.getElementById("info").style.paddingTop = "14vh";
 					}
 					else if(screen.width > 400){
-						alert("g2");
+						//alert("g2");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "10vh";
+							imgs[i].style.right = "2vw";
 						}
-						document.getElementById("info").style.paddingTop = "12vh";
+						document.getElementById("info").style.paddingTop = "20vh";
 					}
 					else if(screen.width > 365 && screen.height < 800){
-						alert("g3");
+						//alert("g3");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "20vh";
+							imgs[i].style.right = "15vw";
 						}
+						document.getElementById("info").style.paddingTop = "10vh";
 					}
 					else if(screen.width > 365){
-						alert("g4");
+						//alert("g4");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "13vh";
+							imgs[i].style.right = "8vw";
 							imgs[i].style.height = "52vh";
 						}
 						i = 0;
@@ -158,32 +187,37 @@
 						}
 					}
 					else{
-						alert("g5");
+						//alert("g5");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "23vh";
+							imgs[i].style.right = "20vw";
 						}
-						document.getElementById("info").style.marginTop = "0vh";
+						document.getElementById("info").style.marginTop = "10vh";
 					}
 				}
 				else if(screen.height > 768 && screen.height <= 1024){
-					alert("h");
+					//alert("h");
 					var i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "0vh";
+						if(window.orientation == 0){
+							imgs[i].style.right = "-5vw";
+						}
+						else{
+							imgs[i].style.right = "-3vw";
+						}
 						imgs[i].style.height = "57vh";
 					}
-					document.getElementById("info").style.paddingTop = "25vh";
+					document.getElementById("info").style.paddingTop = "30vh";
 				}
 				else if(screen.height > 1024){
-					alert("h2");
+					//alert("h2");
 					var i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "0vh";
-						imgs[i].style.height = "47vh";
+						imgs[i].style.right = "-5vw";
+						imgs[i].style.height = "50vh";
 						imgs[i].style.paddingTop = "5vh";
 					}
-					document.getElementById("info").style.paddingTop = "25vh";
+					document.getElementById("info").style.paddingTop = "35vh";
 				}
 				else if(window.orientation == 90 && screen.height < 450){
 					var hiddenInfo = document.getElementById("hiddenInfo")
@@ -196,8 +230,8 @@
 					}
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "4vh";
-						imgs[i].style.height = "53vh";
+						imgs[i].style.right = "4vw";
+						imgs[i].style.height = "57vh";
 					}
 					var lineBreaks = document.getElementsByTagName("br");
 					var j = 0;
@@ -208,33 +242,19 @@
 					//alert("i1");
 				}
 				else if(window.orientation == 90){
-					document.getElementById("hiddenInfo").style.display = "block";
 					i = 0;
 					for(i; i < imgs.length; i++){
 						imgs[i].style.right = "0vh";
-						imgs[i].style.height = "75vh";
+						imgs[i].style.height = "65vh";
 						imgs[i].style.paddingTop = "2vh";
 					}
-					var lineBreaks = document.getElementsByTagName("br");
-					var j = 0;
-					for(j; j < lineBreaks.length; j++){
-						lineBreaks[j].hidden = true;
-					}
-					document.getElementById("info").hidden = true;
-					var hiddenInfo = document.getElementById("hiddenInfo");
-					hiddenInfo.style.display = "block";
-					hiddenInfo.style.width = "150%";
-					var cols2 = document.getElementsByClassName("col-sm-2");
-					i = 0;
-					for(i; i < cols2.length; i++){
-						cols2[i].style.width = "30%";
-					}
+					document.getElementById("info").style.paddingTop = "30vh";
 					//alert("i2");
 				}
 				else{
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "";
+						imgs[i].style.right = "5vw";
 						imgs[i].style.height = "60vh";
 						imgs[i].style.paddingTop = "";
 					}
@@ -285,7 +305,7 @@
 				<div class="col-sm-2">
 					<div id="hiddenInfo">
 						<h1>Gregory Ord</h1>
-						<h4>BSc. Software Engineering</h4>
+						<h4>BSc. Software Engineering (Student)</h4>
 						<h4>University of Calgary</h4>
 					</div>
 				</div>
