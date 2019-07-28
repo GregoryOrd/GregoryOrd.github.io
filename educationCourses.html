@@ -7,10 +7,18 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="main.css"/>
 		<script>
-			function toggleRow(className){
+			function toggleRow(id, className){
+				var yearElement = document.getElementById(id);
 				var elements = document.getElementsByClassName(className);
 				var i = 0;
 				var prev = elements[0].hidden;
+				if(prev == true){
+					yearElement.style.borderBottom = "none";
+				}
+				else{
+					yearElement.style.borderBottom = "solid";
+					yearElement.style.borderBottomColor = "white";
+				}
 				for(i; i < elements.length; i++){
 					elements[i].hidden = !prev;
 				}
@@ -42,140 +50,183 @@
 		<section>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8 buttonRow">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10 buttonRow">
 						<table class="table-responsive">
 							<tbody>
-								<tr id="year1" onclick="toggleRow('year1Contents');">
+								<tr id="year1" class="yearsHeader" onclick="toggleRow('year1', 'year1Contents');">
 									<th colspan="2">Year 1 (2016-2017)</th>
 								</tr>
 								<tr class="year1Contents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+									<th class="yearsContentHeader">Fall 2016</th>
+									<th class="yearsContentHeader">Winter 2017</th>
 								</tr>
 								<tr class="year1Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+									<td class="yearsContent">CHEM 209 - General Chemistry for Engineers</td>
+									<td class="yearsContent">ANTH 311 - Primate Behaviour</td>
 								</tr>
-								<tr class="year1Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year1Contents yearsContent" hidden>
+									<td class="yearsContent">ENGG 233 - Computing for Engineers</td>
+									<td class="yearsContent">ENGG 225 - Fundamentals of Electrical Circuits and Machines</td>
 								</tr>
-								<tr class="year1Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year1Contents yearsContent" hidden>
+									<td class="yearsContent">MATH 211 - Linear Methods I</td>
+									<td class="yearsContent">MATH 275 - Multivariable Calculus for Engineers and Scientists</td>
 								</tr>
-								<tr class="year1Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year1Contents yearsContent2ndLast" hidden>
+									<td class="yearsContent2ndLast">MATH 275 - Calculus for Engineers and Scientists</td>
+									<td class="yearsContent2ndLast">PHYS 259 - Electricity and Magnetism (for student in Engineering)</td>
 								</tr>
-								<tr id="year2" onclick="toggleRow('year2Contents');">
-									<th colspan="2">Year 2 (2017-2018)</th>
+								<tr class="year1Contents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
 								</tr>
-								<tr class="year2Contents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+							</tbody>
+						</table>
+						<table>
+							<tbody>
+								<tr id="year2" class="yearsHeader" onclick="toggleRow('year2', 'year2Contents');">
+									<th colspan="4">Year 2 (2017-2018)</th>
 								</tr>
-								<tr class="year2Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year2Contents yearsContentHeader" hidden>
+									<th class="yearsContentHeader">Fall 2017</th>
+									<th class="yearsContentHeader">Winter 2018</th>
+									<th class="yearsContentHeader">Spring 2018</th>
+									<th class="yearsContentHeader">Summer 2018</th>
 								</tr>
-								<tr class="year2Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year2Contents yearsContent" hidden>
+									<td class="yearsContent">ARKY 205 - Ancient Peoples And Places</td>
+									<td class="yearsContent">ENGG 201 - Behaviour Of Liquids Gases & Solids</td>
+									<td class="yearsContent">ENGG 513 - The Role and Responsibilities of the Professional Engineer in Society</td>
+									<td class="yearsContent">ENEL 327 - Signals and Transforms</td>
 								</tr>
-								<tr class="year2Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year2Contents yearsContent" hidden>
+									<td class="yearsContent">COMS 363 - Professional and Technical Communication</td>
+									<td class="yearsContent">ENGG 202 - Engineering Statics</td>
+									<td class="yearsContent"></td>
+									<td class="yearsContent">ENGG 319 - Probability And Statistics For Engineers</td>
 								</tr>
-								<tr class="year2Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year2Contents yearsContent" hidden>
+									<td class="yearsContent">ENGG 200 - Engineering Design and Communication</td>
+									<td class="yearsContent">ENGG 481 - Technology and Society</td>
+									<td class="yearsContent"></td>
+									<td class="yearsContent"></td>
 								</tr>
-								<tr id="year3" onclick="toggleRow('year3Contents');">
+								<tr class="year2Contents yearsContent2ndLast" hidden>
+									<td class="yearsContent2ndLast">MATH 375 - Differential Equations for Engineers and Scientists</td>
+									<td class="yearsContent2ndLast"></td>
+									<td class="yearsContent"></td>
+									<td class="yearsContent"></td>
+								</tr>
+								<tr class="year2Contents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+								</tr>
+							</tbody>
+						</table>								
+						<table>
+							<tbody>								
+								<tr id="year3" class="yearsHeader" onclick="toggleRow('year3', 'year3Contents');">
 									<th colspan="2">Year 3 (2018-2019)</th>
 								</tr>
-								<tr class="year3Contents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+								<tr class="year3Contents yearsContentHeader" hidden>
+									<th class="yearsContentHeader">Fall 2018</th>
+									<th class="yearsContentHeader">Winter 2019</th>
 								</tr>
-								<tr class="year3Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year3Contents yearsContent" hidden>
+									<td class="yearsContent">ENEL 353 - Digital Circuits</td>
+									<td class="yearsContent">CPSC 319 - Data Structures, Algorithms, and Their Applications</td>
 								</tr>
-								<tr class="year3Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year3Contents yearsContent" hidden>
+									<td class="yearsContent">ENGG 209 - Engineering Economics</td>
+									<td class="yearsContent">ENCM 369 - Computer Organization</td>
 								</tr>
-								<tr class="year3Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year3Contents yearsContent" hidden>
+									<td class="yearsContent">ENSF 337 - Programming Fundamentals for Software and Computer Engineering</td>
+									<td class="yearsContent">ENSF 409 - Principles of Software Development</td>
 								</tr>
-								<tr class="year3Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year3Contents yearsContent2ndLast" hidden>
+									<td class="yearsContent2ndLast">PHYS 365 - Acoustics, Optics and Modern Physics (for students in Engineering)</td>
+									<td class="yearsContent2ndLast">MATH 271 - Discrete Mathematics</td>
 								</tr>
-								<tr id="year4" onclick="toggleRow('year4Contents');">
+								<tr class="year3Contents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+								</tr>
+								
+								<tr id="year4" class="yearsHeader" onclick="toggleRow('year4', 'year4Contents');">
 									<th colspan="2">Year 4 (2019-2020)</th>
 								</tr>
-								<tr class="year4Contents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+								<tr class="year4Contents yearsContentHeader" hidden>
+									<th class="yearsContentHeader">Fall 2019</th>
+									<th class="yearsContentHeader">Winter 2020</th>
 								</tr>
-								<tr class="year4Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year4Contents yearsContent" hidden>
+									<td class="yearsContent">CPSC 441- Computer Networks</td>
+									<td class="yearsContent">CPSC 471 - Data Base Management Systems</td>
 								</tr>
-								<tr class="year4Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year4Contents yearsContent" hidden>
+									<td class="yearsContent">CPSC 457 - Principles of Operating Systems</td>
+									<td class="yearsContent">SENG 401 - Software Architecture</td>
 								</tr>
-								<tr class="year4Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year4Contents yearsContent" hidden>
+									<td class="yearsContent">ENCM 511 - Embedded System Interfacing </td>
+									<td class="yearsContent">SENG 471 - Software Requirements Engineering</td>
 								</tr>
-								<tr class="year4Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year4Contents yearsContent2ndLast" hidden>
+									<td class="yearsContent2ndLast">ENSF 480 - Principles of Software Design</td>
+									<td class="yearsyearsContent2ndLastContent">SENG 438 - Software Testing, Reliability, and Quality</td>
 								</tr>
-								<tr id="internshipYear" onclick="toggleRow('internshipYearContents');">
+								<tr class="year4Contents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+								</tr>
+								
+								
+								<tr id="internshipYear" class="yearsHeader" onclick="toggleRow('internshipYear', 'internshipYearContents');">
 									<th colspan="2">Internship Year (2020-2021)</th>
 								</tr>
-								<tr class="internshipYearContents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+								<tr class="internshipYearContents yearsContentHeader" hidden>
+									<th class="yearsContentHeader">Fall 2020</th>
+									<th class="yearsContentHeader">Winter 2021</th>
 								</tr>
-								<tr class="internshipYearContents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="internshipYearContents yearsContent2ndLast" hidden>
+									<td class="yearsContent2ndLast">A</td>
+									<td class="yearsContent2ndLast">B</td>
 								</tr>
-								<tr id="year5" onclick="toggleRow('year5Contents');">
+								<tr class="internshipYearContents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
+								</tr>
+								
+								
+								<tr id="year5" class="yearsHeader" onclick="toggleRow('year5', 'year5Contents');">
 									<th colspan="2">Year 5 (2021-2022)</th>
 								</tr>
-								<tr class="year5Contents" hidden>
-									<th>Fall</th>
-									<th>Winter</th>
+								<tr class="year5Contents yearsContentHeader" hidden>
+									<th class="yearsContentHeader">Fall 2021</th>
+									<th class="yearsContentHeader">Winter 2022</th>
 								</tr>
-								<tr class="year5Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year5Contents yearsContent" hidden>
+									<td class="yearsContent">SENG 511 - Software Process and Project Management</td>
+									<td class="yearsContent">SENG 533 - Software Performance Evaluation</td>
 								</tr>
-								<tr class="year5Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year5Contents yearsContent" hidden>
+									<td colspan="2" class="yearsContent">ENEL 500 - Computer, Electrical, and Software Engineering Team Design (Capstone Project)</td>
 								</tr>
-								<tr class="year5Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year5Contents yearsContent2ndLast" hidden>
+									<td colspan="2" class="yearsContent2ndLast">5 Technical Electives (To Be Determined)</td>
 								</tr>
-								<tr class="year5Contents" hidden>
-									<td>A</td>
-									<td>B</td>
+								<tr class="year5Contents yearsContentLast" hidden>
+									<td class="yearsContentLast"></td>
+									<td class="yearsContentLast"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="col-sm-2"></div>
+					<div class="col-sm-1"></div>
 				</div>
 			</div>
 		</section>
