@@ -8,8 +8,151 @@
 		<link rel="stylesheet" href="main.css"/>
 		<script>
 			var count = 0;
-			function changeImages(){
-				var selector = "#cf2 img.A";
+			var upDown = "down";
+			function changeImages(startTime){
+				//var selector = "#cf2 img.A";
+				//var img = document.querySelector(selector);
+				/*if(upDown == "down"){
+					var currentTime = new Date().getTime();
+					var timeDiff = currentTime - startTime;
+					img.style.opacity = 1 - timeDiff/3;
+					if(img.style.opacity <= 0){	
+						if(count == 3){
+							count = 0;
+						}
+						else{
+							count++;
+						}
+						if(count == 0){
+							img.src = "IMG_3075.JPG";
+						}
+						else if (count == 1){
+							img.src = "IMG_2991.JPG";
+						}
+						else if(count == 2){
+							img.src = "IMG_1234.PNG";
+						}
+						else if(count == 3){
+							img.src = "IMG_2764.JPG";
+						}
+						upDown = "up";
+						alert(img.src);
+					}
+				}
+				img.classList.toggle("nontransparent");*/
+				var img = document.getElementById("cf2");
+				if(count == 7){
+					count = 0;
+				}
+				else{
+					count++;
+				}
+				if(count == 0){
+					img.classList.add("A");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("D");
+					img.classList.remove("G");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_3075.JPG";
+				}
+				else if (count == 1){
+					img.classList.add("B");
+					img.classList.remove("D");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("G");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_2991.JPG";
+				}
+				else if(count == 2){
+					img.classList.add("C");
+					img.classList.remove("B");
+					img.classList.remove("D");
+					img.classList.remove("A");
+					img.classList.remove("G");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_1234.PNG";
+				}
+				else if(count == 3){
+					img.classList.add("D");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("G");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_2764.JPG";
+				}
+				else if(count == 4){
+					img.classList.add("E");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("D");
+					img.classList.remove("G");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_2764.JPG";
+				}
+				else if(count == 5){
+					img.classList.add("F");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("D");
+					img.classList.remove("E");
+					img.classList.remove("G");
+					img.classList.remove("H");
+					//img.src = "IMG_2764.JPG";
+				}
+				else if(count == 6){
+					img.classList.add("G");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("D");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("H");
+					//img.src = "IMG_2764.JPG";
+				}
+				else if(count == 7){
+					img.classList.add("H");
+					img.classList.remove("B");
+					img.classList.remove("C");
+					img.classList.remove("A");
+					img.classList.remove("D");
+					img.classList.remove("E");
+					img.classList.remove("F");
+					img.classList.remove("G");
+					//img.src = "IMG_2764.JPG";
+				}
+				//img.classList.toggle("nontransparent");
+				
+				///////////////////////////////////////////////////
+				/*var img = document.querySelector(selector);
+				if(img.src == "IMG_2991.JPG"){
+					img.src = "IMG_1234.PNG";
+				}
+				else if(img.src == "IMG_1234.PNG"){
+					img.src = "IMG_2764.JPG";
+				}
+				else if(img.src == "IMG_2764.JPG"){
+					img.src = "IMG_3075.JPG";
+				}
+				else{
+					img.src = "IMG_2991.JPG";
+				}*/
+
+				/*var selector = "#cf2 img.A";
 				var prevSelector = "#cf2 img.D";
 				if(count == 3){
 					count = 0;
@@ -36,13 +179,13 @@
 				var img = document.querySelector(selector);
 				img.classList.toggle("nontransparent");
 				var prevImg = document.querySelector(prevSelector);
-				prevImg.classList.toggle("nontransparent");
+				prevImg.classList.toggle("nontransparent");*/
 			}
 			
 			
 			setInterval(function(){
-				changeImages()
-			}, 5000);
+				changeImages(new Date().getTime())
+			}, 3500);
 
 		
 			function sizing(){
@@ -119,7 +262,7 @@
 					}
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "4vw";
+						//imgs[i].style.right = "4vw";
 						imgs[i].style.height = "58vh";
 						imgs[i].style.paddingTop = "1vh";
 					}
@@ -134,7 +277,7 @@
 				else if((window.orientation == 0) && screen.width * screen.height < 190000){
 					var i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "39vw";
+						//imgs[i].style.right = "39vw";
 						imgs[i].style.height = "45vh";
 						imgs[i].style.marginBottom = "0vh";
 						imgs[i].style.paddingBottom = "0vh";
@@ -153,7 +296,7 @@
 						//alert("g1");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "8vw";
+							//imgs[i].style.right = "8vw";
 						}
 						document.getElementById("info").style.paddingTop = "14vh";
 					}
@@ -161,7 +304,7 @@
 						//alert("g2");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "2vw";
+							//imgs[i].style.right = "2vw";
 						}
 						document.getElementById("info").style.paddingTop = "20vh";
 					}
@@ -169,7 +312,7 @@
 						//alert("g3");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "15vw";
+							//imgs[i].style.right = "15vw";
 						}
 						document.getElementById("info").style.paddingTop = "10vh";
 					}
@@ -177,7 +320,7 @@
 						//alert("g4");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "8vw";
+							//imgs[i].style.right = "8vw";
 							imgs[i].style.height = "52vh";
 						}
 						i = 0;
@@ -190,7 +333,7 @@
 						//alert("g5");
 						var i = 0;
 						for(i; i < imgs.length; i++){
-							imgs[i].style.right = "20vw";
+							//imgs[i].style.right = "20vw";
 						}
 						document.getElementById("info").style.marginTop = "10vh";
 					}
@@ -200,10 +343,10 @@
 					var i = 0;
 					for(i; i < imgs.length; i++){
 						if(window.orientation == 0){
-							imgs[i].style.right = "-5vw";
+							//imgs[i].style.right = "-5vw";
 						}
 						else{
-							imgs[i].style.right = "-3vw";
+							//imgs[i].style.right = "-3vw";
 						}
 						imgs[i].style.height = "57vh";
 					}
@@ -213,7 +356,7 @@
 					//alert("h2");
 					var i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "-5vw";
+						//imgs[i].style.right = "-5vw";
 						imgs[i].style.height = "50vh";
 						imgs[i].style.paddingTop = "5vh";
 					}
@@ -230,7 +373,7 @@
 					}
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "4vw";
+						//imgs[i].style.right = "4vw";
 						imgs[i].style.height = "57vh";
 					}
 					var lineBreaks = document.getElementsByTagName("br");
@@ -244,7 +387,7 @@
 				else if(window.orientation == 90){
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "0vh";
+						//imgs[i].style.right = "0vh";
 						imgs[i].style.height = "65vh";
 						imgs[i].style.paddingTop = "2vh";
 					}
@@ -254,11 +397,11 @@
 				else{
 					i = 0;
 					for(i; i < imgs.length; i++){
-						imgs[i].style.right = "5vw";
+						//imgs[i].style.right = "5vw";
 						imgs[i].style.height = "60vh";
 						imgs[i].style.paddingTop = "";
 					}
-					document.getElementById("info").paddingTop = "20vh";
+					//document.getElementById("info").paddingTop = "20vh";
 					var cols2 = document.getElementsByClassName("col-sm-2");
 					i = 0;
 					for(i; i < cols2.length; i++){
@@ -276,7 +419,7 @@
 			};
 		</script>
 	</head>
-	<body <!--onload="sizing();" onresize="sizing();"-->>
+	<body onload="sizing();" onresize="sizing();">
 		<header>
 			<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
 			  <div id="NavigationBar" class="container-fluid">
@@ -310,11 +453,11 @@
 					</div>
 				</div>
 				<div class="col-sm-8">
-					<div id="cf2">
-						<img class="A nontransparent" src="IMG_2991.JPG" />
+					<div class="A" id="cf2">
+						<!--<img class="A nontransparent" src="IMG_2991.JPG" />
 						<img class="B" src="IMG_1234.PNG" />
 						<img class="C" src="IMG_2764.JPG" alt=""/>
-						<img class="D" src="IMG_3075.JPG" alt=""/>
+						<img class="D" src="IMG_3075.JPG" alt=""/>-->
 					</div>
 				</div>
 				<div class="col-sm-2"><p></p></div>

@@ -108,25 +108,106 @@ table{
 #cf2 {
   position:relative;
   padding-left: 0px;
-  height:281px;
-  width:450px;
   margin:0 auto;
 }
-#cf2 img {
+
+
+.A {
   height: 55vh;
   width: auto;
-  position: absolute;
-  right: 21%;
-  -webkit-transition: opacity 3s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out;
-  -o-transition: opacity 3s ease-in-out;
-  transition: opacity 3s ease-in-out;
-  opacity:0;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:1;
+  content: url("IMG_2991.JPG");
 }
 
-#cf2 img.nontransparent {
-opacity:1;
+.B{
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:0;
+  content: url("IMG_2991.JPG");
 }
+
+.C {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:1;
+  content: url("IMG_1234.PNG");
+}
+
+.D {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:0;
+  content: url("IMG_1234.PNG");
+}
+
+.E {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:1;
+  content: url("IMG_2764.JPG");
+}
+
+.F {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:0;
+  content: url("IMG_2764.JPG");
+}
+
+.G {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:1;
+  content: url("IMG_3075.JPG");
+}
+
+.H {
+  height: 55vh;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: opacity 3.5s ease-in-out;
+  -moz-transition: opacity 3.5s ease-in-out;
+  -o-transition: opacity 3.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
+  opacity:0;
+  content: url("IMG_3075.JPG");
+}
+
 #cf_onclick {
 cursor:pointer;
 }
