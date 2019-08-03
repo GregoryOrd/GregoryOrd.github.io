@@ -10,36 +10,6 @@
 			var count = 0;
 			var upDown = "down";
 			function changeImages(startTime){
-				//var selector = "#cf2 img.A";
-				//var img = document.querySelector(selector);
-				/*if(upDown == "down"){
-					var currentTime = new Date().getTime();
-					var timeDiff = currentTime - startTime;
-					img.style.opacity = 1 - timeDiff/3;
-					if(img.style.opacity <= 0){	
-						if(count == 3){
-							count = 0;
-						}
-						else{
-							count++;
-						}
-						if(count == 0){
-							img.src = "IMG_3075.JPG";
-						}
-						else if (count == 1){
-							img.src = "IMG_2991.JPG";
-						}
-						else if(count == 2){
-							img.src = "IMG_1234.PNG";
-						}
-						else if(count == 3){
-							img.src = "IMG_2764.JPG";
-						}
-						upDown = "up";
-						alert(img.src);
-					}
-				}
-				img.classList.toggle("nontransparent");*/
 				var img = document.getElementById("cf2");
 				if(count == 7){
 					count = 0;
@@ -56,7 +26,6 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_3075.JPG";
 				}
 				else if (count == 1){
 					img.classList.add("B");
@@ -67,7 +36,6 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_2991.JPG";
 				}
 				else if(count == 2){
 					img.classList.add("C");
@@ -78,7 +46,6 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_1234.PNG";
 				}
 				else if(count == 3){
 					img.classList.add("D");
@@ -89,7 +56,6 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_2764.JPG";
 				}
 				else if(count == 4){
 					img.classList.add("E");
@@ -100,7 +66,6 @@
 					img.classList.remove("G");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_2764.JPG";
 				}
 				else if(count == 5){
 					img.classList.add("F");
@@ -111,7 +76,6 @@
 					img.classList.remove("E");
 					img.classList.remove("G");
 					img.classList.remove("H");
-					//img.src = "IMG_2764.JPG";
 				}
 				else if(count == 6){
 					img.classList.add("G");
@@ -122,7 +86,6 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("H");
-					//img.src = "IMG_2764.JPG";
 				}
 				else if(count == 7){
 					img.classList.add("H");
@@ -133,53 +96,7 @@
 					img.classList.remove("E");
 					img.classList.remove("F");
 					img.classList.remove("G");
-					//img.src = "IMG_2764.JPG";
 				}
-				//img.classList.toggle("nontransparent");
-				
-				///////////////////////////////////////////////////
-				/*var img = document.querySelector(selector);
-				if(img.src == "IMG_2991.JPG"){
-					img.src = "IMG_1234.PNG";
-				}
-				else if(img.src == "IMG_1234.PNG"){
-					img.src = "IMG_2764.JPG";
-				}
-				else if(img.src == "IMG_2764.JPG"){
-					img.src = "IMG_3075.JPG";
-				}
-				else{
-					img.src = "IMG_2991.JPG";
-				}*/
-
-				/*var selector = "#cf2 img.A";
-				var prevSelector = "#cf2 img.D";
-				if(count == 3){
-					count = 0;
-				}
-				else{
-					count++;
-				}
-				if(count == 0){
-					selector = "#cf2 img.A";
-					prevSelector = "#cf2 img.D"
-				}
-				else if (count == 1){
-					selector = "#cf2 img.B";
-					prevSelector = "#cf2 img.A"
-				}
-				else if(count == 2){
-					selector = "#cf2 img.C";
-					prevSelector = "#cf2 img.B"
-				}
-				else if(count == 3){
-					selector = "#cf2 img.D";
-					prevSelector = "#cf2 img.C"
-				}
-				var img = document.querySelector(selector);
-				img.classList.toggle("nontransparent");
-				var prevImg = document.querySelector(prevSelector);
-				prevImg.classList.toggle("nontransparent");*/
 			}
 			
 			
@@ -194,12 +111,6 @@
 				
 				var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
 				document.getElementById("info").style.paddingBottom = paddingBottomStr;
-				if(screen.height >= 768){
-					document.getElementById("info").style.paddingTop = "9vh";
-				}
-				else{
-					document.getElementById("info").style.paddingTop = "0px";
-				}
 				
 				if(screen.width < 350){
 					document.getElementById("footerMessage").style.height = "65px";
@@ -214,9 +125,7 @@
 				else{
 					//alert("b");
 				}
-				var selector = "#cf2 img";
-				var imgs = document.querySelectorAll(selector);
-				//alert(window.orientation);
+				////alert(window.orientation);
 				if(screen.width < 840 && screen.width > 770){
 					if(window.orientation == 90 || window.orientation == -90){
 						var hiddenInfo = document.getElementById("hiddenInfo");
@@ -254,34 +163,16 @@
 				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
 					var hiddenInfo = document.getElementById("hiddenInfo")
 					hiddenInfo.style.display = "block";
-					hiddenInfo.style.width = "150%";
+					hiddenInfo.style.width = "auto";
 					var cols2 = document.getElementsByClassName("col-sm-2");
 					i = 0;
 					for(i; i < cols2.length; i++){
-						cols2[i].style.width = "36.666666%";
-					}
-					i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "4vw";
-						imgs[i].style.height = "58vh";
-						imgs[i].style.paddingTop = "1vh";
-					}
-					var lineBreaks = document.getElementsByTagName("br");
-					var j = 0;
-					for(j; j < lineBreaks.length; j++){
-						lineBreaks[j].hidden = true;
+						cols2[i].style.width = "26.666666%";
 					}
 					document.getElementById("info").hidden = true;
 					//alert("e");
 				}
 				else if((window.orientation == 0) && screen.width * screen.height < 190000){
-					var i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "39vw";
-						imgs[i].style.height = "45vh";
-						imgs[i].style.marginBottom = "0vh";
-						imgs[i].style.paddingBottom = "0vh";
-					}
 					document.getElementById("info").style.paddingTop = "0vh";
 					document.getElementById("info").style.marginTop = "0vh";
 					var lineBreaks = document.getElementsByTagName("br");
@@ -293,74 +184,32 @@
 				}
 				else if(window.orientation == 0 && screen.width * screen.height < 340000){
 					if(screen.width > 400 && screen.height < 800){
-						//alert("g1");
-						var i = 0;
-						for(i; i < imgs.length; i++){
-							//imgs[i].style.right = "8vw";
-						}
-						document.getElementById("info").style.paddingTop = "14vh";
+						////alert("g1");
 					}
 					else if(screen.width > 400){
-						//alert("g2");
-						var i = 0;
-						for(i; i < imgs.length; i++){
-							//imgs[i].style.right = "2vw";
-						}
-						document.getElementById("info").style.paddingTop = "20vh";
+						////alert("g2");
 					}
 					else if(screen.width > 365 && screen.height < 800){
 						//alert("g3");
-						var i = 0;
-						for(i; i < imgs.length; i++){
-							//imgs[i].style.right = "15vw";
-						}
-						document.getElementById("info").style.paddingTop = "10vh";
 					}
 					else if(screen.width > 365){
 						//alert("g4");
-						var i = 0;
-						for(i; i < imgs.length; i++){
-							//imgs[i].style.right = "8vw";
-							imgs[i].style.height = "52vh";
-						}
-						i = 0;
-						for(i; i < 4; i++){
-							var br = document.createElement("br");
-							document.getElementById("breakDiv").appendChild(br);
-						}
 					}
 					else{
 						//alert("g5");
-						var i = 0;
-						for(i; i < imgs.length; i++){
-							//imgs[i].style.right = "20vw";
-						}
-						document.getElementById("info").style.marginTop = "10vh";
 					}
 				}
-				else if(screen.height > 768 && screen.height <= 1024){
+				else if(screen.height >= 768 && screen.height <= 1024 && screen.width == 768){
+					document.getElementById("hiddenInfoDiv").classList.remove("col-sm-5");
+					document.getElementById("hiddenInfoDiv").classList.add("col-sm-2");
+					document.getElementById("photoDiv").classList.remove("col-sm-7");
+					document.getElementById("photoDiv").classList.add("col-sm-8");
+					document.getElementById("lastDiv").classList.remove("col-sm-0");
+					document.getElementById("lastDiv").classList.add("col-sm-2");
 					//alert("h");
-					var i = 0;
-					for(i; i < imgs.length; i++){
-						if(window.orientation == 0){
-							//imgs[i].style.right = "-5vw";
-						}
-						else{
-							//imgs[i].style.right = "-3vw";
-						}
-						imgs[i].style.height = "57vh";
-					}
-					document.getElementById("info").style.paddingTop = "30vh";
 				}
 				else if(screen.height > 1024){
 					//alert("h2");
-					var i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "-5vw";
-						imgs[i].style.height = "50vh";
-						imgs[i].style.paddingTop = "5vh";
-					}
-					document.getElementById("info").style.paddingTop = "35vh";
 				}
 				else if(window.orientation == 90 && screen.height < 450){
 					var hiddenInfo = document.getElementById("hiddenInfo")
@@ -371,37 +220,27 @@
 					for(i; i < cols2.length; i++){
 						cols2[i].style.width = "26.666666%";
 					}
-					i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "4vw";
-						imgs[i].style.height = "57vh";
+					if(screen.height > 400){
+						document.getElementById("cf2").style.height = "70vh";
+						document.getElementById("hiddenInfo").style.paddingTop = "30%";
+						//alert("i2a");
 					}
-					var lineBreaks = document.getElementsByTagName("br");
-					var j = 0;
-					for(j; j < lineBreaks.length; j++){
-						lineBreaks[j].hidden = true;
+					else if(screen.height > 370){
+						document.getElementById("cf2").style.height = "61vh";
+						document.getElementById("hiddenInfo").style.paddingTop = "30%";
+						//alert("i2b");
+					}
+					else{
+						//alert("i2c");
+						document.getElementById("cf2").style.height = "";
+						document.getElementById("hiddenInfo").style.paddingTop = "20%";
 					}
 					document.getElementById("info").hidden = true;
-					//alert("i1");
 				}
 				else if(window.orientation == 90){
-					i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "0vh";
-						imgs[i].style.height = "65vh";
-						imgs[i].style.paddingTop = "2vh";
-					}
-					document.getElementById("info").style.paddingTop = "30vh";
 					//alert("i2");
 				}
 				else{
-					i = 0;
-					for(i; i < imgs.length; i++){
-						//imgs[i].style.right = "5vw";
-						imgs[i].style.height = "60vh";
-						imgs[i].style.paddingTop = "";
-					}
-					//document.getElementById("info").paddingTop = "20vh";
 					var cols2 = document.getElementsByClassName("col-sm-2");
 					i = 0;
 					for(i; i < cols2.length; i++){
@@ -445,27 +284,18 @@
 		</header>
 		<div class="container-fluid">
 			<div id="photoRow" class="row">
-				<div class="col-sm-2">
+				<div id="hiddenInfoDiv" class="col-sm-5 col-md-2">
 					<div id="hiddenInfo">
 						<h1>Gregory Ord</h1>
 						<h4>BSc. Software Engineering (Student)</h4>
 						<h4>University of Calgary</h4>
 					</div>
 				</div>
-				<div class="col-sm-8">
+				<div id="photoDiv" class="col-sm-7 col-md-8">
 					<div class="A" id="cf2">
-						<!--<img class="A nontransparent" src="IMG_2991.JPG" />
-						<img class="B" src="IMG_1234.PNG" />
-						<img class="C" src="IMG_2764.JPG" alt=""/>
-						<img class="D" src="IMG_3075.JPG" alt=""/>-->
 					</div>
 				</div>
-				<div class="col-sm-2"><p></p></div>
-			</div>
-			<div id="breakDiv">
-				<br />
-				<br />
-				<br />
+				<div id="lastDiv" class="col-sm-0 col-md-2"><p></p></div>
 			</div>
 
 			<div class="row" id="info">
