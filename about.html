@@ -15,16 +15,16 @@
 		<script>
 			function sizing(){
 				if(screen.height >= 768 && screen.width > 700){
-					document.getElementById("aboutTextTitleDiv").style.marginTop = "7vh";
+					document.getElementById("aboutTextTitleDiv").style.marginTop = "2vh";
 				}
 				else{
-					document.getElementById("aboutTextTitleDiv").style.marginTop = "";
+					document.getElementById("aboutTextTitleDiv").style.paddingTop = "20vh";
 				}
 				if(screen.width < 840 && screen.width > 770){
-					document.getElementById("aboutTextTitleDiv").style.paddingTop = "25vh";
+					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "25vh";
 				}
 				else{
-					document.getElementById("aboutTextTitleDiv").style.paddingTop = "";
+					document.getElementById("aboutTextTitleDiv").style.paddingTop = "7vh";
 					document.getElementById("skyLine").style.paddingTop = "";
 				}
 				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
