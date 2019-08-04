@@ -14,8 +14,32 @@ body{
 
 }
 
-#Courses{
-	padding-top: 4vh;
+.videoLeft{ 
+	max-height: 240px; 
+	float: left; 
+	padding-right: 15px; 
+	padding-bottom: 15px;
+	padding-top: 35px;
+}
+
+.videoRight{ 
+	max-height: 240px; 
+	float: left; 
+	padding-left: 15px; 
+	padding-bottom: 15px;
+	padding-top: 35px;
+}
+
+#pageTitle{
+	padding-top: 6vh;
+}
+
+section{
+	margin-top: 4vh;
+}
+.coloredProjectSection{
+	padding-top: 15px;
+	background-color: white;	
 }
 
 .buttonRow{
@@ -110,6 +134,7 @@ table{
 }
 
 #cf2 {
+  padding-top: 3vh;
   position:relative;
   padding-left: 0px;
   margin:0 auto;
