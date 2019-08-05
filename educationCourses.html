@@ -6,8 +6,13 @@
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="main.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		<script>
 			function toggleRow(id, className){
+				var caretID = id + "Caret";
+				var caret = document.getElementById(caretID);
+				caret.classList.toggle("fa-caret-right");
+				caret.classList.toggle("fa-caret-down");
 				var yearElement = document.getElementById(id);
 				var elements = document.getElementsByClassName(className);
 				var i = 0;
@@ -91,7 +96,7 @@
 						<table>
 							<tbody>
 								<tr id="year1" class="yearsHeader" onclick="toggleRow('year1', 'year1Contents');">
-									<th colspan="2">Year 1 (2016-2017)</th>
+									<th colspan="2">Year 1 (2016-2017) <i id="year1Caret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="year1Contents" hidden>
 									<th class="yearsContentHeader">Fall 2016</th>
@@ -101,15 +106,15 @@
 									<td class="yearsContent" onclick="ShowModal(&#34;CHEM 209 - General Chemistry for Engineers&#34;,&#34;Basic chemical concepts. Atomic and molecular structure. Chemical bonding. Chemical kinetics and equilibria. Acid-base and solubility equilibria. Oxidation-reduction phenomena and electrochemistry. The chemistry of water. The chemistry of energy sources. Basic environmental issues.&#34;);">CHEM 209 - General Chemistry for Engineers</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ANTH 311 - Primate Behaviour&#34;,&#34;Primate behaviour and related topics, including social dynamics, sociobiology, socio-ecology, dominance, aggression, kinship, sexual behaviour, socialization, learning, cognition, communication, ape language, and conservation.&#34;);">ANTH 311 - Primate Behaviour</td>
 								</tr>
-								<tr class="year1Contents yearsContent" hidden>
+								<tr class="year1Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 233 - Computing for Engineers&#34;,&#34;Overview of computer systems. Functions of software components: operating systems, editors, compilers. Programming in a high-level language: selection and loop structures, routines, array and record types, text file operations. Introduction to object-based programming: use of class libraries and construction of simple classes.&#34;);">ENGG 233 - Computing for Engineers</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 225 - Fundamentals of Electrical Circuits and Machines&#34;,&#34;Current, voltage and power; Kirchhoff's current and voltage laws; capacitors; electricity and magnetism fundamentals applied to circuit elements and machines; inductors; topics in electrical circuits and systems; instrumentation; circuit design, DC and AC circuit analysis methods; DC and AC machines; first order circuits and transient analysis.&#34;);">ENGG 225 - Fundamentals of Electrical Circuits and Machines</td>
 								</tr>
-								<tr class="year1Contents yearsContent" hidden>
+								<tr class="year1Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;MATH 211 - Linear Methods I&#34;,&#34;Systems of equations and matrices, vectors, matrix representations and determinants. Complex numbers, polar form, eigenvalues, eigenvectors. Applications.&#34;);">MATH 211 - Linear Methods I</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;MATH 277 - Multivariable Calculus for Engineers and Scientists&#34;,&#34;Calculus of functions of several real variables; differentiation, implicit functions, double and triple integrals; applications; Vector-valued functions; derivatives and integrals; parametric curves.&#34;);">MATH 277 - Multivariable Calculus for Engineers and Scientists</td>
 								</tr>
-								<tr class="year1Contents yearsContent2ndLast" hidden>
+								<tr class="year1Contents" hidden>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;MATH 275 - Calculus for Engineers and Scientists&#34;,&#34;Calculus of functions of one real variable; derivative and Riemann integral; Mean Value Theorem; the Fundamental Theorem of Calculus; techniques of integration; Applications; Improper integrals; Power series, Taylor series.&#34;);">MATH 275 - Calculus for Engineers and Scientists</td>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;PHYS 259 - Electricity and Magnetism (for student in Engineering)&#34;,&#34;Electric and magnetic fields related to charges and current through Maxwell's equations. Energy stored in fields, potential energy, and voltage. Conductors, insulators, and dielectrics. Resistance, capacitance, and inductance with applications to RC/RL circuits.&#34;);">PHYS 259 - Electricity and Magnetism (for student in Engineering)</td>
 								</tr>
@@ -122,7 +127,7 @@
 						<table>
 							<tbody>
 								<tr id="year2" class="yearsHeader" onclick="toggleRow('year2', 'year2Contents');">
-									<th colspan="4">Year 2 (2017-2018)</th>
+									<th colspan="4">Year 2 (2017-2018) <i id="year2Caret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="year2Contents yearsContentHeader" hidden>
 									<th class="yearsContentHeader">Fall 2017</th>
@@ -130,25 +135,25 @@
 									<th class="yearsContentHeader">Spring 2018</th>
 									<th class="yearsContentHeader">Summer 2018</th>
 								</tr>
-								<tr class="year2Contents yearsContent" hidden>
+								<tr class="year2Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ARKY 205 - Ancient Peoples And Places&#34;,&#34;An overview of Old and New World archaeology; the emergence of humans; development of humans and culture from hunting/gathering to agricultural and ancient urban societies.&#34;);">ARKY 205 - Ancient Peoples And Places</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 201 - Behaviour Of Liquids Gases & Solids&#34;,&#34;An introduction to the behaviour of fluids and solids; phase transformations, the phase rule and phase diagrams. Ideal and real gases; equations of state and their engineering applications; simple kinetic theory; transport properties of fluids. Liquid state; vapor pressure; shear behaviour; flow of fluids in pipelines. Solids; crystalline and non-crystalline structure; non equilibrium solid phases; electrical and thermal conductivity; dislocations; stress and strain; creep; fracture.&#34;);">ENGG 201 - Behaviour Of Liquids Gases & Solids</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 513 - The Role and Responsibilities of the Professional Engineer in Society&#34;,&#34;The professional duties and responsibilities of the engineer as they relate to society. Ethics and the engineering profession. Public and worker safety and health. Design for safety. Sustainable development. The engineer and the environment. Environmental stewardship. Essentials of leadership. Gender issues. Employment equity. Fundamentals of Engineering Law. Professional organizations. The Engineering Professions Act.&#34;);">ENGG 513 - The Role and Responsibilities of the Professional Engineer in Society</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENEL 327 - Signals and Transforms&#34;,&#34;Continuous-time systems. Impulse response and convolution. Fourier series and Fourier transform. Basics of discrete time signals. Sampling theory. Discrete convolution. Difference equations and the Z-transform. Discrete-time Fourier representations.&#34;);">ENEL 327 - Signals and Transforms</td>
 								</tr>
-								<tr class="year2Contents yearsContent" hidden>
+								<tr class="year2Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;COMS 363 - Professional and Technical Communication&#34;,&#34;An introduction to professional and technical communication in diverse media. Examines the rhetorical dimensions of workplace settings as well as the process of planning, composing and delivering professional and technical communication for various audiences.&#34;);">COMS 363 - Professional and Technical Communication</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 202 - Engineering Statics&#34;,&#34;Force vectors; equilibrium of a particle in two and three dimensions; force system resultants; equilibrium of a rigid body in two and three dimensions; internal forces in trusses; frames, machines and beams; bending moment and shear force diagrams; friction; centre of gravity; centroids of areas; composite bodies.&#34;);">ENGG 202 - Engineering Statics</td>
 									<td class="yearsContent"></td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 319 - Probability And Statistics For Engineers&#34;,&#34;Presentation and description of data, introduction to probability theory, Bayes' theorem, discrete and continuous probability distributions, estimation, sampling distributions, tests of hypotheses on means, variances and proportions, simple linear regression and correlation. Applications are chosen from engineering practice.&#34;);">ENGG 319 - Probability And Statistics For Engineers</td>
 								</tr>
-								<tr class="year2Contents yearsContent" hidden>
+								<tr class="year2Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 200 - Engineering Design and Communication&#34;,&#34;An interdisciplinary course involving the application of engineering principles, design, communications, leadership and project management concepts through a sequence of team-based design projects.&#34;);">ENGG 200 - Engineering Design and Communication</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 481 - Technology and Society&#34;,&#34;An interpretive course on the interrelationship between technology and society. The first part of the course surveys significant historical developments within disciplinary areas such as energy, materials, production processes, structures, transport, communications, and computation. Sequence within each area: discovery, development, application, impact, future. Social and economic consequences are also considered. The latter part of the course explores contemporary problems of society and technology.&#34;);">ENGG 481 - Technology and Society</td>
 									<td class="yearsContent"></td>
 									<td class="yearsContent"></td>
 								</tr>
-								<tr class="year2Contents yearsContent2ndLast" hidden>
+								<tr class="year2Contents" hidden>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;MATH 375 - Differential Equations for Engineers and Scientists&#34;,&#34;Definition, existence and uniqueness of solutions; first order and higher order equations and applications; Homogeneous systems; Laplace transform; partial differential equations of mathematical physics.&#34;);">MATH 375 - Differential Equations for Engineers and Scientists</td>
 									<td class="yearsContent2ndLast"></td>
 									<td class="yearsContent"></td>
@@ -165,25 +170,25 @@
 						<table>
 							<tbody>								
 								<tr id="year3" class="yearsHeader" onclick="toggleRow('year3', 'year3Contents');">
-									<th colspan="2">Year 3 (2018-2019)</th>
+									<th colspan="2">Year 3 (2018-2019) <i id="year3Caret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="year3Contents yearsContentHeader" hidden>
 									<th class="yearsContentHeader">Fall 2018</th>
 									<th class="yearsContentHeader">Winter 2019</th>
 								</tr>
-								<tr class="year3Contents yearsContent" hidden>
+								<tr class="year3Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENEL 353 - Digital Circuits&#34;,&#34;Number systems and simple codes. Combinational logic: Boolean algebra, truth tables, minterms, maxterms, Karnaugh maps; gates, buffers, multiplexers and decoders; combinational circuit timing. Sequential circuits: latches and D flip flops; timing considerations; analysis and synthesis techniques; Mealy and Moore machine models; counters and registers. Introduction to memory arrays.&#34;);">ENEL 353 - Digital Circuits</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;CPSC 319 - Data Structures, Algorithms, and Their Applications&#34;,&#34;Fundamental data structures, including arrays, lists, stacks, queues, trees, hash tables, and graphs. Algorithms for searching and sorting. Applications of these data structures and algorithms. For students wishing to combine studies in computer science with studies in other disciplines.&#34;);">CPSC 319 - Data Structures, Algorithms, and Their Applications</td>
 								</tr>
-								<tr class="year3Contents yearsContent" hidden>
+								<tr class="year3Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENGG 209 - Engineering Economics&#34;,&#34;Engineering Economics The basic tools and methodology of engineering economic studies. Topics include investment decisions, theory of replacement, economies of scale, externalities, social decision making and government regulation. Examples are drawn from engineering projects.&#34;);">ENGG 209 - Engineering Economics</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENCM 369 - Computer Organization&#34;,&#34;Organization of a simple stored-program computer: CPU, busses and memory. Instruction sets, machine code, and assembly language. Conventions for assembly language generated by compilers. Floating-point number representation. Hardware organization. Address translation and virtual memory. Input/output devices, computer interfacing, interrupt handling and multi-tasking systems.&#34;);">ENCM 369 - Computer Organization</td>
 								</tr>
-								<tr class="year3Contents yearsContent" hidden>
+								<tr class="year3Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENSF 337 - Programming Fundamentals for Software and Computer Engineering&#34;,&#34;Key features of the C programming language. Pointers, memory models and memory management. Manipulation of text files and binary files. Introduction to recursion. Introduction to a modern object-oriented language. Development of basic program design skills with small projects.&#34;);">ENSF 337 - Programming Fundamentals for Software and Computer Engineering</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENSF 409 - Principles of Software Development&#34;,&#34;A survey of software design and development topics for Engineering students. Topics include: key features of an object-oriented programming language, especially inheritance and polymorphism; elements of object-oriented design; programming and application of common data structures; strategies and tools for testing and debugging&#34;);">ENSF 409 - Principles of Software Development</td>
 								</tr>
-								<tr class="year3Contents yearsContent2ndLast" hidden>
+								<tr class="year3Contents" hidden>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;PHYS 365 - Acoustics, Optics and Modern Physics (for students in Engineering)&#34;,&#34;Wave motion as applied to acoustics and physical optics. Wave-particle duality applied to light and matter; electron energy levels of atoms and crystals.&#34;);">PHYS 365 - Acoustics, Optics and Modern Physics (for students in Engineering)</td>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;MATH 271 - Discrete Mathematics&#34;,&#34;Proof techniques. Sets and relations. Induction. Counting and probability. Graphs and trees.&#34;);">MATH 271 - Discrete Mathematics</td>
 								</tr>
@@ -193,27 +198,27 @@
 								</tr>
 								
 								<tr id="year4" class="yearsHeader" onclick="toggleRow('year4', 'year4Contents');">
-									<th colspan="2">Year 4 (2019-2020)</th>
+									<th colspan="2">Year 4 (2019-2020) <i id="year4Caret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="year4Contents yearsContentHeader" hidden>
 									<th class="yearsContentHeader">Fall 2019</th>
 									<th class="yearsContentHeader">Winter 2020</th>
 								</tr>
-								<tr class="year4Contents yearsContent" hidden>
+								<tr class="year4Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;CPSC 441- Computer Networks&#34;,&#34;Principles and practice in modern telecommunications, computer communications and networks. Layered communication protocols and current physical, data link, network and internet protocol layers. Circuit switching, packet switching, and an introduction to broadband multimedia networking.&#34;);">CPSC 441- Computer Networks</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;CPSC 471 - Data Base Management Systems&#34;,&#34;Conceptual, internal and external data bases. Relational data base systems and SQL. The normal forms, data base design, and the entity-relationship approach.&#34;);">CPSC 471 - Data Base Management Systems</td>
 								</tr>
-								<tr class="year4Contents yearsContent" hidden>
+								<tr class="year4Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;CPSC 457 - Principles of Operating Systems&#34;,&#34;An introduction to operating systems principles. Performance measurement; concurrent programs; the management of information, memory and processor resources.&#34;);">CPSC 457 - Principles of Operating Systems</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;SENG 401 - Software Architecture&#34;,&#34;Software architectures and design for non-functional software properties. Introduction to program comprehension skills including analysis of existing architectures.&#34;);">SENG 401 - Software Architecture</td>
 								</tr>
-								<tr class="year4Contents yearsContent" hidden>
+								<tr class="year4Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;ENCM 511 - Embedded System Interfacing&#34;,&#34;Review of computer architecture; microcontrollers and their instruction sets; interfacing using common input/output devices, debugging and other software engineering practices, strategies for interrupt handling and exception handling; Interfacing using high level and assembly languages; software and hardware optimizations to achieve real time operations; real time operating systems; Embedded real-time applications.&#34;);">ENCM 511 - Embedded System Interfacing</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;SENG 471 - Software Requirements Engineering&#34;,&#34;Introduction to elicitation, modelling, expression and validation of the requirements. Techniques and methodologies for requirements engineering. Applications of requirements engineering to the management of the software development lifecycle.&#34;);">SENG 471 - Software Requirements Engineering</td>
 								</tr>
-								<tr class="year4Contents yearsContent2ndLast" hidden>
+								<tr class="year4Contents" hidden>
 									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;ENSF 480 - Principles of Software Design&#34;,&#34;Brief overview of typical software development lifecycles. Systematic methods for designing large-scale, quality software. Concepts such as abstraction, modularity, and software modelling will be covered. Designing for non-functional properties of software will be introduced. Emphasis on individual skills&#34;);">ENSF 480 - Principles of Software Design</td>
-									<td class="yearsyearsContent2ndLastContent" onclick="ShowModal(&#34;SENG 438 - Software Testing, Reliability, and Quality&#34;,&#34;Concepts, methods, techniques, processes, and tools for software testing. The principles, processes, and applications of software reliability and software quality assurance.&#34;);">SENG 438 - Software Testing, Reliability, and Quality</td>
+									<td class="yearsContent2ndLast" onclick="ShowModal(&#34;SENG 438 - Software Testing, Reliability, and Quality&#34;,&#34;Concepts, methods, techniques, processes, and tools for software testing. The principles, processes, and applications of software reliability and software quality assurance.&#34;);">SENG 438 - Software Testing, Reliability, and Quality</td>
 								</tr>
 								<tr class="year4Contents yearsContentLast" hidden>
 									<td class="yearsContentLast"></td>
@@ -222,13 +227,13 @@
 								
 								
 								<tr id="internshipYear" class="yearsHeader" onclick="toggleRow('internshipYear', 'internshipYearContents');">
-									<th colspan="2">Internship Year (2020-2021)</th>
+									<th colspan="2">Internship Year (2020-2021) <i id="internshipYearCaret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="internshipYearContents yearsContentHeader" hidden>
 									<th class="yearsContentHeader">Fall 2020</th>
 									<th class="yearsContentHeader">Winter 2021</th>
 								</tr>
-								<tr class="internshipYearContents yearsContent2ndLast" hidden>
+								<tr class="internshipYearContents" hidden>
 									<td colspan="2" class="yearsContent2ndLast">INTE 513 - Internship in Engineering</td>
 								</tr>
 								<tr class="internshipYearContents yearsContentLast" hidden>
@@ -238,20 +243,20 @@
 								
 								
 								<tr id="year5" class="yearsHeader" onclick="toggleRow('year5', 'year5Contents');">
-									<th colspan="2">Year 5 (2021-2022)</th>
+									<th colspan="2">Year 5 (2021-2022) <i id="year5Caret" class="fa fa-caret-right"></i></th>
 								</tr>
 								<tr class="year5Contents yearsContentHeader" hidden>
 									<th class="yearsContentHeader">Fall 2021</th>
 									<th class="yearsContentHeader">Winter 2022</th>
 								</tr>
-								<tr class="year5Contents yearsContent" hidden>
+								<tr class="year5Contents" hidden>
 									<td class="yearsContent" onclick="ShowModal(&#34;SENG 511 - Software Process and Project Management&#34;,&#34;Analysis of methods, tools, and techniques for software process improvement and software project management as an effort to achieve quality software products.&#34;);">SENG 511 - Software Process and Project Management</td>
 									<td class="yearsContent" onclick="ShowModal(&#34;SENG 533 - Software Performance Evaluation&#34;,&#34;Analyzing quality requirements of large-scale software. Performance analysis, testing, and tuning techniques. Evaluating software scalability. Capacity planning methodologies. Issues related to safety, security, and availability of software.&#34;);">SENG 533 - Software Performance Evaluation</td>
 								</tr>
-								<tr class="year5Contents yearsContent" hidden>
+								<tr class="year5Contents" hidden>
 									<td colspan="2" class="yearsContent" onclick="ShowModal(&#34;ENEL 500 - Computer, Electrical, and Software Engineering Team Design (Capstone Project)&#34;,&#34;Preliminary and detailed engineering design and implementation of an engineering system that applies engineering knowledge to solving a real-life problem. The emphasis is on the design process as it is associated with electrical, computer and software engineering, design methodology, general design principles for engineers, teamwork and project management.&#34;);">ENEL 500 - Computer, Electrical, and Software Engineering Team Design (Capstone Project)</td>
 								</tr>
-								<tr class="year5Contents yearsContent2ndLast" hidden>
+								<tr class="year5Contents" hidden>
 									<td colspan="2" class="yearsContent2ndLast">5 Technical Electives (To Be Determined)</td>
 								</tr>
 								<tr class="year5Contents yearsContentLast" hidden>
