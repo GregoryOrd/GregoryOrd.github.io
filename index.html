@@ -260,6 +260,24 @@
 					hiddenInfo.style.display = "";
 					hiddenInfo.style.width = "";
 					//alert("j");
+					document.getElementById("hiddenInfoDiv").classList.add("col-sm-5");
+					document.getElementById("hiddenInfoDiv").classList.remove("col-sm-2");
+					document.getElementById("photoDiv").classList.add("col-sm-7");
+					document.getElementById("photoDiv").classList.remove("col-sm-8");
+					document.getElementById("lastDiv").classList.add("col-sm-0");
+					document.getElementById("lastDiv").classList.remove("col-sm-2");
+					document.getElementById("cf2").style.paddingTop = " 3vh";
+				}
+				if(screen.width >= 768 && screen.width < 1000){
+					document.getElementById("hiddenInfoDiv").classList.remove("col-sm-5");
+					document.getElementById("hiddenInfoDiv").classList.add("col-sm-2");
+					document.getElementById("photoDiv").classList.remove("col-sm-7");
+					document.getElementById("photoDiv").classList.add("col-sm-8");
+					document.getElementById("lastDiv").classList.remove("col-sm-0");
+					document.getElementById("lastDiv").classList.add("col-sm-2");
+					document.getElementById("cf2").style.paddingTop = " 3vh";
+					document.getElementById("info").style.paddingTop = "3vh";
+					//alert("k");
 				}
 			}
 
