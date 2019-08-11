@@ -18,6 +18,15 @@ p{
 	font-size: 16px;
 }
 
+.darkIndicators li {
+  background-color: #999;
+  background-color: rgba(70, 70, 70, 0.25);
+}
+
+.darkIndicators .active {
+  background-color: #444;
+}
+
 video{
 	border: solid;
 	border-width: 1px;
