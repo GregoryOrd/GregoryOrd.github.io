@@ -10,6 +10,18 @@ body{
 	display: none;
 }
 
+#hiddenCarousel{
+	float: right;
+	width: 50%;
+	display: none;
+}
+
+
+#CarouselRow{
+	padding-top: 10.5vh;
+}
+
+
 #info{
 	padding-top: 3vh;
 }
