@@ -3,6 +3,11 @@ body{
 	background-color: #e6e6ff;
 }
 
+li{
+  position: relative;
+  left: -10px;
+}
+
 #hiddenInfo{
 	float: left;
 	width: 50%;
