@@ -73,6 +73,79 @@
 				<div class="col-sm-8">
 					<table>
 						<tbody>
+							<tr id="HelpingHandsProject" class="projectsHeader" onclick="toggleRow('HelpingHandsProject', 'HelpingHandsProjectContents');">
+								<th>Helping Hands Caf&eacute Systems <i id="HelpingHandsProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
+							<tr class="HelpingHandsProjectContents whiteBackground" hidden>
+								<td class="projectsContent">
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>Helping Hands is the purposed name for a startup business venture that I am involved with. The goal of this endeavour is to provide technological solutions to improve the efficiency of student run caf&eacute programs in schools. More specifically, this technology is aimed at caf&eacute programs where the students workers are part of the school's special education department and the organizers of the program are occuptional therapists. These people and departments in school are often forgetten and lack technology tailored to their specific needs. Helping Hands addresses this issue and provides helpful services to these school caf&eacutes. </p>
+									<p>The inspiration for Helping Hands came from a University of Calgary track teammate, Jan Erik Naess. Jan Erik came to me in the fall of 2019 asking me to join him with this project. He had seen and heard of this problem first hand with a caf&eacute program at the school where is mother worked. The only technology the program had in place was a Google Form that allowed customers to place orders. Once orders were place occuptional therapists would print large exessive summaries and then filter data manually. This was very hard and time consuming. Helping Hands has since developed a web application and an automatic label printing solution for the caf&eacute. </p>
+									<p>As of January 2020, we are still only in the single school, Hinsdale South High School in Darien, Illinois, but looking to expand to others. The staff at Hinsdale has been great in working with us to develop our product and ideas.</p>
+									<p>We have also developed some marketing material to help the Hinsdale caf&eacute draw in more customers. In the future we plan to add more features such as customer accounts, an improved order form, and a performance measurement system to track how students are progressing in the times it takes them to make and deliver orders. We hope that eventually we can collect data on students' performance and allow students to put that data on resumes to help them get jobs after they graduate. </p>
+									<br />
+									
+									<div id="HelpingHandsCarousel" class="carousel slide" data-ride="carousel">
+										<ol class="carousel-indicators darkIndicators">
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="1"></li>
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="2"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="3"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="4"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="5"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="6"></li> 
+										</ol>
+
+										<div class="carousel-inner">
+										  <div class="item active">
+											<img src="HelpingHands1.png" style="height: 5%; width:100%;">
+										  </div>
+										
+										  <div class="item">
+											<img src="HelpingHands2.png" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="HelpingHands3.png" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="HelpingHands4.jpg" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="HelpingHands5.jpg" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="HelpingHands6.jpg" style="height: 5%; width:100%;">
+										  </div>	
+										  <div class="item">
+											<img src="HelpingHands7.png" style="height: 5%; width:100%;">
+										  </div>										  
+										  
+										<a class="left carousel-control" href="#HelpingHandsCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#HelpingHandsCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
+									</div>
+									<br />
+									<h4><u>Lessons Learned</u></h4>	
+									<p>
+										Thus far during this project I have learned a lot about Google's developer products, Windows batch scripting, and Brother's label printers. The web side of this project has been done using Google Apps Script because it easily integrates with the Google Forms and Spreadsheets that the school was alreay using. The thought of moving away from Google to have our own system has come up, but we have decided to stick with Google because many of the other schools we had hear of with similar programs also use Google Forms.
+									</p>
+									<p>Google also has a cloud print service. However we had formatting using when using this to send print jobs to the label printer. The solution to automate printing was then to using batch scripting and some python to download data from a Google drive, open printing software, and print orders with a preformatted template. This is currently done with a Windows laptop as a 'print server'. I have learned that Brother's QL series label printer support the use of raster and ESC-P commands. Later improvements to the printing solution will likely use this capability to bypass the printer's drivers and send raw binary data directly from our application to the printer. We will also likely switch to using a small raspberry pi device as a print server instead of a full flegded windows laptop.</p>
+								</td>
+							</tr>
+							<tr class="HelpingHandsProjectContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>
 							<tr id="CCCProject" class="projectsHeader" onclick="toggleRow('CCCProject', 'CCCProjectContents');">
 								<th>Calgary Counselling Centre Group Testing App (May to August 2019) <i id="CCCProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>
