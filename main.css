@@ -56,13 +56,15 @@ video{
 }
 
 .videoLeft{ 
-	max-height: 240px; 
+	max-height: 480px; 
+  height: 480px;
 	float: left; 
 	padding: 15px;
 }
 
 .videoRight{ 
-	max-height: 240px; 
+	max-height: 480px; 
+  height: 480px;
 	float: right; 
 	padding: 15px;
 }

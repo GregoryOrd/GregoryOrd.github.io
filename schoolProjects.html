@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+		<title>Greg Ord's Software Development Porfolio</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="main.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script>
+			function toggleRow(id, className){
+				var caretID = id + "Caret";
+				var caret = document.getElementById(caretID);
+				caret.classList.toggle("fa-caret-right");
+				caret.classList.toggle("fa-caret-down");
+				var yearElement = document.getElementById(id);
+				var elements = document.getElementsByClassName(className);
+				var i = 0;
+				var prev = elements[0].hidden;
+				if(prev == true){
+					yearElement.style.borderBottom = "none";
+				}
+				else{
+					yearElement.style.borderBottom = "solid";
+					yearElement.style.borderBottomColor = "white";
+				}
+				for(i; i < elements.length; i++){
+					elements[i].hidden = !prev;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+		  <div id="NavigationBar" class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <a class="navbar-brand" href="home.html">Software Portfolio Website</a>
+			</div>
+			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
+				<ul id="navBarList" class="nav navbar-nav navbar-right">
+				  <li class="nav-item"><a href="home.html">Home</a></li>
+				  <li class="nav-item"><a href="about.html">About</a></li>
+				  <li class="nav-item"><a href="workExperience.html">Work Experiences</a></li>
+				  <li class="nav-item"><a href="personalProjects.html">Personal Projects</a></li>
+				  <li class="nav-item active"><a href="schoolProjects.html">School Projects</a></li>
+				  <li class="nav-item"><a href="educationCourses.html">Education/Courses</a></li> 
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		<div class="container-fluid">
+			<section>
+				<div class="row" id="pageTitle">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<h1>School Projects</h1>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+                        <h4>Over the course of my Software Engineering degree I have completed some short projects 
+                            as part of my course work. The ones that I have recorded and documented are shown below, 
+                            as well as a few notable omissions that I don't have anything saved for. There have also 
+                            been many interesting lab and assignments, but unfortunately many of these
+                            have also been lost.
+                        </h4>
+                    </div>
+					<div class="col-sm-2"></div>
+				</div>
+			</section>
+			<section>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<table>
+						<tbody>							
+                            <tr id="NotableOmissionsProject" class="projectsHeader" onclick="toggleRow('NotableOmissionsProject', 'NotableOmissionsProjectContents');">
+								<th>Notable Omissions (Don't have any work save from these projects) <i id="NotableOmissionsProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr class="NotableOmissionsProjectContents whiteBackground projectsContentLast" hidden>
+								<td class="projectsContent projectsContent2ndLast">
+                                    <h4>Notable Omissions: </h4>
+                                    <ul>
+                                        <li>Multi-player Online Tic-Tac-Toe Game for CPSC 441 - Computer Networks</li>
+                                        <li>Social Media Type Web App for SENG 401 - Software Architecture</li>
+                                        <li>Small Virtual Reality Memory Game for ENSF 545 - Virtual Reality.</li>
+                                        <ul>
+                                            <li> Two containers sit at the bottom of a slide. One to the left of the slide and one to the right.
+                                            </li>
+                                            <li>Before anything happens, numbers from 1 to 10 are shown above each container.</li>
+                                            <li>After a short time the numbers go away and small boxes start coming down the slide.</li>
+                                            <li>Each of these boxes sliding down the ramp has a number on it.</li> 
+                                            <li>The objective of the game is then to grab the boxes with a haptic controller 
+                                                as they slide down the ramp, and to put them in the correct box based on the number</li>
+                                            <li>3D Glasses were used to give the player depth perception</li>
+                                            <li>The objective of the project was to create two versions of this game and vary the haptic mechanism to
+                                                see what effect that had on the players cognitive ability (memory).
+                                            </li>
+                                            <li>Google "Haptic Pen" to see the type of device we used as our haptic controller.</li>
+                                        </ul>
+                                    </ul>
+								</td>
+							</tr>
+							<tr class="NotableOmissionsProjectContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>	
+
+
+							<tr id="ToolShopProject" class="projectsHeader" onclick="toggleRow('ToolShopProject', 'ToolShopProjectContents');">
+								<th>ENSF 409 ToolShop Client/Server Application (March/April 2019) <i id="ToolShopProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr class="ToolShopProjectContents whiteBackground projectsContent2ndLast" hidden>
+								<td class="projectsContent projectsContent2ndLast">
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>This application was built as the term project for the ENSF 409 - Principles of Software Development course at the University of Calgary. The instructor of the course introduced this project first as a part a weekly lab assignment. The course focused heavily on object oriented design, and used Java as the language of instruction.</p>
+									<p>The first step in the lab assignment was to analyze the project's problem statement and create a UML class diagram. The second step was use this class diagram to create a simple console based application. Text files were provided as inital data input into the application, and the user was presented with a menu from the command-line/console to add, delete, and edit information related to tools in the inventory of a toolshop.</p>
+									<p>Weeks later, the work for this lab assignment was brought back for the course's final project. The goal of the final project was to transform this simple one machine console based application into a Client-Server application. Lots of emphasis was placed proper system design and another set of class diagrams was created. The instruction was to build this application using the Model-View-Controller (MVC) design pattern. A simple graphical user interface was built for the client, and a mySQL database replaced text files on the server-side. The client and server programs communicated through socket programming, and the server was required to use a thread pool to handle concurrency and multiple clients at the same time.</p><br />
+									
+									<div id="ToolShopCarousel" class="carousel slide" data-ride="carousel">
+										<ol class="carousel-indicators darkIndicators">
+										  <li data-target="#ToolShopCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#ToolShopCarousel" data-slide-to="1"></li>
+										  <li data-target="#ToolShopCarousel" data-slide-to="2"></li> 
+										  <li data-target="#ToolShopCarousel" data-slide-to="3"></li> 
+										  <li data-target="#ToolShopCarousel" data-slide-to="4"></li> 
+										  <li data-target="#ToolShopCarousel" data-slide-to="5"></li> 
+										</ol>
+
+										<div class="carousel-inner">
+										  <div class="item active">
+											<img src="ToolShop2.png" style="height: 5%; width:100%;">
+										  </div>
+										
+										  <div class="item">
+											<img src="ToolShop3.png" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="Diagram1.jpg" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="Diagram2.jpg" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="Diagram3.jpg" style="height: 5%; width:100%;">
+										  </div>
+
+										  <div class="item">
+											<img src="Diagram4.jpg" style="height: 5%; width:100%;">
+										  </div>										  
+										  
+										<a class="left carousel-control" href="#ToolShopCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#ToolShopCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
+									</div>
+									<br />
+									<h4><u>Lessons Learned</u></h4>	
+									<p>
+										From a learning standpoint, this was a very involved project. It helped in me to develop an understanding of client-server architecture, the MVC design pattern, multithreading and socket programming. At the time this was the largest project I had worked on, and I think this project was the first to give me a sense of how much planning and design work goes into creating quality software.
+									</p>
+									
+								</td>
+							</tr>
+							<tr class="ToolShopProjectContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>							
+							
+							
+							<tr id="BilliardsProject" class="projectsHeader" onclick="toggleRow('BilliardsProject', 'BilliardsProjectContents');">
+								<th>ENGG 233 Billiards Project (November 2016) <i id="BilliardsProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr class="BilliardsProjectContents whiteBackground projectsContentLast" hidden>
+								<td class="projectsContent projectsContent2ndLast">
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>This project was my first "real" project and came at the end of the first programming class I ever took, ENGG 233 - Computing for Engineers. The course was an introductory programming course, taught using a language called Processing, and this was the final project for the course.</p>
+									<p>The objective of the project was to create a simple game that simulated billiards/pool. The game was only single player and did not involve any rules except that if you sunk the white ball the game was over. The player controlled their que stick with the mouse and adjusted the power of their shot with the up and down arrow keys. Addition features such as a timer and sound effects allowed students to gain bonus points on the grading of the assignment.</p><br />
+									<video width="90%" controls>
+										<source src="Billiards.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<br />
+									<h4><u>Lessons Learned</u></h4>	
+									<p>This project was given to the class just after we had covered classes and objects in the lectures. It was my first experience building a system with these concepts. I remember that on my first attempt at this project nothing was working, so I completely stoped my work and began again completely from scratch.</p>
+									<p>On the second attempt I restuctured my classes and everything went super smoothly. The main lesson I took away from this was the lesson that how a program is structured does matter and doing things correctly at the beginning will make things a lot easier at the end.</p>
+								</td>
+							</tr>
+							<tr class="BilliardsProjectContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>
+						</tbody>
+					</table>
+				<div class="col-sm-2"></div>
+			</div>
+			</section>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</body>
+</html>
