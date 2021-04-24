@@ -74,6 +74,99 @@
 				<div class="col-sm-8">
 					<table>
 						<tbody>
+                            <tr id="GregWatchProject" class="projectsHeader" onclick="toggleRow('GregWatchProject', 'GregWatchProjectContents');">
+								<th>GregWatch - Running Watch - In Development (April 2021 to Present) <i id="GregWatchProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
+							<tr class="GregWatchProjectContents whiteBackground" hidden>
+								<td class="projectsContent">
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>A running watch.
+                                    </p>
+                                    <p>
+                                        One morning I woke up and started thinking about logging my training and how I had lost touch with that habbit. Previously, I had logged 
+										training data with pen and paper. This took a few minutes each day and, over time, became harder and harder to look through. With years of 
+										data spread over different physical log books, I wished that I had one of the new fancy watches that can automatically upload run 
+										data to your phone and into applications like Strava or Garmin Connect where you could analyze it easily.
+                                    </p>
+                                    <p>
+                                        I was also looking for a new side project at the time and decided it would be more fun to try and build my own GPS running watch 
+										then go buy a watch similar to the watches all of my running friends have. I thought this project would be a good opportunity to learn more about some of 
+										the real world problems faced by embedded systems and wearable electronics.
+									</p>
+									<p>This project idea was the main motivation 
+										behind the GregBuild project. I needed a build system for writing embedded C code to go on the microcontroller in the watch. 
+										As has become the theme of my recent side projects, I decided to write my own build system (for learning and to tailor it to 
+										my own specific needs and wants). So I created
+										GregBuild.
+										After about four months of getting GregBuild to a level that was sufficient and convenient enough that I thought I could use it for a real project
+										I began working on the GregWatch project. 
+									</p>
+									<p>
+										Progess to this date has only included getting some simple graphic displays on the watch screen,
+										but it has also revealed a few bugs in GregBuild and is a good opportunity to gain knowledge about that project as I work on this one. 
+										Eventually, I think that I could also tie this project into the DinosInspire training log project from a few years back. I think there is a lot of work 
+										to be done before I start to work on that, but it would be an interesting bringing together of a bunch of different projects to create a full product similar to how companies
+										like Garmin building everything from the watch, up to the web user face and all of the data analysis of what is collected from physical device.
+									</p>
+									
+									<div class="row">
+										<div class="col-sm-6">
+                                            <video width="90%" height="200px" controls>
+                                                <source src="HelloSarah.MOV.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>"Hello Sarah" for the screen. Using "Sarah" instead of "World" for demoing to my girlfriend.</i></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <video width="90%" height="200px" controls>
+                                                <source src="BaseThreeTimer.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>Running a base three timer through its paces. This was at a point where I had only created bit patterns for 0-2. Other numbers to come later.</i></p>
+                                        </div>
+                                    </div>
+									<div class="row">
+										<div class="col-sm-6">
+                                            <img src="FirstSolderTopView.jpg" style="width:100%;">
+                                            <p><i>Top view of my first time soldering. Thank you to Sarah for saving me with desoldering wick when I bridged two adjacent pins.</i></p>
+                                        </div>
+										<div class="col-sm-6">
+											<img src="FirstSolderSideView.jpg" style="margin-left:5%; width:88%;">
+                                            <p style="margin-left:5%;"><i>Side view of my first time soldering. Not the prettiest solder job, but it gets the job done!</i></p>
+                                        </div>
+                                    </div>
+
+									<br />
+									<h4><u>Lessons Learned</u></h4>	
+									<p>
+										In addition to the code, I will need to learn a lot of other things
+										about creating a customer ready electronic product (I'm not trying to sell this to an actual customer, but for the sake of learning I want to 
+										take it to the level of quality where I could). What I imagine I will need to learn includes:
+									</p>
+                                    <ul>
+                                        <li>How to solder</li>
+										<li>How to 3D print/manufacture a case for the watch</li>
+										<li>How to shrink the system down from a microcontroller on an Arduino board and a bunch of stuff on a breadboard, 
+											down into somehting that can fit on a person's wrist
+										</li>
+										<li>Shrinking it down might require a customer PCB, I will need to learn how to create that</li>
+										<li>In general I will probably need to learn a lot about electronics and more of the hardware side of the project</li>
+										<li>To run the screen I have already reviewed/re-learned some of the material on the SPI interface that I had learned in school (ENCM 511 - Embedded Systems Interfacing)</li>
+										<li>When I get to the point of using buttons and a GPS module, I will need to learn more about both the hardware and software interfaces
+											required with those aspects of the project.
+										</li>
+										<li>How to generate more advanced graphics for the screen. An idea for something to do here is to re-learn some 
+											of the image/video processing techniques I learned in ENEL 503 - Computer Vision to take any image or video,
+											resize it and convert it to monochrome, then use the result to display the original imagine on my small monochrome watch screen display.
+										</li>
+                                    </ul>
+								</td>
+							</tr>
+							<tr class="GregWatchProjectContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>
+
                             <tr id="GregBuildProject" class="projectsHeader" onclick="toggleRow('GregBuildProject', 'GregBuildProjectContents');">
 								<th>GregBuild - Build System for C/C++ Projects (January 2021 to April 2021) <i id="GregBuildProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>	
