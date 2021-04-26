@@ -1,0 +1,2 @@
+1) Cleanup sizing() javascript function all html page
+    - Should probably split it out into a shared javascript file

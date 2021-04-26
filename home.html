@@ -5,106 +5,8 @@
 	
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="main.css"/>
+		<link rel="stylesheet" href="common/main.css"/>
 		<script>
-			var count = 0;
-			var upDown = "down";
-			function changeImages(startTime){
-				/*var img = document.getElementById("cf2");
-				if(count == 7){
-					count = 0;
-				}
-				else{
-					count++;
-				}
-				if(count == 0){
-					img.classList.add("A");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("D");
-					img.classList.remove("G");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if (count == 1){
-					img.classList.add("B");
-					img.classList.remove("D");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("G");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if(count == 2){
-					img.classList.add("C");
-					img.classList.remove("B");
-					img.classList.remove("D");
-					img.classList.remove("A");
-					img.classList.remove("G");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if(count == 3){
-					img.classList.add("D");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("G");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if(count == 4){
-					img.classList.add("E");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("D");
-					img.classList.remove("G");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if(count == 5){
-					img.classList.add("F");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("D");
-					img.classList.remove("E");
-					img.classList.remove("G");
-					img.classList.remove("H");
-				}
-				else if(count == 6){
-					img.classList.add("G");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("D");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("H");
-				}
-				else if(count == 7){
-					img.classList.add("H");
-					img.classList.remove("B");
-					img.classList.remove("C");
-					img.classList.remove("A");
-					img.classList.remove("D");
-					img.classList.remove("E");
-					img.classList.remove("F");
-					img.classList.remove("G");
-				}*/
-			}
-			
-			
-			setInterval(function(){
-				changeImages(new Date().getTime())
-			}, 3500);
-
-		
 			function sizing(){
 				var paddingTopStr = (document.getElementById("NavigationBar").offsetHeight).toString() + "px";
 				document.getElementById("CarouselRow").style.paddingTop = paddingTopStr;
@@ -220,7 +122,7 @@
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
 				  <li class="nav-item active"><a href="home.html">Home</a></li>
-				  <li class="nav-item"><a href="about.html">About</a></li>
+				  <li class="nav-item"><a href="aboutPage/about.html">About</a></li>
 				  <li class="nav-item"><a href="workExperience.html">Work Experiences</a></li>
 				  <li class="nav-item"><a href="personalProjects.html">Personal Projects</a></li>
 				  <li class="nav-item"><a href="schoolProjects.html">School Projects</a></li>
