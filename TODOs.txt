@@ -1,2 +1,6 @@
 1) Cleanup sizing() javascript function all html page
     - Should probably split it out into a shared javascript file
+2) Investigate consolidating the nav bar and header sections of each html file
+so we don't need to keep multiple copies of that code
+3) Some sort of templating would be nice for the rows in educationCourses.html  
+    - Is vanilla html capable of this on its own?
