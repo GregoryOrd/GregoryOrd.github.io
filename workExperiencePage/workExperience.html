@@ -5,7 +5,7 @@
 	
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="common/main.css"/>
+		<link rel="stylesheet" href="../common/main.css"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		<script>
 			function toggleRow(id, className){
@@ -43,12 +43,12 @@
 			</div>
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
-				  <li class="nav-item"><a href="homePage/home.html">Home</a></li>
-				  <li class="nav-item"><a href="aboutPage/about.html">About</a></li>
+				  <li class="nav-item"><a href="../homePage/home.html">Home</a></li>
+				  <li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
 				  <li class="nav-item active"><a href="workExperience.html">Work Experiences</a></li>
-				  <li class="nav-item"><a href="personalProjectsPage/personalProjects.html">Personal Projects</a></li>
-				  <li class="nav-item"><a href="schoolProjectsPage/schoolProjects.html">School Projects</a></li> 
-				  <li class="nav-item"><a href="educationPage/educationCourses.html">Education/Courses</a></li> 
+				  <li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a></li>
+				  <li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li> 
+				  <li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li> 
 				</ul>
 			</div>
 		  </div>
@@ -118,13 +118,13 @@
 									<h4><u>Project Description</u></h4>
 									<p>The goal of this project was to build an application to allow clients in group counselling programs to complete assessment questionnaires each week throughout a 10-14 week program duration. The application was web-based and was presented to clients via tablets connected to the Calgary Counselling Centre's internal network. This project was completed by myself and another summer student using C# and the .NET framework.</p>
 									<video width="50%" class="videoRight" controls>
-										<source src="GWMX6921.mp4" type="video/mp4">
+										<source src="CalgaryCounsellingCentre/Questionnaire.mp4" type="video/mp4">
 										Your browser does not support the video tag.
 									</video>
 									<p>The Calgary Counselling Centre runs 12 different group programs for clients with different needs. Some of the programs are for adults, while others are intended for children. Each group has a "Pre-Package" which is completed at the first session, a "Post-Package" which was completed at the final session, and a standard package that is completed at every session in  between. Each package consists of a variable number of individual questionnaires. The application needed to be able to get the client's log-in information, determine which questionnaire package the client was to complete that day, then serve that package to the client. The client's questionnaire answer data was then stored in a database before being pulled out and processed by a software used by counsellors and the centre's Research department. In total, there were about 40 individual questionnaires arranged into approximately 30 packages.</p><br />
 									<h4><u>Project Add-ons</u></h4>
 									<p>In addition to the main project requirements, my partner and I had and implemented some ideas to make the project more complete. The first was an editing interface that allowed users to modify the contents of programs, packages, sections and questions. This functioned through a web API. The second add-on was an automated emailing system. This system detected common database configuration errors and sent an appropriate email to the Centre's IT Coordinator in response. The system was also capable of sending summary reports of important questions, but this feature was turned off. Finally, simple interface was built with another web API to allow retrieve client entered question data. The interface allowed the user to specify filters such as date, program type, package type, client, etc. On the client-side, the retrieved data was formatted into an excel spreadsheet that could be downloaded and inputted into the software used by the Research Department.</p>
-									<video width="50%" class="videoRight" src="IMG_3357.MOV" controls>
+									<video width="50%" class="videoRight" src="CalgaryCounsellingCentre/WelcomeAndLogIn.MOV" controls>
 										Your browser does not support the video tag.
 									</video>
 									<br />
