@@ -128,7 +128,7 @@
 					<table>
 						<tbody>
                             <tr id="GregWatchProject" class="projectsHeader" onclick="toggleRow('GregWatchProject', 'GregWatchProjectContents');">
-								<th>GregWatch - Running Watch - In Development (April 2021 to Present) <i id="GregWatchProjectCaret" class="fa fa-caret-right"></i></th>
+								<th>GregWatch - Running Watch - Development Temporarily Paused (April 2021 to August 2021) <i id="GregWatchProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>	
 							<tr class="GregWatchProjectContents whiteBackground" hidden>
 								<td class="projectsContent">
@@ -140,8 +140,9 @@
                                     <p>
                                         One morning I woke up and started thinking about logging my training and how I had lost touch with that habbit. Previously, I had logged 
 										training data with pen and paper. This took a few minutes each day and, over time, became harder and harder to look through. With years of 
-										data spread over different physical log books, I wished that I had one of the new fancy watches that can automatically upload run 
-										data to your phone and into applications like Strava or Garmin Connect where you could analyze it easily.
+										data spread over different physical log books, I wished that I had a newer watch that can automatically upload run 
+										data to your phone and into applications like Strava or Garmin Connect where you could analyze it easily. My current running watch is an old 
+										Garmin and I haven't been able to get run data off of it in recent years.
                                     </p>
                                     <p>
                                         I was also looking for a new side project at the time and decided it would be more fun to try and build my own GPS running watch 
@@ -157,8 +158,8 @@
 										I began working on the GregWatch project. 
 									</p>
 									<p>
-										Progess to this date has only included getting some simple graphic displays on the watch screen,
-										but it has also revealed a few bugs in GregBuild and is a good opportunity to gain knowledge about that project as I work on this one. 
+										Progess to this date has included getting a simple timer to run on the screen with a button to stop and start it. This work
+										has also revealed a few bugs in GregBuild and is a good opportunity to gain knowledge about that project as I work on this one. 
 										Eventually, I think that I could also tie this project into the DinosInspire training log project from a few years back. I think there is a lot of work 
 										to be done before I start to work on that, but it would be an interesting bringing together of a bunch of different projects to create a full product similar to how companies
 										like Garmin building everything from the watch, up to the web user face and all of the data analysis of what is collected from physical device.
@@ -177,7 +178,7 @@
                                                 <source src="GregWatch/BaseThreeTimer.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
-                                            <p><i>Running a base three timer through its paces. This was at a point where I had only created bit patterns for 0-2. Other numbers to come later.</i></p>
+                                            <p><i>Running a base three timer through its paces. This was at a point where I had only created bit patterns for 0-2. I now have bit display patterns for 0-9 and I timer that can run up to 1 hour.</i></p>
                                         </div>
                                     </div>
 									<div class="row">
@@ -190,26 +191,30 @@
                                             <p style="margin-left:5%;"><i>Side view of my first time soldering. Not the prettiest solder job, but it gets the job done!</i></p>
                                         </div>
                                     </div>
+									<div class="row">
+										<div class="col-sm-6">
+                                            <img src="GregWatch/PCBFront.jpg" style="width:100%;" onclick="showTopViewModal()">
+                                            <p><i>Front side of the first PCB design attempt for GregWatch. Manufactured by OshPark.</i></p>
+                                        </div>
+										<div class="col-sm-6">
+											<img src="GregWatch/PCBBack.jpg" style="margin-left:5%; width:88%;" onclick="showSideViewModal()">
+                                            <p style="margin-left:5%;"><i>Back side of the first PCB design attempt for GregWatch. Manufactured by OshPark.</i></p>
+                                        </div>
+                                    </div>
 
 									<br />
 									<h4><u>Lessons Learned</u></h4>	
 									<p>
 										In addition to the code, I will need to learn a lot of other things
 										about creating a customer ready electronic product (I'm not trying to sell this to an actual customer, but for the sake of learning I want to 
-										take it to the level of quality where I could). What I imagine I will need to learn includes:
+										take it to the level of quality where I could). Some of the lessons learned and lessons still to learn include:
 									</p>
                                     <ul>
-                                        <li>How to solder</li>
+                                        <li>How to solder. (Some progress has been made here since the first try, shown above. It helps keeping your iron tip clean!)</li>
 										<li>How to 3D print/manufacture a case for the watch</li>
-										<li>How to shrink the system down from a microcontroller on an Arduino board and a bunch of stuff on a breadboard, 
-											down into somehting that can fit on a person's wrist
-										</li>
-										<li>Shrinking it down might require a customer PCB, I will need to learn how to create that</li>
+										<li>How to design a custom PCB.</li>
 										<li>In general I will probably need to learn a lot about electronics and more of the hardware side of the project</li>
 										<li>To run the screen I have already reviewed/re-learned some of the material on the SPI interface that I had learned in school (ENCM 511 - Embedded Systems Interfacing)</li>
-										<li>When I get to the point of using buttons and a GPS module, I will need to learn more about both the hardware and software interfaces
-											required with those aspects of the project.
-										</li>
 										<li>How to generate more advanced graphics for the screen. An idea for something to do here is to re-learn some 
 											of the image/video processing techniques I learned in ENEL 503 - Computer Vision to take any image or video,
 											resize it and convert it to monochrome, then use the result to display the original imagine on my small monochrome watch screen display.
