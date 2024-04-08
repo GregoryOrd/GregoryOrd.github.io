@@ -1,805 +1,605 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-	<title>Gregory Ord Portfolio</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../common/main.css" />
-	<link rel="stylesheet" href="personalProjects.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<script>
-		function toggleRow(id, className) {
-			var caretID = id + "Caret";
-			var caret = document.getElementById(caretID);
-			caret.classList.toggle("fa-caret-right");
-			caret.classList.toggle("fa-caret-down");
-			var yearElement = document.getElementById(id);
-			var elements = document.getElementsByClassName(className);
-			var i = 0;
-			var prev = elements[0].hidden;
-			if (prev == true) {
-				yearElement.style.borderBottom = "none";
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+		<title>Greg Ord's Software Development Porfolio</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../common/main.css"/>
+		<link rel="stylesheet" href="personalProjects.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script>
+			function toggleRow(id, className){
+				var caretID = id + "Caret";
+				var caret = document.getElementById(caretID);
+				caret.classList.toggle("fa-caret-right");
+				caret.classList.toggle("fa-caret-down");
+				var yearElement = document.getElementById(id);
+				var elements = document.getElementsByClassName(className);
+				var i = 0;
+				var prev = elements[0].hidden;
+				if(prev == true){
+					yearElement.style.borderBottom = "none";
+				}
+				else{
+					yearElement.style.borderBottom = "solid";
+					yearElement.style.borderBottomColor = "white";
+				}
+				for(i; i < elements.length; i++){
+					elements[i].hidden = !prev;
+				}
 			}
-			else {
-				yearElement.style.borderBottom = "solid";
-				yearElement.style.borderBottomColor = "white";
-			}
-			for (i; i < elements.length; i++) {
-				elements[i].hidden = !prev;
-			}
-		}
-	</script>
-</head>
-
-<body>
-	<div class="row">
-		<div id="solderTopViewModal" class="modal">
-			<div class="modal-content">
+		</script>
+	</head>
+	<body>
+		<div class="row">
+			<div id="solderTopViewModal" class="modal">
+			  <div class="modal-content">
 				<div class="modal-header">
-					<h4 id="ModalTitle" class="modal-title">Top view of my first time soldering. Thank you to Sarah for
-						saving me and removing the bridge when I soldered two adjacent pins together.</h4>
+					<h4 id="ModalTitle" class="modal-title">Top view of my first time soldering. Thank you to Sarah for saving me and removing the bridge when I soldered two adjacent pins together.</h4>
 					<button type="button" style="opacity: 1;" class="close" data-dismiss="modal">&times;</button>
-				</div>
+				</div>					  
 				<img src="GregWatch/FirstSolderTopView.jpg" style="width:80%; margin-top: 2.5%;">
-			</div>
+			  </div>
 
+			</div>				
 		</div>
-	</div>
-	<div class="row">
-		<div id="solderSideViewModal" class="modal">
-			<div class="modal-content">
+		<div class="row">
+			<div id="solderSideViewModal" class="modal">
+			  <div class="modal-content">
 				<div class="modal-header">
-					<h4 id="ModalTitle" class="modal-title">Side view of my first time soldering. Not the prettiest
-						solder job, but it gets the job done!</h4>
+					<h4 id="ModalTitle" class="modal-title">Side view of my first time soldering. Not the prettiest solder job, but it gets the job done!</h4>
 					<button type="button" style="opacity: 1;" class="close" data-dismiss="modal">&times;</button>
-				</div>
+				</div>					  
 				<img src="GregWatch/FirstSolderSideView.jpg" style="width:80%; margin-top: 2.5%;">
-			</div>
+			  </div>
 
+			</div>				
 		</div>
-	</div>
-	<script>
-		var topViewModal = document.getElementById("solderTopViewModal");
-		var sideViewModal = document.getElementById("solderSideViewModal");
-		function showTopViewModal() {
-			topViewModal.style.display = "block";
-		}
-		function showSideViewModal() {
-			sideViewModal.style.display = "block";
-		}
-		var topViewModalCloseButton = document.getElementsByClassName("close")[0];
-		var sideViewModalCloseButton = document.getElementsByClassName("close")[1];
-		topViewModalCloseButton.onclick = function () {
-			topViewModal.style.display = "none";
-		}
-		sideViewModalCloseButton.onclick = function () {
-			sideViewModal.style.display = "none";
-		}
-		window.onclick = function (event) {
-			if (event.target == topViewModal) {
+		<script>
+			var topViewModal = document.getElementById("solderTopViewModal");
+			var sideViewModal = document.getElementById("solderSideViewModal");
+			function showTopViewModal(){
+				topViewModal.style.display = "block";
+			}
+			function showSideViewModal(){
+				sideViewModal.style.display = "block";
+			}
+			var topViewModalCloseButton = document.getElementsByClassName("close")[0];
+			var sideViewModalCloseButton = document.getElementsByClassName("close")[1];
+			topViewModalCloseButton.onclick = function() {
 				topViewModal.style.display = "none";
 			}
-			else if (event.target == sideViewModal) {
+			sideViewModalCloseButton.onclick = function() {
 				sideViewModal.style.display = "none";
 			}
-		}				
-	</script>
+			window.onclick = function(event) {
+			  if (event.target == topViewModal) {
+				topViewModal.style.display = "none";
+			  }
+			  else if(event.target == sideViewModal)
+			  {
+				sideViewModal.style.display = "none";
+			  }
+			}				
+		</script>
 
-	<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
-		<div id="NavigationBar" class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+		  <div id="NavigationBar" class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="../homePage/home.html">Portfolio Website</a>
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <a class="navbar-brand" href="../homePage/home.html">Software Portfolio Website</a>
 			</div>
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="../homePage/home.html">Home</a></li>
-					<li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
-					<li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
-					<li class="nav-item active"><a href="personalProjects.html">Personal Projects</a></li>
-					<li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
-					<li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li>
+				  <li class="nav-item"><a href="../homePage/home.html">Home</a></li>
+				  <li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
+				  <li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
+				  <li class="nav-item active"><a href="personalProjects.html">Personal Projects</a></li>
+                  <li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
+                  <li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li>
 				</ul>
 			</div>
-		</div>
-	</nav>
-	<div class="container-fluid">
-		<section>
-			<div class="row" id="pageTitle">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					<h1>Personal Projects</h1>
+		  </div>
+		</nav>
+		<div class="container-fluid">
+			<section>
+				<div class="row" id="pageTitle">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<h1>Personal Projects</h1>
+					</div>
+					<div class="col-sm-2"></div>
 				</div>
-				<div class="col-sm-2"></div>
-			</div>
-			<div class="row">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					<h4>Over the years I have worked on some personal projects. Some of these projects have taken place
-						at times overlapping with school or work and have just been for fun outside of work/school
-						hours.</h4>
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8"><h4>Over the years I have worked on some personal projects. Some of these projects have taken place at times overlapping with school or work and have just been for fun outside of work/school hours.</h4></div>
+					<div class="col-sm-2"></div>
 				</div>
-				<div class="col-sm-2"></div>
-			</div>
-		</section>
-		<section>
+			</section>
+			<section>
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-8">
 					<table>
 						<tbody>
-							<tr id="GregWatchProject" class="projectsHeader"
-								onclick="toggleRow('GregWatchProject', 'GregWatchProjectContents');">
-								<th>GregWatch - Running Watch - Development Temporarily Paused (April 2021 to August
-									2021) <i id="GregWatchProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
+                            <tr id="GregWatchProject" class="projectsHeader" onclick="toggleRow('GregWatchProject', 'GregWatchProjectContents');">
+								<th>GregWatch - Running Watch - Development Temporarily Paused (April 2021 to August 2021) <i id="GregWatchProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
 							<tr class="GregWatchProjectContents whiteBackground" hidden>
 								<td class="projectsContent">
-									<br />
-									<h4><u>Project Description</u></h4>
+								<br />
+								<h4><u>Project Description</u></h4>
 									<p>A running watch.
-									</p>
-									<p>The github repo for this project is here: <a
-											href="https://github.com/GregoryOrd/GregWatch">https://github.com/GregoryOrd/GregWatch</a>
-									</p><br />
-									<p>
-										One morning I woke up and started thinking about logging my training and how I
-										had lost touch with that habbit. Previously, I had logged
-										training data with pen and paper. This took a few minutes each day and, over
-										time, became harder and harder to look through. With years of
-										data spread over different physical log books, I wished that I had a newer watch
-										that could automatically upload run
-										data to your phone and into applications like Strava or Garmin Connect where you
-										could analyze it easily. My current running watch is an old
+                                    </p>
+									<p>The github repo for this project is here: <a href="https://github.com/GregoryOrd/GregWatch">https://github.com/GregoryOrd/GregWatch</a></p><br/>
+                                    <p>
+                                        One morning I woke up and started thinking about logging my training and how I had lost touch with that habbit. Previously, I had logged 
+										training data with pen and paper. This took a few minutes each day and, over time, became harder and harder to look through. With years of 
+										data spread over different physical log books, I wished that I had a newer watch that could automatically upload run 
+										data to your phone and into applications like Strava or Garmin Connect where you could analyze it easily. My current running watch is an old 
 										Garmin and I haven't been able to get run data off of it in recent years.
-									</p>
-									<p>
-										I was also looking for a new side project at the time and decided it would be
-										more fun to try to build my own GPS running watch
-										than go buy a watch similar to the watches all of my running friends have. I
-										thought this project would be a good opportunity to learn more about some of
+                                    </p>
+                                    <p>
+                                        I was also looking for a new side project at the time and decided it would be more fun to try to build my own GPS running watch 
+										than go buy a watch similar to the watches all of my running friends have. I thought this project would be a good opportunity to learn more about some of 
 										the real world problems faced by embedded systems and wearable electronics.
 									</p>
-									<p>This project idea was the main motivation
-										behind the GregBuild project. I needed a build system for writing embedded C
-										code to go on the microcontroller in the watch.
-										As has become the theme of my recent side projects, I decided to write my own
-										build system (for learning and to tailor it to
+									<p>This project idea was the main motivation 
+										behind the GregBuild project. I needed a build system for writing embedded C code to go on the microcontroller in the watch. 
+										As has become the theme of my recent side projects, I decided to write my own build system (for learning and to tailor it to 
 										my own specific needs and wants). So I created
 										GregBuild.
-										After about four months of getting GregBuild to a level that was sufficient and
-										convenient enough that I thought I could use it for a real project
-										I began working on the GregWatch project.
+										After about four months of getting GregBuild to a level that was sufficient and convenient enough that I thought I could use it for a real project
+										I began working on the GregWatch project. 
 									</p>
 									<p>
-										Progess to this date has included getting a simple timer to run on the screen
-										with a button to stop and start it. This work
-										has also revealed a few bugs in GregBuild and is a good opportunity to gain
-										knowledge about that project as I work on this one.
-										Eventually, I could tie this project into the DinosInspire training log project
-										from a few years back. A lot of work
-										needs to be done before I start to work on that, but it would be an interesting
-										integration of a bunch of different projects to create a full product similar to
-										how companies
-										like Garmin build everything from the watch, up to the web user interface and
-										all of the data analysis of what is collected from the physical device.
+										Progess to this date has included getting a simple timer to run on the screen with a button to stop and start it. This work
+										has also revealed a few bugs in GregBuild and is a good opportunity to gain knowledge about that project as I work on this one. 
+										Eventually, I could tie this project into the DinosInspire training log project from a few years back. A lot of work 
+										needs to be done before I start to work on that, but it would be an interesting integration of a bunch of different projects to create a full product similar to how companies
+										like Garmin build everything from the watch, up to the web user interface and all of the data analysis of what is collected from the physical device.
 									</p>
-
+									
 									<div class="row">
 										<div class="col-sm-6">
-											<video width="90%" height="200px" controls>
-												<source src="GregWatch/HelloSarah.MOV.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-											<p><i>"Hello Sarah" for the screen. Using "Sarah" instead of "World" for
-													demoing to my girlfriend.</i></p>
-										</div>
-										<div class="col-sm-6">
-											<video width="90%" height="200px" controls>
-												<source src="GregWatch/BaseThreeTimer.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-											<p><i>Running a base three timer through its paces. This was at a point
-													where I had only created bit patterns for 0-2. I now have bit
-													display patterns for 0-9 and a timer that can run up to 1 hour.</i>
-											</p>
-										</div>
-									</div>
+                                            <video width="90%" height="200px" controls>
+                                                <source src="GregWatch/HelloSarah.MOV.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>"Hello Sarah" for the screen. Using "Sarah" instead of "World" for demoing to my girlfriend.</i></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <video width="90%" height="200px" controls>
+                                                <source src="GregWatch/BaseThreeTimer.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>Running a base three timer through its paces. This was at a point where I had only created bit patterns for 0-2. I now have bit display patterns for 0-9 and a timer that can run up to 1 hour.</i></p>
+                                        </div>
+                                    </div>
 									<div class="row">
 										<div class="col-sm-6">
-											<img src="GregWatch/FirstSolderTopView.jpg" style="width:100%;"
-												onclick="showTopViewModal()">
-											<p><i>Top view of my first time soldering. Thank you to Sarah for saving me
-													and removing the bridge when I soldered two adjacent pins
-													together.</i></p>
-										</div>
+                                            <img src="GregWatch/FirstSolderTopView.jpg" style="width:100%;" onclick="showTopViewModal()">
+                                            <p><i>Top view of my first time soldering. Thank you to Sarah for saving me and removing the bridge when I soldered two adjacent pins together.</i></p>
+                                        </div>
 										<div class="col-sm-6">
-											<img src="GregWatch/FirstSolderSideView.jpg"
-												style="margin-left:5%; width:88%;" onclick="showSideViewModal()">
-											<p style="margin-left:5%;"><i>Side view of my first time soldering. Not the
-													prettiest solder job, but it gets the job done!</i></p>
-										</div>
-									</div>
+											<img src="GregWatch/FirstSolderSideView.jpg" style="margin-left:5%; width:88%;" onclick="showSideViewModal()">
+                                            <p style="margin-left:5%;"><i>Side view of my first time soldering. Not the prettiest solder job, but it gets the job done!</i></p>
+                                        </div>
+                                    </div>
 									<div class="row">
 										<div class="col-sm-6">
-											<img src="GregWatch/PCBFront.jpg" style="width:100%;"
-												onclick="showTopViewModal()">
-											<p><i>Front side of the first PCB design attempt for GregWatch. Manufactured
-													by OshPark.</i></p>
-										</div>
+                                            <img src="GregWatch/PCBFront.jpg" style="width:100%;" onclick="showTopViewModal()">
+                                            <p><i>Front side of the first PCB design attempt for GregWatch. Manufactured by OshPark.</i></p>
+                                        </div>
 										<div class="col-sm-6">
-											<img src="GregWatch/PCBBack.jpg" style="margin-left:5%; width:88%;"
-												onclick="showSideViewModal()">
-											<p style="margin-left:5%;"><i>Back side of the first PCB design attempt for
-													GregWatch. Manufactured by OshPark.</i></p>
-										</div>
-									</div>
+											<img src="GregWatch/PCBBack.jpg" style="margin-left:5%; width:88%;" onclick="showSideViewModal()">
+                                            <p style="margin-left:5%;"><i>Back side of the first PCB design attempt for GregWatch. Manufactured by OshPark.</i></p>
+                                        </div>
+                                    </div>
 
 									<br />
-									<h4><u>Lessons Learned</u></h4>
+									<h4><u>Lessons Learned</u></h4>	
 									<p>
 										In addition to the code, I will need to learn a lot of other things
-										about creating a customer ready electronic product (I'm not trying to sell this
-										to an actual customer, but for the sake of learning I want to
-										take it to the level of quality where I could). Some of the lessons learned and
-										lessons still to learn include:
+										about creating a customer ready electronic product (I'm not trying to sell this to an actual customer, but for the sake of learning I want to 
+										take it to the level of quality where I could). Some of the lessons learned and lessons still to learn include:
 									</p>
-									<ul>
-										<li>How to solder. (Some progress has been made here since the first try, shown
-											above. It helps keeping your iron tip clean!)</li>
+                                    <ul>
+                                        <li>How to solder. (Some progress has been made here since the first try, shown above. It helps keeping your iron tip clean!)</li>
 										<li>How to 3D print/manufacture a case for the watch</li>
 										<li>How to design a custom PCB.</li>
-										<li>In general I want to continue learning about electronics and more of the
-											hardware side of the project</li>
-										<li>To run the screen I have already reviewed/re-learned some of the material on
-											the SPI interface that I had learned in school (ENCM 511 - Embedded Systems
-											Interfacing)</li>
-										<li>How to generate more advanced graphics for the screen. An idea for something
-											to do here is to re-learn some
-											of the image/video processing techniques I learned in ENEL 503 - Computer
-											Vision to take any image or video,
-											resize it and convert it to monochrome, then use the result to display the
-											original image on my small monochrome watch screen display.
+										<li>In general I want to continue learning about electronics and more of the hardware side of the project</li>
+										<li>To run the screen I have already reviewed/re-learned some of the material on the SPI interface that I had learned in school (ENCM 511 - Embedded Systems Interfacing)</li>
+										<li>How to generate more advanced graphics for the screen. An idea for something to do here is to re-learn some 
+											of the image/video processing techniques I learned in ENEL 503 - Computer Vision to take any image or video,
+											resize it and convert it to monochrome, then use the result to display the original image on my small monochrome watch screen display.
 										</li>
-									</ul>
+                                    </ul>
 								</td>
 							</tr>
 							<tr class="GregWatchProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
+									<td class="projectsContentLast"></td>
 							</tr>
 
-							<tr id="GregBuildProject" class="projectsHeader"
-								onclick="toggleRow('GregBuildProject', 'GregBuildProjectContents');">
-								<th>GregBuild - Build System for C/C++ Projects (January 2021 to April 2021) <i
-										id="GregBuildProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
+                            <tr id="GregBuildProject" class="projectsHeader" onclick="toggleRow('GregBuildProject', 'GregBuildProjectContents');">
+								<th>GregBuild - Build System for C/C++ Projects (January 2021 to April 2021) <i id="GregBuildProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
 							<tr class="GregBuildProjectContents whiteBackground" hidden>
 								<td class="projectsContent">
-									<br />
-									<h4><u>Project Description</u></h4>
-									<p>A build system for C/C++ projects that allows the user to build for either
-										the host machine and or a different target hardware. For example, using their
-										x86 laptop,
-										a user could build an executable for that same x86 laptop. Or for the case of
-										building
-										for a different target hardware, the user could use GregBuild on their x86
-										laptop to build
-										an exectuable to run on a different harware, such as a microcontroller.
-									</p>
-									<p>The github repo for this project is here: <a
-											href="https://github.com/GregoryOrd/GregBuild">https://github.com/GregoryOrd/GregBuild</a>
-									</p><br />
-									<p>
-										GregBuild is a project that I see myself working on for a long time. There is a
-										lot that
-										goes into a professional grade build system, and this project is not there yet.
-										I worked on this for about four months before making the 0.0.1 release. After
-										those four months
-										it was working well enough that I decided to stop actively developing it and
-										start using it as a
-										user.
-									</p>
-									<p>
-										There are a lot of things I would still like to improve. So another 4 months of
-										working on GregBuild may be in the cards for the not so distant future.
-									</p>
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>A build system for C/C++ projects that allows the user to build for either 
+                                        the host machine and or a different target hardware. For example, using their x86 laptop,
+                                        a user could build an executable for that same x86 laptop. Or for the case of building 
+                                        for a different target hardware, the user could use GregBuild on their x86 laptop to build
+                                        an exectuable to run on a different harware, such as a microcontroller.
+                                    </p>
+									<p>The github repo for this project is here: <a href="https://github.com/GregoryOrd/GregBuild">https://github.com/GregoryOrd/GregBuild</a></p><br/>
+                                    <p>
+                                        GregBuild is a project that I see myself working on for a long time. There is a lot that 
+                                        goes into a professional grade build system, and this project is not there yet.
+                                        I worked on this for about four months before making the 0.0.1 release. After those four months
+                                        it was working well enough that I decided to stop actively developing it and start using it as a
+                                        user.
+                                    </p>
+                                    <p>
+                                        There are a lot of things I would still like to improve. So another 4 months of 
+                                        working on GregBuild may be in the cards for the not so distant future.
+                                    </p>
 
-									<div class="row">
-										<div class="col-sm-6">
-											<video width="90%" height="200px" controls>
-												<source src="GregBuild/ExampleSrcRepoVideo.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-											<p><i>Using GregBuild for a Hello World program on the same hardware.</i>
-											</p>
-										</div>
-										<div class="col-sm-6">
-											<video width="90%" height="200px" controls>
-												<source src="GregBuild/BlinkVideo.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-											<p><i>Using GregBuild on a laptop for a Blink program on the Arduino Uno
-													board.</i></p>
-										</div>
-									</div>
-
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <video width="90%" height="200px" controls>
+                                                <source src="GregBuild/ExampleSrcRepoVideo.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>Using GregBuild for a Hello World program on the same hardware.</i></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <video width="90%" height="200px" controls>
+                                                <source src="GregBuild/BlinkVideo.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <p><i>Using GregBuild on a laptop for a Blink program on the Arduino Uno board.</i></p>
+                                        </div>
+                                    </div>
+									
 
 									<br />
-									<h4><u>Lessons Learned</u></h4>
+									<h4><u>Lessons Learned</u></h4>	
 									<p>
 										Build Systems can be Complicated...
 									</p>
-									<ul>
-										<li><a
-												href="https://www.lurklurk.org/linkers/linkers.html">https://www.lurklurk.org/linkers/linkers.html</a>
-											is a helpful article for learning about linkers.</li>
-										<li>Link order can matter.</li>
-										<li>Debugging on microcontrollers is more difficult than in applications running
-											on your laptop.</li>
-										<li>First big project using C. Learned/refreshed my memory on a lot of little
-											things about the language and memory management.</li>
-										<li>Discovered Windows Subsystem for Linux</li>
-										<li>Learned how to use valgrind (Saw/heard about it on internship, but didn't
-											get much exposure to it until using it with this project).</li>
-										<li>Got a better understanding for the compilation/linking process. Learned
-											about some cool tools on linux like 'nm' for inspecting binary files.</li>
-										<li>Learned a little bit about name mangling in C++. Discovered the c++filt tool
-											for demangling names.</li>
-										<li>Got a feel for some of the problems that need to be solved by a test
-											framework.</li>
-										<li>Learned about dynamic linking and libary file types (.dll/.so).</li>
-										<li>Wrote my first application using a plugin architecture.</li>
-										<li>Learned a little bit about releases and the ideas behind them while on
-											internship. Created my first at home release of a project using Github.</li>
-										<li>Applied a lot of the lessons learned while on internship to this project.
-											(Clang-format, git submodules, build system/test framework knowledge, coding
-											style, readability, code modularity, screaming architecture/repo structure)
-										</li>
-										<li>Setup clang-format with VS Code.</li>
-										<li>Learned about VS Code. Learned how to add files to the VS Code include path
-											so the editor
-											doesn't have issues with unknown header files. </li>
-									</ul>
+                                    <ul>
+										<li><a href="https://www.lurklurk.org/linkers/linkers.html">https://www.lurklurk.org/linkers/linkers.html</a> is a helpful article for learning about linkers.</li>
+                                        <li>Link order can matter.</li>
+                                        <li>Debugging on microcontrollers is more difficult than in applications running on your laptop.</li>
+                                        <li>First big project using C. Learned/refreshed my memory on a lot of little things about the language and memory management.</li>
+                                        <li>Discovered Windows Subsystem for Linux</li>
+                                        <li>Learned how to use valgrind (Saw/heard about it on internship, but didn't get much exposure to it until using it with this project).</li>
+                                        <li>Got a better understanding for the compilation/linking process. Learned about some cool tools on linux like 'nm' for inspecting binary files.</li>
+										<li>Learned a little bit about name mangling in C++. Discovered the c++filt tool for demangling names.</li>
+                                        <li>Got a feel for some of the problems that need to be solved by a test framework.</li>
+                                        <li>Learned about dynamic linking and libary file types (.dll/.so).</li>
+                                        <li>Wrote my first application using a plugin architecture.</li>
+                                        <li>Learned a little bit about releases and the ideas behind them while on internship. Created my first at home release of a project using Github.</li>
+                                        <li>Applied a lot of the lessons learned while on internship to this project. (Clang-format, git submodules, build system/test framework knowledge, coding style, readability, code modularity, screaming architecture/repo structure)</li>
+                                        <li>Setup clang-format with VS Code.</li>
+                                        <li>Learned about VS Code. Learned how to add files to the VS Code include path so the editor
+                                            doesn't have issues with unknown header files. </li>
+                                    </ul>
 								</td>
 							</tr>
 							<tr class="GregBuildProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
+									<td class="projectsContentLast"></td>
 							</tr>
 
 
-							<tr id="HelpingHandsRoutinesProject" class="projectsHeader"
-								onclick="toggleRow('HelpingHandsRoutinesProject', 'HelpingHandsRoutinesProjectContents');">
-								<th>Helping Hands Routine Manager (March 2020 to October 2020) <i
-										id="HelpingHandsRoutinesProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
+                            <tr id="HelpingHandsRoutinesProject" class="projectsHeader" onclick="toggleRow('HelpingHandsRoutinesProject', 'HelpingHandsRoutinesProjectContents');">
+								<th>Helping Hands Routine Manager (March 2020 to October 2020) <i id="HelpingHandsRoutinesProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
 							<tr class="HelpingHandsRoutinesProjectContents whiteBackground" hidden>
 								<td class="projectsContent">
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>This project came out of the "Helping Hands Caf&eacute Systems" project below. Myself and a partner 
+                                        were working together to help special education teacher's organize a student run caf&eacute at a high school
+                                        in Illinois where his family lived. He managed the organization/communication with the school and I managed
+                                        the technical side of things.
+                                    </p>
+                                    <p>When COVID-19 began and schools were shut down for a while, we stopped working on the caf&eacute idea 
+                                        and began working on a new idea to help the teachers while students were at home. The idea was to have
+                                        a web application that managed a set of "routines" for each student to complete at home. After the student
+                                        completed each step they would click the "Next Step" button and progress through the set of steps that 
+                                        made up a routine.
+                                    </p>
+                                    <p>The teacher's could make unique routines and assign those routines to students. The application also had a 
+                                        page called the "Live Feed" that was a real time tracker of the students' progress through their routines.
+                                        We thought this could be useful for teacher's to see where the students where in a routine if the teacher
+                                        was working with the student over the phone or through zoom/skype at the same time.
+                                    </p>
+                                    <p>The last feature that this routines manager app had was that it would record how long it took the student
+                                        to complete each step and each routine. Collecting this data would help monitoring learning and progress
+                                        of the student completing their routines. We thought this would be useful data for the teacher's 
+                                        and occupational therapists to have while working with the special education students.
+                                    </p>
+                                    <p>
+                                        This project reached a few teachers who made accounts for their classrooms.
+                                    </p>
 									<br />
-									<h4><u>Project Description</u></h4>
-									<p>This project came out of the "Helping Hands Caf&eacute Systems" project below.
-										Myself and a partner
-										were working together to help special education teacher's organize a student run
-										caf&eacute at a high school
-										in Illinois where his family lived. He managed the organization/communication
-										with the school and I managed
-										the technical side of things.
-									</p>
-									<p>When COVID-19 began and schools were shut down for a while, we stopped working on
-										the caf&eacute idea
-										and began working on a new idea to help the teachers while students were at
-										home. The idea was to have
-										a web application that managed a set of "routines" for each student to complete
-										at home. After the student
-										completed each step they would click the "Next Step" button and progress through
-										the set of steps that
-										made up a routine.
-									</p>
-									<p>The teacher's could make unique routines and assign those routines to students.
-										The application also had a
-										page called the "Live Feed" that was a real time tracker of the students'
-										progress through their routines.
-										We thought this could be useful for teacher's to see where the students where in
-										a routine if the teacher
-										was working with the student over the phone or through zoom/skype at the same
-										time.
-									</p>
-									<p>The last feature that this routines manager app had was that it would record how
-										long it took the student
-										to complete each step and each routine. Collecting this data would help
-										monitoring learning and progress
-										of the student completing their routines. We thought this would be useful data
-										for the teacher's
-										and occupational therapists to have while working with the special education
-										students.
-									</p>
-									<p>
-										This project reached a few teachers who made accounts for their classrooms.
-									</p>
-									<br />
-
+									
 									<div id="HelpingHandsRoutinesCarousel" class="carousel slide" data-ride="carousel">
 										<ol class="carousel-indicators darkIndicators">
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="0"
-												class="active"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="1"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="2"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="3"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="4"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="5"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="6"></li>
-											<li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="7"></li>
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="1"></li>
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="2"></li> 
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="3"></li> 
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="4"></li> 
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="5"></li> 
+										  <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="6"></li> 
+                                          <li data-target="#HelpingHandsRoutinesCarousel" data-slide-to="7"></li> 
 										</ol>
-
+	
 										<div class="carousel-inner">
-											<div class="item">
-												<img src="HelpingHandsRoutines/RoutineStart.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/RoutineStep.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/TeacherDashboard.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item active">
-												<img src="HelpingHandsRoutines/EditRoutine.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/EditStudent.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/LiveFeed.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/NewRoutine.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-											<div class="item">
-												<img src="HelpingHandsRoutines/NewStudent.jpg"
-													style="height: 5%; width:100%;">
-											</div>
-
-											<a class="left carousel-control" href="#HelpingHandsRoutinesCarousel"
-												data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="right carousel-control" href="#HelpingHandsRoutinesCarousel"
-												data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right"></span>
-												<span class="sr-only">Next</span>
-											</a>
-										</div>
+                                            <div class="item">
+                                                <img src="HelpingHandsRoutines/RoutineStart.jpg" style="height: 5%; width:100%;">
+                                            </div>	
+                                            <div class="item">
+                                                <img src="HelpingHandsRoutines/RoutineStep.jpg" style="height: 5%; width:100%;">
+                                            </div>	
+                                            <div class="item">
+                                                <img src="HelpingHandsRoutines/TeacherDashboard.jpg" style="height: 5%; width:100%;">
+                                            </div>	
+										    <div class="item active">
+											    <img src="HelpingHandsRoutines/EditRoutine.jpg" style="height: 5%; width:100%;">
+										    </div>
+										    <div class="item">
+										    	<img src="HelpingHandsRoutines/EditStudent.jpg" style="height: 5%; width:100%;">
+										    </div>
+										    <div class="item">
+										    	<img src="HelpingHandsRoutines/LiveFeed.jpg" style="height: 5%; width:100%;">
+										    </div>
+										    <div class="item">
+										    	<img src="HelpingHandsRoutines/NewRoutine.jpg" style="height: 5%; width:100%;">
+										    </div>
+										    <div class="item">
+										    	<img src="HelpingHandsRoutines/NewStudent.jpg" style="height: 5%; width:100%;">
+										    </div>									  
+										  
+										<a class="left carousel-control" href="#HelpingHandsRoutinesCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#HelpingHandsRoutinesCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
 									</div>
 									<br />
-									<h4><u>Lessons Learned</u></h4>
+									<h4><u>Lessons Learned</u></h4>	
 									<p>
-										This project was completed using the Java Spring framework and VueJS. I had used
-										these tools previously
-										with the Helping Hands Caf&eacute Systems application that was never released,
-										but this was my first project
-										using these tools that actually reached a customer. In addition to learning
-										these tools, I had my first experience
-										using Amazon Web Services. I learned how to setup an EC2 instance, an RDS
-										database, and an ELB load balancer.
-										I learned a little bit about SSL certificates, and deployed my first web
-										application using HTTPS.
+										This project was completed using the Java Spring framework and VueJS. I had used these tools previously
+                                        with the Helping Hands Caf&eacute Systems application that was never released, but this was my first project
+                                        using these tools that actually reached a customer. In addition to learning these tools, I had my first experience
+                                        using Amazon Web Services. I learned how to setup an EC2 instance, an RDS database, and an ELB load balancer. 
+                                        I learned a little bit about SSL certificates, and deployed my first web application using HTTPS.
 									</p>
 								</td>
 							</tr>
 							<tr class="HelpingHandsRoutinesProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
+									<td class="projectsContentLast"></td>
 							</tr>
 
 
-							<tr id="HelpingHandsProject" class="projectsHeader"
-								onclick="toggleRow('HelpingHandsProject', 'HelpingHandsProjectContents');">
-								<th>Helping Hands Caf&eacute Systems (September 2019 to March 2020) <i
-										id="HelpingHandsProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
+							<tr id="HelpingHandsProject" class="projectsHeader" onclick="toggleRow('HelpingHandsProject', 'HelpingHandsProjectContents');">
+								<th>Helping Hands Caf&eacute Systems (September 2019 to March 2020) <i id="HelpingHandsProjectCaret" class="fa fa-caret-right"></i></th>
+							</tr>	
 							<tr class="HelpingHandsProjectContents whiteBackground" hidden>
 								<td class="projectsContent">
-									<br />
-									<h4><u>Project Description</u></h4>
-									<p>Helping Hands Caf&eacute Systems was a project with the goal to improve the
-										efficiency of student run caf&eacute programs in schools. More specifically, it
-										was aimed at caf&eacute programs where the students are enrolled in the school's
-										special education program and the caf&eacute organizers are occuptional
-										therapists. </p>
-									<p>The inspiration for Helping Hands came from a University of Calgary track
-										teammate, Jan Erik Naess. Jan Erik discovered this problem through the school
-										where his mom was working and came to me in the fall of 2019 asking me to help
-										him develop a solution. The only technology the program had in place at the time
-										was a Google Form that allowed customers to place orders. Once orders were
-										placed occuptional therapists would print of large summaries and then filter go
-										through all of the orders and data manually. This was very hard and time
-										consuming. To help this I developed a web application and an automatic label
-										printing solution. </p>
-									<p>In January 2020, we got our system set up at Hinsdale South High School in
-										Darien, Illinois. We were hoping to expand to some of the nearby schools, but
-										ended up stopping on the project when COVID-19 started.</p>
-									<p>In addition to the new technology, we have made a few posters for the students
-										and teachers of the caf&eacute to put up around the school. </p>
-									<p>The solution we implemented was created was a simple google scripts app. We used
-										this technology to start because it was able to easily interface with
-										the pre-existing Google form that the caf&eacute was using. Before we finished
-										working on this project, I started to create a
-										more invloved application using the Java Spring framework and VueJs. That
-										application had customer accounts, an improved order form, and a performance
-										measurement system to track how
-										the students were progressing with their skills in the caf&eacute. We hoped that
-										recording data on how long it took
-										students to make orders would be beneficial to the occupation therapists working
-										with them and could even perhaps
-										be used on a resume for the students to apply to jobs at caf&eacutes outside of
-										the school. However, when COVID-19 started
-										we switched to working on Helping Hands Routines and the Java Spring/VueJS
-										caf&eacute application never made it to the school.
-									</p>
-									<br />
-
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>Helping Hands Caf&eacute Systems was a project with the goal to improve the efficiency of student run caf&eacute programs in schools. More specifically, it was aimed at caf&eacute programs where the students are enrolled in the school's special education program and the caf&eacute organizers are occuptional therapists.  </p>
+									<p>The inspiration for Helping Hands came from a University of Calgary track teammate, Jan Erik Naess. Jan Erik discovered this problem through the school where his mom was working and came to me in the fall of 2019 asking me to help him develop a solution. The only technology the program had in place at the time was a Google Form that allowed customers to place orders. Once orders were placed occuptional therapists would print of large summaries and then filter go through all of the orders and data manually. This was very hard and time consuming. To help this I developed a web application and an automatic label printing solution. </p>
+									<p>In January 2020, we got our system set up at Hinsdale South High School in Darien, Illinois. We were hoping to expand to some of the nearby schools, but ended up stopping on the project when COVID-19 started.</p>
+									<p>In addition to the new technology, we have made a few posters for the students and teachers of the caf&eacute to put up around the school. </p>
+									<p>The solution we implemented was created was a simple google scripts app. We used this technology to start because it was able to easily interface with 
+                                        the pre-existing Google form that the caf&eacute was using. Before we finished working on this project, I started to create a
+                                        more invloved application using the Java Spring framework and VueJs. That application had customer accounts, an improved order form, and a performance measurement system to track how 
+                                        the students were progressing with their skills in the caf&eacute. We hoped that recording data on how long it took
+                                        students to make orders would be beneficial to the occupation therapists working with them and could even perhaps 
+                                        be used on a resume for the students to apply to jobs at caf&eacutes outside of the school. However, when COVID-19 started
+                                        we switched to working on Helping Hands Routines and the Java Spring/VueJS caf&eacute application never made it to the school. 
+                                    </p>
+                                    <br />
+									
 									<div id="HelpingHandsCarousel" class="carousel slide" data-ride="carousel">
 										<ol class="carousel-indicators darkIndicators">
-											<li data-target="#HelpingHandsCarousel" data-slide-to="0" class="active">
-											</li>
-											<li data-target="#HelpingHandsCarousel" data-slide-to="1"></li>
-											<li data-target="#HelpingHandsCarousel" data-slide-to="2"></li>
-											<li data-target="#HelpingHandsCarousel" data-slide-to="3"></li>
-											<li data-target="#HelpingHandsCarousel" data-slide-to="4"></li>
-											<li data-target="#HelpingHandsCarousel" data-slide-to="5"></li>
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="1"></li>
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="2"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="3"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="4"></li> 
+										  <li data-target="#HelpingHandsCarousel" data-slide-to="5"></li> 
 										</ol>
 
 										<div class="carousel-inner">
-											<div class="item active">
-												<img src="HelpingHandsCafe/OrderDashboard.png"
-													style="height: 5%; width:100%;">
-											</div>
+										  <div class="item active">
+											<img src="HelpingHandsCafe/OrderDashboard.png" style="height: 5%; width:100%;">
+										  </div>
+										
+										  <div class="item">
+											<img src="HelpingHandsCafe/ReceiptExample.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="HelpingHandsCafe/ReceiptExample.png"
-													style="height: 5%; width:100%;">
-											</div>
+										  <div class="item">
+											<img src="HelpingHandsCafe/DeliveredOrders.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="HelpingHandsCafe/DeliveredOrders.png"
-													style="height: 5%; width:100%;">
-											</div>
+										  <div class="item">
+											<img src="HelpingHandsCafe/PrintedReceipt.jpg" style="height: 5%; width:50%; margin-left: 25%;">
+										  </div>
 
-											<div class="item">
-												<img src="HelpingHandsCafe/PrintedReceipt.jpg"
-													style="height: 5%; width:50%; margin-left: 25%;">
-											</div>
+										  <div class="item">
+											<img src="HelpingHandsCafe/JanErikSetupWithLadies.jpg" style="height: 5%; width:70%; margin-left: 15%;">
+										  </div>
 
-											<div class="item">
-												<img src="HelpingHandsCafe/JanErikSetupWithLadies.jpg"
-													style="height: 5%; width:70%; margin-left: 15%;">
-											</div>
-
-											<div class="item">
-												<img src="HelpingHandsCafe/OriginalGoogleForm.png"
-													style="height: 5%; width:100%;">
-											</div>
-
-											<a class="left carousel-control" href="#HelpingHandsCarousel"
-												data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="right carousel-control" href="#HelpingHandsCarousel"
-												data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right"></span>
-												<span class="sr-only">Next</span>
-											</a>
-										</div>
+										  <div class="item">
+											<img src="HelpingHandsCafe/OriginalGoogleForm.png" style="height: 5%; width:100%;">
+										  </div>										  
+										  
+										<a class="left carousel-control" href="#HelpingHandsCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#HelpingHandsCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
 									</div>
-									<p><i>Images of the Google Scripts App, the automatically printed receipts, and Jan
-											Erik deploying our system with the ladies at the caf&eacute at Hinsdale High
-											School in Darien, Illinois.</i></p>
+                                    <p><i>Images of the Google Scripts App, the automatically printed receipts, and Jan Erik deploying our system with the ladies at the caf&eacute at Hinsdale High School in Darien, Illinois.</i></p>
 									<br />
-									<h4><u>Lessons Learned</u></h4>
+									<h4><u>Lessons Learned</u></h4>	
 									<p>
-										I learned a bit about Google's developer products, Windows batch scripting, and
-										Brother label printers.
+										I learned a bit about Google's developer products, Windows batch scripting, and Brother label printers.
 									</p>
-									<p>Google has a cloud print service. However, we had formatting issues when using
-										this to send print jobs to the label printer. So the solution to automate
-										printing was to use batch scripting and some python to download data from a
-										Google drive, open printing software, and print orders with a preformatted
-										template. This was done with a Windows laptop as the 'print server'. During this
-										process, I learned that Brother's QL series label printer support the use of
-										raster and ESC-P commands. Although never implemented, an idea for later
-										improvements was to send raw binary data directly from our application to the
-										printer without needing to open the Brother QL printer software on a desktop
-										computer. We were also considering the switch to using a small raspberry pi
-										device as a print server instead of a Windows laptop.</p>
+									<p>Google has a cloud print service. However, we had formatting issues when using this to send print jobs to the label printer. So the solution to automate printing was to use batch scripting and some python to download data from a Google drive, open printing software, and print orders with a preformatted template. This was done with a Windows laptop as the 'print server'. During this process, I learned that Brother's QL series label printer support the use of raster and ESC-P commands. Although never implemented, an idea for later improvements was to send raw binary data directly from our application to the printer without needing to open the Brother QL printer software on a desktop computer. We were also considering the switch to using a small raspberry pi device as a print server instead of a Windows laptop.</p>
 								</td>
 							</tr>
 							<tr class="HelpingHandsProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
+									<td class="projectsContentLast"></td>
 							</tr>
-
-
-
-							<tr id="DinosInspireProject" class="projectsHeader"
-								onclick="toggleRow('DinosInspireProject', 'DinosInspireProjectContents');">
-								<th>Dinos Inspire Training Log Website (June to August 2017) <i
-										id="DinosInspireProjectCaret" class="fa fa-caret-right"></i></th>
+							
+							
+							
+							<tr id="DinosInspireProject" class="projectsHeader" onclick="toggleRow('DinosInspireProject', 'DinosInspireProjectContents');">
+								<th>Dinos Inspire Training Log Website (June to August 2017) <i id="DinosInspireProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr class="DinosInspireProjectContents whiteBackground projectsContentLast" hidden>
 								<td class="projectsContent projectsContent2ndLast">
-									<br />
-									<h4><u>Project Description</u></h4>
-									<p>This was a weekend warrior type project that I worked on during the summer of
-										2017. This project was a web-based application, built using PHP, that allowed
-										distance runners to create accounts and then store data related to their
-										training in a database. The inspiration for this project came from my involvment
-										in the sport and awareness of the importance of keeping a proper training log. I
-										viewed the project as an opportunity to learn about the technology and get a
-										sense for how other training log websites, like Garmin Connect or Strava, might
-										work.</p>
-									<p>This project did not reach completion by the end of summer 2017 and got put on
-										the backburner when school begin in September. However, I did feel that I took
-										this project far enough to achieve the goal of learning the basics of how
-										client-side and server side languages work together in a web application to
-										navigate from page to page, pass data, and interact with a database.</p><br />
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>This was a weekend warrior type project that I worked on during the summer of 2017. This project was a web-based application, built using PHP, that allowed distance runners to create accounts and then store data related to their training in a database. The inspiration for this project came from my involvment in the sport and awareness of the importance of keeping a proper training log. I viewed the project as an opportunity to learn about the technology and get a sense for how other training log websites, like Garmin Connect or Strava, might work.</p>
+									<p>This project did not reach completion by the end of summer 2017 and got put on the backburner when school begin in September. However, I did feel that I took this project far enough to achieve the goal of learning the basics of how client-side and server side languages work together in a web application to navigate from page to page, pass data, and interact with a database.</p><br />
 
 									<div id="DinosInspireCarousel" class="carousel slide" data-ride="carousel">
 										<ol class="carousel-indicators darkIndicators">
-											<li data-target="#DinosInspireCarousel" data-slide-to="0" class="active">
-											</li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="1"></li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="2"></li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="3"></li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="4"></li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="5"></li>
-											<li data-target="#DinosInspireCarousel" data-slide-to="6"></li>
+										  <li data-target="#DinosInspireCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#DinosInspireCarousel" data-slide-to="1"></li>
+										  <li data-target="#DinosInspireCarousel" data-slide-to="2"></li> 
+										  <li data-target="#DinosInspireCarousel" data-slide-to="3"></li> 
+										  <li data-target="#DinosInspireCarousel" data-slide-to="4"></li> 
+										  <li data-target="#DinosInspireCarousel" data-slide-to="5"></li> 
+										  <li data-target="#DinosInspireCarousel" data-slide-to="6"></li> 
 										</ol>
 
 										<div class="carousel-inner">
-											<div class="item active">
-												<img src="DinosInspire/HomePage.png" style="height: 5%; width:100%;">
-											</div>
+										  <div class="item active">
+											<img src="DinosInspire/HomePage.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="DinosInspire/AboutPage.png" style="height: 5%; width:100%;">
-											</div>
+										  <div class="item">
+											<img src="DinosInspire/AboutPage.png" style="height: 5%; width:100%;">
+										  </div>
+										
+										  <div class="item">
+											<img src="DinosInspire/LogInPage.png" style="height: 5%; width:100%;">
+										  </div>
+										  
+										  <div class="item">
+											<img src="DinosInspire/SevenDayDashboard.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="DinosInspire/LogInPage.png" style="height: 5%; width:100%;">
-											</div>
+										  <div class="item">
+											<img src="DinosInspire/EnterRunData.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="DinosInspire/SevenDayDashboard.png"
-													style="height: 5%; width:100%;">
-											</div>
+										  <div class="item">
+											<img src="DinosInspire/EnterWorkputData.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="DinosInspire/EnterRunData.png"
-													style="height: 5%; width:100%;">
-											</div>
-
-											<div class="item">
-												<img src="DinosInspire/EnterWorkputData.png"
-													style="height: 5%; width:100%;">
-											</div>
-
-											<div class="item">
-												<img src="DinosInspire/RecentTraining.png"
-													style="height: 5%; width:100%;">
-											</div>
-											<a class="left carousel-control" href="#DinosInspireCarousel"
-												data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="right carousel-control" href="#DinosInspireCarousel"
-												data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right"></span>
-												<span class="sr-only">Next</span>
-											</a>
-										</div>
+										  <div class="item">
+											<img src="DinosInspire/RecentTraining.png" style="height: 5%; width:100%;">
+										  </div>										  
+										<a class="left carousel-control" href="#DinosInspireCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#DinosInspireCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
 									</div>
 									<br />
-									<h4><u>Lessons Learned</u></h4>
-									<p>Looking back at this project it is interesting to see how many things I could
-										have done better, and how much I have learned since then. From a user experience
-										point of view, the two main area for improvement are mobile responsiveness and
-										dynamic display of formatted run/workout data. These are areas that I feel I
-										have greatly improved upon with the my work at the Calgary Counselling Centre
-										and with this personal portfolio website. If I were to do the training log
-										project again a lot of things would be different, but overall I think it was a
-										good learning experience.</p>
+									<h4><u>Lessons Learned</u></h4>	
+									<p>Looking back at this project it is interesting to see how many things I could have done better, and how much I have learned since then. From a user experience point of view, the two main area for improvement are mobile responsiveness and dynamic display of formatted run/workout data. These are areas that I feel I have greatly improved upon with the my work at the Calgary Counselling Centre and with this personal portfolio website. If I were to do the training log project again a lot of things would be different, but overall I think it was a good learning experience.</p>
 								</td>
 							</tr>
 							<tr class="DinosInspireProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
+									<td class="projectsContentLast"></td>
 							</tr>
-
-							<tr id="PythonTextingProject" class="projectsHeader"
-								onclick="toggleRow('PythonTextingProject', 'PythonTextingProjectContents');">
-								<th>Python Texting App (August 2017) <i id="PythonTextingProjectCaret"
-										class="fa fa-caret-right"></i></th>
+							
+							<tr id="PythonTextingProject" class="projectsHeader" onclick="toggleRow('PythonTextingProject', 'PythonTextingProjectContents');">
+								<th>Python Texting App (August 2017) <i id="PythonTextingProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr class="PythonTextingProjectContents whiteBackground projectsContentLast" hidden>
 								<td class="projectsContent projectsContent2ndLast">
-									<br />
-									<h4><u>Project Description</u></h4>
-									<p>This was another project for fun in the summer of 2017. The idea for the project
-										came from a youtube video. The video was about 20 minutes long and showed how to
-										use the Twilio API to send an SMS message with python.</p>
-									<p>To expand on what was shown in the video, I decided to add a password system that
-										identified the user an sent the message to a different phone number based on the
-										user. I also decided to add a user interface. To do this I used the Tkinter
-										python library, and this was my first introduction to graphical user interfaces.
-										This little app also added to the ideas presented in the video by using ngrok
-										webhooks to allow for the phone that recieved the initial message to send a
-										response back to the computer.</p><br />
+								<br />
+								<h4><u>Project Description</u></h4>
+									<p>This was another project for fun in the summer of 2017.  The idea for the project came from a youtube video. The video was about 20 minutes long and showed how to use the Twilio API to send an SMS message with python.</p>
+									<p>To expand on what was shown in the video, I decided to add a password system that identified the user an sent the message to a different phone number based on the user. I also decided to add a user interface. To do this I used the Tkinter python library, and this was my first introduction to graphical user interfaces. This little app also added to the ideas presented in the video by using ngrok webhooks to allow for the phone that recieved the initial message to send a response back to the computer.</p><br/>
 									<div id="TextingAppCarousel" class="carousel slide" data-ride="carousel">
 										<ol class="carousel-indicators darkIndicators">
-											<li data-target="#TextingAppCarousel" data-slide-to="0" class="active"></li>
-											<li data-target="#TextingAppCarousel" data-slide-to="1"></li>
-											<li data-target="#TextingAppCarousel" data-slide-to="2"></li>
+										  <li data-target="#TextingAppCarousel" data-slide-to="0" class="active"></li>
+										  <li data-target="#TextingAppCarousel" data-slide-to="1"></li>
+										  <li data-target="#TextingAppCarousel" data-slide-to="2"></li> 
 										</ol>
 
 										<div class="carousel-inner">
-											<div class="item active">
-												<img src="PythonTextingApp/LogIn.png" style="height: 5%; width:100%;">
-											</div>
+										  <div class="item active">
+											<img src="PythonTextingApp/LogIn.png" style="height: 5%; width:100%;">
+										  </div>
 
-											<div class="item">
-												<img src="PythonTextingApp/LogInSuccessful.png"
-													style="height: 5%; width:100%;">
-											</div>
-
-											<div class="item">
-												<img src="PythonTextingApp/SendMessage.png"
-													style="height: 5%; width:100%;">
-											</div>
-											<a class="left carousel-control" href="#TextingAppCarousel"
-												data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="right carousel-control" href="#TextingAppCarousel"
-												data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right"></span>
-												<span class="sr-only">Next</span>
-											</a>
-										</div>
+										  <div class="item">
+											<img src="PythonTextingApp/LogInSuccessful.png" style="height: 5%; width:100%;">
+										  </div>
+										
+										  <div class="item">
+											<img src="PythonTextingApp/SendMessage.png" style="height: 5%; width:100%;">
+										  </div>
+										<a class="left carousel-control" href="#TextingAppCarousel" data-slide="prev">
+										  <span class="glyphicon glyphicon-chevron-left"></span>
+										  <span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#TextingAppCarousel" data-slide="next">
+										  <span class="glyphicon glyphicon-chevron-right"></span>
+										  <span class="sr-only">Next</span>
+										</a>
+									  </div>
 									</div>
 									<br />
-									<h4><u>Lessons Learned</u></h4>
-									<p>The main take aways from this project were learning about APIs, webhooks, and
-										graphical user interfaces. This project introduced me to the idea of sending
-										requests from one machine to another, and seeing how this can be triggered by
-										event based programming.</p>
+									<h4><u>Lessons Learned</u></h4>	
+									<p>The main take aways from this project were learning about APIs, webhooks, and graphical user interfaces. This project introduced me to the idea of sending requests from one machine to another, and seeing how this can be triggered by event based programming.</p>
 								</td>
 							</tr>
 							<tr class="PythonTextingProjectContents projectsContentLast" hidden>
-								<td class="projectsContentLast"></td>
-							</tr>
+									<td class="projectsContentLast"></td>
+							</tr>							
 						</tbody>
 					</table>
-					<div class="col-sm-2"></div>
-				</div>
-		</section>
-	</div>
-	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
-
+				<div class="col-sm-2"></div>
+			</div>
+			</section>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</body>
 </html>
