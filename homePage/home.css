@@ -1,0 +1,17 @@
+.carousel-img-container {
+    height: 68vh;
+}
+
+.carousel-inner {
+    border: 2px solid black;
+    border-radius: 8%;
+}
+
+.carousel-img-container img {
+    /* width: auto; */
+    /* height: 100%; */
+}
+
+#Name {
+    margin-top: 0px;
+}

@@ -1,230 +1,147 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-		<title>Greg Ord's Software Development Porfolio</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="../common/main.css"/>
-		<script>
-			function sizing(){
-				var paddingTopStr = (document.getElementById("NavigationBar").offsetHeight).toString() + "px";
-				document.getElementById("CarouselRow").style.paddingTop = paddingTopStr;
-				
-				var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
-				document.getElementById("info").style.paddingBottom = paddingBottomStr;
-				
-				if(screen.width < 350){
-					//document.getElementById("footerMessage").style.height = "65px";
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>Gregory Ord Portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../common/main.css" />
+	<link rel="stylesheet" href="../homePage/home.css" />
+
+	<script>
+		function sizing() {
+			var paddingTopStr = (document.getElementById("NavigationBar").offsetHeight).toString() + "px";
+			document.getElementById("CarouselRow").style.paddingTop = paddingTopStr;
+
+			var paddingBottomStr = (document.getElementById("NavigationBar").offsetHeight + 10).toString() + "px";
+			document.getElementById("info").style.paddingBottom = paddingBottomStr;
+
+			if (window.orientation == 0 && screen.width * screen.height < 340000) {
+				if (screen.width > 400 && screen.height < 800) {
 				}
-				else{
-					//document.getElementById("footerMessage").style.height = "auto";
-				}
-				
-				if(screen.height >= 768 && screen.width > 700){
-					//alert("a");
-				}
-				else{
-					//alert("b");
-				}
-				//alert(window.orientation);
-				if(screen.width < 840 && screen.width > 770){
-					if(window.orientation == 90 || window.orientation == -90){
-						//alert("c1");
-					}
-					else{
-						//alert("c2");
-					}
-				}
-				else{
-					if((window.orientation == 90 || window.orientation == -90)&& screen.width*screen.height < 786432){
-						//alert("d1");
-					}
-					else{
-						//alert("d2");
-					}
-				}
-				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
-					//alert("e");
-				}
-				else if((window.orientation == 0) && screen.width * screen.height < 190000){
-					//alert("f");
-				}
-				else if(window.orientation == 0 && screen.width * screen.height < 340000){
-					if(screen.width > 400 && screen.height < 800){
-						//alert("g1");
-					}
-					else if(screen.width > 400){
-						document.getElementById("CarouselRow").style.paddingTop = "12vh";
-						//alert("g2");
-					}
-					else if(screen.width > 365 && screen.height < 800){
-						//alert("g3");
-					}
-					else if(screen.width > 365){
-						document.getElementById("CarouselRow").style.paddingTop = "12vh";
-						//alert("g4");
-					}
-					else{
-						//alert("g5");
-					}
-				}
-				else if(screen.height >= 768 && screen.height <= 1024 && screen.width == 768){
-					//alert("h");
-				}
-				else if(screen.height > 1024){
+				else if (screen.width > 400) {
 					document.getElementById("CarouselRow").style.paddingTop = "12vh";
-					//alert("h2");
 				}
-				else if(window.orientation == 90 && screen.height < 450){
-					if(screen.height > 400){
-						//alert("i2a");
-					}
-					else if(screen.height > 370){
-						//alert("i2b");
-					}
-					else{
-						//alert("i2c");
-					}
+				else if (screen.width > 365 && screen.height < 800) {
 				}
-				else if(window.orientation == 90){
+				else if (screen.width > 365) {
 					document.getElementById("CarouselRow").style.paddingTop = "12vh";
-					//alert("i2");
-				}
-				else{
-					document.getElementById("CarouselRow").style.paddingTop = "12vh";
-					//alert("j");
-				}
-				if(screen.width >= 768 && screen.width < 1000){
-				document.getElementById("info").style.paddingTop = "0px";
-				document.getElementById("CarouselRow").style.paddingTop = "12vh";
-				//document.getElementById("CarouselRow").style.paddingBottom = "0px";
-					//alert("k");
 				}
 			}
+			else if (screen.height > 1024) {
+				document.getElementById("CarouselRow").style.paddingTop = "12vh";
+			}
+			else if (window.orientation == 90) {
+				document.getElementById("CarouselRow").style.paddingTop = "12vh";
+			}
+			else {
+				document.getElementById("CarouselRow").style.paddingTop = "12vh";
+			}
+			if (screen.width >= 768 && screen.width < 1000) {
+				document.getElementById("info").style.paddingTop = "0px";
+				document.getElementById("CarouselRow").style.paddingTop = "12vh";
+			}
+		}
 
-			window.onorientationchange = function(){
-				location.reload();
-			};
-		</script>
-	</head>
-	<body onload="sizing()" onresize="sizing()">
-		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
-		  <div id="NavigationBar" class="container-fluid">
+		window.onorientationchange = function () {
+			location.reload();
+		};
+	</script>
+</head>
+
+<body onload="sizing()" onresize="sizing()">
+	<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+		<div id="NavigationBar" class="container-fluid">
 			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span> 
-			  </button>
-			  <a class="navbar-brand" href="../index.html">Software Portfolio Website</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">Portfolio Website</a>
 			</div>
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
-				  <li class="nav-item active"><a href="home.html">Home</a></li>
-				  <li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
-				  <li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
-				  <li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a></li>
-				  <li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
-				  <li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li> 
+					<li class="nav-item active"><a href="home.html">Home</a></li>
+					<li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
+					<li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
+					<li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a>
+					</li>
+					<li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
+					<li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li>
 				</ul>
 			</div>
-		  </div>
-		</nav>
-		<div class="container-fluid">
-			<div id="photoRow" class="row">
-				<div id="hiddenInfoDiv" class="col-sm-5 col-md-2">
-					<div id="hiddenInfo">
-						<h1>Gregory Ord</h1>
-						<h4>BSc. Software Engineering (Student)</h4>
-						<h4>University of Calgary</h4>
-					</div>
-				</div>
-				<div id="hiddenCarousel" class="col-sm-7 col-md-8">
-					<div id="IndexHiddenCarousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators darkIndicators">
-						  <li data-target="#IndexHiddenCarousel" data-slide-to="0" class="active"></li>
-						  <li data-target="#IndexHiddenCarousel" data-slide-to="1"></li>
-						  <li data-target="#IndexHiddenCarousel" data-slide-to="2"></li> 
-						  <li data-target="#IndexHiddenCarousel" data-slide-to="3"></li> 
-						</ol>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row" id="CarouselRow">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<div id="IndexCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators darkIndicators">
+						<li data-target="#IndexCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#IndexCarousel" data-slide-to="1"></li>
+						<li data-target="#IndexCarousel" data-slide-to="2"></li>
+						<li data-target="#IndexCarousel" data-slide-to="3"></li>
+					</ol>
 
-						<div class="carousel-inner">
-						<a class="left carousel-control" href="#IndexHiddenCarousel" data-slide="prev">
-						  <span class="glyphicon glyphicon-chevron-left"></span>
-						  <span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#IndexHiddenCarousel" data-slide="next">
-						  <span class="glyphicon glyphicon-chevron-right"></span>
-						  <span class="sr-only">Next</span>
-						</a>
-					  </div>
-					</div>		
-				</div>
-				<div id="lastDiv" class="col-sm-0 col-md-2"><p></p></div>
-			</div>
-			<div class="row" id="CarouselRow">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					<div id="IndexCarousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators darkIndicators">
-						  <li data-target="#IndexCarousel" data-slide-to="0" class="active"></li>
-						  <li data-target="#IndexCarousel" data-slide-to="1"></li>
-						  <li data-target="#IndexCarousel" data-slide-to="2"></li> 
-						  <li data-target="#IndexCarousel" data-slide-to="3"></li> 
-						</ol>
+					<div class="carousel-inner">
+						<div class="item active carousel-img-container">
+							<img src="DinosHeadShotBeard.JPG">
+						</div>
 
-						<div class="carousel-inner">
-						  <div class="item active">
-							<img src="DinosHeadshotBeard.jpg" style="margin: 0 auto; width: 35%;">
-						  </div>
-						  
-						  <div class="item">
-							<img src="HeadShotSunglasses.jpg" style="margin: 0 auto; width: 32%;">
-						  </div>				  
+						<div class="item carousel-img-container">
+							<img src="HeadShotSunglasses.jpg">
+						</div>
 
-						  <div class="item">
-							<img src="DwyerInviteRacePic.png" style="margin: 0 auto; width: 35%;">
-						  </div>
-						
-						  <div class="item ">
-							<img src="CanWestBanner.jpg" style="margin: 0 auto; width: 51%;">
-						  </div>						
-						  
-						  <div class="item">
-							<img src="StampedeWithMom.jpg" style="margin: 0 auto; width: 32.9%;">
-						  </div>
+						<div class="item carousel-img-container">
+							<img src="DwyerInviteRacePic.png">
+						</div>
+
+						<div class="item carousel-img-container">
+							<img src="StampedeWithMom.jpg">
+						</div>
+
+						<div class="item carousel-img-container">
+							<img src="CanWestBanner.jpg">
+						</div>
+
 						<a class="left carousel-control" href="#IndexCarousel" data-slide="prev">
-						  <span class="glyphicon glyphicon-chevron-left"></span>
-						  <span class="sr-only">Previous</span>
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
 						</a>
 						<a class="right carousel-control" href="#IndexCarousel" data-slide="next">
-						  <span class="glyphicon glyphicon-chevron-right"></span>
-						  <span class="sr-only">Next</span>
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
 						</a>
-					  </div>
 					</div>
 				</div>
-				<div class="col-sm-2"></div>
 			</div>
-
-
-
-			<div class="row" id="info">
-				<div class="col-sm-2"><p> </p></div>
-				<div class="col-sm-8">
-					<div>
-						<h1>Gregory Ord</h1>
-						<h4>BSc. Software Engineering</h4>
-						<h4>University of Calgary</h4>
-					</div>
-				</div>
-				<div class="col-sm-2"><p> </p></div>
-			</div>	
+			<div class="col-sm-2"></div>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</body>
-</html> 
+		<div class="row" id="info">
+			<div class="col-sm-2">
+				<p> </p>
+			</div>
+			<div class="col-sm-8">
+				<div>
+					<h1 id="Name">Gregory Ord</h1>
+					<h4>BSc. Software Engineering University of Calgary</h4>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<p> </p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

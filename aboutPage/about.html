@@ -1,141 +1,159 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">.
-	
-		<title>Greg Ord's Software Development Porfolio</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="../common/main.css"/>
-		
-		<script>
-			window.onorientationchange = function(){
-				location.reload();
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">.
+
+	<title>Gregory Ord Portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../common/main.css" />
+
+	<script>
+		window.onorientationchange = function () {
+			location.reload();
+		}
+	</script>
+	<script>
+		function sizing() {
+			if (screen.height >= 768 && screen.width > 700) {
+				//document.getElementById("aboutTextTitleDiv").style.marginTop = "2vh";
 			}
-		</script>
-		<script>
-			function sizing(){
-				if(screen.height >= 768 && screen.width > 700){
-					//document.getElementById("aboutTextTitleDiv").style.marginTop = "2vh";
-				}
-				else{
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "20vh";
-				}
-				if(screen.width < 840 && screen.width > 770){
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "25vh";
-				}
-				else{
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "7vh";
-					document.getElementById("skyLine").style.paddingTop = "";
-				}
-				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "5vh";
-					document.getElementById("skyLine").style.height = "52vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if((window.orientation == 0) && screen.width * screen.height < 190000){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "3vh";
-					document.getElementById("skyLine").style.height = "26vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if(window.orientation == 0 && screen.width * screen.height < 340000){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "2vh";
-					document.getElementById("skyLine").style.height = "25vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if(screen.height > 768){
-					document.getElementById("skyLine").style.height = "32vh";
-					document.getElementById("skyLine").style.width = "auto";
-					document.getElementById("skyLine").style.paddingLeft = "20px";
-				}
-				else{
-								//alert("i");
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "";
-					document.getElementById("skyLine").style.height = "52vh";
-					document.getElementById("skyLine").style.width = "auto";
-					document.getElementById("skyLine").style.paddingLeft = "20px";
-				}
+			else {
+				//document.getElementById("aboutTextTitleDiv").style.paddingTop = "20vh";
 			}
-		</script>
-		
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
-		  <div id="NavigationBar" class="container-fluid">
+			if (screen.width < 840 && screen.width > 770) {
+				//document.getElementById("aboutTextTitleDiv").style.paddingTop = "25vh";
+			}
+			else {
+				//document.getElementById("aboutTextTitleDiv").style.paddingTop = "7vh";
+				document.getElementById("skyLine").style.paddingTop = "";
+			}
+			if ((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756) {
+				document.getElementById("skyLine").style.display = "";
+				document.getElementById("skyLine").style.paddingTop = "5vh";
+				document.getElementById("skyLine").style.paddingLeft = "5vh";
+				document.getElementById("skyLine").style.height = "52vh";
+				document.getElementById("skyLine").style.width = "auto";
+			}
+			else if ((window.orientation == 0) && screen.width * screen.height < 190000) {
+				document.getElementById("skyLine").style.display = "";
+				document.getElementById("skyLine").style.paddingTop = "5vh";
+				document.getElementById("skyLine").style.paddingLeft = "3vh";
+				document.getElementById("skyLine").style.height = "26vh";
+				document.getElementById("skyLine").style.width = "auto";
+			}
+			else if (window.orientation == 0 && screen.width * screen.height < 340000) {
+				document.getElementById("skyLine").style.display = "";
+				document.getElementById("skyLine").style.paddingTop = "5vh";
+				document.getElementById("skyLine").style.paddingLeft = "2vh";
+				document.getElementById("skyLine").style.height = "25vh";
+				document.getElementById("skyLine").style.width = "auto";
+			}
+			else if (screen.height > 768) {
+				document.getElementById("skyLine").style.height = "32vh";
+				document.getElementById("skyLine").style.width = "auto";
+				document.getElementById("skyLine").style.paddingLeft = "20px";
+			}
+			else {
+				//alert("i");
+				document.getElementById("skyLine").style.display = "";
+				document.getElementById("skyLine").style.paddingTop = "";
+				document.getElementById("skyLine").style.height = "52vh";
+				document.getElementById("skyLine").style.width = "auto";
+				document.getElementById("skyLine").style.paddingLeft = "20px";
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+		<div id="NavigationBar" class="container-fluid">
 			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span> 
-			  </button>
-			  <a class="navbar-brand" href="../homePage/home.html">Software Portfolio Website</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../homePage/home.html">Portfolio Website</a>
 			</div>
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
-				  <li class="nav-item"><a href="../homePage/home.html">Home</a></li>
-				  <li class="nav-item active"><a href="aboutPage/about.html">About</a></li>
-				  <li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
-				  <li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a></li>
-				  <li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
-				  <li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li> 
+					<li class="nav-item"><a href="../homePage/home.html">Home</a></li>
+					<li class="nav-item active"><a href="aboutPage/about.html">About</a></li>
+					<li class="nav-item"><a href="../workExperiencePage/workExperience.html">Work Experiences</a></li>
+					<li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a>
+					</li>
+					<li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
+					<li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li>
 				</ul>
 			</div>
-		  </div>
-		</nav>
-		<section>
-			<div class="row" style="width: 100%; height: 50%;">
-				<div class="col-xs-0 col-md-1"></div>
-				<div class="col-xs-12 col-md-10 aboutTextTitle" id="aboutTextTitleDiv">
-					<h3 id="aboutTitle">My Crush on C/C++</h3>
-				</div>
-				<div class="col-xs-0 col-md-1"></div>
+		</div>
+	</nav>
+	<section>
+		<div class="row" style="width: 100%; height: 50%;">
+			<div class="col-xs-0 col-md-1"></div>
+			<div class="col-xs-12 col-md-10 aboutTextTitle" id="aboutTextTitleDiv">
+				<h3 id="aboutTitle">My Crush on C/C++</h3>
 			</div>
-			<div class="row" style="width: 100%;">
-				<div class="col-xs-0 col-md-1"></div>
-				<div class="col-xs-12 col-md-10 aboutText" id="aboutTextDiv">
-					<img src="Cplusplus.png" style="width: 25%;" id="skyLine" alt=""/>
-					<p><br />
-						Born and raised in Ontario, I moved to Calgary to study at the University of Calgary and run for the Dinos Cross-Country team in 2016.	
-					</p>
-					<p>
-						As an athlete, I was fortunate to win the 2016 Canada West Cross-Country Rookie of the Year award and become a member of the team that went on to win the 2018 and 2019 USPORTS National Championships.
-					</p>
-					<p>
-						My first experience programming was in a first year course, ENGG 233 - Computing for Engineers.
-						Since then, I had my first work experience in software development at the Calgary Counselling Centre in the summer of 2019,
-						and began a 16-month internship at Lockheed Martin CDL Systems in May 2020.
-					</p>
-					<p>
-						I have used different languages over the last few years, but lately my interests 
-						have shifted more towards C/C++. I like the idea of systems that have physical devices in the 
-						real world that communicate data back to software systems. Working with control station software
-						for unmanned systems is exactly that, so I really enjoyed that aspect of my internship with Lockheed Martin.
-					</p>
-					<p>
-						The next project that I have on my mind to is to build my own running watch. I think this will be
-						quite a challenge, because I have no experience 3D printing (for the watch casing) or designing custom PCBs. It should be an 
-						interesting learning opportunity for those skills, as well as an opportunity to revisit some of the topics covered in 
-						the "ENCM 511 - Embedded Systems Interfacing". Compared to the other topics covered in school,
-						I feel like the exposure to embedded systems is lacking in the U of C Software Engineering circiculum.
-						Hopefully this project will help to fill that gap in my knowledge.
-					</p>
-					<p>If you think my stuff is cool, or you also have a crush on C/C++, or <strong><u><i>you want me to send you the binaries
-						for GregBuild so you can use a Raspberry Pi zero as a CI server that is also capable of loading programs onto 
-						a microcontroller through an Atmel ICE programmer!!!!!!</i></strong></u>, please feel free to reach out to me!
-						My email is gregory.ord@ucalgary.ca, or you can check out my <a href="https://www.linkedin.com/in/gregory-ord-b6471b191/">Linkedin</a> page. </p>
-				</div>
-				<div class="col-xs-0 col-md-1"></div>
+			<div class="col-xs-0 col-md-1"></div>
+		</div>
+		<div class="row" style="width: 100%;">
+			<div class="col-xs-0 col-md-1"></div>
+			<div class="col-xs-12 col-md-10 aboutText" id="aboutTextDiv">
+				<img src="Cplusplus.png" style="width: 25%;" id="skyLine" alt="" />
+				<p><br />
+					Born and raised in Ontario, I moved to Calgary to study at the University of Calgary and run for the
+					Dinos Cross-Country team in 2016.
+				</p>
+				<p>
+					As an athlete, I was fortunate to win the 2016 Canada West Cross-Country Rookie of the Year award
+					and become a member of the team that went on to win the 2018 and 2019 USPORTS National
+					Championships.
+				</p>
+				<p>
+					My first experience programming was in a first year course, ENGG 233 - Computing for Engineers.
+					Since then, I had my first work experience in software development at the Calgary Counselling Centre
+					in the summer of 2019,
+					and began a 16-month internship at Lockheed Martin CDL Systems in May 2020.
+				</p>
+				<p>
+					I have used different languages over the last few years, but lately my interests
+					have shifted more towards C/C++. I like the idea of systems that have physical devices in the
+					real world that communicate data back to software systems. Working with control station software
+					for unmanned systems is exactly that, so I really enjoyed that aspect of my internship with Lockheed
+					Martin.
+				</p>
+				<p>
+					The next project that I have on my mind to is to build my own running watch. I think this will be
+					quite a challenge, because I have no experience 3D printing (for the watch casing) or designing
+					custom PCBs. It should be an
+					interesting learning opportunity for those skills, as well as an opportunity to revisit some of the
+					topics covered in
+					the "ENCM 511 - Embedded Systems Interfacing". Compared to the other topics covered in school,
+					I feel like the exposure to embedded systems is lacking in the U of C Software Engineering
+					circiculum.
+					Hopefully this project will help to fill that gap in my knowledge.
+				</p>
+				<p>If you think my stuff is cool, or you also have a crush on C/C++, or <strong><u><i>you want me to
+								send you the binaries
+								for GregBuild so you can use a Raspberry Pi zero as a CI server that is also capable of
+								loading programs onto
+								a microcontroller through an Atmel ICE programmer!!!!!!</i></strong></u>, please feel
+					free to reach out to me!
+					My email is gregory.ord@ucalgary.ca, or you can check out my <a
+						href="https://www.linkedin.com/in/gregory-ord-b6471b191/">Linkedin</a> page. </p>
 			</div>
-		</section>
+			<div class="col-xs-0 col-md-1"></div>
+		</div>
+	</section>
 
-		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</body>
-</html> 
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

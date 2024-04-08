@@ -1,148 +1,204 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-		<title>Greg Ord's Software Development Porfolio</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="../common/main.css"/>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-		<script>
-			function toggleRow(id, className){
-				var caretID = id + "Caret";
-				var caret = document.getElementById(caretID);
-				caret.classList.toggle("fa-caret-right");
-				caret.classList.toggle("fa-caret-down");
-				var yearElement = document.getElementById(id);
-				var elements = document.getElementsByClassName(className);
-				var i = 0;
-				var prev = elements[0].hidden;
-				if(prev == true){
-					yearElement.style.borderBottom = "none";
-				}
-				else{
-					yearElement.style.borderBottom = "solid";
-					yearElement.style.borderBottomColor = "white";
-				}
-				for(i; i < elements.length; i++){
-					elements[i].hidden = !prev;
-				}
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>Gregory Ord Portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../common/main.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script>
+		function toggleRow(id, className) {
+			var caretID = id + "Caret";
+			var caret = document.getElementById(caretID);
+			caret.classList.toggle("fa-caret-right");
+			caret.classList.toggle("fa-caret-down");
+			var yearElement = document.getElementById(id);
+			var elements = document.getElementsByClassName(className);
+			var i = 0;
+			var prev = elements[0].hidden;
+			if (prev == true) {
+				yearElement.style.borderBottom = "none";
 			}
-		</script>
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
-		  <div id="NavigationBar" class="container-fluid">
+			else {
+				yearElement.style.borderBottom = "solid";
+				yearElement.style.borderBottomColor = "white";
+			}
+			for (i; i < elements.length; i++) {
+				elements[i].hidden = !prev;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+		<div id="NavigationBar" class="container-fluid">
 			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span> 
-			  </button>
-			  <a class="navbar-brand" href="../homePage/home.html">Software Portfolio Website</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../homePage/home.html">Portfolio Website</a>
 			</div>
 			<div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
 				<ul id="navBarList" class="nav navbar-nav navbar-right">
-				  <li class="nav-item"><a href="../homePage/home.html">Home</a></li>
-				  <li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
-				  <li class="nav-item active"><a href="workExperience.html">Work Experiences</a></li>
-				  <li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a></li>
-				  <li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li> 
-				  <li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li> 
+					<li class="nav-item"><a href="../homePage/home.html">Home</a></li>
+					<li class="nav-item"><a href="../aboutPage/about.html">About</a></li>
+					<li class="nav-item active"><a href="workExperience.html">Work Experiences</a></li>
+					<li class="nav-item"><a href="../personalProjectsPage/personalProjects.html">Personal Projects</a>
+					</li>
+					<li class="nav-item"><a href="../schoolProjectsPage/schoolProjects.html">School Projects</a></li>
+					<li class="nav-item"><a href="../educationPage/educationCourses.html">Education/Courses</a></li>
 				</ul>
 			</div>
-		  </div>
-		</nav>
-		<div class="container-fluid">
-			<section>
-				<div class="row" id="pageTitle">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-						<h1>Work Experiences</h1>
-					</div>
-					<div class="col-sm-2"></div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<section>
+			<div class="row" id="pageTitle">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<h1>Work Experiences</h1>
 				</div>
-				<div class="row">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8"><h4>To date, I have had two software developement work experiences. The first was a 4-month summer job at the Calgary Counselling Centre. The second, a 16-month internship at Lockheed Martin CDL systems.</h4></div>
-					<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<h4>To date, I have had two software developement work experiences. The first was a 4-month summer
+						job at the Calgary Counselling Centre. The second, a 16-month internship at Lockheed Martin CDL
+						systems.</h4>
 				</div>
-			</section>
-			<section>
+				<div class="col-sm-2"></div>
+			</div>
+		</section>
+		<section>
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-8">
 					<table>
 						<tbody>
-	
 
 
-							<tr id="LmCdlInternship" class="projectsHeader" onclick="toggleRow('LmCdlInternship', 'LmCdlInternshipContents');">
-								<th>Lockheed Martin Cdl Systems Internship (May 2020 to August 2021) <i id="LmCdlInternshipCaret" class="fa fa-caret-right"></i></th>
+
+							<tr id="LmCdlInternship" class="projectsHeader"
+								onclick="toggleRow('LmCdlInternship', 'LmCdlInternshipContents');">
+								<th>Lockheed Martin Cdl Systems Internship (May 2020 to August 2021) <i
+										id="LmCdlInternshipCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr class="LmCdlInternshipContents whiteBackground" hidden>
 								<td class="projectsContent projectsContent2ndLast">
-								<br />
+									<br />
 									<h4><u>Lockheed Martin Cdl Systems</u></h4>
-									<p>From the Lockheed Martin Website: <strong>"Lockheed Martin CDL Systems specializes in the development and licensing of vehicle control station software for unmanned systems."</strong></p><br/>
-									<br/>
-									<p>During this internship I learned a lot about the software development process that CDL Systems uses to manage 
-										such a large team and ensure quality in their products. I practiced agile software development for the first 
-										time in this position, and learned a lot about things like test-driven development and continous integration. 
-										My skills with git also improved working here, and I gained a lot of technical knowledge about object oriented 
+									<p>From the Lockheed Martin Website: <strong>"Lockheed Martin CDL Systems
+											specializes in the development and licensing of vehicle control station
+											software for unmanned systems."</strong></p><br />
+									<br />
+									<p>During this internship I learned a lot about the software development process
+										that CDL Systems uses to manage
+										such a large team and ensure quality in their products. I practiced agile
+										software development for the first
+										time in this position, and learned a lot about things like test-driven
+										development and continous integration.
+										My skills with git also improved working here, and I gained a lot of technical
+										knowledge about object oriented
 										software and C++.
 									</p><br />
-									<iframe width="100%" height="480px" src="https://www.youtube.com/embed/0cb7dL2V3NY"></iframe><br/>
-									<p><i>Video from Lockheed Martin Youtube Channel</i></p><br/>
-									<br />								
-									<p>Lockheed Martin CDL Systems has such a good group of people that even though my entire internship was working 
-										from home due to COVID-19, I made leaps and bounds learning from them. After working here, I know
-										what it looks like to be a member of a strong professional team.
-									</p></div>
-								</td>
-							</tr>
-							<tr class="LmCdlInternshipContents projectsContentLast" hidden>
-									<td class="projectsContentLast"></td>
-							</tr>
-
-
-
-							<tr id="CCCProject" class="projectsHeader" onclick="toggleRow('CCCProject', 'CCCProjectContents');">
-								<th>Calgary Counselling Centre Group Testing App (May to August 2019) <i id="CCCProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
-							<tr class="CCCProjectContents whiteBackground" hidden>
-								<td class="projectsContent projectsContent2ndLast">
-								<br />
-									<h4><u>Project Description</u></h4>
-									<p>The goal of this project was to build an application to allow clients in group counselling programs to complete assessment questionnaires each week throughout a 10-14 week program duration. The application was web-based and was presented to clients via tablets connected to the Calgary Counselling Centre's internal network. This project was completed by myself and another summer student using C# and the .NET framework.</p>
-									<video width="50%" class="videoRight" controls>
-										<source src="CalgaryCounsellingCentre/Questionnaire.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-									<p>The Calgary Counselling Centre runs 12 different group programs for clients with different needs. Some of the programs are for adults, while others are intended for children. Each group has a "Pre-Package" which is completed at the first session, a "Post-Package" which was completed at the final session, and a standard package that is completed at every session in  between. Each package consists of a variable number of individual questionnaires. The application needed to be able to get the client's log-in information, determine which questionnaire package the client was to complete that day, then serve that package to the client. The client's questionnaire answer data was then stored in a database before being pulled out and processed by a software used by counsellors and the centre's Research department. In total, there were about 40 individual questionnaires arranged into approximately 30 packages.</p><br />
-									<h4><u>Project Add-ons</u></h4>
-									<p>In addition to the main project requirements, my partner and I had and implemented some ideas to make the project more complete. The first was an editing interface that allowed users to modify the contents of programs, packages, sections and questions. This functioned through a web API. The second add-on was an automated emailing system. This system detected common database configuration errors and sent an appropriate email to the Centre's IT Coordinator in response. The system was also capable of sending summary reports of important questions, but this feature was turned off. Finally, simple interface was built with another web API to allow retrieve client entered question data. The interface allowed the user to specify filters such as date, program type, package type, client, etc. On the client-side, the retrieved data was formatted into an excel spreadsheet that could be downloaded and inputted into the software used by the Research Department.</p>
-									<video width="50%" class="videoRight" src="CalgaryCounsellingCentre/WelcomeAndLogIn.MOV" controls>
-										Your browser does not support the video tag.
-									</video>
+									<iframe width="100%" height="480px"
+										src="https://www.youtube.com/embed/0cb7dL2V3NY"></iframe><br />
+									<p><i>Video from Lockheed Martin Youtube Channel</i></p><br />
 									<br />
-									<h4><u>Lessons Learned</u></h4>									
-									<p>As my first industry experience, I learned that being flexible throughout the development process is very important as requirements can change and be added at any moment. I also learned a lot about teamwork in software development. My partner and I worked very well together during this project; often one of his ideas would spark an idea in me which would then spark an idea in him and allow us to find the best solution to whatever problem we were facing. I learned that when designing a system it is important to design for the future as well as for the present moment...and I also learned a little bit about the .NET framework, C#, SQL, databases, HTML, javascript and CSS.</p></div>
-								</td>
-							</tr>
-							<tr class="CCCProjectContents projectsContentLast" hidden>
-									<td class="projectsContentLast"></td>
-							</tr>
+									<p>Lockheed Martin CDL Systems has such a good group of people that even though my
+										entire internship was working
+										from home due to COVID-19, I made leaps and bounds learning from them. After
+										working here, I know
+										what it looks like to be a member of a strong professional team.
+									</p>
+				</div>
+				</td>
+				</tr>
+				<tr class="LmCdlInternshipContents projectsContentLast" hidden>
+					<td class="projectsContentLast"></td>
+				</tr>
 
-						</tbody>
-					</table>
-				<div class="col-sm-2"></div>
+
+
+				<tr id="CCCProject" class="projectsHeader" onclick="toggleRow('CCCProject', 'CCCProjectContents');">
+					<th>Calgary Counselling Centre Group Testing App (May to August 2019) <i id="CCCProjectCaret"
+							class="fa fa-caret-right"></i></th>
+				</tr>
+				<tr class="CCCProjectContents whiteBackground" hidden>
+					<td class="projectsContent projectsContent2ndLast">
+						<br />
+						<h4><u>Project Description</u></h4>
+						<p>The goal of this project was to build an application to allow clients in group counselling
+							programs to complete assessment questionnaires each week throughout a 10-14 week program
+							duration. The application was web-based and was presented to clients via tablets connected
+							to the Calgary Counselling Centre's internal network. This project was completed by myself
+							and another summer student using C# and the .NET framework.</p>
+						<video width="50%" class="videoRight" controls>
+							<source src="CalgaryCounsellingCentre/Questionnaire.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<p>The Calgary Counselling Centre runs 12 different group programs for clients with different
+							needs. Some of the programs are for adults, while others are intended for children. Each
+							group has a "Pre-Package" which is completed at the first session, a "Post-Package" which
+							was completed at the final session, and a standard package that is completed at every
+							session in between. Each package consists of a variable number of individual questionnaires.
+							The application needed to be able to get the client's log-in information, determine which
+							questionnaire package the client was to complete that day, then serve that package to the
+							client. The client's questionnaire answer data was then stored in a database before being
+							pulled out and processed by a software used by counsellors and the centre's Research
+							department. In total, there were about 40 individual questionnaires arranged into
+							approximately 30 packages.</p><br />
+						<h4><u>Project Add-ons</u></h4>
+						<p>In addition to the main project requirements, my partner and I had and implemented some ideas
+							to make the project more complete. The first was an editing interface that allowed users to
+							modify the contents of programs, packages, sections and questions. This functioned through a
+							web API. The second add-on was an automated emailing system. This system detected common
+							database configuration errors and sent an appropriate email to the Centre's IT Coordinator
+							in response. The system was also capable of sending summary reports of important questions,
+							but this feature was turned off. Finally, simple interface was built with another web API to
+							allow retrieve client entered question data. The interface allowed the user to specify
+							filters such as date, program type, package type, client, etc. On the client-side, the
+							retrieved data was formatted into an excel spreadsheet that could be downloaded and inputted
+							into the software used by the Research Department.</p>
+						<video width="50%" class="videoRight" src="CalgaryCounsellingCentre/WelcomeAndLogIn.MOV"
+							controls>
+							Your browser does not support the video tag.
+						</video>
+						<br />
+						<h4><u>Lessons Learned</u></h4>
+						<p>As my first industry experience, I learned that being flexible throughout the development
+							process is very important as requirements can change and be added at any moment. I also
+							learned a lot about teamwork in software development. My partner and I worked very well
+							together during this project; often one of his ideas would spark an idea in me which would
+							then spark an idea in him and allow us to find the best solution to whatever problem we were
+							facing. I learned that when designing a system it is important to design for the future as
+							well as for the present moment...and I also learned a little bit about the .NET framework,
+							C#, SQL, databases, HTML, javascript and CSS.</p>
 			</div>
-			</section>
-		</div>
+			</td>
+			</tr>
+			<tr class="CCCProjectContents projectsContentLast" hidden>
+				<td class="projectsContentLast"></td>
+			</tr>
 
-		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</body>
+			</tbody>
+			</table>
+			<div class="col-sm-2"></div>
+	</div>
+	</section>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
 </html>
