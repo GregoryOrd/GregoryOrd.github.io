@@ -64,7 +64,9 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-2"></div>
-					<div class="col-sm-8"><h4>To date, I have had two software developement work experiences. The first was a 4-month summer job at the Calgary Counselling Centre. The second, a 16-month internship at Lockheed Martin CDL systems.</h4></div>
+					<div class="col-sm-8"><h4>To date, I have had three software developement work experiences. The first was a 4-month summer job at the Calgary Counselling Centre. The second, a 16-month internship at Lockheed Martin CDL systems. The third, a full-time position
+						at Calian Advanced Technologies since I graduated from university.
+					</h4></div>
 					<div class="col-sm-2"></div>
 				</div>
 			</section>
@@ -76,9 +78,113 @@
 						<tbody>
 	
 
+							<tr id="CalianAt" class="projectsHeader" onclick="toggleRow('CalianAt', 'CalianAtContents');">
+								<th>Calian Advanced Technologies (May 2022 to Present) (Remote) <i id="CalianAtCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr class="CalianAtContents whiteBackground" hidden>
+								<td class="projectsContent projectsContent2ndLast">
+								<br />
+									<h3><u>Calian Advance Technologies</u></h3>
+									<p>From the Calian Website: <strong>"Calian Advanced Technologies is a global supplier of highly technical solutions, services and products to the aerospace and defence, satellite, wired and terrestrial wireless, test and measurement, agricultural technology, GNSS technology and nuclear industries."</strong></p><br/>
+									<p>This was my first experience working in a linux only environment. I learned a decent amount here about linux tools, software packaging, firewalls, 
+										selinux, network interfaces, and systemd. I was even the main contributor on the effort to upgrade the servers for a project from an old RHEL version to a new one 
+										after it went end of life.
+									</p>
+									<h3><u>What Team was I On</u></h3>
+									<p>The team I was on at Calian was a small team called the "Gateways" team. We had various projects, but they were all related to the operation of Satellite Ground Gateways.
+										In particular, our gateways handled aeronautical data and the main purpose of our systems was to connect the ground network to the satellite network. 
+										ACARS (Aircraft Communications Addressing and Reporting System) and ADS-B (Automatic Dependent Surveillance - Broadcast) data are some example of the types of data 
+										that went through these gateways. Having redundant systems was a common theme for these projects and we had servers at multiple sites around the world.
+									</p>
+									<h3><u>Features I Worked On</u></h3>
+									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead:</p>
+										<h4><u>Designed and built a DNS log reader program.</u></h4>
+										<p>
+											This program read from the log file of the named daemon, parsed out the relevant DNS log data, and 
+												wrote it to our postgres database. The postgres table was then displayed in a GUI using code that Calian had already developed. For this program I used the logrotate tool and install
+												pre/post rotate scripts to detect rotations in the named.log file. The program was written in python and used linux signal handlers to receive signals of 
+												the logrotatation events from the pre/post rotate scripts. The state of the DNS log reader was also maintained in sqlite DB files so that the program
+												could behave properly on start and restart and could handle down time without any loss up until a reasonable duration of time. To control execution of the 
+												program we setup a service file and ran it with systemd. 
+										</p>
+										<h4><u>Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics</u></h4>
+										<p>Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics</u>. Some of the statistics included
+											the current number of active VPN tunnels, the number of successful/failes VPN tunnel setup in a time window, and the average setup time of the successfully 
+											setup VPN tunnels.</p>
+										<h4><u>Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics.</u></h4>
+										<p>
+											For this I wrote a python script to automate the setup and update of the Grafana dashboards and datasources.
+											I also developed a couple of Grafana Datasource plugins to display the data in the ways we needed.
+										</p>
+										<h4><u>Wrote a C program to redirect UDP traffic from a raw socket to a unix socket.</u></h4>
+										<p>
+											The purpose of this was that we were analyzing traffic from a client's system 
+												like a packet sniffer. We needed to know the true source and destination IP addresses, 
+												and not inject the IP address of our machine as the destination or the IP address of our client's network monitoring machine as the source. 
+												So instead of receiving the data over a regular socket, we read it from a raw socket and 
+												then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be 
+												turned off in a test environment.
+										</p>
+										<h4><u>Worked on an operating system upgrade from one version of RHEL to a newer version.</u></h4>
+										<p>
+											This involved some of the following tasks:
+												<ul>
+													<li>Using a base image virtual machine to download all of the .rpm files needed by the server from the package manager.</li>
+													<li>For packages that couldn't be downloaded through the package manager, download the source code and build it ourselves. Then used
+														Red Hat's rpmbuild tools to build a .rpm file ourselves.
+													</li>
+													<li>
+														One of these packages that needed to be built from source was python2. We decided to stick with python2 because we didn't want 
+														to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. These was signficant because
+														the new version of RHEL came with python3 and we didn't want to distrupt any operating system services that needed python3 when we installed 
+														python2. So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.
+													</li>
+													<li>
+														Turn the directory of rpm packages into an offline yum repository.
+													</li>
+													<li>
+														Create two SELinux policy modules to allow some of our systemd services to run on the new operating system. For the sake of confifientiality, I 
+														won't say what the SELinux policy modules did, but this part of the OS upgrade configuaration did give me the chance to play around with some of the selinux tools and 
+														create two basic SELinux policy modules.
+													</li>
+													<li>
+														Make some code changes to our application code to be compatible with updated API in .so libraries and .jar files. For example, upgraded versions of OpenSSL.
+													</li>
+													<li>
+														Update configuration for changed linux services. For example, changing the service used for syncing with the time server changed when upgrading to a new 
+														version of REHL. The firewall service that was used also changed so those configurations also needed to be updated.
+													</li>
+													<li>
+														Create a custom .iso file that has all of our packages, SELinux modules, and configurations updates baked into it.
+														To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it.
+														To customize the install we used Red Hat kickstart files.
+														Calian had some tools setup to build this .iso file, so I didn't have to setup the entire process, but some of the scripts needed to 
+														be updated, and along side our updated offline rpm package repo, configuration files, and kickstart files.
+													</li>
+												</ul>
+										</p>
+									</p>
+									<h4><u>Support Tasks</u></h4>
+									<p>In addition to the above tasks, my role at Calian sometimes involved support tasks and bug fixes for issues that came up at the various production sites. These tasks 
+										typically involved reading through log data, analyzing messaging sequences, and trying to debug the systems from a distance. In some instances we even created tools 
+										to capture data for debugging at a later date. <u>One example was creating a python program that used inotify to monitor a directory that was receiving files from an SFTP transfer 
+										and stream a copy of the files into a tarball</u> in another directory before the server's application code could process and delete them.
+										This program allowed us to capture the files and analyze them as part of the debugging process for the particular issue that was happening in production.
+									</p>
+									<h3><u>How I Grew My Skills</u></h3>
+									<p>Throughout this experience I grew my programming skills in Java, Python, and Bash. But more importantly I learned a lot about all of the things that need to 
+										be present in an environment or on a system rather than just the application code. There is still lots to learn, but I have a much better grasp on a lot 
+										for linux system concepts now. 
+									</p><br />
+								</td>
+							</tr>
+							<tr class="CalianAtContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>
+
 
 							<tr id="LmCdlInternship" class="projectsHeader" onclick="toggleRow('LmCdlInternship', 'LmCdlInternshipContents');">
-								<th>Lockheed Martin Cdl Systems Internship (May 2020 to August 2021) <i id="LmCdlInternshipCaret" class="fa fa-caret-right"></i></th>
+								<th>Lockheed Martin Cdl Systems Internship (May 2020 to August 2021) (Remote due to COVID-19) <i id="LmCdlInternshipCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr class="LmCdlInternshipContents whiteBackground" hidden>
 								<td class="projectsContent projectsContent2ndLast">
@@ -108,7 +214,7 @@
 
 
 							<tr id="CCCProject" class="projectsHeader" onclick="toggleRow('CCCProject', 'CCCProjectContents');">
-								<th>Calgary Counselling Centre Group Testing App (May to August 2019) <i id="CCCProjectCaret" class="fa fa-caret-right"></i></th>
+								<th>Calgary Counselling Centre Group Testing App (May to August 2019) (In Office) <i id="CCCProjectCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr class="CCCProjectContents whiteBackground" hidden>
 								<td class="projectsContent projectsContent2ndLast">
