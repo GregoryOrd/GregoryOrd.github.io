@@ -90,15 +90,15 @@
 										selinux, network interfaces, and systemd. I was even the main contributor on the effort to upgrade the servers for a project from an old RHEL version to a new one 
 										after it went end of life.
 									</p>
-									<h3><u>What Team was I On</u></h3>
+									<h3><u>The Gateways Team</u></h3>
 									<p>The team I was on at Calian was a small team called the "Gateways" team. We had various projects, but they were all related to the operation of Satellite Ground Gateways.
 										In particular, our gateways handled aeronautical data and the main purpose of our systems was to connect the ground network to the satellite network. 
 										ACARS (Aircraft Communications Addressing and Reporting System) and ADS-B (Automatic Dependent Surveillance - Broadcast) data are some example of the types of data 
 										that went through these gateways. Having redundant systems was a common theme for these projects and we had servers at multiple sites around the world.
 									</p>
-									<h3><u>Features I Worked On</u></h3>
+									<h3><u>Features I Lead</u></h3>
 									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead:</p>
-										<h4><u>Designed and built a DNS log reader program.</u></h4>
+										<h4><u>Designed and built a DNS log reader program</u></h4>
 										<p>
 											This program read from the log file of the named daemon, parsed out the relevant DNS log data, and 
 												wrote it to our postgres database. The postgres table was then displayed in a GUI using code that Calian had already developed. For this program I used the logrotate tool and install
@@ -108,15 +108,15 @@
 												program we setup a service file and ran it with systemd. 
 										</p>
 										<h4><u>Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics</u></h4>
-										<p>Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics</u>. Some of the statistics included
-											the current number of active VPN tunnels, the number of successful/failes VPN tunnel setup in a time window, and the average setup time of the successfully 
+										<p>Wrote a syslog parser for both the RFC 5424 syslog standard and the BSD syslog standard. Then implemented the logic to track FortiOS VPN tunnel sessions and calculate statistics. Some of the statistics included
+											the current number of active VPN tunnels, the number of successful/failed VPN tunnel setups in a time window, and the average setup time of the successfully 
 											setup VPN tunnels.</p>
-										<h4><u>Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics.</u></h4>
+										<h4><u>Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics</u></h4>
 										<p>
 											For this I wrote a python script to automate the setup and update of the Grafana dashboards and datasources.
 											I also developed a couple of Grafana Datasource plugins to display the data in the ways we needed.
 										</p>
-										<h4><u>Wrote a C program to redirect UDP traffic from a raw socket to a unix socket.</u></h4>
+										<h4><u>Wrote a C program to redirect UDP traffic from a raw socket to a unix socket</u></h4>
 										<p>
 											The purpose of this was that we were analyzing traffic from a client's system 
 												like a packet sniffer. We needed to know the true source and destination IP addresses, 
@@ -125,7 +125,7 @@
 												then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be 
 												turned off in a test environment.
 										</p>
-										<h4><u>Worked on an operating system upgrade from one version of RHEL to a newer version.</u></h4>
+										<h4><u>Worked on an operating system upgrade from one version of RHEL to a newer version</u></h4>
 										<p>
 											This involved some of the following tasks:
 												<ul>
@@ -135,7 +135,7 @@
 													</li>
 													<li>
 														One of these packages that needed to be built from source was python2. We decided to stick with python2 because we didn't want 
-														to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. These was signficant because
+														to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. This was signficant because
 														the new version of RHEL came with python3 and we didn't want to distrupt any operating system services that needed python3 when we installed 
 														python2. So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.
 													</li>
@@ -159,7 +159,7 @@
 														To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it.
 														To customize the install we used Red Hat kickstart files.
 														Calian had some tools setup to build this .iso file, so I didn't have to setup the entire process, but some of the scripts needed to 
-														be updated, and along side our updated offline rpm package repo, configuration files, and kickstart files.
+														be updated along side our updated offline rpm package repo, configuration files, and kickstart files.
 													</li>
 												</ul>
 										</p>
@@ -173,8 +173,7 @@
 									</p>
 									<h3><u>How I Grew My Skills</u></h3>
 									<p>Throughout this experience I grew my programming skills in Java, Python, and Bash. But more importantly I learned a lot about all of the things that need to 
-										be present in an environment or on a system rather than just the application code. There is still lots to learn, but I have a much better grasp on a lot 
-										for linux system concepts now. 
+										be present in an environment or on a system rather than just the application code. There is still lots to learn, but I have a much better grasp of linux system concepts now. 
 									</p><br />
 								</td>
 							</tr>
@@ -189,7 +188,7 @@
 							<tr class="LmCdlInternshipContents whiteBackground" hidden>
 								<td class="projectsContent projectsContent2ndLast">
 								<br />
-									<h4><u>Lockheed Martin Cdl Systems</u></h4>
+									<h3><u>Lockheed Martin Cdl Systems</u></h3>
 									<p>From the Lockheed Martin Website: <strong>"Lockheed Martin CDL Systems specializes in the development and licensing of vehicle control station software for unmanned systems."</strong></p><br/>
 									<br/>
 									<p>During this internship I learned a lot about the software development process that CDL Systems uses to manage 
@@ -219,20 +218,20 @@
 							<tr class="CCCProjectContents whiteBackground" hidden>
 								<td class="projectsContent projectsContent2ndLast">
 								<br />
-									<h4><u>Project Description</u></h4>
+									<h3><u>Project Description</u></h3>
 									<p>The goal of this project was to build an application to allow clients in group counselling programs to complete assessment questionnaires each week throughout a 10-14 week program duration. The application was web-based and was presented to clients via tablets connected to the Calgary Counselling Centre's internal network. This project was completed by myself and another summer student using C# and the .NET framework.</p>
 									<video width="50%" class="videoRight" controls>
 										<source src="CalgaryCounsellingCentre/Questionnaire.mp4" type="video/mp4">
 										Your browser does not support the video tag.
 									</video>
 									<p>The Calgary Counselling Centre runs 12 different group programs for clients with different needs. Some of the programs are for adults, while others are intended for children. Each group has a "Pre-Package" which is completed at the first session, a "Post-Package" which was completed at the final session, and a standard package that is completed at every session in  between. Each package consists of a variable number of individual questionnaires. The application needed to be able to get the client's log-in information, determine which questionnaire package the client was to complete that day, then serve that package to the client. The client's questionnaire answer data was then stored in a database before being pulled out and processed by a software used by counsellors and the centre's Research department. In total, there were about 40 individual questionnaires arranged into approximately 30 packages.</p><br />
-									<h4><u>Project Add-ons</u></h4>
+									<h3><u>Project Add-ons</u></h3>
 									<p>In addition to the main project requirements, my partner and I had and implemented some ideas to make the project more complete. The first was an editing interface that allowed users to modify the contents of programs, packages, sections and questions. This functioned through a web API. The second add-on was an automated emailing system. This system detected common database configuration errors and sent an appropriate email to the Centre's IT Coordinator in response. The system was also capable of sending summary reports of important questions, but this feature was turned off. Finally, simple interface was built with another web API to allow retrieve client entered question data. The interface allowed the user to specify filters such as date, program type, package type, client, etc. On the client-side, the retrieved data was formatted into an excel spreadsheet that could be downloaded and inputted into the software used by the Research Department.</p>
 									<video width="50%" class="videoRight" src="CalgaryCounsellingCentre/WelcomeAndLogIn.MOV" controls>
 										Your browser does not support the video tag.
 									</video>
 									<br />
-									<h4><u>Lessons Learned</u></h4>									
+									<h3><u>Lessons Learned</u></h3>									
 									<p>As my first industry experience, I learned that being flexible throughout the development process is very important as requirements can change and be added at any moment. I also learned a lot about teamwork in software development. My partner and I worked very well together during this project; often one of his ideas would spark an idea in me which would then spark an idea in him and allow us to find the best solution to whatever problem we were facing. I learned that when designing a system it is important to design for the future as well as for the present moment...and I also learned a little bit about the .NET framework, C#, SQL, databases, HTML, javascript and CSS.</p></div>
 								</td>
 							</tr>
