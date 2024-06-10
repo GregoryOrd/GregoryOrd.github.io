@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+		<title>Greg Ord's Software Development Porfolio</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../common/main.css"/>
+		<link rel="stylesheet" href="personalProjects.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script>
+			function toggleRow(id, className){
+				var caretID = id + "Caret";
+				var caret = document.getElementById(caretID);
+				caret.classList.toggle("fa-caret-right");
+				caret.classList.toggle("fa-caret-down");
+				var yearElement = document.getElementById(id);
+				var elements = document.getElementsByClassName(className);
+				var i = 0;
+				var prev = elements[0].hidden;
+				if(prev == true){
+					yearElement.style.borderBottom = "none";
+				}
+				else{
+					yearElement.style.borderBottom = "solid";
+					yearElement.style.borderBottomColor = "white";
+				}
+				for(i; i < elements.length; i++){
+					elements[i].hidden = !prev;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="row">
+			<div id="solderTopViewModal" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+					<h4 id="ModalTitle" class="modal-title">Top view of my first time soldering. Thank you to Sarah for saving me and removing the bridge when I soldered two adjacent pins together.</h4>
+					<button type="button" style="opacity: 1;" class="close" data-dismiss="modal">&times;</button>
+				</div>					  
+				<img src="GregWatch/FirstSolderTopView.jpg" style="width:80%; margin-top: 2.5%;">
+			  </div>
+
+			</div>				
+		</div>
+		<div class="row">
+			<div id="solderSideViewModal" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+					<h4 id="ModalTitle" class="modal-title">Side view of my first time soldering. Not the prettiest solder job, but it gets the job done!</h4>
+					<button type="button" style="opacity: 1;" class="close" data-dismiss="modal">&times;</button>
+				</div>					  
+				<img src="GregWatch/FirstSolderSideView.jpg" style="width:80%; margin-top: 2.5%;">
+			  </div>
+
+			</div>				
+		</div>
+		<script>
+			var topViewModal = document.getElementById("solderTopViewModal");
+			var sideViewModal = document.getElementById("solderSideViewModal");
+			function showTopViewModal(){
+				topViewModal.style.display = "block";
+			}
+			function showSideViewModal(){
+				sideViewModal.style.display = "block";
+			}
+			var topViewModalCloseButton = document.getElementsByClassName("close")[0];
+			var sideViewModalCloseButton = document.getElementsByClassName("close")[1];
+			topViewModalCloseButton.onclick = function() {
+				topViewModal.style.display = "none";
+			}
+			sideViewModalCloseButton.onclick = function() {
+				sideViewModal.style.display = "none";
+			}
+			window.onclick = function(event) {
+			  if (event.target == topViewModal) {
+				topViewModal.style.display = "none";
+			  }
+			  else if(event.target == sideViewModal)
+			  {
+				sideViewModal.style.display = "none";
+			  }
+			}				
+		</script>
+
+		<iframe class="navbarFrame" src="../navbar.html?page=trainingCourses" frameborder="0" width="100%" height="50"></iframe>
+		<div class="container-fluid">
+			<section>
+				<div class="row" id="pageTitle">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<h1>On the Job Training Courses</h1>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8"><h4>This section is meant to show some of the training courses I have completed or been a part of at work. 
+						Some of the smaller more basic training courses have been left out, but the more interesting ones are listed here.</h4></div>
+					<div class="col-sm-2"></div>
+				</div>
+			</section>
+			<section>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<table>
+						<tbody>							
+							<tr id="KubernetesTrainingCourse" class="projectsHeader" onclick="toggleRow('KubernetesTrainingCourse', 'KubernetesTrainingCourseContents');">
+								<th>Kubernetes Training Course (Summer 2024) <i id="KubernetesTrainingCourseCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr class="KubernetesTrainingCourseContents whiteBackground projectsContentLast" hidden>
+								<td class="projectsContent projectsContent2ndLast">
+								<br />
+								<h4><u>Training Description</u></h4>
+									<p>This was an internal training course organized and directed by a team member at Calian Advanced Technologies.</p>
+									<p>The course was delivered over approximately 15 weeks with session per week lasting 1-2 hours per session.
+										These sessions were interactive follow along lessons where the group work through deploying various applications to
+										on various Kubernetes cluster configurations.
+									</p>
+									<p>
+										For this training we ran Kubernetes in a local cluster using 'kind', and I personally ran it on
+										a Ubuntu VM on my personal laptop at home. There was also an accompanying training course put on by Calian 
+										the year before on the subject of docker. I did not attend the docker training but was able to look over 
+										the notes for the docker course on my own.
+									</p>
+								</td>
+							</tr>
+							<tr class="KubernetesTrainingCourseContents projectsContentLast" hidden>
+									<td class="projectsContentLast"></td>
+							</tr>							
+						</tbody>
+					</table>
+				<div class="col-sm-2"></div>
+			</div>
+			</section>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</body>
+</html>
