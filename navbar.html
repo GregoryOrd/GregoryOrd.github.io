@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../common/navbar.css"/>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
+            <div id="NavigationBar" class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="../homePage/home.html">Software Portfolio Website</a>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse" id="myNavbar">
+                <ul id="navBarList" class="nav navbar-nav navbar-right">
+                    <li id="homeItem" class="nav-item"><a id="home" href="./homePage/home.html" target="_top">Home</a></li>
+                    <li id="aboutItem" class="nav-item"><a id="about" href="./aboutPage/about.html" target="_top">About</a></li>
+                    <li id="workExperienceItem" class="nav-item"><a id="workExperience" href="./workExperiencePage/workExperience.html" target="_top">Work Experiences</a></li>
+                    <li id="personalProjectsItem" class="nav-item"><a id="personalProjects" href="./personalProjectsPage/personalProjects.html" target="_top">Personal Projects</a></li>
+                    <li id="schoolProjectsItem" class="nav-item"><a id="schoolProjects" href="./schoolProjectsPage/schoolProjects.html" target="_top">School Projects</a></li>
+                    <li id="educationCoursesItem" class="nav-item"><a id="educationCourses" href="./educationPage/educationCourses.html" target="_top">Education/Courses</a></li> 
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentPage = urlParams.get('page');
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                let linkId = link.getAttribute('id');
+                if (linkId === currentPage) {
+                    document.getElementById(linkId + "Item").classList.add('active')
+                }
+            });
+        </script>
+    </body>
+</html>
