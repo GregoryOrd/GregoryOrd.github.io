@@ -44,7 +44,7 @@
 				<div class="row">
 					<div class="col-sm-2"></div>
 					<div class="col-sm-8"><h4>To date, I have had three software developement work experiences. The first was a 4-month summer job at the Calgary Counselling Centre. The second, a 16-month internship at Lockheed Martin CDL systems. The third, a full-time position
-						at Calian Advanced Technologies since I graduated from university.
+						at Calian Advanced Technologies since I graduated from university in the spring of 2022.
 					</h4></div>
 					<div class="col-sm-2"></div>
 				</div>
@@ -77,6 +77,14 @@
 									</p>
 									<h3><u>Features I Lead</u></h3>
 									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead:</p>
+										<h4><u>Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.</u></h4>
+										<p>
+											For one project, I was tasked with adding support for using a non-default truststore and keystore for outgoing TLS interfaces.
+											These interfaces included connecting to an LDAP server and various database servers. The client libraries we were using already had support for TLS, and the 
+											code change to use a non-default truststore and keystore was quite trivial. Where this became interesting was in testing.
+											To test, I needed to configure all of the test databases to require TLS connections, and I needed to generate and configure TLS certificates.
+											There was nothing revolutionary in this task, but it was a good opportunity to learn a little bit about TLS certificates and how java handles TLS. 
+										</p>
 										<h4><u>Designed and built a DNS log reader program</u></h4>
 										<p>
 											This program read from the log file of the named daemon, parsed out the relevant DNS log data, and 
