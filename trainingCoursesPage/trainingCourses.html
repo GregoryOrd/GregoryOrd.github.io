@@ -113,19 +113,92 @@
 							<tr class="KubernetesTrainingCourseContents whiteBackground projectsContentLast" hidden>
 								<td class="projectsContent projectsContent2ndLast">
 								<br />
-								<h4><u>Training Description</u></h4>
-									<p>This was an internal training course organized and directed by a team member at Calian Advanced Technologies.</p>
-									<p>The course was delivered over approximately 15 weeks with session per week lasting 1-2 hours per session.
-										These sessions were interactive follow along lessons where the group work through deploying various applications to
-										on various Kubernetes cluster configurations.
-									</p>
-									<p>
-										For this training we ran Kubernetes in a local cluster using 'kind', and I personally ran it on
-										a Ubuntu VM on my personal laptop at home. There was also an accompanying training course put on by Calian 
-										the year before on the subject of docker. I did not attend the docker training but was able to look over 
-										the notes for the docker course on my own.
-									</p>
-								</td>
+								<h3><u>Training Description</u></h3>
+								<p>This was an internal training course organized and directed by a team member at Calian Advanced Technologies.</p>
+								<p>The course was delivered over approximately 10 weeks with session per week lasting 1-2 hours per session.
+									These sessions were interactive follow along lessons where the group work through deploying a python rest api application with 
+									a redis datastore to various Kubernetes cluster configurations.
+								</p>
+								<p>
+									For this training we ran Kubernetes in a local cluster using 'kind', and I personally ran it on
+									a Ubuntu VM on my personal laptop at home. There was also an accompanying training course put on by Calian 
+									the year before on the subject of docker. I did not attend the docker training but was able to look over 
+									the notes for the docker course on my own.
+								</p>
+								<p>
+									During this training course we learned about various resources types such as:
+									<ul>
+										<li>
+											Pods
+										</li>
+										<li>
+											Deployments
+										</li>
+										<li>
+											Services
+										</li>
+										<li>
+											Volume Mounts
+										</li>
+										<li>
+											Config Maps
+										</li>
+									</ul>
+								</p>
+								<p>
+									We also learned about tools like k9s for managing the system, and helm charts for
+									publishing our kubernetes configurations and reusing previous published configurations.
+								</p>
+								<h3><u>The Example Application</u></h3>
+								<img src="kubernetes/k9s.png" style="width: 100%;">
+								<p>
+									In this image of the k9s command line interface, you can see a list of pods, with the first one 
+									being the "python-rest-api" pod. This was the main application we were deploying during this training.
+									It was a small example application that had a few rest endpoints which we were able to access with a 
+									web browser once everything was setup correctly. 
+								</p>
+								<p>
+									This application was a good example, because as we went along deploying it we needed to include different resources types.
+									For example, to make the application accessible outside of the cluster, we needed to use either port-fortwarding or a service resource type.
+									Then once we were able to access the application port from outside the kind cluster, we started to add in the redis datastore to support the 
+									"/get" and "/put" endpoints. To do this we needed volumne mounts to setup a disk on which the redis datastore could run. 
+									Finally, once the disk was setup, we downloaded a helm chart with a starting redis configuration that we could override with the relevant
+									configuration to get our app working. 
+								</p>
+								<p>We also learned about adding config maps to provide a configuration file to the application.</p>
+								<h3><u>Screenshots</u></h3>
+								<figure>
+									<img src="kubernetes/config.png" style="width: 100%;">
+									<figcaption>
+										The config endpoint shows the configuration of the application. Some of this configuration (for example, server.cowsay) was set
+										from an environment variable. Other configuration was set via a configuration file read in when the application
+										started running.
+									</figcaption>
+								</figure>
+								<br>
+								<figure>
+									<img src="kubernetes/cowsay.png" style="width: 100%;">
+									<figcaption>
+										The "/cowsay" endpoint shows the value of the cosway field in from the "/config" endpoint.
+									</figcaption>
+								</figure>
+								<br>
+								<figure>
+									<img src="kubernetes/put.png" style="width: 100%;">
+									<figcaption>
+										The "/put" endpoint allows the use to add a value to a list in the redis datastore.
+									</figcaption>
+								</figure>
+								<br>
+								<figure>
+									<img src="kubernetes/get.png" style="width: 100%;">
+									<figcaption>
+										The "/get" endpoint allows the user to see the contents of the list in the redis datastore.
+									</figcaption>
+								</figure>
+
+
+							</td>
 							</tr>
 							<tr class="KubernetesTrainingCourseContents projectsContentLast" hidden>
 									<td class="projectsContentLast"></td>
