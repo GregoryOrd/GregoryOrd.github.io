@@ -8,12 +8,6 @@ li{
   left: -10px;
 }
 
-.navbarFrame {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 #hiddenInfo{
 	float: left;
 	width: 50%;
@@ -97,11 +91,11 @@ th{
 }
 
 
-.yearsContent:hover{
+.modalDataContent:hover{
 	background-color: #a6abb3;
 }
 
-.yearsContent2ndLast:hover{
+.modalDataContent2ndLast:hover{
 	background-color: #a6abb3;	
 }
  
@@ -119,7 +113,7 @@ table{
 	background-color: #333;
 }
 
-.yearsContentHeader{
+.modalDataContentHeader{
 	background-color: #a6abb3;
 	border-right: solid;
 	border-left: solid;
@@ -128,7 +122,7 @@ table{
 	text-align: center;
 }
 
-.yearsContent{
+.modalDataContent{
 	height: 6vh;
 	border: solid;
 	padding-right: 10px;
@@ -136,13 +130,17 @@ table{
 	border-width: 1px;
 }
 
-.yearsContent2ndLast{
+.modal-content p{
+  text-align: left;
+}
+
+.modalDataContent2ndLast{
 	height: 6vh;
 	border: solid;
 	border-width: 1px;
 }
 
-.yearsContentLast{
+.modalDataContentLast{
 	height: 1vh;
 }
 

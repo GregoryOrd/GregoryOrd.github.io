@@ -29,12 +29,41 @@
 				</div>
 			</section>
 			<section>
+				<div class="row">
+					<div id="myModal" class="modal">
+					  <!-- Modal content -->
+					  <div class="modal-content">
+						<div class="modal-header">
+							<h4 id="ModalTitle" class="modal-title">Unable to Load Course Title</h4>
+							<button type="button" style="opacity: 1;" class="close" data-dismiss="modal">&times;</button>
+						</div>					  
+						<p id="ModalText">Unable to Load Course Description</p>
+					  </div>
+
+					</div>				
+				</div>
+				<script>
+					var modal = document.getElementById("myModal");
+					function ShowModal(titleMessage, bodyMessage){
+						document.getElementById("ModalText").innerHTML = bodyMessage;
+						document.getElementById("ModalTitle").innerHTML = titleMessage;
+						modal.style.display = "block";
+					}
+					var modalCloseButton = document.getElementsByClassName("close")[0];
+					modalCloseButton.onclick = function() {
+					  modal.style.display = "none";
+					}
+					window.onclick = function(event) {
+					  if (event.target == modal) {
+						modal.style.display = "none";
+					  }
+					}				
+				</script>
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-8">
 					<table>
 						<tbody>
-	
 
 							<tr id="CalianAt" class="projectsHeader" onclick="toggleRow('CalianAt', 'CalianAtContents');">
 								<th>Calian Advanced Technologies (May 2022 to Present) (Remote) <i id="CalianAtCaret" class="fa fa-caret-right"></i></th>
@@ -51,86 +80,46 @@
 									<h3><u>The Gateways Team</u></h3>
 									<p>The team I was on at Calian was a small team called the "Gateways" team. We had various projects, but they were all related to the operation of Satellite Ground Gateways.
 										In particular, our gateways handled aeronautical data and the main purpose of our systems was to connect the ground network to the satellite network. 
-										ACARS (Aircraft Communications Addressing and Reporting System) and ADS-B (Automatic Dependent Surveillance - Broadcast) data are some example of the types of data 
+										ACARS (Aircraft Communications Addressing and Reporting System) and ADS (Automatic Dependent Surveillance) data are some example of the types of data 
 										that went through these gateways. Having redundant systems was a common theme for these projects and we had servers at multiple sites around the world.
 									</p>
 									<h3><u>Features I Lead</u></h3>
-									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead:</p>
-										<h4><u>Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.</u></h4>
-										<p>
-											For one project, I was tasked with adding support for using a non-default truststore and keystore for outgoing TLS interfaces.
-											These interfaces included connecting to an LDAP server and various database servers. The client libraries we were using already had support for TLS, and the 
-											code change to use a non-default truststore and keystore was quite trivial. Where this became interesting was in testing.
-											To test, I needed to configure all of the test databases to require TLS connections, and I needed to generate and configure TLS certificates.
-											There was nothing revolutionary in this task, but it was a good opportunity to learn a little bit about TLS certificates and how java handles TLS. 
-										</p>
-										<h4><u>Designed and built a DNS log reader program</u></h4>
-										<p>
-											This program read from the log file of the named daemon, parsed out the relevant DNS log data, and 
-												wrote it to our postgres database. The postgres table was then displayed in a GUI using code that Calian had already developed. For this program I used the logrotate tool and install
-												pre/post rotate scripts to detect rotations in the named.log file. The program was written in python and used linux signal handlers to receive signals of 
-												the logrotatation events from the pre/post rotate scripts. The state of the DNS log reader was also maintained in sqlite DB files so that the program
-												could behave properly on start and restart and could handle down time without any loss up until a reasonable duration of time. To control execution of the 
-												program we setup a service file and ran it with systemd. 
-										</p>
-										<h4><u>Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics</u></h4>
-										<p>Wrote a syslog parser for both the RFC 5424 syslog standard and the BSD syslog standard. Then implemented the logic to track FortiOS VPN tunnel sessions and calculate statistics. Some of the statistics included
-											the current number of active VPN tunnels, the number of successful/failed VPN tunnel setups in a time window, and the average setup time of the successfully 
-											setup VPN tunnels.</p>
-										<h4><u>Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics</u></h4>
-										<p>
-											For this I wrote a python script to automate the setup and update of the Grafana dashboards and datasources.
-											I also developed a couple of Grafana Datasource plugins to display the data in the ways we needed.
-										</p>
-										<h4><u>Wrote a C program to redirect UDP traffic from a raw socket to a unix socket</u></h4>
-										<p>
-											The purpose of this was that we were analyzing traffic from a client's system 
-												like a packet sniffer. We needed to know the true source and destination IP addresses, 
-												and not inject the IP address of our machine as the destination or the IP address of our client's network monitoring machine as the source. 
-												So instead of receiving the data over a regular socket, we read it from a raw socket and 
-												then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be 
-												turned off in a test environment.
-										</p>
-										<h4><u>Worked on an operating system upgrade from one version of RHEL to a newer version</u></h4>
-										<p>
-											This involved some of the following tasks:
-												<ul>
-													<li>Using a base image virtual machine to download all of the .rpm files needed by the server from the package manager.</li>
-													<li>For packages that couldn't be downloaded through the package manager, download the source code and build it ourselves. Then used
-														Red Hat's rpmbuild tools to build a .rpm file ourselves.
-													</li>
-													<li>
-														One of these packages that needed to be built from source was python2. We decided to stick with python2 because we didn't want 
-														to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. This was signficant because
-														the new version of RHEL came with python3 and we didn't want to distrupt any operating system services that needed python3 when we installed 
-														python2. So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.
-													</li>
-													<li>
-														Turn the directory of rpm packages into an offline yum repository.
-													</li>
-													<li>
-														Create two SELinux policy modules to allow some of our systemd services to run on the new operating system. For the sake of confifientiality, I 
-														won't say what the SELinux policy modules did, but this part of the OS upgrade configuaration did give me the chance to play around with some of the selinux tools and 
-														create two basic SELinux policy modules.
-													</li>
-													<li>
-														Make some code changes to our application code to be compatible with updated API in .so libraries and .jar files. For example, upgraded versions of OpenSSL.
-													</li>
-													<li>
-														Update configuration for changed linux services. For example, changing the service used for syncing with the time server changed when upgrading to a new 
-														version of REHL. The firewall service that was used also changed so those configurations also needed to be updated.
-													</li>
-													<li>
-														Create a custom .iso file that has all of our packages, SELinux modules, and configurations updates baked into it.
-														To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it.
-														To customize the install we used Red Hat kickstart files.
-														Calian had some tools setup to build this .iso file, so I didn't have to setup the entire process, but some of the scripts needed to 
-														be updated along side our updated offline rpm package repo, configuration files, and kickstart files.
-													</li>
-												</ul>
-										</p>
+									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead.
+										Click on the entry to see a more detailed description.
 									</p>
-									<h4><u>Support Tasks</u></h4>
+									<table>
+										<tbody>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.&#34;,&#34;For one project, I was tasked with adding support for using a non-default truststore and keystore for outgoing TLS interfaces. These interfaces included connecting to an LDAP server and various database servers. The client libraries we were using already had support for TLS, and the code change to use a non-default truststore and keystore was quite trivial. Where this became interesting was in testing. To test, I needed to configure all of the test databases to require TLS connections, and I needed to generate and configure TLS certificates. There was nothing revolutionary in this task, but it was a good opportunity to learn a little bit about TLS certificates and how java handles TLS. &#34;);">
+													Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.
+												</td>
+											</tr>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Designed and built a DNS log reader program&#34;,&#34;This program read from the log file of the named daemon, parsed out the relevant DNS log data, and wrote it to our postgres database. The postgres table was then displayed in a GUI using code that Calian had already developed. For this program I used the logrotate tool and install pre/post rotate scripts to detect rotations in the named.log file. The program was written in python and used linux signal handlers to receive signals of the logrotatation events from the pre/post rotate scripts. The state of the DNS log reader was also maintained in sqlite DB files so that the program could behave properly on start and restart and could handle down time without any loss up until a reasonable duration of time. To control execution of the program we setup a service file and ran it with systemd. &#34;);">
+													Designed and built a DNS log reader program
+												</td>
+											</tr>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics&#34;,&#34;&#34;);">
+													Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics
+												</td>
+											</tr>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics&#34;,&#34;For this I wrote a python script to automate the setup and update of the Grafana dashboards and datasources. I also developed a couple of Grafana Datasource plugins to display the data in the ways we needed.&#34;);">Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics</td>
+											</tr>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Wrote a C program to redirect UDP traffic from a raw socket to a unix socket&#34;,&#34;The purpose of this was that we were analyzing traffic from a client's system like a packet sniffer. We needed to know the true source and destination IP addresses, and not inject the IP address of our machine as the destination or the IP address of our client's network monitoring machine as the source. So instead of receiving the data over a regular socket, we read it from a raw socket and then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be turned off in a test environment.&#34;);">Wrote a C program to redirect UDP traffic from a raw socket to a unix socket</td>
+											</tr>
+											<tr>
+												<td class="modalDataContent" onclick="ShowModal(&#34;Worked on an operating system upgrade from one version of RHEL to a newer version&#34;,&#34;<h4>This involved some of the following tasks:</h4><ul><li>Using a base image virtual machine to download all of the .rpm files needed by the server from the package manager.</li><li>For packages that couldn't be downloaded through the package manager, download the source code and build it ourselves. Then used Red Hat's rpmbuild tools to build a .rpm file ourselves.</li><li>One of these packages that needed to be built from source was python2. We decided to stick with python2 because we didn't want to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. This was signficant because the new version of RHEL came with python3 and we didn't want to distrupt any operating system services that needed python3 when we installed python2. So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.</li><li>Turn the directory of rpm packages into an offline yum repository.</li><li>Create two SELinux policy modules to allow some of our systemd services to run on the new operating system. For the sake of confidientiality, I won't say what the SELinux policy modules did, but this part of the OS upgrade configuaration did give me the chance to play around with some of the selinux tools and create two basic SELinux policy modules.</li><li>Make some code changes to our application code to be compatible with updated API in .so libraries and .jar files. For example, upgraded versions of OpenSSL.</li><li>Update configuration for changed linux services. For example, changing the service used for syncing with the time server changed when upgrading to a new version of REHL. The firewall service that was used also changed so those configurations also needed to be updated.</li><li>Create a custom .iso file that has all of our packages, SELinux modules, and configurations updates baked into it. To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it. To customize the install we used Red Hat kickstart files. Calian had some tools setup to build this .iso file, so I didn't have to setup the entire process, but some of the scripts needed to be updated along side our updated offline rpm package repo, configuration files, and kickstart files.</li></ul>&#34;);">Worked on an operating system upgrade from one version of RHEL to a newer version.</td>
+											</tr>
+											<tr class="modalDataContentLast">
+												<td class="modalDataContentLast"></td>
+												<td class="modalDataContentLast"></td>
+											</tr>
+										</tbody>
+									</table>
+									<h3><u>Support Tasks</u></h3>
 									<p>In addition to the above tasks, my role at Calian sometimes involved support tasks and bug fixes for issues that came up at the various production sites. These tasks 
 										typically involved reading through log data, analyzing messaging sequences, and trying to debug the systems from a distance. In some instances we even created tools 
 										to capture data for debugging at a later date. <u>One example was creating a python program that used inotify to monitor a directory that was receiving files from an SFTP transfer 
