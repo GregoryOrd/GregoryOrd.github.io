@@ -4,3 +4,14 @@
 so we don't need to keep multiple copies of that code
 3) Some sort of templating would be nice for the rows in educationCourses.html  
     - Is vanilla html capable of this on its own?
+
+
+Calian Section of Website
+----------------------------
+1) Add note to use that they can click on the entries in the "Features I lead" section to expand and read more.
+2) Add a features I lead section about RTP Proxy and updating load tester to send SIP protocol messages for instantiating sessions to send RTP packets from a VoIP server to our receivers.
+3) Add a features I lead section about transferring SQLite logs over SFTP and also to then be parsed and added to a postges database.
+4) Update "How I Grew my Skills" to include more about database and networking.
+5) Add note about installing our software using upgrade scripts
+6) Add to "How I Greg My Skills" to include details on debugging from logs and issues that arise in a production system
+while being hard to reproduce in your test/dev environment.
