@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">.
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
 		<title>Greg Ord's Software Development Porfolio</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="../common/main.css"/>
-		
+		<link rel="stylesheet" href="../common/responsive-utils.css"/>
+		<script src="../common/responsive.js"></script>
 		<script>
-			window.onorientationchange = function(){
-				location.reload();
+			/**
+			 * About page specific responsive layout for skyLine image
+			 * Uses ResponsiveManager for modern breakpoint detection
+			 */
+			function initAboutPageLayout() {
+				const updateSkyLineLayout = () => {
+					const skyLine = document.getElementById('skyLine');
+					if (!skyLine) return;
+
+					const isLandscape = ResponsiveManager.isLandscape();
+					const width = window.innerWidth;
+					const height = window.innerHeight;
+					const area = width * height;
+
+					// Layout logic based on orientation and screen area
+					if (isLandscape && area < 207756) {
+						// Small landscape (e.g., small phone horizontal)
+						skyLine.style.display = '';
+						skyLine.style.paddingTop = '5vh';
+						skyLine.style.paddingLeft = '5vh';
+						skyLine.style.height = '52vh';
+						skyLine.style.width = 'auto';
+					} else if (!isLandscape && area < 190000) {
+						// Small portrait (e.g., small phone vertical)
+						skyLine.style.display = '';
+						skyLine.style.paddingTop = '5vh';
+						skyLine.style.paddingLeft = '3vh';
+						skyLine.style.height = '26vh';
+						skyLine.style.width = 'auto';
+					} else if (!isLandscape && area < 340000) {
+						// Medium portrait
+						skyLine.style.display = '';
+						skyLine.style.paddingTop = '5vh';
+						skyLine.style.paddingLeft = '2vh';
+						skyLine.style.height = '25vh';
+						skyLine.style.width = 'auto';
+					} else if (height > 768) {
+						// Large screen
+						skyLine.style.height = '32vh';
+						skyLine.style.width = 'auto';
+						skyLine.style.paddingLeft = '20px';
+					} else {
+						// Default
+						skyLine.style.display = '';
+						skyLine.style.paddingTop = '';
+						skyLine.style.height = '52vh';
+						skyLine.style.width = 'auto';
+						skyLine.style.paddingLeft = '20px';
+					}
+				};
+
+				// Update on initial load and on breakpoint changes
+				updateSkyLineLayout();
+				ResponsiveManager.onBreakpointChange(updateSkyLineLayout);
+			}
+
+			// Initialize when page loads
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initAboutPageLayout);
+			} else {
+				initAboutPageLayout();
 			}
 		</script>
-		<script>
-			function sizing(){
-				if(screen.height >= 768 && screen.width > 700){
-					//document.getElementById("aboutTextTitleDiv").style.marginTop = "2vh";
-				}
-				else{
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "20vh";
-				}
-				if(screen.width < 840 && screen.width > 770){
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "25vh";
-				}
-				else{
-					//document.getElementById("aboutTextTitleDiv").style.paddingTop = "7vh";
-					document.getElementById("skyLine").style.paddingTop = "";
-				}
-				if((window.orientation == 90 || window.orientation == -90) && screen.width * screen.height < 207756){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "5vh";
-					document.getElementById("skyLine").style.height = "52vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if((window.orientation == 0) && screen.width * screen.height < 190000){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "3vh";
-					document.getElementById("skyLine").style.height = "26vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if(window.orientation == 0 && screen.width * screen.height < 340000){
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "5vh";
-					document.getElementById("skyLine").style.paddingLeft = "2vh";
-					document.getElementById("skyLine").style.height = "25vh";
-					document.getElementById("skyLine").style.width = "auto";
-				}
-				else if(screen.height > 768){
-					document.getElementById("skyLine").style.height = "32vh";
-					document.getElementById("skyLine").style.width = "auto";
-					document.getElementById("skyLine").style.paddingLeft = "20px";
-				}
-				else{
-								//alert("i");
-					document.getElementById("skyLine").style.display = "";
-					document.getElementById("skyLine").style.paddingTop = "";
-					document.getElementById("skyLine").style.height = "52vh";
-					document.getElementById("skyLine").style.width = "auto";
-					document.getElementById("skyLine").style.paddingLeft = "20px";
-				}
-			}
-		</script>
-		
 	</head>
 	<body>
 		<iframe class="navbarFrame" src="../navbar.html?page=about" frameborder="0" width="100%" height="50"></iframe>
