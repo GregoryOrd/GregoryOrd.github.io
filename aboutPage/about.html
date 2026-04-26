@@ -1,137 +1,133 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-		<title>Greg Ord's Software Development Porfolio</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="../common/main.css"/>
-		<link rel="stylesheet" href="../common/responsive-utils.css"/>
-		<script src="../common/responsive.js"></script>
-		<script>
-			/**
-			 * About page specific responsive layout for skyLine image
-			 * Uses ResponsiveManager for modern breakpoint detection
-			 */
-			function initAboutPageLayout() {
-				const updateSkyLineLayout = () => {
-					const skyLine = document.getElementById('skyLine');
-					if (!skyLine) return;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-					const isLandscape = ResponsiveManager.isLandscape();
-					const width = window.innerWidth;
-					const height = window.innerHeight;
-					const area = width * height;
+    <title>Greg Ord's Software Development Porfolio</title>
 
-					// Layout logic based on orientation and screen area
-					if (isLandscape && area < 207756) {
-						// Small landscape (e.g., small phone horizontal)
-						skyLine.style.display = '';
-						skyLine.style.paddingTop = '5vh';
-						skyLine.style.paddingLeft = '5vh';
-						skyLine.style.height = '52vh';
-						skyLine.style.width = 'auto';
-					} else if (!isLandscape && area < 190000) {
-						// Small portrait (e.g., small phone vertical)
-						skyLine.style.display = '';
-						skyLine.style.paddingTop = '5vh';
-						skyLine.style.paddingLeft = '3vh';
-						skyLine.style.height = '26vh';
-						skyLine.style.width = 'auto';
-					} else if (!isLandscape && area < 340000) {
-						// Medium portrait
-						skyLine.style.display = '';
-						skyLine.style.paddingTop = '5vh';
-						skyLine.style.paddingLeft = '2vh';
-						skyLine.style.height = '25vh';
-						skyLine.style.width = 'auto';
-					} else if (height > 768) {
-						// Large screen
-						skyLine.style.height = '32vh';
-						skyLine.style.width = 'auto';
-						skyLine.style.paddingLeft = '20px';
-					} else {
-						// Default
-						skyLine.style.display = '';
-						skyLine.style.paddingTop = '';
-						skyLine.style.height = '52vh';
-						skyLine.style.width = 'auto';
-						skyLine.style.paddingLeft = '20px';
-					}
-				};
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../common/main.css"/>
+    <link rel="stylesheet" href="../common/responsive-utils.css"/>
+    <link rel="stylesheet" href="../common/navbar.css"/>
 
-				// Update on initial load and on breakpoint changes
-				updateSkyLineLayout();
-				ResponsiveManager.onBreakpointChange(updateSkyLineLayout);
-			}
+    <script src="../common/responsive.js"></script>
+	<script src="../common/navbar.js"></script>
 
-			// Initialize when page loads
-			if (document.readyState === 'loading') {
-				document.addEventListener('DOMContentLoaded', initAboutPageLayout);
-			} else {
-				initAboutPageLayout();
-			}
-		</script>
-		<link rel="stylesheet" href="../common/navbar.css"/>
-		<script src="../common/navbar.js"></script>
-	</head>
-	<body>
-		<div id="navbar"></div>
-		<section>
-			<div class="row" style="width: 100%; height: 50%;">
-				<div class="col-xs-0 col-md-1"></div>
-				<div class="col-xs-12 col-md-10 aboutTextTitle" id="aboutTextTitleDiv">
-					<h3 id="aboutTitle">My Crush on C/C++</h3>
-				</div>
-				<div class="col-xs-0 col-md-1"></div>
-			</div>
-			<div class="row" style="width: 100%;">
-				<div class="col-xs-0 col-md-1"></div>
-				<div class="col-xs-12 col-md-10 aboutText" id="aboutTextDiv">
-					<img src="Cplusplus.png" style="width: 25%;" id="skyLine" alt=""/>
-					<p><br />
-						Born and raised in Ontario, I moved to Calgary to study at the University of Calgary and run for the Dinos Cross-Country team in 2016.	
-					</p>
-					<p>
-						As an athlete, I was fortunate to win the 2016 Canada West Cross-Country Rookie of the Year award and be surrounded by great teammates. Together our hard work lead to the team winning silver at the 2017 USPORTS National Championships, and gold at the 2018 and 2019 editions.
-					</p>
-					<p>
-						My first programming experience was in a first year course, ENGG 233 - Computing for Engineers.
-						A couple years later, I gained my first software development work experience at the Calgary Counselling Centre in the summer of 2019. 
-						Then a 16-month internship at Lockheed Martin CDL Systems from May 2020 to August 2021, and since May 2022, a fulltime position at Calian Advanced Technologies.
-					</p>
-					<p>
-						I have used different languages over the years, and worked in both Windows and Linux development environments, though I do much 
-						prefer working with Linux. While working with control station software
-						for unmanned vehicles during my Lockheed Martin internship, I became very interested in C++, the build system, and the unit testing framework they were using 
-						to build such a large project. This led to a couple of personal side projects which I called GregBuild and GregTest. 
+    <script>
+        function initAboutPageLayout() {
+            const updateSkyLineLayout = () => {
+                const skyLine = document.getElementById('skyLine');
+                if (!skyLine) return;
 
-					</p>
-					<p>
-						A little while later, the idea came up to try my hand with a little bit of embedded device development. I had been using Garmin running watches for years, 
-						so I decided to try building one. At the time I had a Raspbeery Pi zero laying around
-						and my girlfriend had an Arduino Uno that she wasn't using, so GregBuild was addapted to use a plugin architecture with dynamically linking libraries and a plugin 
-						was build for cross-compiling on the Raspberry Pi and flashing the firmware onto the Arduino Uno. I attached a screen to the Arduino, and came up with 
-						my own pixel schemes for the number's of a digital clock face. GregBuild then became the build system for the C code used to create the watch project 
-						which I called GregWatch.
-					</p>
-					<p>
-						The GregWatch code got to a point I was happy with, and I designed a PCB to replace the Arduino. When the PCB arrived from Osh Park, there 
-						were some problems with it, and then life got busy and the work on GregWatch ended there. But it was a fun project to work on, and I thought that it 
-						was really cool that I was able to prove the usefulness of GregBuild by building the code for GregWatch with it.
-					</p>
-					<p>Since then, I have been working at Calian Advanced Technologies. With Calian I have learned a bunch more about how Linux servers work and writen some 
-						documentation for our customers' system administators. For Calian, I've worked in C/C++, Java, python, writen upgrade and task automation scripts in bash, 
-						and even created an ISO image with all of the packages and system configuration we needed when updating an operating system. When I look back, I realize I've learned 
-						a lot since that first course in 2016, and I am eager to continue learning as my career progresses!
-					</p>
-				</div>
-				<div class="col-xs-0 col-md-1"></div>
-			</div>
-		</section>
+                const isLandscape = ResponsiveManager.isLandscape();
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                const area = width * height;
 
-		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</body>
-</html> 
+                if (isLandscape && area < 207756) {
+                    skyLine.style.paddingTop = '5vh';
+                    skyLine.style.paddingLeft = '5vh';
+                    skyLine.style.height = '52vh';
+                } else if (!isLandscape && area < 190000) {
+                    skyLine.style.paddingTop = '5vh';
+                    skyLine.style.paddingLeft = '3vh';
+                    skyLine.style.height = '26vh';
+                } else if (!isLandscape && area < 340000) {
+                    skyLine.style.paddingTop = '5vh';
+                    skyLine.style.paddingLeft = '2vh';
+                    skyLine.style.height = '25vh';
+                } else if (height > 768) {
+                    skyLine.style.height = '32vh';
+                    skyLine.style.paddingLeft = '20px';
+                } else {
+                    skyLine.style.paddingTop = '';
+                    skyLine.style.height = '52vh';
+                    skyLine.style.paddingLeft = '20px';
+                }
+
+                skyLine.style.width = 'auto';
+            };
+
+            updateSkyLineLayout();
+            ResponsiveManager.onBreakpointChange(updateSkyLineLayout);
+        }
+
+        document.addEventListener('DOMContentLoaded', initAboutPageLayout);
+    </script>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <section class="container-fluid mt-4">
+
+        <!-- Title Row -->
+        <div class="row">
+            <div class="col-md-1 d-none d-md-block"></div>
+
+            <div class="col-12 col-md-10 aboutTextTitle text-center">
+                <h3 id="aboutTitle">My Crush on C/C++</h3>
+            </div>
+
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row mt-3">
+            <div class="col-md-1 d-none d-md-block"></div>
+
+            <div class="col-12 col-md-10 aboutText">
+
+                <img src="Cplusplus.png" class="img-fluid mb-3" style="max-width: 25%;" id="skyLine" alt=""/>
+
+				<p><br />
+					Born and raised in Ontario, I moved to Calgary to study at the University of Calgary and run for the Dinos Cross-Country team in 2016.	
+				</p>
+				<p>
+					As an athlete, I was fortunate to win the 2016 Canada West Cross-Country Rookie of the Year award and be surrounded by great teammates. Together our hard work lead to the team winning silver at the 2017 USPORTS National Championships, and gold at the 2018 and 2019 editions.
+				</p>
+				<p>
+					My first programming experience was in a first year course, ENGG 233 - Computing for Engineers.
+					A couple years later, I gained my first software development work experience at the Calgary Counselling Centre in the summer of 2019. 
+					Then a 16-month internship at Lockheed Martin CDL Systems from May 2020 to August 2021, and since May 2022, a fulltime position at Calian Advanced Technologies.
+				</p>
+				<p>
+					I have used different languages over the years, and worked in both Windows and Linux development environments, though I do much 
+					prefer working with Linux. While working with control station software
+					for unmanned vehicles during my Lockheed Martin internship, I became very interested in C++, the build system, and the unit testing framework they were using 
+					to build such a large project. This led to a couple of personal side projects which I called GregBuild and GregTest. 
+
+				</p>
+				<p>
+					A little while later, the idea came up to try my hand with a little bit of embedded device development. I had been using Garmin running watches for years, 
+					so I decided to try building one. At the time I had a Raspbeery Pi zero laying around
+					and my girlfriend had an Arduino Uno that she wasn't using, so GregBuild was addapted to use a plugin architecture with dynamically linking libraries and a plugin 
+					was build for cross-compiling on the Raspberry Pi and flashing the firmware onto the Arduino Uno. I attached a screen to the Arduino, and came up with 
+					my own pixel schemes for the number's of a digital clock face. GregBuild then became the build system for the C code used to create the watch project 
+					which I called GregWatch.
+				</p>
+				<p>
+					The GregWatch code got to a point I was happy with, and I designed a PCB to replace the Arduino. When the PCB arrived from Osh Park, there 
+					were some problems with it, and then life got busy and the work on GregWatch ended there. But it was a fun project to work on, and I thought that it 
+					was really cool that I was able to prove the usefulness of GregBuild by building the code for GregWatch with it.
+				</p>
+				<p>Since then, I have been working at Calian Advanced Technologies. With Calian I have learned a bunch more about how Linux servers work and writen some 
+					documentation for our customers' system administators. For Calian, I've worked in C/C++, Java, python, writen upgrade and task automation scripts in bash, 
+					and even created an ISO image with all of the packages and system configuration we needed when updating an operating system. When I look back, I realize I've learned 
+					a lot since that first course in 2016, and I am eager to continue learning as my career progresses!
+				</p>
+
+            </div>
+
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+
+    </section>
+
+    <!-- Bootstrap 5 JS (no jQuery needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
