@@ -1,0 +1,76 @@
+<table>
+    <tbody>
+        <tr id="GregBuildProject" class="projectsHeader" onclick="toggleRow('GregBuildProject', 'GregBuildProjectContents');">
+            <th>GregBuild - Build System for C/C++ Projects (January 2021 to April 2021) <i id="GregBuildProjectCaret" class="fa fa-caret-right"></i></th>
+        </tr>	
+        <tr class="GregBuildProjectContents whiteBackground" hidden>
+            <td class="projectsContent">
+            <br />
+            <h4><u>Project Description</u></h4>
+                <p>A build system for C/C++ projects that allows the user to build for either 
+                    the host machine and or a different target hardware. For example, using their x86 laptop,
+                    a user could build an executable for that same x86 laptop. Or for the case of building 
+                    for a different target hardware, the user could use GregBuild on their x86 laptop to build
+                    an exectuable to run on a different harware, such as a microcontroller.
+                </p>
+                <p>The github repo for this project is here: <a href="https://github.com/GregoryOrd/GregBuild">https://github.com/GregoryOrd/GregBuild</a></p><br/>
+                <p>
+                    GregBuild is a project that I see myself working on for a long time. There is a lot that 
+                    goes into a professional grade build system, and this project is not there yet.
+                    I worked on this for about four months before making the 0.0.1 release. After those four months
+                    it was working well enough that I decided to stop actively developing it and start using it as a
+                    user.
+                </p>
+                <p>
+                    There are a lot of things I would still like to improve. So another 4 months of 
+                    working on GregBuild may be in the cards for the not so distant future.
+                </p>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <video width="90%" height="200px" controls>
+                            <source src="GregBuild/ExampleSrcRepoVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p><i>Using GregBuild for a Hello World program on the same hardware.</i></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <video width="90%" height="200px" controls>
+                            <source src="GregBuild/BlinkVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p><i>Using GregBuild on a laptop for a Blink program on the Arduino Uno board.</i></p>
+                    </div>
+                </div>
+                
+
+                <br />
+                <h4><u>Lessons Learned</u></h4>	
+                <p>
+                    Build Systems can be Complicated...
+                </p>
+                <ul>
+                    <li><a href="https://www.lurklurk.org/linkers/linkers.html">https://www.lurklurk.org/linkers/linkers.html</a> is a helpful article for learning about linkers.</li>
+                    <li>Link order can matter.</li>
+                    <li>Debugging on microcontrollers is more difficult than in applications running on your laptop.</li>
+                    <li>First big project using C. Learned/refreshed my memory on a lot of little things about the language and memory management.</li>
+                    <li>Discovered Windows Subsystem for Linux</li>
+                    <li>Learned how to use valgrind (Saw/heard about it on internship, but didn't get much exposure to it until using it with this project).</li>
+                    <li>Got a better understanding for the compilation/linking process. Learned about some cool tools on linux like 'nm' for inspecting binary files.</li>
+                    <li>Learned a little bit about name mangling in C++. Discovered the c++filt tool for demangling names.</li>
+                    <li>Got a feel for some of the problems that need to be solved by a test framework.</li>
+                    <li>Learned about dynamic linking and libary file types (.dll/.so).</li>
+                    <li>Wrote my first application using a plugin architecture.</li>
+                    <li>Learned a little bit about releases and the ideas behind them while on internship. Created my first at home release of a project using Github.</li>
+                    <li>Applied a lot of the lessons learned while on internship to this project. (Clang-format, git submodules, build system/test framework knowledge, coding style, readability, code modularity, screaming architecture/repo structure)</li>
+                    <li>Setup clang-format with VS Code.</li>
+                    <li>Learned about VS Code. Learned how to add files to the VS Code include path so the editor
+                        doesn't have issues with unknown header files. </li>
+                </ul>
+            </td>
+        </tr>
+        <tr class="GregBuildProjectContents projectsContentLast" hidden>
+                <td class="projectsContentLast"></td>
+        </tr>
+    </tbody>
+</table>

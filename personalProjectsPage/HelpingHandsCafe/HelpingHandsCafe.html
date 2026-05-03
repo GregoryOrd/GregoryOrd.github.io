@@ -1,0 +1,82 @@
+<table>
+    <tbody>
+        <tr id="HelpingHandsProject" class="projectsHeader" onclick="toggleRow('HelpingHandsProject', 'HelpingHandsProjectContents');">
+            <th>Helping Hands Caf&eacute Systems (September 2019 to March 2020) <i id="HelpingHandsProjectCaret" class="fa fa-caret-right"></i></th>
+        </tr>	
+        <tr class="HelpingHandsProjectContents whiteBackground" hidden>
+            <td class="projectsContent">
+            <br />
+            <h4><u>Project Description</u></h4>
+                <p>Helping Hands Caf&eacute Systems was a project with the goal to improve the efficiency of student run caf&eacute programs in schools. More specifically, it was aimed at caf&eacute programs where the students are enrolled in the school's special education program and the caf&eacute organizers are occuptional therapists.  </p>
+                <p>The inspiration for Helping Hands came from a University of Calgary track teammate, Jan Erik Naess. Jan Erik discovered this problem through the school where his mom was working and came to me in the fall of 2019 asking me to help him develop a solution. The only technology the program had in place at the time was a Google Form that allowed customers to place orders. Once orders were placed occuptional therapists would print of large summaries and then filter go through all of the orders and data manually. This was very hard and time consuming. To help this I developed a web application and an automatic label printing solution. </p>
+                <p>In January 2020, we got our system set up at Hinsdale South High School in Darien, Illinois. We were hoping to expand to some of the nearby schools, but ended up stopping on the project when COVID-19 started.</p>
+                <p>In addition to the new technology, we have made a few posters for the students and teachers of the caf&eacute to put up around the school. </p>
+                <p>The solution we implemented was created was a simple google scripts app. We used this technology to start because it was able to easily interface with 
+                    the pre-existing Google form that the caf&eacute was using. Before we finished working on this project, I started to create a
+                    more invloved application using the Java Spring framework and VueJs. That application had customer accounts, an improved order form, and a performance measurement system to track how 
+                    the students were progressing with their skills in the caf&eacute. We hoped that recording data on how long it took
+                    students to make orders would be beneficial to the occupation therapists working with them and could even perhaps 
+                    be used on a resume for the students to apply to jobs at caf&eacutes outside of the school. However, when COVID-19 started
+                    we switched to working on Helping Hands Routines and the Java Spring/VueJS caf&eacute application never made it to the school. 
+                </p>
+                <br />
+                
+                <div id="HelpingHandsCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators darkIndicators">
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="1"></li>
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="2"></li> 
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="3"></li> 
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="4"></li> 
+                        <li data-target="#HelpingHandsCarousel" data-slide-to="5"></li> 
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        <img src="HelpingHandsCafe/OrderDashboard.png" style="height: 5%; width:100%;">
+                        </div>
+                    
+                        <div class="item">
+                        <img src="HelpingHandsCafe/ReceiptExample.png" style="height: 5%; width:100%;">
+                        </div>
+
+                        <div class="item">
+                        <img src="HelpingHandsCafe/DeliveredOrders.png" style="height: 5%; width:100%;">
+                        </div>
+
+                        <div class="item">
+                        <img src="HelpingHandsCafe/PrintedReceipt.jpg" style="height: 5%; width:50%; margin-left: 25%;">
+                        </div>
+
+                        <div class="item">
+                        <img src="HelpingHandsCafe/JanErikSetupWithLadies.jpg" style="height: 5%; width:70%; margin-left: 15%;">
+                        </div>
+
+                        <div class="item">
+                        <img src="HelpingHandsCafe/OriginalGoogleForm.png" style="height: 5%; width:100%;">
+                        </div>										  
+                        
+                    <a class="left carousel-control" href="#HelpingHandsCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#HelpingHandsCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                </div>
+                <p><i>Images of the Google Scripts App, the automatically printed receipts, and Jan Erik deploying our system with the ladies at the caf&eacute at Hinsdale High School in Darien, Illinois.</i></p>
+                <br />
+                <h4><u>Lessons Learned</u></h4>	
+                <p>
+                    I learned a bit about Google's developer products, Windows batch scripting, and Brother label printers.
+                </p>
+                <p>Google has a cloud print service. However, we had formatting issues when using this to send print jobs to the label printer. So the solution to automate printing was to use batch scripting and some python to download data from a Google drive, open printing software, and print orders with a preformatted template. This was done with a Windows laptop as the 'print server'. During this process, I learned that Brother's QL series label printer support the use of raster and ESC-P commands. Although never implemented, an idea for later improvements was to send raw binary data directly from our application to the printer without needing to open the Brother QL printer software on a desktop computer. We were also considering the switch to using a small raspberry pi device as a print server instead of a Windows laptop.</p>
+            </td>
+        </tr>
+        <tr class="HelpingHandsProjectContents projectsContentLast" hidden>
+                <td class="projectsContentLast"></td>
+        </tr>
+    </tbody>
+</table>

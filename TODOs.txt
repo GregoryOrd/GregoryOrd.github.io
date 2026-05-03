@@ -1,7 +1,5 @@
-1) Cleanup sizing() javascript function all html page
-    - Should probably split it out into a shared javascript file
-2) Investigate consolidating the nav bar and header sections of each html file
-so we don't need to keep multiple copies of that code
+1) Fix Carousel on Personal Project Pages (HelpingHandsCafe.html and PythonTextingApp.html)
+
 3) Some sort of templating would be nice for the rows in educationCourses.html  
     - Is vanilla html capable of this on its own?
 4) Add text for the "Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics" modal in the Calian work experiences section
