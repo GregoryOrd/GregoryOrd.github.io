@@ -30,7 +30,7 @@ body{
     font-size: 18px;
     text-decoration: none;
     color: var(--color-button-text);
-    border: var(--color-button-border) 1px solid;
+    border: var(--color-accent-primary) 1px solid;
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 55vh;

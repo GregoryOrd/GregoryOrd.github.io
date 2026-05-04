@@ -47,7 +47,7 @@ p{
 }
 
 .darkIndicators .active {
-  background-color: var(--color-gray-active);
+  background-color: var(--color-accent-primary);
 }
 
 video{
@@ -95,12 +95,12 @@ th{
 
 
 .modalDataContent:hover{
-	background-color: var(--color-accent-gray);
+	background-color: var(--color-accent-primary);
 	color: var(--color-white);
 }
 
 .modalDataContent2ndLast:hover{
-	background-color: var(--color-accent-gray);
+	background-color: var(--color-accent-primary);
 	color: var(--color-white);	
 }
  
@@ -115,7 +115,7 @@ table{
 	border-bottom: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: var(--color-white);
-	background-color: var(--color-dark-header);
+	background-color: var(--color-accent-primary);
 }
 
 .modalDataContentHeader{
@@ -175,7 +175,7 @@ table{
 }
 
 .projectsContentHeader{
-	background-color: var(--color-accent-gray);
+	background-color: var(--color-accent-primary);
 	border-right: solid;
 	border-left: solid;
 	border-width: 1px;

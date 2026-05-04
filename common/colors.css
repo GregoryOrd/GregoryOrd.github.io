@@ -21,7 +21,6 @@
   --color-primary-text: #fff3f3c4;            /* White - primary text, high contrast */
   --color-accent-primary: var(--color-cyan);  /* Cyan-blue - interactive elements, shows creativity & trust */
   --color-secondary-bg: #1a2332;            /* Lighter navy - section depth, separation */
-  --color-dark-header: var(--color-cyan);     /* Cyan - section headers (accent color for prominence) */
 
   /* NEUTRAL PALETTE - Supporting Colors */
   --color-light-gray: #e0e7ff;           /* Very light lavender - subtle accents, borders */
@@ -30,10 +29,7 @@
   --color-black: #0f0f1e;                /* Deep navy - shadows, strong contrast text */
 
   /* SECONDARY/INTERACTIVE STATES */
-  --color-accent-gray: var(--color-cyan);  /* Cyan - interactive elements, hover states */
   --color-gray-inactive: #4a5578;        /* Muted blue-gray - disabled/inactive states */
-  --color-gray-active: var(--color-cyan);  /* Cyan - active/selected states */
-  --color-gray-icon: var(--color-cyan);    /* Cyan - interactive icons, buttons */
 
   /* LIGHT MODE/ALTERNATIVE - For contrast sections */
   --color-light-bg: #c1c1c1c9;           /* Off-white - alternative backgrounds */
@@ -41,7 +37,6 @@
 
   /* LANDING PAGE */
   --color-button-text: #ffffff;             /* White text on dark buttons */
-  --color-button-border: var(--color-cyan);   /* Cyan - button borders for consistency */
   --color-overlay: rgba(15, 15, 30, 0.7);   /* Dark semi-transparent - modals, carousel overlays */
 
 }
