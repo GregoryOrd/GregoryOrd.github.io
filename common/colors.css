@@ -1,0 +1,31 @@
+/* ============================================================================
+   COLOR PALETTE - CENTRALIZED THEME CONFIGURATION
+   ============================================================================
+   Semantic color variables for consistent theming across the project.
+   To change theme colors globally, update values here.
+   ========================================================================== */
+
+:root {
+
+  /* PRIMARY PALETTE - Core theme colors */
+  --color-primary-bg: #e6e6ff;           /* Light lavender - main body background */
+  --color-dark-header: #333;              /* Dark charcoal - section/table headers */
+  --color-accent-gray: #a6abb3;           /* Dusty blue-gray - interactive elements, modal headers */
+
+  /* NEUTRAL PALETTE - Grays and whites */
+  --color-border-gray: rgb(107, 106, 106); /* Gray-brown - borders */
+  --color-light-gray: #d4d4d4;            /* Light gray - project group headers */
+  --color-white: white;                   /* White - text, backgrounds, borders */
+  --color-black: black;                   /* Black - text */
+
+  /* SECONDARY GRAYS - Interactive states */
+  --color-gray-inactive: #999;            /* Medium gray - carousel inactive indicators */
+  --color-gray-active: #444;              /* Dark gray - carousel active indicator */
+  --color-gray-icon: #aaa;                /* Light gray - close button icons */
+
+  /* LANDING PAGE - Index/showcase specific */
+  --color-button-text: #ebebeb;           /* Off-white - landing page button text */
+  --color-button-border: #fff7ef;         /* Cream - landing page button border */
+  --color-overlay: rgba(70, 70, 70, 0.25); /* Transparent dark gray - carousel overlay */
+
+}

@@ -1,6 +1,8 @@
+@import url('colors.css');
+
 body{
 	text-align: center;
-	background-color: #e6e6ff;
+	background-color: var(--color-primary-bg);
 }
 
 li{
@@ -39,19 +41,19 @@ p{
 }
 
 .darkIndicators li {
-  background-color: #999;
-  background-color: rgba(70, 70, 70, 0.25);
+  background-color: var(--color-gray-inactive);
+  background-color: var(--color-overlay);
 }
 
 .darkIndicators .active {
-  background-color: #444;
+  background-color: var(--color-gray-active);
 }
 
 video{
 	border: solid;
 	border-width: 1px;
 	border-radius: 3px;
-	background-color: #e6e6ff;
+	background-color: var(--color-primary-bg);
 	margin: 20px;
 }
 
@@ -78,7 +80,7 @@ section{
 }
 .coloredProjectSection{
 	padding-top: 15px;
-	background-color: white;	
+	background-color: var(--color-white);	
 }
 
 .buttonRow{
@@ -92,11 +94,11 @@ th{
 
 
 .modalDataContent:hover{
-	background-color: #a6abb3;
+	background-color: var(--color-accent-gray);
 }
 
 .modalDataContent2ndLast:hover{
-	background-color: #a6abb3;	
+	background-color: var(--color-accent-gray);	
 }
  
 
@@ -106,15 +108,15 @@ table{
 
 .yearsHeader{
 	height: 10vh;
-	color: white;
+	color: var(--color-white);
 	border-bottom: solid;
 	border-bottom-width: 2px;
-	border-bottom-color: white;
-	background-color: #333;
+	border-bottom-color: var(--color-white);
+	background-color: var(--color-dark-header);
 }
 
 .modalDataContentHeader{
-	background-color: #a6abb3;
+	background-color: var(--color-accent-gray);
 	border-right: solid;
 	border-left: solid;
 	border-width: 1px;
@@ -151,15 +153,15 @@ table{
 
 .projectsHeader{
 	height: 10vh;
-	color: white;
+	color: var(--color-white);
 	border-bottom: solid;
 	border-bottom-width: 2px;
-	border-bottom-color: white;
-	background-color: #333;
+	border-bottom-color: var(--color-white);
+	background-color: var(--color-dark-header);
 }
 
 .projectsContentHeader{
-	background-color: #a6abb3;
+	background-color: var(--color-accent-gray);
 	border-right: solid;
 	border-left: solid;
 	border-width: 1px;
@@ -349,7 +351,7 @@ cursor:pointer;
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: var(--color-gray-icon);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -357,13 +359,13 @@ cursor:pointer;
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: var(--color-black);
   text-decoration: none;
   cursor: pointer;
 }
 
 .whiteBackground{
-	background-color: white;
+	background-color: var(--color-white);
 }
 
 .fa{

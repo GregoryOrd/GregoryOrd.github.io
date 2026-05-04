@@ -269,6 +269,8 @@
    PRINT STYLES (Bonus: useful for portfolio)
    ========================================================================== */
 
+@import url('colors.css');
+
 @media print {
   .navbar,
   .navbarFrame {
@@ -276,8 +278,8 @@
   }
   
   body {
-    background-color: white;
-    color: black;
+    background-color: var(--color-white);
+    color: var(--color-black);
   }
   
   section {

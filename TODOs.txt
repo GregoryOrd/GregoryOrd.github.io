@@ -8,7 +8,7 @@
 7) Add GS Messaging Project to Personal Projects
 8) Add Pi Hole Access Point Project to Personal Projects
 9) Add Receipt Reader Project to personal projects 
-
+10) Add Housing Market Monitor Project to Personal Projects 
 
 Calian Section of Website
 ----------------------------
