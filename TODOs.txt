@@ -1,5 +1,5 @@
 1) Fix Carousel on Personal Project Pages (HelpingHandsCafe.html and PythonTextingApp.html)
-
+2) Add details of Docker Container for VS Code on Legacy Systems Demo
 3) Some sort of templating would be nice for the rows in educationCourses.html  
     - Is vanilla html capable of this on its own?
 4) Add text for the "Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics" modal in the Calian work experiences section

@@ -18,3 +18,16 @@ function toggleRow(id, className){
         elements[i].hidden = !prev;
     }
 }
+
+function toggleHidden(className, caretID){ 
+    var caret = document.getElementById(caretID);
+    caret.classList.toggle("fa-caret-right");
+    caret.classList.toggle("fa-caret-down");
+
+    var elements = document.getElementsByClassName(className); 
+    var prev = elements[0].hidden;
+    
+    for(var i = 0; i < elements.length; i++){
+        elements[i].hidden = !prev;
+    } 
+}
