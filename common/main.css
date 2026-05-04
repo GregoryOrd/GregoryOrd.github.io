@@ -119,7 +119,7 @@ table{
 }
 
 .modalDataContentHeader{
-	background-color: var(--color-accent-gray);
+	background-color: var(--color-gray-inactive);
 	border-right: solid;
 	border-left: solid;
 	border-width: 1px;
@@ -162,11 +162,16 @@ table{
 
 .projectsHeader{
 	height: 10vh;
-	color: var(--color-white);
+	color: var( --color-primary-text);
 	border-bottom: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: var(--color-white);
-	background-color: var(--color-dark-header);
+	background-color: var(--color-gray-inactive);
+}
+
+.primaryAccent{
+	background-color: var(--color-accent-primary);
+	color: var(--color-primary-text);
 }
 
 .projectsContentHeader{
@@ -175,7 +180,7 @@ table{
 	border-left: solid;
 	border-width: 1px;
 	height: 8vh;
-	color: var(--color-white);
+	color: var( --color-primary-text);
 }
 
 .projectsContent{

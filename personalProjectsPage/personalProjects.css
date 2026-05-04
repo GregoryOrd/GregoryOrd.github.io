@@ -10,18 +10,6 @@ margin: 5% auto;
 margin: 5% auto;
 }
 
-/* .projectGroupHeader {
-	border-color: var(--color-border-gray);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    height: 6vh;
-    margin-top: 2vh;
-	background-color: var(--color-light-gray);
-} */
-
 .projectGroupHeader {
     display: flex;
     align-items: center;
@@ -32,7 +20,7 @@ margin: 5% auto;
     border-radius: 5px;
     padding: 1vh;
     margin-top: 2vh;
-    background-color: var(--color-light-gray);
+    background-color: var(--color-accent-primary);
 }
 
 .projectGroupCaret {

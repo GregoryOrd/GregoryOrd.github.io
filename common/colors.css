@@ -14,12 +14,14 @@
 
 :root {
 
+  --color-cyan: #026f82df;
+
   /* PRIMARY PALETTE - Modern Tech Theme (Dark Mode) */
-  --color-primary-bg: #0f0f1e;           /* Deep navy-black - main background, professionalism */
-  --color-primary-text: #ffffff;         /* White - primary text, high contrast */
-  --color-accent-primary: #06b6d4;       /* Cyan-blue - interactive elements, shows creativity & trust */
-  --color-secondary-bg: #1a2332;         /* Lighter navy - section depth, separation */
-  --color-dark-header: #06b6d4;          /* Cyan - section headers (accent color for prominence) */
+  --color-primary-bg: #0f0f1e;              /* Deep navy-black - main background, professionalism */
+  --color-primary-text: #fff3f3c4;            /* White - primary text, high contrast */
+  --color-accent-primary: var(--color-cyan);  /* Cyan-blue - interactive elements, shows creativity & trust */
+  --color-secondary-bg: #1a2332;            /* Lighter navy - section depth, separation */
+  --color-dark-header: var(--color-cyan);     /* Cyan - section headers (accent color for prominence) */
 
   /* NEUTRAL PALETTE - Supporting Colors */
   --color-light-gray: #e0e7ff;           /* Very light lavender - subtle accents, borders */
@@ -28,19 +30,19 @@
   --color-black: #0f0f1e;                /* Deep navy - shadows, strong contrast text */
 
   /* SECONDARY/INTERACTIVE STATES */
-  --color-accent-gray: #06b6d4;          /* Cyan - interactive elements, hover states */
+  --color-accent-gray: var(--color-cyan);  /* Cyan - interactive elements, hover states */
   --color-gray-inactive: #4a5578;        /* Muted blue-gray - disabled/inactive states */
-  --color-gray-active: #06b6d4;          /* Cyan - active/selected states */
-  --color-gray-icon: #06b6d4;            /* Cyan - interactive icons, buttons */
+  --color-gray-active: var(--color-cyan);  /* Cyan - active/selected states */
+  --color-gray-icon: var(--color-cyan);    /* Cyan - interactive icons, buttons */
 
   /* LIGHT MODE/ALTERNATIVE - For contrast sections */
-  --color-light-bg: #f5f6f7;             /* Off-white - alternative backgrounds */
+  --color-light-bg: #c1c1c1c9;           /* Off-white - alternative backgrounds */
   --color-light-text: #0f0f1e;           /* Dark navy - text on light backgrounds */
 
   /* LANDING PAGE */
-  --color-button-text: #ffffff;          /* White text on dark buttons */
-  --color-button-border: #06b6d4;        /* Cyan - button borders for consistency */
-  --color-overlay: rgba(15, 15, 30, 0.7); /* Dark semi-transparent - modals, carousel overlays */
+  --color-button-text: #ffffff;             /* White text on dark buttons */
+  --color-button-border: var(--color-cyan);   /* Cyan - button borders for consistency */
+  --color-overlay: rgba(15, 15, 30, 0.7);   /* Dark semi-transparent - modals, carousel overlays */
 
 }
 
@@ -50,7 +52,7 @@
 /* 
    WCAG AA Contrast Ratios (verified):
    - White text (#ffffff) on dark bg (#0f0f1e): 13.8:1 (AAA - excellent)
-   - Cyan text (#06b6d4) on dark bg: 6.5:1 (AA - accessible, good for interactive elements)
+   - Cyan text (#06b5d48f) on dark bg: 6.5:1 (AA - accessible, good for interactive elements)
    - Light gray on dark: 8.2:1 (AA - accessible)
    
    Light mode fallback:

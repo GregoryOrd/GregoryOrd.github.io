@@ -1,0 +1,16 @@
+@import url('colors.css');
+
+.nav-link {
+    color: var(--color-white) !important;
+}
+
+.navbar {
+  background-color: var(--color-cyan) !important;
+  border-bottom: 1px solid var(--color-gray-inactive);
+  height: 5vh;
+  color: var(--color-white) !important;
+}
+
+.navbar-brand {
+  color: var(--color-white);
+}
