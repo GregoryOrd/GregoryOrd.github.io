@@ -109,16 +109,16 @@ table{
 	width: 100%;
 }
 
-.yearsHeader{
+.expandableTableHeader{
 	height: 10vh;
-	color: var(--color-white);
+	color: var( --color-primary-text);
 	border-bottom: solid;
-	border-bottom-width: 1px;
+	border-bottom-width: 2px;
 	border-bottom-color: var(--color-white);
-	background-color: var(--color-accent-primary);
+	background-color: var(--color-accent-secondary);
 }
 
-.yearsHeaderLast {
+.expandableTableHeaderLast {
 	border: none;
 }
 

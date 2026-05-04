@@ -40,36 +40,37 @@
 				<div class="col-sm-8">
 					<table>
 						<tbody>
-							<tr>
-								<table>
-									<tbody>
-										<h1 class="projectGroupHeader" onclick="toggleHidden('2021ToPresentRow', '2021ToPresentCaret');">2021 to Present <i id="2021ToPresentCaret" class="fa fa-caret-right projectGroupCaret"></i></h1>
-										<span class="2021ToPresentRow" id="AirMonitorMCPServer" hidden></span>
-										<span class="2021ToPresentRow" id="ReceiptReader" hidden></span>
-										<span class="2021ToPresentRow" id="PiHoleAccessPoint" hidden></span>
-										<span class="2021ToPresentRow" id="GSMessaging" hidden></span>
-									</tbody>
-								</table>
+							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('2021ToPresentRow', '2021ToPresentCaret');">2021 to Present <i id="2021ToPresentCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr>
-								<table>
-									<tbody>
-										<h1 class="projectGroupHeader" onclick="toggleHidden('2019To2021Row', '2019To2021Caret');">2019 to 2021 <i id="2019To2021Caret" class="fa fa-caret-right projectGroupCaret"></i></h1>
-										<span class="2019To2021Row" id="GregWatch" hidden></span>
-										<span class="2019To2021Row" id="GregBuild" hidden></span>
-										<span class="2019To2021Row" id="HelpingHandsRoutines" hidden></span>
-										<span class="2019To2021Row" id="HelpingHandsCafe" hidden></span>
-									</tbody>
-								</table>
+								<td>
+									<span class="2021ToPresentRow" id="AirMonitorMCPServer" hidden></span>
+									<span class="2021ToPresentRow" id="ReceiptReader" hidden></span>
+									<span class="2021ToPresentRow" id="PiHoleAccessPoint" hidden></span>
+									<span class="2021ToPresentRow" id="GSMessaging" hidden></span>
+								</td>
+							</tr>
+							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('2019To2021Row', '2019To2021Caret');">2019 to 2021 <i id="2019To2021Caret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr>
-								<table>
-									<tbody>
-										<h1 class="projectGroupHeader" onclick="toggleHidden('Pre2019Row', 'Pre2019Caret');">Pre 2019 <i id="Pre2019Caret" class="fa fa-caret-right projectGroupCaret"></i></h1>
-										<span class="Pre2019Row" id="DinosInspire" hidden></span>
-										<span class="Pre2019Row" id="PythonTextingApp" hidden></span>
-									</tbody>
-								</table>
+								<td>
+									<span class="2019To2021Row" id="GregWatch" hidden></span>
+									<span class="2019To2021Row" id="GregBuild" hidden></span>
+									<span class="2019To2021Row" id="HelpingHandsRoutines" hidden></span>
+									<span class="2019To2021Row" id="HelpingHandsCafe" hidden></span>
+								</td>
+							</tr>
+
+							<tr class="expandableTableHeader expandableTableHeaderLast  primaryAccent">
+								<th onclick="toggleHidden('Pre2019Row', 'Pre2019Caret');">Pre 2019 <i id="Pre2019Caret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr>
+								<td>
+									<span class="Pre2019Row" id="DinosInspire" hidden></span>
+									<span class="Pre2019Row" id="PythonTextingApp" hidden></span>
+								</td>
 							</tr>
 						</tbody>
 					</table>
