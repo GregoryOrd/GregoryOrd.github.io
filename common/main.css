@@ -3,6 +3,7 @@
 body{
 	text-align: center;
 	background-color: var(--color-primary-bg);
+	color: var(--color-primary-text);
 }
 
 li{
@@ -95,10 +96,12 @@ th{
 
 .modalDataContent:hover{
 	background-color: var(--color-accent-gray);
+	color: var(--color-white);
 }
 
 .modalDataContent2ndLast:hover{
-	background-color: var(--color-accent-gray);	
+	background-color: var(--color-accent-gray);
+	color: var(--color-white);	
 }
  
 
@@ -122,6 +125,7 @@ table{
 	border-width: 1px;
 	height: 8vh;
 	text-align: center;
+	color: var(--color-white);
 }
 
 .modalDataContent{
@@ -130,8 +134,11 @@ table{
 	padding-right: 10px;
 	padding-left: 10px;
 	border-width: 1px;
+	background-color: var(--color-light-bg);
+	color: var(--color-light-text);
 }
 
+  color: var(--color-light-text);
 .modal-content p{
   text-align: left;
 }
@@ -139,6 +146,8 @@ table{
 .modalDataContent2ndLast{
 	height: 6vh;
 	border: solid;
+	background-color: var(--color-light-bg);
+	color: var(--color-light-text);
 	border-width: 1px;
 }
 
@@ -166,6 +175,7 @@ table{
 	border-left: solid;
 	border-width: 1px;
 	height: 8vh;
+	color: var(--color-white);
 }
 
 .projectsContent{
@@ -176,12 +186,16 @@ table{
 	border-width: 1px;
 	text-align: left;
 	padding-bottom: 10px;
+	background-color: var(--color-light-bg);
+	color: var(--color-light-text);
 }
 
 .projectsContent2ndLast{
 	height: 6vh;
 	border: solid;
 	border-width: 1px;
+	background-color: var(--color-light-bg);
+	color: var(--color-light-text);
 }
 
 .projectsContentLast{
@@ -349,6 +363,30 @@ cursor:pointer;
   overflow: auto; /* Enable scroll if needed */
 }
 
+/* Bootstrap Modal Overrides - Dark Theme */
+.modal-content {
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text);
+}
+
+.modal-header {
+  background-color: var(--color-accent-primary);
+  border-color: var(--color-border-gray);
+}
+
+.modal-title {
+  color: var(--color-white);
+}
+
+.modal-body {
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text);
+}
+
+.modal-body p {
+  color: var(--color-light-text);
+}
+
 /* The Close Button */
 .close {
   color: var(--color-gray-icon);
@@ -365,7 +403,8 @@ cursor:pointer;
 }
 
 .whiteBackground{
-	background-color: var(--color-white);
+	background-color: var(--color-light-bg);
+	color: var(--color-light-text);
 }
 
 .fa{
