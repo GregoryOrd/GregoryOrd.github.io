@@ -14,7 +14,7 @@ margin: 5% auto;
     display: flex;
     align-items: center;
     cursor: pointer;
-    border-color: var(--color-border-gray);
+    border-color: var(--color-accent-primary);
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;

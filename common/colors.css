@@ -14,29 +14,21 @@
 
 :root {
 
-  --color-cyan: #026f82df;
-
   /* PRIMARY PALETTE - Modern Tech Theme (Dark Mode) */
   --color-primary-bg: #0f0f1e;              /* Deep navy-black - main background, professionalism */
   --color-primary-text: #fff3f3c4;            /* White - primary text, high contrast */
-  --color-accent-primary: var(--color-cyan);  /* Cyan-blue - interactive elements, shows creativity & trust */
-  --color-secondary-bg: #1a2332;            /* Lighter navy - section depth, separation */
+  --color-accent-primary: #026f82df;  /* Cyan-blue - interactive elements, shows creativity & trust */
+  --color-accent-secondary: #4a5578;        /* Muted blue-gray - disabled/inactive states */
 
   /* NEUTRAL PALETTE - Supporting Colors */
-  --color-light-gray: #e0e7ff;           /* Very light lavender - subtle accents, borders */
-  --color-border-gray: #3d4563;          /* Medium-dark gray - line separators, subtle dividers */
   --color-white: #ffffff;                /* Pure white - high-contrast elements */
   --color-black: #0f0f1e;                /* Deep navy - shadows, strong contrast text */
 
-  /* SECONDARY/INTERACTIVE STATES */
-  --color-gray-inactive: #4a5578;        /* Muted blue-gray - disabled/inactive states */
-
   /* LIGHT MODE/ALTERNATIVE - For contrast sections */
-  --color-light-bg: #c1c1c1c9;           /* Off-white - alternative backgrounds */
+  --color-light-bg: #d7d7d7;           /* Off-white - alternative backgrounds */
   --color-light-text: #0f0f1e;           /* Dark navy - text on light backgrounds */
 
-  /* LANDING PAGE */
-  --color-button-text: #ffffff;             /* White text on dark buttons */
+  /* Carousel Indicators */
   --color-overlay: rgba(15, 15, 30, 0.7);   /* Dark semi-transparent - modals, carousel overlays */
 
 }

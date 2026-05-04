@@ -42,7 +42,7 @@ p{
 }
 
 .darkIndicators li {
-  background-color: var(--color-gray-inactive);
+  background-color: var(--color-accent-secondary);
   background-color: var(--color-overlay);
 }
 
@@ -113,16 +113,17 @@ table{
 	height: 10vh;
 	color: var(--color-white);
 	border-bottom: solid;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	border-bottom-color: var(--color-white);
 	background-color: var(--color-accent-primary);
 }
 
+.yearsHeaderLast {
+	border: none;
+}
+
 .modalDataContentHeader{
-	background-color: var(--color-gray-inactive);
-	border-right: solid;
-	border-left: solid;
-	border-width: 1px;
+	background-color: var(--color-accent-secondary);
 	height: 8vh;
 	text-align: center;
 	color: var(--color-white);
@@ -166,7 +167,7 @@ table{
 	border-bottom: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: var(--color-white);
-	background-color: var(--color-gray-inactive);
+	background-color: var(--color-accent-secondary);
 }
 
 .primaryAccent{
@@ -376,7 +377,7 @@ cursor:pointer;
 
 .modal-header {
   background-color: var(--color-accent-primary);
-  border-color: var(--color-border-gray);
+  border-color: var(--color-accent-primary);
 }
 
 .modal-title {
