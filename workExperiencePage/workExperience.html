@@ -15,6 +15,19 @@
 		<script src="../common/toggleRow.js"></script>
 		<script src="../common/responsive.js"></script>
 		<script src="../common/navbar.js"></script>
+		<script src="../common/loadHtmlElement.js"></script>
+		<script src="../common/showModal.js"></script>
+
+		<script>
+			window.onload = function() {
+				loadHtmlElement("../navbar.html", "navbar")
+				loadHtmlElement("../common/modal.html", "WorkExperienceModal")
+				loadHtmlElement("Calian/Calian.html", "Calian")
+				loadHtmlElement("LockheedMartinCdl/LockheedMartinCdl.html", "LockheedMartinCdl")
+				loadHtmlElement("CalgaryCounsellingCentre/CalgaryCounsellingCentre.html", "CalgaryCounsellingCentre")
+
+			}
+		</script>
 	</head>
 <body>
     <div id="navbar"></div>
@@ -49,177 +62,22 @@
         </section>
 
         <section>
-
-            <div class="modal fade" id="myModal" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5 id="ModalTitle" class="modal-title">Unable to Load Modal</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <p id="ModalText">Unable to Load Modal</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                function ShowModal(titleMessage, bodyMessage) {
-                    document.getElementById("ModalText").innerHTML = bodyMessage;
-                    document.getElementById("ModalTitle").innerHTML = titleMessage;
-
-                    const modal = new bootstrap.Modal(document.getElementById('myModal'));
-                    modal.show();
-                }
-            </script>
-
+			<span id="WorkExperienceModal"></span>
             <div class="row mt-4">
                 <div class="col-md-2 d-none d-md-block"></div>
 
                 <div class="col-12 col-md-8">
                     <table>
 						<tbody>
-
-							<tr id="CalianAt" class="expandableTableHeader primaryAccent" onclick="toggleRow('CalianAt', 'CalianAtContents');">
-								<th>Calian Advanced Technologies (May 2022 to Present) (Remote) <i id="CalianAtCaret" class="fa fa-caret-right"></i></th>
-							</tr>
-							<tr class="CalianAtContents whiteBackground" hidden>
-								<td class="projectsContent projectsContent2ndLast">
-								<br />
-									<h3><u>Calian Advance Technologies</u></h3>
-									<p>From the Calian Website: <strong>"Calian Advanced Technologies is a global supplier of highly technical solutions, services and products to the aerospace and defence, satellite, wired and terrestrial wireless, test and measurement, agricultural technology, GNSS technology and nuclear industries."</strong></p><br/>
-									<p>This was my first experience working in a linux only environment. I learned a decent amount here about linux tools, software packaging, firewalls, 
-										selinux, network interfaces, and systemd. I was even the main contributor on the effort to upgrade the servers for a project from an old RHEL version to a new one 
-										after it went end of life.
-									</p>
-									<h3><u>The Gateways Team</u></h3>
-									<p>The team I was on at Calian was a small team called the "Gateways" team. We had various projects, but they were all related to the operation of Satellite Ground Gateways.
-										In particular, our gateways handled aeronautical data and the main purpose of our systems was to connect the ground network to the satellite network. 
-										ACARS (Aircraft Communications Addressing and Reporting System) and ADS (Automatic Dependent Surveillance) data are some example of the types of data 
-										that went through these gateways. Having redundant systems was a common theme for these projects and we had servers at multiple sites around the world.
-									</p>
-									<h3><u>Features I Lead</u></h3>
-									<p>While much of the work I did for Calian was with the help of team members, these were some of the tasks where I took the lead.
-										Click on the entry to see a more detailed description.
-									</p>
-									<table>
-										<tbody>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.&#34;,&#34;For one project, I was tasked with adding support for using a non-default truststore and keystore for outgoing TLS interfaces. These interfaces included connecting to an LDAP server and various database servers. The client libraries we were using already had support for TLS, and the code change to use a non-default truststore and keystore was quite trivial. Where this became interesting was in testing. To test, I needed to configure all of the test databases to require TLS connections, and I needed to generate and configure TLS certificates. There was nothing revolutionary in this task, but it was a good opportunity to learn a little bit about TLS certificates and how java handles TLS. &#34;);">
-													Adding Support for Using a non-default Java Tuststore and Keystore for Outgoing TLS Interfaces.
-												</td>
-											</tr>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Designed and built a DNS log reader program&#34;,&#34;This program read from the log file of the named daemon, parsed out the relevant DNS log data, and wrote it to our postgres database. The postgres table was then displayed in a GUI using code that Calian had already developed. For this program I used the logrotate tool and install pre/post rotate scripts to detect rotations in the named.log file. The program was written in python and used linux signal handlers to receive signals of the logrotatation events from the pre/post rotate scripts. The state of the DNS log reader was also maintained in sqlite DB files so that the program could behave properly on start and restart and could handle down time without any loss up until a reasonable duration of time. To control execution of the program we setup a service file and ran it with systemd. &#34;);">
-													Designed and built a DNS log reader program
-												</td>
-											</tr>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics&#34;,&#34;This program read from the log file&#34;);">
-													Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics
-												</td>
-											</tr>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics&#34;,&#34;For this I wrote a python script to automate the setup and update of the Grafana dashboards and datasources. I also developed a couple of Grafana Datasource plugins to display the data in the ways we needed.&#34;);">Setup a Grafana dashboard configuration to show the above VPN statistics as well as other important statistics</td>
-											</tr>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Wrote a C program to redirect UDP traffic from a raw socket to a unix socket&#34;,&#34;The purpose of this was that we were analyzing traffic from a client's system like a packet sniffer. We needed to know the true source and destination IP addresses, and not inject the IP address of our machine as the destination or the IP address of our client's network monitoring machine as the source. So instead of receiving the data over a regular socket, we read it from a raw socket and then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be turned off in a test environment.&#34;);">Wrote a C program to redirect UDP traffic from a raw socket to a unix socket</td>
-											</tr>
-											<tr>
-												<td class="modalDataContent" onclick="ShowModal(&#34;Worked on an operating system upgrade from one version of RHEL to a newer version&#34;,&#34;<h4>This involved some of the following tasks:</h4><ul><li>Using a base image virtual machine to download all of the .rpm files needed by the server from the package manager.</li><li>For packages that couldn't be downloaded through the package manager, download the source code and build it ourselves. Then used Red Hat's rpmbuild tools to build a .rpm file ourselves.</li><li>One of these packages that needed to be built from source was python2. We decided to stick with python2 because we didn't want to update some legacy C code that was using the Python2 C Api to embed a python interpreter into a simulator. This was signficant because the new version of RHEL came with python3 and we didn't want to distrupt any operating system services that needed python3 when we installed python2. So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.</li><li>Turn the directory of rpm packages into an offline yum repository.</li><li>Create two SELinux policy modules to allow some of our systemd services to run on the new operating system. For the sake of confidientiality, I won't say what the SELinux policy modules did, but this part of the OS upgrade configuaration did give me the chance to play around with some of the selinux tools and create two basic SELinux policy modules.</li><li>Make some code changes to our application code to be compatible with updated API in .so libraries and .jar files. For example, upgraded versions of OpenSSL.</li><li>Update configuration for changed linux services. For example, changing the service used for syncing with the time server changed when upgrading to a new version of REHL. The firewall service that was used also changed so those configurations also needed to be updated.</li><li>Create a custom .iso file that has all of our packages, SELinux modules, and configurations updates baked into it. To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it. To customize the install we used Red Hat kickstart files. Calian had some tools setup to build this .iso file, so I didn't have to setup the entire process, but some of the scripts needed to be updated along side our updated offline rpm package repo, configuration files, and kickstart files.</li></ul>&#34;);">Worked on an operating system upgrade from one version of RHEL to a newer version.</td>
-											</tr>
-											<tr class="modalDataContentLast">
-												<td class="modalDataContentLast"></td>
-												<td class="modalDataContentLast"></td>
-											</tr>
-										</tbody>
-									</table>
-									<h3><u>Support Tasks</u></h3>
-									<p>In addition to the above tasks, my role at Calian sometimes involved support tasks and bug fixes for issues that came up at the various production sites. These tasks 
-										typically involved reading through log data, analyzing messaging sequences, and trying to debug the systems from a distance. In some instances we even created tools 
-										to capture data for debugging at a later date. <u>One example was creating a python program that used inotify to monitor a directory that was receiving files from an SFTP transfer 
-										and stream a copy of the files into a tarball</u> in another directory before the server's application code could process and delete them.
-										This program allowed us to capture the files and analyze them as part of the debugging process for the particular issue that was happening in production.
-									</p>
-									<h3><u>How I Grew My Skills</u></h3>
-									<p>Throughout this experience I grew my programming skills in C++, Java, Python, and Bash. But more importantly I learned a lot about all of the things that need to 
-										be present in an environment or on a system rather than just the application code. There is still lots to learn, but I have a much better grasp of linux system concepts now. 
-									</p><br />
-								</td>
-							</tr>
-							<tr class="CalianAtContents projectsContentLast" hidden>
-									<td class="projectsContentLast"></td>
-							</tr>
-
-
-							<tr id="LmCdlInternship" class="expandableTableHeader primaryAccent" onclick="toggleRow('LmCdlInternship', 'LmCdlInternshipContents');">
-								<th>Lockheed Martin Cdl Systems Internship (May 2020 to August 2021) (Remote due to COVID-19) <i id="LmCdlInternshipCaret" class="fa fa-caret-right"></i></th>
-							</tr>
-							<tr class="LmCdlInternshipContents whiteBackground" hidden>
-								<td class="projectsContent projectsContent2ndLast">
-								<br />
-									<h3><u>Lockheed Martin Cdl Systems</u></h3>
-									<p>From the Lockheed Martin Website: <strong>"Lockheed Martin CDL Systems specializes in the development and licensing of vehicle control station software for unmanned systems."</strong></p><br/>
-									<br/>
-									<p>During this internship I learned a lot about the software development process that CDL Systems uses to manage 
-										such a large team and ensure quality in their products. I practiced agile software development for the first 
-										time in this position, and learned a lot about things like test-driven development and continous integration. 
-										My skills with git also improved working here, and I gained a lot of technical knowledge about object oriented 
-										software and C++.
-									</p><br />
-									<iframe width="100%" height="480px" src="https://www.youtube.com/embed/0cb7dL2V3NY"></iframe><br/>
-									<p><i>Video from Lockheed Martin Youtube Channel</i></p><br/>
-									<br />								
-									<p>Lockheed Martin CDL Systems has such a good group of people that even though my entire internship was working 
-										from home due to COVID-19, I made leaps and bounds learning from them. After working here, I know
-										what it looks like to be a member of a strong professional team.
-									</p></div>
-								</td>
-							</tr>
-							<tr class="LmCdlInternshipContents projectsContentLast" hidden>
-									<td class="projectsContentLast"></td>
-							</tr>
-
-
-
-							<tr id="CCCProject" class="expandableTableHeader expandableTableHeaderLast primaryAccent" onclick="toggleRow('CCCProject', 'CCCProjectContents');">
-								<th>Calgary Counselling Centre Group Testing App (May to August 2019) (In Office) <i id="CCCProjectCaret" class="fa fa-caret-right"></i></th>
-							</tr>
-							<tr class="CCCProjectContents whiteBackground" hidden>
-								<td class="projectsContent projectsContent2ndLast">
-								<br />
-									<h3><u>Project Description</u></h3>
-									<p>The goal of this project was to build an application to allow clients in group counselling programs to complete assessment questionnaires each week throughout a 10-14 week program duration. The application was web-based and was presented to clients via tablets connected to the Calgary Counselling Centre's internal network. This project was completed by myself and another summer student using C# and the .NET framework.</p>
-									<video width="50%" class="videoRight" controls>
-										<source src="CalgaryCounsellingCentre/Questionnaire.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-									<p>The Calgary Counselling Centre runs 12 different group programs for clients with different needs. Some of the programs are for adults, while others are intended for children. Each group has a "Pre-Package" which is completed at the first session, a "Post-Package" which was completed at the final session, and a standard package that is completed at every session in  between. Each package consists of a variable number of individual questionnaires. The application needed to be able to get the client's log-in information, determine which questionnaire package the client was to complete that day, then serve that package to the client. The client's questionnaire answer data was then stored in a database before being pulled out and processed by a software used by counsellors and the centre's Research department. In total, there were about 40 individual questionnaires arranged into approximately 30 packages.</p><br />
-									<h3><u>Project Add-ons</u></h3>
-									<p>In addition to the main project requirements, my partner and I had and implemented some ideas to make the project more complete. The first was an editing interface that allowed users to modify the contents of programs, packages, sections and questions. This functioned through a web API. The second add-on was an automated emailing system. This system detected common database configuration errors and sent an appropriate email to the Centre's IT Coordinator in response. The system was also capable of sending summary reports of important questions, but this feature was turned off. Finally, simple interface was built with another web API to allow retrieve client entered question data. The interface allowed the user to specify filters such as date, program type, package type, client, etc. On the client-side, the retrieved data was formatted into an excel spreadsheet that could be downloaded and inputted into the software used by the Research Department.</p>
-									<video width="50%" class="videoRight" src="CalgaryCounsellingCentre/WelcomeAndLogIn.MOV" controls>
-										Your browser does not support the video tag.
-									</video>
-									<br />
-									<h3><u>Lessons Learned</u></h3>									
-									<p>As my first industry experience, I learned that being flexible throughout the development process is very important as requirements can change and be added at any moment. I also learned a lot about teamwork in software development. My partner and I worked very well together during this project; often one of his ideas would spark an idea in me which would then spark an idea in him and allow us to find the best solution to whatever problem we were facing. I learned that when designing a system it is important to design for the future as well as for the present moment...and I also learned a little bit about the .NET framework, C#, SQL, databases, HTML, javascript and CSS.</p></div>
-								</td>
-							</tr>
-							<tr class="CCCProjectContents projectsContentLast" hidden>
-									<td class="projectsContentLast"></td>
-							</tr>
-
+							<span id="Calian"></span>
+							<span id="LockheedMartinCdl"></span>
+							<span id="CalgaryCounsellingCentre"></span>
 						</tbody>
-                    </table>
+					</table>
                 </div>
 
                 <div class="col-md-2 d-none d-md-block"></div>
             </div>
-
         </section>
 
     </div>
