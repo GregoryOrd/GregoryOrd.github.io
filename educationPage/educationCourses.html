@@ -13,39 +13,21 @@
 
 		<script src="../common/responsive.js"></script>
 		<script src="../common/toggleRow.js"></script>
-		<script src="../common/navbar.js"></script>
+		<script src="../common/loadHtmlElement.js"></script>
+		<script src="../common/showModal.js"></script>
+
+		<script>
+			loadHtmlElement("../navbar.html", "navbar")
+			loadHtmlElement("../common/modal.html", "EducationModal")
+		</script>
 	</head>
 	<body>
-		<div id="navbar"></div>
+		<span id="navbar"></span>
 		<section>
 			<div class="container-fluid">
 
-				<div class="modal fade" id="myModal" tabindex="-1">
-					<div class="modal-dialog modal-dialog-centered modal-lg">
-						<div class="modal-content">
+				<span id="EducationModal"></span>
 
-							<div class="modal-header">
-								<h5 id="ModalTitle" class="modal-title">Unable to Load Modal</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-							</div>
-
-							<div class="modal-body">
-								<p id="ModalText">Unable to Load Modal</p>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				<script>
-					function ShowModal(titleMessage, bodyMessage) {
-						document.getElementById("ModalText").innerHTML = bodyMessage;
-						document.getElementById("ModalTitle").innerHTML = titleMessage;
-
-						const modal = new bootstrap.Modal(document.getElementById('myModal'));
-						modal.show();
-					}
-				</script>
 
 				<div class="row" id="pageTitle">
 					<div class="col-sm-2"></div>
