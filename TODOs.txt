@@ -1,4 +1,5 @@
-1) Fix Carousel on Personal Project Pages (HelpingHandsCafe.html and PythonTextingApp.html)
+0) Fix Responsive Design. Some pages and navbar have problems on phone screen.
+    -> Might be fixed now. Wait for update to get push and check on phone screen.
 2) Add details of Docker Container for VS Code on Legacy Systems Demo
 3) Some sort of templating would be nice for the rows in educationCourses.html  
     - Is vanilla html capable of this on its own?
@@ -10,6 +11,10 @@
 9) Add Receipt Reader Project to personal projects 
 10) Add Housing Market Monitor Project to Personal Projects 
 11) Update home page photos
+12) Update features I lead for FortiOs log tracking.
+13) Add JVM Heap Dump Analysis (w/ Visual VM) to fix memory leak to Calian support tasks
+14) Maybe use table instead of text for Calian support tasks
+15) Add note about kubernetes Kafka project
 
 Calian Section of Website
 ----------------------------
