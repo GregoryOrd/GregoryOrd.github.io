@@ -6,7 +6,6 @@
 
 .navbar {
   background-color: var(--color-accent-primary) !important;
-  height: 5vh;
   color: var(--color-white) !important;
 }
 
