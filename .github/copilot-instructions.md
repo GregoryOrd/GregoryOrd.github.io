@@ -56,7 +56,7 @@ python3 -m http.server 8000
 ├── common/                             # Shared resources
 │   ├── main.css                        # Global styles (body, colors, components)
 │   ├── navbar.css                      # Responsive navbar styles
-│   └── main.js                         # toggleRow() for collapsible content
+│   └── toggleRow.js                         # toggleRow() for collapsible content
 ├── homePage/
 │   └── home.html                       # Main landing page (has sizing() function)
 ├── aboutPage/
@@ -91,12 +91,12 @@ Each main page follows this pattern:
 ### Key Components
 - **Navbar** (`navbar.html`): Embedded as iframe in all pages using query parameter to highlight active page
 - **Responsive Layout**: Uses `sizing()` function to handle complex responsive behavior for various devices
-- **Collapsible Sections**: Uses `toggleRow(id, className)` function from `main.js` to toggle row visibility with Font Awesome caret icons
+- **Collapsible Sections**: Uses `toggleRow(id, className)` function from `toggleRow.js` to toggle row visibility with Font Awesome caret icons
 - **External CSS**: Font Awesome (4.7.0) included in some pages via CDN
 
 ### Important Codebase Details
 **Known Issues (from TODOs.txt):**
-1. `sizing()` function is duplicated in each page (home.html, about.html, etc.) — should be consolidated into shared `main.js`
+1. `sizing()` function is duplicated in each page (home.html, about.html, etc.) — should be consolidated into shared `toggleRow.js`
 2. Navbar/header code generation is duplicated across pages; templating would help reduce maintenance
 3. Education courses page needs templating for repeated row structures
 
