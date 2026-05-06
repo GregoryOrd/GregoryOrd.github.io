@@ -264,6 +264,43 @@ table{
   width: 50%;
 }
 
+.projectsContent img,
+.projectsContent video,
+.projectsContent .center {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.projectsContent,
+.projectsContent2ndLast,
+.projectsContentLast,
+.expandableTableHeader th,
+.projectsContent a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  table {
+    table-layout: fixed;
+  }
+
+  .projectsContent,
+  .projectsContent2ndLast,
+  .projectsContentLast,
+  .expandableTableHeader th,
+  .projectsContent a,
+  .projectsContent p,
+  .projectsContent li {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+
 .A {
   height: 55vh;
   width: auto;
