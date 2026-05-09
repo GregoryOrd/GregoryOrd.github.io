@@ -1,0 +1,39 @@
+<head>
+    <title>Implemented, and Tested an RTP proxy server for a VoIP application</title>
+<script>
+console.log(window.location.href);
+</script>
+</head>
+<body>
+    <p>
+        We had a legacy system that used SIP (Session Initiation Protocol) messages to setup RTP (Real-Time Transport Protocol) sessions for voice calls 
+        between the air and ground. Once the SIP session was intialized, the air and ground systems would communicate directly. 
+    </p>
+    <p>
+        The devices on the ground side had two different ports, one for sending RTP traffic and one for receiving RTP traffic.
+    </p>
+    <img src="Calian/OriginalCallSetup.svg" alt="Diagram">
+
+    <p>
+        After some time, the customer wanted to change the system and upgrade the air-side machines. When this change happened
+        the air-side machine stopped recognizing that the ground-side machine wanted to use two different ports. Instead the air-side 
+        would always send to the ground-sde port that it was receiving traffic from. This broke the two-ways communication setup.
+    </p>
+    <img src="Calian/BrokenCallSetup.svg" alt="Diagram">
+
+    <p>
+        The solution was to implement an RTP proxy server between the ground-side and air-side machines.
+        The proxy needed to support voice calls in both directions, initiated by either side.
+        Details of which addresses and ports to connect came into the RTP proxy server from the SIP coordinator.
+        Once a connection was up, the proxy begin collecting statistcs on the RTP traffic like number of packes, time between packets, etc. 
+        When the call ended, the proxy would send a report with these statistics back to the SIP coordinator.
+    </p>
+    <img src="Calian/RtpProxySolution.svg" alt="Diagram">
+
+    <p>
+        To generate test packets,I created an RTP playback tool. I setup an ffmpeg stream and then used wireshark to capture the RTP traffic packets and save to a pcap file.
+        Then I integrated a new module into our load tester tool to read the pcap file and send those packets.
+        Some of the fields in the packets relating to timing and sequence numbers needed to be modified by the test tool to make the RTP stream look like a real stream. 
+        I also setup this testing tool to repeat the playback continously until a configured timer expired or the SIP coordinator instructed it to stop.
+    </p>
+</body>

@@ -5,6 +5,7 @@ function setupTableRows() {
 }
 
 function setupCalianModals() {
+    PopulatePreModalTitle('Calian/RtpProxy.html', 'RtpProxyTableData')
     PopulatePreModalTitle('Calian/ModernVsCodeOnLegacySystems.html', 'ModernVsCodeTableData')
     PopulatePreModalTitle('Calian/NonDefaultJavaTruststore.html', 'NonDefaultJavaTruststoreTableData')
     PopulatePreModalTitle('Calian/DnsLogger.html', 'DnsLoggerTableData')

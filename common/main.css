@@ -143,6 +143,13 @@ table{
   text-align: left;
 }
 
+.modal-content img {
+  width: auto;
+  max-height: 50vh;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
 .modalDataContent2ndLast{
 	height: 6vh;
 	border: solid;
