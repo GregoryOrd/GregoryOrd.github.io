@@ -1,4 +1,3 @@
-2) Maybe use table instead of text for Calian support tasks
 3) Update "How I Grew my Skills" to include more about database and networking.
 4) Add to "How I Grew My Skills" to include details on debugging from logs and issues that arise in a production system while being hard to reproduce in your test/dev environment.
 
