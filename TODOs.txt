@@ -1,6 +1,3 @@
-3) Update "How I Grew my Skills" to include more about database and networking.
-4) Add to "How I Grew My Skills" to include details on debugging from logs and issues that arise in a production system while being hard to reproduce in your test/dev environment.
-
 5) Write about GS Messaging Project in Personal Projects
 6) Write about Housing Market Monitor Project in Personal Projects 
 7) Write about Pi Hole Access Point Project in Personal Projects
