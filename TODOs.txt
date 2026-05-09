@@ -1,3 +1,4 @@
+0) Consider moving script invocations from head to end of body
 5) Write about GS Messaging Project in Personal Projects
 6) Write about Housing Market Monitor Project in Personal Projects 
 7) Write about Pi Hole Access Point Project in Personal Projects
