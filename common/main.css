@@ -139,8 +139,7 @@ table{
 	color: var(--color-light-text);
 }
 
-  color: var(--color-light-text);
-.modal-content p{
+.modal-content {
   text-align: left;
 }
 
