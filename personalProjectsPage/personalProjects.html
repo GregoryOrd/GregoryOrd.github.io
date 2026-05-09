@@ -54,12 +54,23 @@
 				<div class="col-sm-8">
 					<table>
 						<tbody>
+
+
+							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('FutureRow', 'FutureCaret');">Future Project Ideas<i id="FutureCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr>
+								<td>
+									<span class="FutureRow" id="AirMonitorMCPServer" hidden></span>
+								</td>
+							</tr>
+
+
 							<tr class="expandableTableHeader  primaryAccent">
 								<th onclick="toggleHidden('2021ToPresentRow', '2021ToPresentCaret');">2021 to Present <i id="2021ToPresentCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr>
 								<td>
-									<span class="2021ToPresentRow" id="AirMonitorMCPServer" hidden></span>
 									<span class="2021ToPresentRow" id="ReceiptReader" hidden></span>
 									<span class="2021ToPresentRow" id="PiHoleAccessPoint" hidden></span>
 									<span class="2021ToPresentRow" id="HousingMarketMonitor" hidden></span>
