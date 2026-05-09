@@ -1,22 +1,15 @@
-0) Use loadHtmlElement in modals of work experience sub pages to improve code readability
-4) Add text for the "Implemented a feature to read syslog messages from a FortiOs log to track VPN sessions statistics" modal in the Calian work experiences section
-5) Add RTP proxy section to Calian Work Experiences Section
-6) Rewrite about section
-7) Add GS Messaging Project to Personal Projects
-8) Add Pi Hole Access Point Project to Personal Projects
-9) Add Receipt Reader Project to personal projects 
-10) Add Housing Market Monitor Project to Personal Projects 
-11) Update home page photos
-12) Update features I lead for FortiOs log tracking.
-13) Add JVM Heap Dump Analysis (w/ Visual VM) to fix memory leak to Calian support tasks
-14) Maybe use table instead of text for Calian support tasks
-15) Add note about kubernetes Kafka project
+0) Add RTP proxy section to Calian Work Experiences Section
+    - Add a features I lead section about RTP Proxy and updating load tester to send SIP protocol messages for instantiating sessions to send RTP packets from a VoIP server to our receivers.
+1) Add JVM Heap Dump Analysis (w/ Visual VM) to fix memory leak to Calian support tasks
+2) Maybe use table instead of text for Calian support tasks
+3) Update "How I Grew my Skills" to include more about database and networking.
+4) Add to "How I Grew My Skills" to include details on debugging from logs and issues that arise in a production system while being hard to reproduce in your test/dev environment.
 
-Calian Section of Website
-----------------------------
-2) Add a features I lead section about RTP Proxy and updating load tester to send SIP protocol messages for instantiating sessions to send RTP packets from a VoIP server to our receivers.
-3) Add a features I lead section about transferring SQLite logs over SFTP and also to then be parsed and added to a postges database.
-4) Update "How I Grew my Skills" to include more about database and networking.
-5) Add note about installing our software using upgrade scripts
-6) Add to "How I Grew My Skills" to include details on debugging from logs and issues that arise in a production system
-while being hard to reproduce in your test/dev environment.
+5) Write about GS Messaging Project in Personal Projects
+6) Write about Housing Market Monitor Project in Personal Projects 
+7) Write about Pi Hole Access Point Project in Personal Projects
+8) Write about Receipt Reader Project in personal projects 
+9) Write about Air Quality Monitor MCP server in Personal Projects
+
+10) Rewrite about section
+11) Update home page photos
