@@ -1,0 +1,11 @@
+<head>
+    <title>Wrote a C program to redirect UDP traffic from a raw socket to a unix socket</title>
+</head>
+<body>
+<p>
+    The purpose of this was that we were analyzing traffic from a client's system like a packet sniffer. 
+    We needed to know the true source and destination IP addresses, and not inject the IP address of our machine as the destination or the IP address 
+    of our client's network monitoring machine as the source. So instead of receiving the data over a regular socket, we read it from a raw socket 
+    and then redirected it to our Java application code using a unix socket. The C program that we wrote to do this had an accompanying systemd service file so that it would be turned off in a test environment.
+</p>
+</body>

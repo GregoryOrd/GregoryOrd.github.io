@@ -1,0 +1,20 @@
+<head>
+    <title>Designed and built a python DNS log reader program</title>
+</head>
+<body>
+    <p>
+        <p>
+            This program read from the log file of the named daemon, parsed out the relevant DNS log data, and wrote it to our postgres database. 
+            The postgres table was then displayed in a GUI using code that Calian had already developed.
+        </p>
+        <p>
+            For this program I used the logrotate tool and install pre/post rotate scripts to detect rotations in the named.log file. 
+            The program was written in python and used linux signal handlers to receive signals of the logrotatation events from the pre/post rotate scripts. 
+            The state of the DNS log reader was also maintained in sqlite DB files so that the program could behave properly on start and restart and could 
+            handle down time without any loss up until a reasonable duration of time.
+        </p>
+        <p>
+            To control execution of the program we setup a service file and ran it with systemd.
+        </p>
+    </p>
+</body>

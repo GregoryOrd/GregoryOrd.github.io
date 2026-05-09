@@ -1,0 +1,43 @@
+<head>
+    <title>Worked on an operating system upgrade from one version of RHEL to a newer version</title>
+</head>
+<body>
+<h4>This involved some of the following tasks:</h4>
+<ul>
+    <li>Using a base image virtual machine to download all of the .rpm files needed by the server from the package manager.</li>
+    <li>
+        For packages that couldn't be downloaded through the package manager, download the source code and build it ourselves. 
+        Then used Red Hat's rpmbuild tools to build a .rpm file ourselves.
+    </li>
+    <li>
+        One of these packages that needed to be built from source was python2.
+        We decided to stick with python2 because we didn't want to update some legacy C code that was using the Python2 C Api 
+        to embed a python interpreter into a simulator. This was signficant because the new version of RHEL came with python3 
+        and we didn't want to distrupt any operating system services that needed python3 when we installed python2. 
+        So the python2 rpm package that we built needed to behave nicely installed side-by-side with python3.
+    </li>
+    <li>Turn the directory of rpm packages into an offline yum repository.</li>
+    <li>
+        Create two SELinux policy modules to allow some of our systemd services to run on the new operating system. 
+        For the sake of confidientiality, I won't say what the SELinux policy modules did, but this part of the OS 
+        upgrade configuaration did give me the chance to play around with some of the selinux tools and create two 
+        basic SELinux policy modules.
+    </li>
+    <li>
+        Make some code changes to our application code to be compatible with updated API in .so libraries and .jar files. 
+        For example, upgraded versions of OpenSSL.
+    </li>
+    <li>
+        Update configuration for changed linux services. For example, changing the service used for syncing with the time 
+        server changed when upgrading to a new version of REHL. The firewall service that was used also changed so those
+        configurations also needed to be updated.
+    </li>
+    <li>
+        Create a custom .iso file that has all of our packages, SELinux modules, and configurations updates baked into it. 
+        To do this we mounted the file system from a base .iso file, then made a copy and overlaid our changes on top of it. 
+        To customize the install we used Red Hat kickstart files. Calian had some tools setup to build this .iso file, so I 
+        didn't have to setup the entire process, but some of the scripts needed to be updated along side our updated offline 
+        rpm package repo, configuration files, and kickstart files.
+    </li>
+</ul>
+</body>
