@@ -1,5 +1,3 @@
-0) Add RTP proxy section to Calian Work Experiences Section
-    - Add a features I lead section about RTP Proxy and updating load tester to send SIP protocol messages for instantiating sessions to send RTP packets from a VoIP server to our receivers.
 1) Add JVM Heap Dump Analysis (w/ Visual VM) to fix memory leak to Calian support tasks
 2) Maybe use table instead of text for Calian support tasks
 3) Update "How I Grew my Skills" to include more about database and networking.

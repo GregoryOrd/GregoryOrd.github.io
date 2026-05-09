@@ -1,0 +1,33 @@
+<head>
+    <title>JVM Heap Dump Analysis (w/ Visual VM) to Fix Memory Leak</title>
+</head>
+<body>
+    <p>
+        We had a legacy Java application that was experiencing some problems in production, causing the primary server to fail and switch over to the backup server. 
+        At first this was happening every 6-8 months but then it started happening every 1-2 months.
+    </p>
+    <p>
+        From the garbage collection logs we could see that the garbage collector was executing Stop-The-World collections that we taking up to 30 seconds to complete.
+        During these Stop-The-World garbage collections, the application code stops, so the server would appear unresponsive and timeouts would expire in the system to cause
+        the failover to the backup server. 
+    </p>
+    <p>
+        A senior developer with more experience of this project looked at the problem initially before passing onto me due to his lack of availibility.
+        He advised me of which part of the system he supected had the problem. He explained that as the customer was adding more satellites to the system,
+        the load on this part of the system had grown, and that was likely the reason for the increase in frequency of the Stop-The-World garbage collections.
+    </p>
+    <p>
+        I took on the problem and began by examining the garbage collection logs before deciding to take heap dumps and examine them with a tool called Visual VM.
+        On our testbed system, I setup hourly heaps dumps and then ran a load test with as high of a load as I could in the suspected part of the system.
+        I was not quite able to reproduce the issue but I was able to see pattern in these heap dumps that suggested problems.
+    </p>
+    <p>
+        We also asked the customer to take some heap dumps in production when the issue was happening.
+        Analysing the production heap dumps actually showed some slightly different patterns than what we were seeing on the testbed.
+        Putting the together the analysis from both environment, I was able to identify the source of the memory leak and modify the code. 
+    </p>
+    <p>
+        After making the code change and repeating the load test in our testbed environment I saw a great improvement in the heap dumps, so we 
+        gave the change to the customer, and they haven't seen this issue since.
+    </p>
+</body>
