@@ -50,41 +50,37 @@
     }
 
     .birthday-card {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.92);
         border-radius: 24px;
         box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
-        height: 80vh;
         padding: 40px 30px;
         backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.8);
     }
 
     .birthday-card h1 {
-        font-size: clamp(2.8rem, 4vw, 4.2rem);
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
         margin-bottom: 0.6rem;
         color: #dc3c80;
         letter-spacing: 0.05em;
     }
 
     .birthday-card p {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.3rem);
         color: #5e3b62;
-        margin-bottom: 2rem;
+        margin-bottom: 1.75rem;
     }
 
     .cake-scene {
         display: flex;
         justify-content: center;
-        position: relative;
-        top: 5vh;
-        left: 15%;
-        margin-top: 20px;
+        margin-top: 60px;
     }
 
     .cake {
         position: relative;
-        width: 270px;
-        height: 260px;
+        width: clamp(220px, 38vw, 320px);
+        aspect-ratio: 270 / 260;
         animation: floatCake 4s ease-in-out infinite;
     }
 
@@ -92,28 +88,28 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: 24px;
+        border-radius: 20px;
         box-shadow: inset 0 6px 0 rgba(255,255,255,0.35);
     }
 
     .cake-base {
         bottom: 0;
-        width: 240px;
-        height: 110px;
+        width: 88.9%;
+        height: 42.3%;
         background: #f78fb3;
     }
 
     .cake-middle {
-        bottom: 90px;
-        width: 210px;
-        height: 90px;
+        bottom: 34.6%;
+        width: 77.8%;
+        height: 34.6%;
         background: #ff9ff3;
     }
 
     .cake-top {
-        bottom: 170px;
-        width: 180px;
-        height: 68px;
+        bottom: 65.4%;
+        width: 66.7%;
+        height: 26.2%;
         background: #ff6b6b;
     }
 
@@ -121,35 +117,34 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: 220px;
-        height: 42px;
-        bottom: 135px;
+        width: 81.5%;
+        height: 16.1%;
+        bottom: 51.9%;
         background: radial-gradient(circle at 50% 10%, #fff6f8 32%, rgba(255, 255, 255, 0));
         border-radius: 50% 50% 20% 20%;
     }
 
     .candle {
         position: absolute;
-        width: 12px;
-        left: 47%;
-        height: 50px;
-        bottom: 235px;
+        width: 4.4%;
+        height: 19.2%;
+        bottom: 90.4%;
         background: linear-gradient(180deg, #ffe066 0%, #f0932b 100%);
         border-radius: 8px;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
         animation: sway 3s ease-in-out infinite;
     }
 
-    .candle:nth-child(1) { left: 78px; animation-delay: -0.2s; }
-    .candle:nth-child(2) { left: 122px; animation-delay: -0.5s; }
-    .candle:nth-child(3) { left: 166px; animation-delay: -0.3s; }
+    .candle-1 { left: 29%; animation-delay: -0.2s; }
+    .candle-2 { left: 47%; animation-delay: -0.5s; }
+    .candle-3 { left: 65%; animation-delay: -0.3s; }
 
     .flame {
         position: absolute;
-        top: -18px;
+        top: -8%;
         left: 50%;
-        width: 16px;
-        height: 22px;
+        width: 5.9%;
+        height: 8.5%;
         transform: translateX(-50%);
         background: radial-gradient(circle at 50% 30%, #fff8b5 20%, #ffd166 40%, #ff6348 60%, rgba(255, 99, 72, 0));
         border-radius: 50% 50% 45% 45%;
@@ -160,10 +155,10 @@
     .cake-plate {
         position: absolute;
         left: 50%;
-        bottom: -18px;
+        bottom: -7%;
         transform: translateX(-50%);
-        width: 280px;
-        height: 24px;
+        width: 103.7%;
+        height: 9.2%;
         border-radius: 999px;
         background: linear-gradient(90deg, #ffe4e1, #f3c3d1, #ffe4e1);
         box-shadow: 0 10px 24px rgba(0,0,0,0.12);
@@ -171,14 +166,15 @@
 
     .birthday-footer {
         display: block;
-        margin-top: 20vh;
+        margin-top: 3rem;
         font-size: 1rem;
         color: #8a5d7b;
     }
 
+
     @keyframes floatCake {
-        0%, 100% { transform: translateX(-50%) translateY(0); }
-        50% { transform: translateX(-50%) translateY(-12px); }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
     }
 
     @keyframes sway {
@@ -205,21 +201,21 @@ loadHtmlElement("../mommyDay/mommyDayNavBar.html", "navbar")
 <canvas id="confetti-canvas"></canvas>
 <div class="birthday-content">
 <div class="birthday-card text-center">
-<h1>Happy Birthday Mom!</h1>
-<p>Today is your day — full of joy, sparkles, cake, and all the love in the world. Enjoy every moment!</p>
-<div class="cake-scene">
-<div class="cake" aria-hidden="true">
-<div class="cake-layer cake-top"></div>
-<div class="cake-layer cake-middle"></div>
-<div class="cake-layer cake-base"></div>
-<div class="frosting"></div>
-<div class="candle"><span class="flame"></span></div>
-<div class="candle"><span class="flame"></span></div>
-<div class="candle"><span class="flame"></span></div>
-<div class="cake-plate"></div>
-</div>
-</div>
-<span class="birthday-footer">Wishing you an amazing year ahead.</span>
+    <h1>Happy Birthday Mom!</h1>
+    <p>Today is your day — full of joy, sparkles, cake, and all the love in the world. Enjoy every moment!</p>
+    <div class="cake-scene">
+        <div class="cake" aria-hidden="true">
+            <div class="cake-layer cake-top"></div>
+            <div class="cake-layer cake-middle"></div>
+            <div class="cake-layer cake-base"></div>
+            <div class="frosting"></div>
+            <div class="candle candle-1"><span class="flame"></span></div>
+            <div class="candle candle-2"><span class="flame"></span></div>
+            <div class="candle candle-3"><span class="flame"></span></div>
+            <div class="cake-plate"></div>
+        </div>
+    </div>
+    <span class="birthday-footer">Wishing you an amazing year ahead.</span>
 </div>
 </div>
 </div>
