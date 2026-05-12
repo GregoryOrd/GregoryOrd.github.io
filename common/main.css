@@ -145,10 +145,10 @@ table{
 
 .modal-content img {
   max-width: 100%;
+  display: block;
   width: auto;
   max-height: 50vh;
-  margin-bottom: 1vh;
-  margin-top: 1vh;
+  margin: 1vh auto;
 }
 
 .modalDataContent2ndLast{

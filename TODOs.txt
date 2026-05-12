@@ -1,5 +1,6 @@
-0) On phone screen, RTP Proxy diagrams too wide
 1) On phone screen, contents of about screen too high, hides behind navbar
+    - Need to check if this is actually a problem or only an issue 
+    with the development environment live reload rendering.
 2) Maybe make the photo transitions on the home page carousel a little bit faster
 5) Write about GS Messaging Project in Personal Projects
 6) Write about Housing Market Monitor Project in Personal Projects 
