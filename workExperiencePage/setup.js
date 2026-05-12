@@ -1,7 +1,11 @@
 function setupTableRows() {
-        loadHtmlElement("Calian/Calian.html", "Calian")
-        loadHtmlElement("LockheedMartinCdl/LockheedMartinCdl.html", "LockheedMartinCdl")
-        loadHtmlElement("CalgaryCounsellingCentre/CalgaryCounsellingCentre.html", "CalgaryCounsellingCentre")
+        Promise.all([
+            loadHtmlElement("Calian/Calian.html", "Calian"),
+            loadHtmlElement("LockheedMartinCdl/LockheedMartinCdl.html", "LockheedMartinCdl"),
+            loadHtmlElement("CalgaryCounsellingCentre/CalgaryCounsellingCentre.html", "CalgaryCounsellingCentre")
+        ]).then(() => {
+            setupCalianModals();
+        });
 }
 
 function setupCalianModals() {

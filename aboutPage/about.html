@@ -10,52 +10,6 @@
     <link rel="stylesheet" href="../common/main.css"/>
     <link rel="stylesheet" href="../common/responsive-utils.css"/>
     <link rel="stylesheet" href="../common/navbar.css"/>
-
-    <script src="../common/responsive.js"></script>
-    <script src="../common/loadHtmlElement.js"></script>
-
-    <script>
-        function initAboutPageLayout() {
-            const updateSkyLineLayout = () => {
-                const skyLine = document.getElementById('skyLine');
-                if (!skyLine) return;
-
-                const isLandscape = ResponsiveManager.isLandscape();
-                const width = window.innerWidth;
-                const height = window.innerHeight;
-                const area = width * height;
-
-                if (isLandscape && area < 207756) {
-                    skyLine.style.paddingTop = '5vh';
-                    skyLine.style.paddingLeft = '5vh';
-                    skyLine.style.height = '52vh';
-                } else if (!isLandscape && area < 190000) {
-                    skyLine.style.paddingTop = '5vh';
-                    skyLine.style.paddingLeft = '3vh';
-                    skyLine.style.height = '26vh';
-                } else if (!isLandscape && area < 340000) {
-                    skyLine.style.paddingTop = '5vh';
-                    skyLine.style.paddingLeft = '2vh';
-                    skyLine.style.height = '25vh';
-                } else if (height > 768) {
-                    skyLine.style.height = '32vh';
-                    skyLine.style.paddingLeft = '20px';
-                } else {
-                    skyLine.style.paddingTop = '';
-                    skyLine.style.height = '52vh';
-                    skyLine.style.paddingLeft = '20px';
-                }
-
-                skyLine.style.width = 'auto';
-            };
-
-            updateSkyLineLayout();
-            ResponsiveManager.onBreakpointChange(updateSkyLineLayout);
-        }
-
-        document.addEventListener('DOMContentLoaded', initAboutPageLayout);
-        loadHtmlElement("../navbar.html", "navbar");
-    </script>
 </head>
 
 <body>
@@ -129,6 +83,12 @@
 
     <!-- Bootstrap 5 JS (no jQuery needed) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../common/responsive.js"></script>
+    <script src="../common/loadHtmlElement.js"></script>
+
+    <script>
+        loadHtmlElement("../navbar.html", "navbar");
+    </script>
 
 </body>
 </html>
