@@ -1,12 +1,8 @@
-1) On phone screen, contents of about screen too high, hides behind navbar
-    - Need to check if this is actually a problem or only an issue 
-    with the development environment live reload rendering.
-2) Maybe make the photo transitions on the home page carousel a little bit faster
-5) Write about GS Messaging Project in Personal Projects
-6) Write about Housing Market Monitor Project in Personal Projects 
-7) Write about Pi Hole Access Point Project in Personal Projects
-8) Write about Receipt Reader Project in personal projects 
-9) Write about Air Quality Monitor MCP server in Personal Projects
+1) Write about GS Messaging Project in Personal Projects
+2) Write about Housing Market Monitor Project in Personal Projects 
+3) Write about Pi Hole Access Point Project in Personal Projects
+4) Write about Receipt Reader Project in personal projects 
+5) Write about Air Quality Monitor MCP server in Personal Projects
 
 10) Rewrite about section
 11) Update home page photos
