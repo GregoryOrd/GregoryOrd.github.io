@@ -1,4 +1,4 @@
-1) Write about GS Messaging Project in Personal Projects
+1) Add a modal or something similar to enlarge photos when the are click on in the PersonalProjects page
 2) Write about Housing Market Monitor Project in Personal Projects 
 3) Write about Pi Hole Access Point Project in Personal Projects
 4) Write about Receipt Reader Project in personal projects 
