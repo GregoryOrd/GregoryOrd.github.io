@@ -55,7 +55,7 @@ python3 -m http.server 8000
 ├── index_style.css                     # Landing page styles
 ├── common/                             # Shared resources
 │   ├── main.css                        # Global styles (body, colors, components)
-│   ├── navbar.css                      # Responsive navbar styles
+│   ├── common-components.css                      # Responsive navbar styles
 │   └── toggleRow.js                         # toggleRow() for collapsible content
 ├── homePage/
 │   └── home.html                       # Main landing page (has sizing() function)

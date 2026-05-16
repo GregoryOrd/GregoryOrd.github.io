@@ -93,18 +93,6 @@ th{
 	width: 25%;
 }
 
-
-.modalDataContent:hover{
-	background-color: var(--color-accent-primary);
-	color: var(--color-white);
-}
-
-.modalDataContent2ndLast:hover{
-	background-color: var(--color-accent-primary);
-	color: var(--color-white);	
-}
- 
-
 table{
 	width: 100%;
 }
@@ -122,51 +110,9 @@ table{
 	border: none;
 }
 
-.modalDataContentHeader{
-	background-color: var(--color-accent-secondary);
-	height: 8vh;
-	text-align: center;
-	color: var(--color-white);
-}
-
-.modalDataContent{
-	height: 6vh;
-	border: solid;
-	padding-right: 10px;
-	padding-left: 10px;
-	border-width: 1px;
-	background-color: var(--color-light-bg);
-	color: var(--color-light-text);
-}
-
-.modal-content {
-  text-align: left;
-}
-
-.modal-content img {
-  max-width: 100%;
-  display: block;
-  width: auto;
-  max-height: 50vh;
-  margin: 1vh auto;
-}
-
-.modalDataContent2ndLast{
-	height: 6vh;
-	border: solid;
-	background-color: var(--color-light-bg);
-	color: var(--color-light-text);
-	border-width: 1px;
-}
-
-.modalDataContentLast{
-	height: 1vh;
-}
-
 .yearsHeader:hover{
 	cursor: pointer;
 }
-
 
 .projectsHeader{
 	height: 10vh;
@@ -408,35 +354,6 @@ table{
 cursor:pointer;
 }
 
-/* The Modal (background) */
-.modal {
-  overflow: auto; /* Enable scroll if needed */
-}
-
-/* Bootstrap Modal Overrides - Dark Theme */
-.modal-content {
-  background-color: var(--color-light-bg);
-  color: var(--color-light-text);
-}
-
-.modal-header {
-  background-color: var(--color-accent-primary);
-  border-color: var(--color-accent-primary);
-}
-
-.modal-title {
-  color: var(--color-white);
-}
-
-.modal-body {
-  background-color: var(--color-light-bg);
-  color: var(--color-light-text);
-}
-
-.modal-body p {
-  color: var(--color-light-text);
-}
-
 /* The Close Button */
 .close {
   color: var(--color-gray-icon);
@@ -539,9 +456,7 @@ cursor:pointer;
 		font-size: 13px;
 	}
 	
-	.modalDataContent,
 	.projectsContent,
-	.modalDataContentHeader,
 	.projectsContentHeader {
 		font-size: 12px;
 		height: auto;
