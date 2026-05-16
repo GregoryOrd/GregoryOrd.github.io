@@ -8,21 +8,26 @@ Features To Implement
 6) Rewrite about section
 7) Update home page photos
 8) Update Education/Courses to not say "currently studying"
-9) Consider splitting responsive-utils.css up into page specific subsets
-    - Be aware of responsive design stuff in main.css. That stuff might be shared across pages so leaving in main.css might be fine.
-10) Formalize wording  of final section title across work experiences (CalgaryCounsellingCentre/Lockheed/Calian)
+9) Formalize wording  of final section title across work experiences (CalgaryCounsellingCentre/Lockheed/Calian)
     - "Lessons Learned" vs "How I Grew My Skills"
-11) Update Calian section with "Advanced Technologies" to "Defence and Space" department name change
-12) Add something to Calian section Kubernetes Kafka Project
-13) Consider adding this site as a personal project
+10) Update Calian section with "Advanced Technologies" to "Defence and Space" department name change
+11) Add something to Calian section Kubernetes Kafka Project
+12) Consider adding this site as a personal project
+
+
 
 Defects
 ---------
-0) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+1) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+
+
 
 Refactors
 -----------
-Nothing right now
+1) Consider splitting responsive-utils.css up into page specific subsets
+    - Be aware of responsive design stuff in main.css. That stuff might be shared across pages so leaving in main.css might be fine.
+
+
 
 Tests
 ----------
