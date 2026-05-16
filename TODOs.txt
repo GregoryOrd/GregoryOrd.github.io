@@ -22,14 +22,12 @@ Defects
 1) In CalgaryCounsellingCentre.css, ".videoRight" selector is not floating the element to the right as appears the intention
     - Either rename the css selector or fix
 2) Not enough padding/margin about "Lessons Learned" in CalgaryCounsellingCentre 
-
+3) Too much space between navbar and header in educationCourses.html
 
 Refactors
 -----------
 1) We have css styling on an element id called "pageTitle". 
    Since multiple pages use this for their titles, a class should be created for styling instead of an id.
-2) Check if buttonRow styling in educationCourses.css is actually doing anything. Delete if it is not needed.
-
 
 Tests
 ----------
