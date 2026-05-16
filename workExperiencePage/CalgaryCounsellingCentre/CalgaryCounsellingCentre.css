@@ -1,0 +1,19 @@
+.videoRight{ 
+	max-height: 480px; 
+    height: 480px;
+	float: right; 
+	padding: 15px;
+}
+
+/* Mobile devices: optimize spacing and sizing */
+@media (max-width: 768px) {
+
+	.videoRight {
+		float: none;
+		width: 100%;
+		max-height: auto;
+		height: auto;
+		padding: 10px;
+		margin: 10px 0;
+	}
+}
