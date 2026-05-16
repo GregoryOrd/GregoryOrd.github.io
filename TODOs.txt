@@ -19,8 +19,6 @@ Features To Implement
 Defects
 ---------
 0) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
-1) In CalgaryCounsellingCentre.css, ".videoRight" selector is not floating the element to the right as appears the intention
-    - Either rename the css selector or fix
 
 Refactors
 -----------
