@@ -138,10 +138,6 @@
 
 /* Reduce padding on mobile */
 @media (max-width: 480px) {
-  #pageTitle {
-    padding-top: 3vh;
-  }
-  
   section {
     margin-top: 2vh;
   }
@@ -153,10 +149,6 @@
 
 /* Standard padding on tablet+ */
 @media (min-width: 768px) {
-  #pageTitle {
-    padding-top: 6vh;
-  }
-  
   section {
     margin-top: 4vh;
   }
@@ -233,10 +225,6 @@
 @media (orientation: landscape) and (max-height: 500px) {
   section {
     margin-top: 1vh;
-  }
-  
-  #pageTitle {
-    padding-top: 2vh;
   }
   
   .buttonRow {

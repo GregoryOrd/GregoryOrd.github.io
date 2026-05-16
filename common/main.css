@@ -32,10 +32,6 @@ video{
 	margin: 20px;
 }
 
-#pageTitle{
-	padding-top: 6vh;
-}
-
 section{
 	margin-top: 4vh;
 }
@@ -149,11 +145,7 @@ table{
    ========================================================================== */
 
 /* Mobile devices: optimize spacing and sizing */
-@media (max-width: 768px) {
-	#pageTitle {
-		padding-top: 3vh;
-	}
-	
+@media (max-width: 768px) {	
 	li {
 		left: -25px;
 	}
@@ -192,18 +184,10 @@ table{
 	section {
 		margin-top: 1vh;
 	}
-	
-	#pageTitle {
-		padding-top: 1vh;
-	}
 }
 
 /* Large desktop screens: enhance spacing and sizing */
-@media (min-width: 1200px) {
-	#pageTitle {
-		padding-top: 8vh;
-	}
-	
+@media (min-width: 1200px) {	
 	section {
 		margin-top: 5vh;
 	}
