@@ -1,7 +1,5 @@
 Features To Implement
 -----------------------
-0) Update image viewer modal to hide control buttons on touch screens
-    - Also make sure touch screens have working controls.
 1) Update images throughout project to use image viewer modal
 2) Write about Housing Market Monitor Project in Personal Projects 
 3) Write about Pi Hole Access Point Project in Personal Projects
@@ -28,6 +26,7 @@ Refactors
 -----------
 1) Consider splitting responsive-utils.css up into page specific subsets
     - Be aware of responsive design stuff in main.css. That stuff might be shared across pages so leaving in main.css might be fine.
+2) Cleanup ShowImageModal() in showModal.js. See if we can split the functions out into a new file called imageViewerControls.js
 
 
 
