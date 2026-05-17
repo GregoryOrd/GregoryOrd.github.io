@@ -30,7 +30,7 @@ function PopulatePreModalTitle(filePath, tableDataId) {
         });
 }
 
-function ShowImageModal(imgSrc) {
+function ShowImageModal(imgSrc, touchRotationEnabled=false) {
     const safeSrc = imgSrc || '';
 
     const modalEl = document.getElementById('imageModal');
@@ -186,9 +186,11 @@ function ShowImageModal(imgSrc) {
             const scaleFactor = currentDistance / initialDistance;
             scale = Math.max(0.5, Math.min(initialScale * scaleFactor, 5));
             
-            // Rotation: angle change between fingers
-            const angleDelta = currentAngle - initialAngle;
-            rotation = initialRotation + angleDelta;
+            if(touchRotationEnabled) {
+                // Rotation: angle change between fingers
+                const angleDelta = currentAngle - initialAngle;
+                rotation = initialRotation + angleDelta;
+            }
             
             updateTransform();
         }
