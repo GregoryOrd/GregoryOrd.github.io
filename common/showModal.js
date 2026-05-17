@@ -6,7 +6,7 @@ function ShowModal(titleMessage, bodyMessage) {
     modal.show();
 }
 
-function ShowModalFromFile(filePath, tableDataId) {
+function ShowModalFromFile(filePath) {
 //From the file, get the title from the <head> and get the bodyMessage from the <body>
     fetch(filePath)
         .then(response => response.text())
