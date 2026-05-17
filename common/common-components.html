@@ -40,3 +40,37 @@
         </div>
     </div>
 </div>
+
+<!-- Large Image Viewing Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="d-flex align-items-center w-100">
+                    <div>
+                        <button id="imgZoomIn" type="button" class="btn btn-sm btn-secondary">Zoom +</button>
+                        <button id="imgZoomOut" type="button" class="btn btn-sm btn-secondary">Zoom -</button>
+                        <button id="imgReset" type="button" class="btn btn-sm btn-secondary">Reset</button>
+                        <button id="imgRotateRight" type="button" class="btn btn-sm btn-secondary">Rotate Right</button>
+                        <button id="imgRotateLeft" type="button" class="btn btn-sm btn-secondary">Rotate Left</button>
+                        <button id="imgLeft" type="button" class="btn btn-sm btn-secondary">Left</button>
+                        <button id="imgRight" type="button" class="btn btn-sm btn-secondary">Right</button>
+                        <button id="imgUp" type="button" class="btn btn-sm btn-secondary">Up</button>
+                        <button id="imgDown" type="button" class="btn btn-sm btn-secondary">Down</button>
+                    </div>
+                    <div class="ms-auto">
+                        <button type="button" class="btn btn-sm btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body" style="padding:0;">
+                <div id="ImageModalContainer" style="width:100%;height:100vh;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center;">
+                    <img id="ImageModalImg" src="" alt="Image" style="transform-origin: center center; cursor: grab; display:block; max-width:98%; max-height:98%;" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
