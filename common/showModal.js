@@ -97,6 +97,26 @@ function ShowImageModal(imgSrc) {
         updateTransform();
     }
 
+    function makeRepeatingButton(buttonId, action, repeatDelay = 100) {
+        const btn = document.getElementById(buttonId);
+        let interval = null;
+        
+        btn.onmousedown = () => {
+            action();
+            interval = setInterval(action, repeatDelay);
+        };
+        
+        btn.onmouseup = () => {
+            clearInterval(interval);
+            interval = null;
+        };
+        
+        btn.onmouseleave = () => {
+            clearInterval(interval);
+            interval = null;
+        };
+    }
+
     // set image src and reset view
     imgEl.src = safeSrc;
     imgEl.onload = () => {
@@ -104,15 +124,15 @@ function ShowImageModal(imgSrc) {
     };
 
     // attach controls
-    document.getElementById('imgZoomIn').onclick = zoomIn;
-    document.getElementById('imgZoomOut').onclick = zoomOut;
-    document.getElementById('imgReset').onclick = resetView;
-    document.getElementById('imgRotateRight').onclick = rotateRight;
-    document.getElementById('imgRotateLeft').onclick = rotateLeft;
-    document.getElementById('imgRight').onclick = translateRight;
-    document.getElementById('imgLeft').onclick = translateLeft;
-    document.getElementById('imgUp').onclick = translateUp;
-    document.getElementById('imgDown').onclick = translateDown;
+    makeRepeatingButton('imgZoomIn', zoomIn);
+    makeRepeatingButton('imgZoomOut', zoomOut);
+    makeRepeatingButton('imgReset', resetView);
+    makeRepeatingButton('imgRotateRight', rotateRight);
+    makeRepeatingButton('imgRotateLeft', rotateLeft);
+    makeRepeatingButton('imgRight', translateRight);
+    makeRepeatingButton('imgLeft', translateLeft);
+    makeRepeatingButton('imgUp', translateUp);
+    makeRepeatingButton('imgDown', translateDown);
 
     const modal = new bootstrap.Modal(modalEl);
     modal.show();

@@ -47,17 +47,23 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <div class="d-flex align-items-center w-100">
-                    <div>
-                        <button id="imgZoomIn" type="button" class="btn btn-sm btn-secondary">Zoom +</button>
-                        <button id="imgZoomOut" type="button" class="btn btn-sm btn-secondary">Zoom -</button>
-                        <button id="imgReset" type="button" class="btn btn-sm btn-secondary">Reset</button>
-                        <button id="imgRotateRight" type="button" class="btn btn-sm btn-secondary">Rotate Right</button>
-                        <button id="imgRotateLeft" type="button" class="btn btn-sm btn-secondary">Rotate Left</button>
-                        <button id="imgLeft" type="button" class="btn btn-sm btn-secondary">Left</button>
-                        <button id="imgRight" type="button" class="btn btn-sm btn-secondary">Right</button>
-                        <button id="imgUp" type="button" class="btn btn-sm btn-secondary">Up</button>
-                        <button id="imgDown" type="button" class="btn btn-sm btn-secondary">Down</button>
+                <div class="d-flex align-items-center w-100 gap-3">
+                    <div class="d-flex gap-2">
+                        <button id="imgZoomIn" type="button" class="btn btn-lg btn-secondary" title="Zoom In">🔍+</button>
+                        <button id="imgZoomOut" type="button" class="btn btn-lg btn-secondary" title="Zoom Out">🔍−</button>
+                        <button id="imgReset" type="button" class="btn btn-lg btn-secondary" title="Reset View">Reset</button>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button id="imgRotateLeft" type="button" class="btn btn-lg btn-secondary" title="Rotate Left">↺</button>
+                        <button id="imgRotateRight" type="button" class="btn btn-lg btn-secondary" title="Rotate Right">↻</button>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(3,3.5rem);gap:0.5rem;align-items:center;justify-items:center;">
+                        <div></div>
+                        <button id="imgUp" type="button" class="btn btn-lg btn-secondary" title="Pan Up" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬆️</button>
+                        <div></div>
+                        <button id="imgLeft" type="button" class="btn btn-lg btn-secondary" title="Pan Left" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬅️</button>
+                        <button id="imgDown" type="button" class="btn btn-lg btn-secondary" title="Pan Down" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬇️</button>
+                        <button id="imgRight" type="button" class="btn btn-lg btn-secondary" title="Pan Right" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">➡️</button>
                     </div>
                     <div class="ms-auto">
                         <button type="button" class="btn btn-sm btn-close" data-bs-dismiss="modal"></button>
@@ -66,7 +72,7 @@
             </div>
 
             <div class="modal-body" style="padding:0;">
-                <div id="ImageModalContainer" style="width:100%;height:100vh;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center;">
+                <div id="ImageModalContainer" style="width:100%;height:100%;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center;">
                     <img id="ImageModalImg" src="" alt="Image" style="transform-origin: center center; cursor: grab; display:block; max-width:98%; max-height:98%;" />
                 </div>
             </div>
