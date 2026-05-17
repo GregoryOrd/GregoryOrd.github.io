@@ -48,22 +48,24 @@
 
             <div class="modal-header">
                 <div class="d-flex align-items-center w-100 gap-3">
-                    <div class="d-flex gap-2">
-                        <button id="imgZoomIn" type="button" class="btn btn-lg btn-secondary" title="Zoom In">🔍+</button>
-                        <button id="imgZoomOut" type="button" class="btn btn-lg btn-secondary" title="Zoom Out">🔍−</button>
-                        <button id="imgReset" type="button" class="btn btn-lg btn-secondary" title="Reset View">Reset</button>
-                    </div>
-                    <div class="d-flex gap-2">
-                        <button id="imgRotateLeft" type="button" class="btn btn-lg btn-secondary" title="Rotate Left">↺</button>
-                        <button id="imgRotateRight" type="button" class="btn btn-lg btn-secondary" title="Rotate Right">↻</button>
-                    </div>
-                    <div style="display:grid;grid-template-columns:repeat(3,3.5rem);gap:0.5rem;align-items:center;justify-items:center;">
-                        <div></div>
-                        <button id="imgUp" type="button" class="btn btn-lg btn-secondary" title="Pan Up" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬆️</button>
-                        <div></div>
-                        <button id="imgLeft" type="button" class="btn btn-lg btn-secondary" title="Pan Left" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬅️</button>
-                        <button id="imgDown" type="button" class="btn btn-lg btn-secondary" title="Pan Down" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬇️</button>
-                        <button id="imgRight" type="button" class="btn btn-lg btn-secondary" title="Pan Right" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">➡️</button>
+                    <div id="ImageViewerControlButtons" class="image-modal-controls d-flex align-items-center gap-3">
+                        <div class="d-flex gap-2">
+                            <button id="imgZoomIn" type="button" class="btn btn-lg btn-secondary controlButton" title="Zoom In">🔍+</button>
+                            <button id="imgZoomOut" type="button" class="btn btn-lg btn-secondary controlButton" title="Zoom Out">🔍−</button>
+                            <button id="imgReset" type="button" class="btn btn-lg btn-secondary" title="Reset View">Reset</button>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button id="imgRotateLeft" type="button" class="btn btn-lg btn-secondary controlButton" title="Rotate Left">↺</button>
+                            <button id="imgRotateRight" type="button" class="btn btn-lg btn-secondary controlButton" title="Rotate Right">↻</button>
+                        </div>
+                        <div style="display:grid;grid-template-columns:repeat(3,3.5rem);gap:0.5rem;align-items:center;justify-items:center;">
+                            <div></div>
+                            <button id="imgUp" type="button" class="btn btn-lg btn-secondary controlButton" title="Pan Up" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬆️</button>
+                            <div></div>
+                            <button id="imgLeft" type="button" class="btn btn-lg btn-secondary controlButton" title="Pan Left" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬅️</button>
+                            <button id="imgDown" type="button" class="btn btn-lg btn-secondary controlButton" title="Pan Down" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">⬇️</button>
+                            <button id="imgRight" type="button" class="btn btn-lg btn-secondary controlButton" title="Pan Right" style="width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">➡️</button>
+                        </div>
                     </div>
                     <div class="ms-auto">
                         <button type="button" class="btn btn-sm btn-close" data-bs-dismiss="modal"></button>

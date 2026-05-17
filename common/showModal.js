@@ -41,50 +41,46 @@ function ShowImageModal(imgSrc) {
     let translateY = 0;
     let rotation = 0;
 
-    let zoomFactor = 1.2;
-    let rotationSize = 10;
-    let translationSize = 20;
-
     function updateTransform() {
         imgEl.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale}) rotate(${rotation}deg)`;
     }
 
-    function zoomIn() {
+    function zoomIn(zoomFactor = 1.2) {
         scale = scale * zoomFactor;
         updateTransform();
     }
 
-    function zoomOut() {
+    function zoomOut(zoomFactor = 1.2) {
         scale = scale / zoomFactor;
         updateTransform();
     }
 
-    function rotateRight() {
+    function rotateRight(rotationSize = 10) {
         rotation = (rotation + rotationSize) % 360; 
         updateTransform();
     }
 
-    function rotateLeft() {
+    function rotateLeft(rotationSize = 10) {
         rotation = (rotation - rotationSize) % 360; 
         updateTransform();
     }
 
-    function translateRight() {
+    function translateRight(translationSize = 20) {
         translateX -= translationSize;
         updateTransform();
     }
 
-    function translateLeft() {
+    function translateLeft(translationSize = 20) {
         translateX += translationSize;
         updateTransform();
     }
 
-    function translateUp() {
+    function translateUp(translationSize = 20) {
         translateY += translationSize;
         updateTransform();
     }
 
-    function translateDown() {
+    function translateDown(translationSize = 20) {
         translateY -= translationSize;
         updateTransform();
     }
@@ -117,22 +113,30 @@ function ShowImageModal(imgSrc) {
         };
     }
 
-    // set image src and reset view
+    function isTouchOnlyDevice() {
+        return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    }
+
+    if (isTouchOnlyDevice()) {
+        const controlButtons = Array.from(document.getElementsByClassName("controlButton"));
+        controlButtons.forEach(el => el.remove());
+    } else {
+        // attach controls
+        makeRepeatingButton('imgZoomIn', zoomIn);
+        makeRepeatingButton('imgZoomOut', zoomOut);
+        makeRepeatingButton('imgReset', resetView);
+        makeRepeatingButton('imgRotateRight', rotateRight);
+        makeRepeatingButton('imgRotateLeft', rotateLeft);
+        makeRepeatingButton('imgRight', translateRight);
+        makeRepeatingButton('imgLeft', translateLeft);
+        makeRepeatingButton('imgUp', translateUp);
+        makeRepeatingButton('imgDown', translateDown);
+    }
+
     imgEl.src = safeSrc;
     imgEl.onload = () => {
         resetView();
     };
-
-    // attach controls
-    makeRepeatingButton('imgZoomIn', zoomIn);
-    makeRepeatingButton('imgZoomOut', zoomOut);
-    makeRepeatingButton('imgReset', resetView);
-    makeRepeatingButton('imgRotateRight', rotateRight);
-    makeRepeatingButton('imgRotateLeft', rotateLeft);
-    makeRepeatingButton('imgRight', translateRight);
-    makeRepeatingButton('imgLeft', translateLeft);
-    makeRepeatingButton('imgUp', translateUp);
-    makeRepeatingButton('imgDown', translateDown);
 
     const modal = new bootstrap.Modal(modalEl);
     modal.show();

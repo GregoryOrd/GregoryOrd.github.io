@@ -1,6 +1,8 @@
 Features To Implement
 -----------------------
-1) Add a modal or something similar to enlarge photos when the are click on in the PersonalProjects page
+0) Update image viewer modal to hide control buttons on touch screens
+    - Also make sure touch screens have working controls.
+1) Update images throughout project to use image viewer modal
 2) Write about Housing Market Monitor Project in Personal Projects 
 3) Write about Pi Hole Access Point Project in Personal Projects
 4) Write about Receipt Reader Project in personal projects 
