@@ -29,7 +29,7 @@ Refactors
 -----------
 1) Consider splitting responsive-utils.css up into page specific subsets
     - Be aware of responsive design stuff in main.css. That stuff might be shared across pages so leaving in main.css might be fine.
-2) Try to check CDN files (like bootstrap) into repo instead of relying on CDNs
+2) Try to check CDN files (like bootstrap) into repo instead of relying on CDNs0a03 (Move js files from common to common/js)
 
 
 Tests
