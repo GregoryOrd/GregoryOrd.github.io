@@ -52,7 +52,8 @@
   text-align: left;
 }
 
-.modal-content img {
+.modal-content img,
+.modal-content viewable-img  {
   max-width: 100%;
   display: block;
   width: auto;

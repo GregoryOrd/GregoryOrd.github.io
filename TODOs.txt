@@ -1,6 +1,5 @@
 Features To Implement
 -----------------------
-0) Update images throughout project to use image viewer modal
 1) Add note in GSMessaging that it was built with GregBuild
 2) Write about Housing Market Monitor Project in Personal Projects 
 3) Write about Pi Hole Access Point Project in Personal Projects

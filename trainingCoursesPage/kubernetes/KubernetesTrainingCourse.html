@@ -43,7 +43,7 @@
                 publishing our kubernetes configurations and reusing previous published configurations.
             </p>
             <h3><u>The Example Application</u></h3>
-            <img src="kubernetes/k9s.png" style="width: 100%;">
+            <viewable-img src="kubernetes/k9s.png" style="width: 100%;"></viewable-img>
             <p>
                 In this image of the k9s command line interface, you can see a list of pods, with the first one 
                 being the "python-rest-api" pod. This was the main application we were deploying during this training.
@@ -61,7 +61,7 @@
             <p>We also learned about adding config maps to provide a configuration file to the application.</p>
             <h3><u>Screenshots</u></h3>
             <figure>
-                <img src="kubernetes/config.png" style="width: 100%;">
+                <viewable-img src="kubernetes/config.png" style="width: 100%;"></viewable-img>
                 <figcaption>
                     The config endpoint shows the configuration of the application. Some of this configuration (for example, server.cowsay) was set
                     from an environment variable. Other configuration was set via a configuration file read in when the application
@@ -70,21 +70,21 @@
             </figure>
             <br>
             <figure>
-                <img src="kubernetes/cowsay.png" style="width: 100%;">
+                <viewable-img src="kubernetes/cowsay.png" style="width: 100%;"></viewable-img>
                 <figcaption>
                     The "/cowsay" endpoint shows the value of the cosway field in from the "/config" endpoint.
                 </figcaption>
             </figure>
             <br>
             <figure>
-                <img src="kubernetes/put.png" style="width: 100%;">
+                <viewable-img src="kubernetes/put.png" style="width: 100%;"></viewable-img>
                 <figcaption>
                     The "/put" endpoint allows the use to add a value to a list in the redis datastore.
                 </figcaption>
             </figure>
             <br>
             <figure>
-                <img src="kubernetes/get.png" style="width: 100%;">
+                <viewable-img src="kubernetes/get.png" style="width: 100%;"></viewable-img>
                 <figcaption>
                     The "/get" endpoint allows the user to see the contents of the list in the redis datastore.
                 </figcaption>

@@ -96,6 +96,7 @@ table{
 }
 
 .projectsContent img,
+.projectsContent viewable-img,
 .projectsContent video,
 .projectsContent .center {
   display: block;
