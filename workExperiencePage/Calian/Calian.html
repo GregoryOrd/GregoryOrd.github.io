@@ -6,8 +6,12 @@
         <tr class="CalianAtContents whiteBackground" hidden>
             <td class="projectsContent projectsContent2ndLast">
             <br />
-                <h3><u>Calian Advance Technologies</u></h3>
+                <h3><u>Calian Advanced Technologies</u></h3>
                 <p>From the Calian Website: <strong>"Calian Advanced Technologies is a global supplier of highly technical solutions, services and products to the aerospace and defence, satellite, wired and terrestrial wireless, test and measurement, agricultural technology, GNSS technology and nuclear industries."</strong></p>
+                <p>Note that while I continue to use the name "Advanced Technologies", Calian has recently rebranded the name
+                    of this division to "Defence and Space". Prior to "Advanced Technologies", this division was called SED Systems, as that 
+                    was the name of the original company, founded in 1965, prior its acquisition by Calian in 1990.
+                <p>
                 <p>This was my first experience working in a linux only environment. I learned a decent amount here about linux tools, software packaging, firewalls, 
                     selinux, network interfaces, and systemd. I was even the main contributor on the effort to upgrade the servers for a project from an old RHEL version to a new one 
                     after it went end of life.
@@ -80,6 +84,19 @@
                     to capture data for debugging at a later date. One example was creating a python program that used inotify to monitor a directory that was receiving files from an SFTP transfer 
                     and stream a copy of the files into a tarball in another directory before the server's application code could process and delete them.
                     This program allowed us to capture the files and analyze them as part of the debugging process for the particular issue that was happening in production.
+                </p>
+                <h3><u>The Network Management Systems (NMS) Team</u></h3>
+                <p>At one point during my time at Calian, due to a slow down in the work of the Gateways Team and the need for extra help elsewhere,
+                    I was moved to help the NMS team for the duration of one of their projects (~3 months)</p>
+                <p>
+                   That project used Infrastructure as Code and GitOps to deploy a dual cluster Kafka solution 
+                   with Kubernetes across two data centers. The system was meant to have zero data loss, and support consumer and producer clients for 
+                   many different customer systems. In addition to the Kafka clusters, this solution included observability into the system,
+                   role-based access control, and web user interfaces to control and monitor the kubernetes cluster, kafka cluster and all other configurations.
+                </p>
+                <p>
+                    This was a big change from the projects that I worked on with the Gateways team, but it was exciting to have my first opportunity 
+                    working with Kubernetes and Kafka.
                 </p>
                 <h3><u>How I Grew My Skills</u></h3>
                 <p>Throughout this experience I grew my programming skills in C++, Java, Python, and Bash. But more importantly I learned a lot about all of the things that need to 
