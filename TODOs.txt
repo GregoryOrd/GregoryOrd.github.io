@@ -1,6 +1,7 @@
 Features To Implement
 -----------------------
-1) Update images throughout project to use image viewer modal
+0) Update images throughout project to use image viewer modal
+1) Add note in GSMessaging that it was built with GregBuild
 2) Write about Housing Market Monitor Project in Personal Projects 
 3) Write about Pi Hole Access Point Project in Personal Projects
 4) Write about Receipt Reader Project in personal projects 
@@ -13,6 +14,8 @@ Features To Implement
 10) Update Calian section with "Advanced Technologies" to "Defence and Space" department name change
 11) Add something to Calian section Kubernetes Kafka Project
 12) Consider adding this site as a personal project
+13) Add personal project for "this website"
+    - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
 
 
 
@@ -26,8 +29,7 @@ Refactors
 -----------
 1) Consider splitting responsive-utils.css up into page specific subsets
     - Be aware of responsive design stuff in main.css. That stuff might be shared across pages so leaving in main.css might be fine.
-2) Cleanup ShowImageModal() in showModal.js. See if we can split the functions out into a new file called imageViewerControls.js
-3) Try to check CDN files (like bootstrap) into repo instead of relying on CDNs
+2) Try to check CDN files (like bootstrap) into repo instead of relying on CDNs
 
 
 Tests
