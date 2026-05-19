@@ -140,12 +140,6 @@ const ResponsiveManager = {
         this.navbarHeight = navBar.offsetHeight;
       }
 
-      // Apply navbar height to carousel rows if they exist
-      const carouselRow = document.getElementById('CarouselRow');
-      if (carouselRow) {
-        carouselRow.style.paddingTop = this.navbarHeight + 'px';
-      }
-
       // Apply navbar padding to info sections if they exist
       const infoSection = document.getElementById('info');
       if (infoSection) {
