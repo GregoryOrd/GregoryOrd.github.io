@@ -9,66 +9,6 @@
  */
 
 /* ============================================================================
-   HELPER CLASSES FOR RESPONSIVE VISIBILITY
-   ========================================================================== */
-
-.hidden-mobile {
-  display: none !important;
-}
-
-.hidden-tablet {
-  display: none !important;
-}
-
-.hidden-desktop {
-  display: none !important;
-}
-
-/* Show on tablet and above */
-@media (min-width: 768px) {
-  .hidden-mobile {
-    display: block !important;
-  }
-  .hidden-tablet {
-    display: none !important;
-  }
-  .hidden-desktop {
-    display: block !important;
-  }
-}
-
-/* Show on desktop and above */
-@media (min-width: 1024px) {
-  .hidden-mobile {
-    display: block !important;
-  }
-  .hidden-tablet {
-    display: block !important;
-  }
-  .hidden-desktop {
-    display: none !important;
-  }
-}
-
-/* Flex utilities for responsive layouts */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ============================================================================
    RESPONSIVE TYPOGRAPHY
    ========================================================================== */
 
@@ -102,37 +42,6 @@
 }
 
 /* ============================================================================
-   VIDEO & MEDIA RESPONSIVE LAYOUT
-   ========================================================================== */
-
-/* Mobile: stack videos vertically */
-.video-container {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  gap: 15px;
-}
-
-.video-container video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Tablet & Desktop: two-column layout with side-by-side arrangement */
-@media (min-width: 768px) {
-  .video-container {
-    flex-direction: row;
-    align-items: stretch;
-  }
-  
-  .video-container video {
-    flex: 1;
-    max-height: 480px;
-  }
-}
-
-/* ============================================================================
    PADDING & MARGIN RESPONSIVE SCALING
    ========================================================================== */
 
@@ -141,20 +50,12 @@
   section {
     margin-top: 2vh;
   }
-  
-  .buttonRow {
-    padding-bottom: 5vh;
-  }
 }
 
 /* Standard padding on tablet+ */
 @media (min-width: 768px) {
   section {
     margin-top: 4vh;
-  }
-  
-  .buttonRow {
-    padding-bottom: 10vh;
   }
 }
 
@@ -171,19 +72,6 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  
-  .modalDataContent,
-  .modalDataContent2ndLast {
-    height: 5vh;
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: 13px;
-  }
-  
-  .modalDataContentHeader {
-    height: 6vh;
-    font-size: 14px;
-  }
 }
 
 /* ============================================================================
@@ -195,26 +83,6 @@
   body {
     padding-top: 0;
   }
-  
-  #CarouselRow {
-    margin-top: 10px;
-  }
-}
-
-/* ============================================================================
-   CAROUSEL RESPONSIVE SIZING
-   ========================================================================== */
-
-@media (max-width: 480px) {
-  .carousel-indicators {
-    bottom: 5px;
-  }
-}
-
-@media (min-width: 768px) {
-  .carousel-indicators {
-    bottom: 10px;
-  }
 }
 
 /* ============================================================================
@@ -225,10 +93,6 @@
 @media (orientation: landscape) and (max-height: 500px) {
   section {
     margin-top: 1vh;
-  }
-  
-  .buttonRow {
-    padding-bottom: 2vh;
   }
 }
 
@@ -242,10 +106,6 @@
   p {
     font-size: 17px;
   }
-  
-  .darkIndicators {
-    margin: 20px 0;
-  }
 }
 
 /* ============================================================================
@@ -254,12 +114,7 @@
 
 @import url('colors.css');
 
-@media print {
-  .navbar,
-  .navbarFrame {
-    display: none !important;
-  }
-  
+@media print {  
   body {
     background-color: var(--color-white);
     color: var(--color-black);

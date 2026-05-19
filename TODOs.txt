@@ -16,6 +16,7 @@ Features To Implement
 Defects
 ---------
 1) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+2) Carousels in personalProjects pages are broken
 
 
 

@@ -1,0 +1,33 @@
+@media (max-width: 480px) {  
+  .buttonRow {
+    padding-bottom: 5vh;
+  }
+}
+
+/* Standard padding on tablet+ */
+@media (min-width: 768px) {  
+  .buttonRow {
+    padding-bottom: 10vh;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {  
+  .buttonRow {
+    padding-bottom: 2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalDataContent,
+  .modalDataContent2ndLast {
+    height: 5vh;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 13px;
+  }
+  
+  .modalDataContentHeader {
+    height: 6vh;
+    font-size: 14px;
+  }
+}

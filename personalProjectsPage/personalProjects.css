@@ -2,12 +2,12 @@
 
 #solderTopViewModal .modal-content
 {
-margin: 5% auto;
+    margin: 5% auto;
 }
 
 #solderSideViewModal .modal-content
 {
-margin: 5% auto;
+    margin: 5% auto;
 }
 
 .projectGroupHeader {
@@ -27,4 +27,28 @@ margin: 5% auto;
 
     font-size: 1.5rem !important;
     transition: transform 1.2s ease;
+}
+
+@media (max-width: 480px) {
+  .carousel-indicators {
+    bottom: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    bottom: 10px;
+  }
+}
+
+/* Adjust sizes for high-DPI screens */
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 1024px) and (min-resolution: 192dpi) {
+  p {
+    font-size: 17px;
+  }
+  
+  .darkIndicators {
+    margin: 20px 0;
+  }
 }

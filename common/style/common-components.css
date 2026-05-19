@@ -115,3 +115,10 @@
 #ImageModalContainer {
   background-color: var(--color-primary-bg);
 }
+
+@media print {
+  .navbar,
+  .navbarFrame {
+    display: none !important;
+  }
+}
