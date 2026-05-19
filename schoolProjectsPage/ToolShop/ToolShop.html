@@ -11,50 +11,54 @@
                 <p>The first step in the lab assignment was to analyze the project's problem statement and create a UML class diagram. The second step was use this class diagram to create a simple console based application. Text files were provided as inital data input into the application, and the user was presented with a menu from the command-line/console to add, delete, and edit information related to tools in the inventory of a toolshop.</p>
                 <p>Weeks later, the work for this lab assignment was brought back for the course's final project. The goal of the final project was to transform this simple one machine console based application into a Client-Server application. Lots of emphasis was placed proper system design and another set of class diagrams was created. The instruction was to build this application using the Model-View-Controller (MVC) design pattern. A simple graphical user interface was built for the client, and a mySQL database replaced text files on the server-side. The client and server programs communicated through socket programming, and the server was required to use a thread pool to handle concurrency and multiple clients at the same time.</p><br />
                 
-                <div id="ToolShopCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators darkIndicators">
-                        <li data-target="#ToolShopCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#ToolShopCarousel" data-slide-to="1"></li>
-                        <li data-target="#ToolShopCarousel" data-slide-to="2"></li> 
-                        <li data-target="#ToolShopCarousel" data-slide-to="3"></li> 
-                        <li data-target="#ToolShopCarousel" data-slide-to="4"></li> 
-                        <li data-target="#ToolShopCarousel" data-slide-to="5"></li> 
-                    </ol>
+                <div id="ToolShopCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
 
-                    <div class="carousel-inner">
-                        <div class="item active">
-                        <viewable-img src="ToolShop/ListOfTools.png" style="height: 5%; width:100%;"></viewable-img>
+                    <!-- Indicators -->
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="0" class="darkIndicators active"></button>
+						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="1" class="darkIndicators"></button>
+						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="2" class="darkIndicators"></button>
+						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="3" class="darkIndicators"></button>
+                        <button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="4" class="darkIndicators"></button>
+                        <button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="5" class="darkIndicators"></button>
+					</div>
+
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <viewable-img src="ToolShop/ListOfTools.png" style="height: 5%; width:100%;"></viewable-img>
                         </div>
                     
-                        <div class="item">
-                        <viewable-img src="ToolShop/DecreaseToolQuantity.png" style="height: 5%; width:100%;"></viewable-img>
+                        <div class="carousel-item">
+                            <viewable-img src="ToolShop/DecreaseToolQuantity.png" style="height: 5%; width:100%;"></viewable-img>
                         </div>
 
-                        <div class="item">
-                        <viewable-img src="ToolShop/PackageDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
+                        <div class="carousel-item">
+                            <viewable-img src="ToolShop/PackageDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
                         </div>
 
-                        <div class="item">
-                        <viewable-img src="ToolShop/ClientSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
+                        <div class="carousel-item">
+                            <viewable-img src="ToolShop/ClientSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
                         </div>
 
-                        <div class="item">
-                        <viewable-img src="ToolShop/ServerSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
+                        <div class="carousel-item">
+                            <viewable-img src="ToolShop/ServerSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
                         </div>
 
-                        <div class="item">
-                        <viewable-img src="ToolShop/ClassDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
+                        <div class="carousel-item">
+                            <viewable-img src="ToolShop/ClassDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
                         </div>										  
-                        
-                    <a class="left carousel-control" href="#ToolShopCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#ToolShopCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                     </div>
+
+					<!-- Controls -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#ToolShopCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+
+					<button class="carousel-control-next" type="button" data-bs-target="#ToolShopCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+						<span class="visually-hidden">Next</span>
+					</button>   
                 </div>
                 <br />
                 <h4><u>Lessons Learned</u></h4>	
