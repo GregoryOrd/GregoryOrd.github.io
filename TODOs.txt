@@ -24,7 +24,7 @@ Defects
 
 Refactors
 -----------
-1) Try to check CDN files (like bootstrap) into repo instead of relying on CDNs0a03 (Move js files from common to common/js)
+Nothing right now
 
 
 Tests
