@@ -15,11 +15,23 @@ Features To Implement
 
 Defects
 ---------
-1) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
-2) The carousel indicators and controls are not visible in some carousels due to same background and foreground colours being used.
-    - Toolshop (School Project)
-    - Python Texting App (Personal Project - Per 2019)
+1) Touch controls not working in image viewer
+2) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+3) The carousel indicators should be moved outside of the photos
+   and photos should have fixed heights to avoid resizing and bumping text below
+   The carousels for personal and school projects might need different styling than the one on the home page. 
+   Building another custom html element/javascript class to reduce the duplication 
+   might be useful. 
 
+   Bad Carousels
+     - Toolshop (School Project)
+     - Python Texting App (Personal Project - Pre 2019)
+     - Helping Hands Cafe
+
+   Good Carousels:
+     - Dinos Inspire
+     - Helping Hands Routines
+     - Home Page
 
 
 Refactors
