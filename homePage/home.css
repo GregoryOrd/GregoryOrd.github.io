@@ -6,6 +6,23 @@
 	padding-top: 3vh;
 }
 
+.darkIndicators li {
+  background-color: var(--color-accent-secondary);
+  background-color: var(--color-overlay);
+}
+
+.darkIndicators .active {
+  background-color: var(--color-accent-primary);
+}
+
+/* Adjust sizes for high-DPI screens */
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 1024px) and (min-resolution: 192dpi) {
+  .darkIndicators {
+    margin: 20px 0;
+  }
+}
+
 @media (max-width: 768px) {
   #CarouselRow {
     margin-top: 10px;
