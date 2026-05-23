@@ -3,19 +3,18 @@ Features To Implement
 1) Write about Housing Market Monitor Project in Personal Projects 
 2) Write about Pi Hole Access Point Project in Personal Projects
 3) Write about Receipt Reader Project in personal projects 
-4) Write about Air Quality Monitor MCP server in Personal Projects
 
-5) Rewrite about section
-6) Update home page photos
+4) Rewrite about section
+5) Update home page photos
 
-7) Consider adding this site as a personal project
+6) Consider adding this site as a personal project
     - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
 
 
 
 Defects
 ---------
-1) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+1) In Work Experiences Page and School Projects Page, expanding then closing a table row adds a white border to the bottom of the row.
 2) It seems like there is a zoom limit on the touch controls of the image viewer
 
 

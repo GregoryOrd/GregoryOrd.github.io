@@ -12,3 +12,7 @@
     font-size: 14px;
   }
 }
+
+td {
+  width: 100%;
+}
