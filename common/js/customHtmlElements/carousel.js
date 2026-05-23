@@ -25,7 +25,9 @@ class ImageCarousel extends HTMLElement {
         // Get image data from attribute
         const images = JSON.parse(this.getAttribute('images') || '[]');
 
-        const viewportHeight = this.getAttribute('vh') || '30vh';
+        const height = this.getAttribute('height');
+        const minHeight = this.getAttribute('min-height');
+        const minWidth = this.getAttribute('min-width');
 
         // Create indicators
         let indicatorsHTML = '';
@@ -43,33 +45,32 @@ class ImageCarousel extends HTMLElement {
 
         // Create slides
         let slidesHTML = '';
-
-        images.forEach((image, index) => {
-            slidesHTML += `
-                <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                    
-                    <div
-                        style="
-                            height: ${viewportHeight};
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        ">
-
-                        <viewable-img 
-                            src="${image.src}" 
+           images.forEach((image, index) => {
+                slidesHTML += `
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <div
                             style="
-                                width: 75%;
-
+                                min-height: ${minHeight}
+                                min-width: ${minWidth};
+                                height: ${height};
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             ">
-                        </viewable-img>
+
+                            <viewable-img 
+                                src="${image.src}" 
+                                style="
+                                    width: 75%;
+                            ">
+                            </viewable-img>
+
+                        </div>
 
                     </div>
-
-                </div>
-            `;
-        });
-
+                `;
+            });  
+    
         // Build full carousel
         this.innerHTML = `
             <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">

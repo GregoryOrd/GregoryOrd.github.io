@@ -12,61 +12,21 @@
 
 
 
-                <div id="DinosInspireCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-					
-                    <!-- Indicators -->
-					<div class="carousel-indicators darkIndicators">
-						<button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="0" class="active"></button>
-						<button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="1"></button>
-						<button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="2"></button>
-						<button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="3"></button>
-                        <button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="4"></button>
-                        <button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="5"></button>
-                        <button type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide-to="6"></button>
-					</div>
-
-                    <!-- Slides -->
-                    <div class="carousel-inner text-center">
-                        <div class="carousel-item active">
-                            <viewable-img src="DinosInspire/HomePage.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/AboutPage.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-                    
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/LogInPage.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/SevenDayDashboard.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/EnterRunData.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/EnterWorkputData.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="DinosInspire/RecentTraining.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>										  
-                    </div>
-
-					<!-- Controls -->
-					<button class="carousel-control-prev" type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-
-					<button class="carousel-control-next" type="button" data-bs-target="#DinosInspireCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon"></span>
-						<span class="visually-hidden">Next</span>
-					</button>                    
-                </div>
+                <image-carousel
+                    carousel-id="DinosInspireCarousel"
+                    images='[
+                        {"src":"DinosInspire/HomePage.png"},
+                        {"src":"DinosInspire/AboutPage.png"},
+                        {"src":"DinosInspire/LogInPage.png"},
+                        {"src":"DinosInspire/SevenDayDashboard.png"},
+                        {"src":"DinosInspire/EnterRunData.png"},
+                        {"src":"DinosInspire/EnterWorkputData.png"},
+                        {"src":"DinosInspire/RecentTraining.png"}
+                    ]'
+                    min-height="50%"
+                    min-width="30vw"
+                    height="50%"
+                ></image-carousel>
                 <br />
                 <h4><u>Lessons Learned</u></h4>	
                 <p>Looking back at this project it is interesting to see how many things I could have done better, and how much I have learned since then. From a user experience point of view, the two main area for improvement are mobile responsiveness and dynamic display of formatted run/workout data. These are areas that I feel I have greatly improved upon with the my work at the Calgary Counselling Centre and with this personal portfolio website. If I were to do the training log project again a lot of things would be different, but overall I think it was a good learning experience.</p>
