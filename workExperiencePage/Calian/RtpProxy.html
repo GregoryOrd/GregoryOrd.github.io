@@ -12,14 +12,14 @@ console.log(window.location.href);
     <p>
         The devices on the ground side had two different ports, one for sending RTP traffic and one for receiving RTP traffic.
     </p>
-    <img src="Calian/OriginalCallSetup.svg" alt="Diagram">
+    <viewable-img src="Calian/OriginalCallSetup.svg" alt="Diagram"></viewable-img>
 
     <p>
         After some time, the customer wanted to change the system and upgrade the air-side machines. When this change happened
         the air-side machine stopped recognizing that the ground-side machine wanted to use two different ports. Instead the air-side 
         would always send to the ground-sde port that it was receiving traffic from. This broke the two-ways communication setup.
     </p>
-    <img src="Calian/BrokenCallSetup.svg" alt="Diagram">
+    <viewable-img src="Calian/BrokenCallSetup.svg" alt="Diagram"></viewable-img>
 
     <p>
         The solution was to implement an RTP proxy server between the ground-side and air-side machines.
@@ -28,7 +28,7 @@ console.log(window.location.href);
         Once a connection was up, the proxy begin collecting statistcs on the RTP traffic like number of packes, time between packets, etc. 
         When the call ended, the proxy would send a report with these statistics back to the SIP coordinator.
     </p>
-    <img src="Calian/RtpProxySolution.svg" alt="Diagram">
+    <viewable-img src="Calian/RtpProxySolution.svg" alt="Diagram"></viewable-img>
 
     <p>
         To generate test packets,I created an RTP playback tool. I setup an ffmpeg stream and then used wireshark to capture the RTP traffic packets and save to a pcap file.
