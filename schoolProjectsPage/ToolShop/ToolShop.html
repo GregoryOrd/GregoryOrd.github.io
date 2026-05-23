@@ -10,56 +10,23 @@
                 <p>This application was built as the term project for the ENSF 409 - Principles of Software Development course at the University of Calgary. The instructor of the course introduced this project first as a part a weekly lab assignment. The course focused heavily on object oriented design, and used Java as the language of instruction.</p>
                 <p>The first step in the lab assignment was to analyze the project's problem statement and create a UML class diagram. The second step was use this class diagram to create a simple console based application. Text files were provided as inital data input into the application, and the user was presented with a menu from the command-line/console to add, delete, and edit information related to tools in the inventory of a toolshop.</p>
                 <p>Weeks later, the work for this lab assignment was brought back for the course's final project. The goal of the final project was to transform this simple one machine console based application into a Client-Server application. Lots of emphasis was placed proper system design and another set of class diagrams was created. The instruction was to build this application using the Model-View-Controller (MVC) design pattern. A simple graphical user interface was built for the client, and a mySQL database replaced text files on the server-side. The client and server programs communicated through socket programming, and the server was required to use a thread pool to handle concurrency and multiple clients at the same time.</p><br />
+ 
                 
-                <div id="ToolShopCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <image-carousel
+                    carousel-id="TextingAppCarousel"
+                    images='[
+                        {"src":"ToolShop/ListOfTools.png"},
+                        {"src":"ToolShop/DecreaseToolQuantity.png"},
+                        {"src":"ToolShop/PackageDiagram.jpg"},
+                        {"src":"ToolShop/ClientSideDiagram.jpg"},
+                        {"src":"ToolShop/ServerSideDiagram.jpg"},
+                        {"src":"ToolShop/ClassDiagram.jpg"}
+                    ]'
+                    height="60vh"
+                    min-height="60vh"
+                    min-width="30vw"
+                ></image-carousel>
 
-                    <!-- Indicators -->
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="0" class="darkIndicators active"></button>
-						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="1" class="darkIndicators"></button>
-						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="2" class="darkIndicators"></button>
-						<button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="3" class="darkIndicators"></button>
-                        <button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="4" class="darkIndicators"></button>
-                        <button type="button" data-bs-target="#ToolShopCarousel" data-bs-slide-to="5" class="darkIndicators"></button>
-					</div>
-
-                    <div class="carousel-inner text-center">
-                        <div class="carousel-item active">
-                            <viewable-img src="ToolShop/ListOfTools.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-                    
-                        <div class="carousel-item">
-                            <viewable-img src="ToolShop/DecreaseToolQuantity.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="ToolShop/PackageDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="ToolShop/ClientSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="ToolShop/ServerSideDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="ToolShop/ClassDiagram.jpg" style="height: 5%; width:100%;"></viewable-img>
-                        </div>										  
-                    </div>
-
-					<!-- Controls -->
-					<button class="carousel-control-prev" type="button" data-bs-target="#ToolShopCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-
-					<button class="carousel-control-next" type="button" data-bs-target="#ToolShopCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon"></span>
-						<span class="visually-hidden">Next</span>
-					</button>   
-                </div>
                 <br />
                 <h4><u>Lessons Learned</u></h4>	
                 <p>

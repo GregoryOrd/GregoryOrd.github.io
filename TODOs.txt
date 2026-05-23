@@ -15,26 +15,11 @@ Features To Implement
 
 Defects
 ---------
-1) The carousel indicators should be moved outside of the photos
-   and photos should have fixed heights to avoid resizing and bumping text below
-   The carousels for personal and school projects might need different styling than the one on the home page. 
-   Building another custom html element/javascript class to reduce the duplication 
-   might be useful. 
-
-   Bad Carousels
-     - Toolshop (School Project)
-     - Python Texting App (Personal Project - Pre 2019)
-     - Helping Hands Cafe
-
-   Good Carousels:
-     - Dinos Inspire
-     - Helping Hands Routines
-     - Home Page
-2) Touch controls not working in image viewer
-3) Some images seem to not be using the viewable-img type
+1) Touch controls not working in image viewer
+2) Some images seem to not be using the viewable-img type
     - Images in Calian Features I led sections
     - Check for others
-4) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+3) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
 
 
 Refactors

@@ -10,40 +10,17 @@
                 <p>This was another project for fun in the summer of 2017.  The idea for the project came from a youtube video. The video was about 20 minutes long and showed how to use the Twilio API to send an SMS message with python.</p>
                 <p>To expand on what was shown in the video, I decided to add a password system that identified the user an sent the message to a different phone number based on the user. I also decided to add a user interface. To do this I used the Tkinter python library, and this was my first introduction to graphical user interfaces. This little app also added to the ideas presented in the video by using ngrok webhooks to allow for the phone that recieved the initial message to send a response back to the computer.</p><br/>
                 
-                <div id="TextingAppCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-                    
-                    <!-- Indicators -->
-					<div class="carousel-indicators darkIndicators">
-						<button type="button" data-bs-target="#TextingAppCarousel" data-bs-slide-to="0" class="active"></button>
-						<button type="button" data-bs-target="#TextingAppCarousel" data-bs-slide-to="1"></button>
-						<button type="button" data-bs-target="#TextingAppCarousel" data-bs-slide-to="2"></button>
-					</div>
-
-                    <div class="carousel-inner text-center">
-                        <div class="carousel-item active">
-                            <viewable-img src="PythonTextingApp/LogIn.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-
-                        <div class="carousel-item">
-                            <viewable-img src="PythonTextingApp/LogInSuccessful.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-                    
-                        <div class="carousel-item">
-                            <viewable-img src="PythonTextingApp/SendMessage.png" style="height: 5%; width:100%;"></viewable-img>
-                        </div>
-                    </div>
-
-					<!-- Controls -->
-					<button class="carousel-control-prev" type="button" data-bs-target="#TextingAppCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-
-					<button class="carousel-control-next" type="button" data-bs-target="#TextingAppCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon"></span>
-						<span class="visually-hidden">Next</span>
-					</button>     
-                </div>
+                <image-carousel
+                    carousel-id="TextingAppCarousel"
+                    images='[
+                        {"src":"PythonTextingApp/LogIn.png"},
+                        {"src":"PythonTextingApp/LogInSuccessful.png"},
+                        {"src":"PythonTextingApp/SendMessage.png"}
+                    ]'
+                    min-height="50%"
+                    min-width="30vw"
+                    height="50%"
+                ></image-carousel>
                 <br />
                 <h4><u>Lessons Learned</u></h4>	
                 <p>The main take aways from this project were learning about APIs, webhooks, and graphical user interfaces. This project introduced me to the idea of sending requests from one machine to another, and seeing how this can be triggered by event based programming.</p>
