@@ -14,8 +14,7 @@ Features To Implement
 
 Defects
 ---------
-1) In Work Experiences Page and School Projects Page, expanding then closing a table row adds a white border to the bottom of the row.
-2) It seems like there is a zoom limit on the touch controls of the image viewer
+Nothing right now
 
 
 Refactors
