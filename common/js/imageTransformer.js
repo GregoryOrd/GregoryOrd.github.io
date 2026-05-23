@@ -102,10 +102,10 @@ export class ImageTransformer {
             this.lastX = this.touches[0].clientX;
             this.lastY = this.touches[0].clientY;
         } else if (this.touches.length === 2) {
-            this.initialDistance = getDistance(this.touches[0], this.touches[1]);
-            this.initialAngle = getAngle(this.touches[0], this.touches[1]);
-            this.initialScale = scale;
-            this.initialRotation = rotation;
+            this.initialDistance = this.getDistance(this.touches[0], this.touches[1]);
+            this.initialAngle = this.getAngle(this.touches[0], this.touches[1]);
+            this.initialScale = this.scale;
+            this.initialRotation = this.rotation;
         }
     }
 
@@ -114,9 +114,10 @@ export class ImageTransformer {
         this.touches = Array.from(e.touches);
         
         if (this.touches.length === 1) {
+
             // Pan: single finger drag
-            const deltaX = this.touches[0].clientX - lastX;
-            const deltaY = this.touches[0].clientY - lastY;
+            const deltaX = this.touches[0].clientX - this.lastX;
+            const deltaY = this.touches[0].clientY - this.lastY;
             
             this.translateX += deltaX;
             this.translateY += deltaY;
@@ -127,8 +128,8 @@ export class ImageTransformer {
             this.updateTransform();
         } else if (this.touches.length === 2) {
             // Pinch-to-zoom and rotation: two finger gesture
-            const currentDistance = getDistance(this.touches[0], this.touches[1]);
-            const currentAngle = getAngle(this.touches[0], this.touches[1]);
+            const currentDistance = this.getDistance(this.touches[0], this.touches[1]);
+            const currentAngle = this.getAngle(this.touches[0], this.touches[1]);
             
             // Zoom: scale based on distance change
             const scaleFactor = currentDistance / this.initialDistance;

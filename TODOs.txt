@@ -15,11 +15,11 @@ Features To Implement
 
 Defects
 ---------
-1) Touch controls not working in image viewer
-2) Some images seem to not be using the viewable-img type
+1) Some images seem to not be using the viewable-img type
     - Images in Calian Features I led sections
     - Check for others
-3) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+2) In Work Experiences Page, expanding then closing a table row adds a white border to the bottom of the row.
+3) It seems like there is a zoom limit on the touch controls of the image viewer
 
 
 Refactors

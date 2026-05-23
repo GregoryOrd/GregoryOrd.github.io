@@ -33,9 +33,9 @@ function ShowImageModal(imgSrc, touchRotationEnabled=false) {
         const controlButtons = Array.from(document.getElementsByClassName("controlButton"));
         controlButtons.forEach(el => el.remove());
 
-        modalEl.addEventListener('touchstart', () => transformer.handleTouchStart(), false);
-        modalEl.addEventListener('touchmove', () => transformer.handleTouchMove, false);
-        modalEl.addEventListener('touchend', () => transformer.handleTouchEnd, false);
+        modalEl.addEventListener('touchstart', (e) => transformer.handleTouchStart(e), false);
+        modalEl.addEventListener('touchmove', (e) => transformer.handleTouchMove(e), false);
+        modalEl.addEventListener('touchend', (e) => transformer.handleTouchEnd(e), false);
     } else {
         // attach controls
         makeRepeatingButton('imgZoomIn', () => transformer.zoomIn());
