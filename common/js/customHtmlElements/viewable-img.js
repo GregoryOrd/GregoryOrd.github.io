@@ -1,4 +1,4 @@
-import { ImageTransformer } from "./imageTransformer.js";
+import { ImageTransformer } from "../imageTransformer.js";
 
 function makeRepeatingButton(buttonId, action, repeatDelay = 100) {
     const btn = document.getElementById(buttonId);
