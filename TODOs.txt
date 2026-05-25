@@ -1,20 +1,17 @@
 Features To Implement
 -----------------------
-1) Write about Housing Market Monitor Project in Personal Projects 
-2) Write about Pi Hole Access Point Project in Personal Projects
-3) Write about Receipt Reader Project in personal projects 
-
-4) Rewrite about section
-5) Update home page photos
-
-6) Consider adding this site as a personal project
+1) Write about Pi Hole Access Point Project in Personal Projects
+2) Write about Receipt Reader Project in personal projects 
+3) Rewrite about section
+4) Update home page photos
+5) Consider adding this site as a personal project
     - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
 
 
 
 Defects
 ---------
-Nothing right now
+1) Styling looks better without underlines on headers for personal and school project write-ups
 
 
 Refactors
