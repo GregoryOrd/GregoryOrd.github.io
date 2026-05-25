@@ -31,6 +31,11 @@
   background-color: var(--color-accent-primary);
 }
 
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
 /* Adjust sizes for high-DPI screens */
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
        (min-width: 1024px) and (min-resolution: 192dpi) {

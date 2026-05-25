@@ -29,6 +29,9 @@ class ImageCarousel extends HTMLElement {
         const minHeight = this.getAttribute('min-height');
         const minWidth = this.getAttribute('min-width');
 
+        const interval = this.getAttribute('data-bs-interval') || "2000";
+        const caption = this.getAttribute('caption') || "";
+
         // Create indicators
         let indicatorsHTML = '';
 
@@ -73,7 +76,7 @@ class ImageCarousel extends HTMLElement {
     
         // Build full carousel
         this.innerHTML = `
-            <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="${interval}">
 
                 <!-- Slides -->
                 <div class="carousel-inner text-center">
@@ -91,6 +94,8 @@ class ImageCarousel extends HTMLElement {
                     </button>
 
                 </div>
+
+                <figcaption>${caption}</figcaption>
 
                 <!-- Indicators -->
                 <div class="carousel-indicators darkIndicators">
