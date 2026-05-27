@@ -17,7 +17,9 @@ Features To Implement
 10) Consider adding a Linux Phone section to future projects
     - If a linux phone setup was acheived it might be possible to run clients for previous projects like GsMessaging, GregCall, and a ReceiptReader app 
       on the linux phone. Then when the home networking setup improves (to do do things like expose endpoints or setup a VPN, like discuessed in the
-      Raspberry Pi Hole/Access Point project or GSMEssaging projects) I can have my own little ecosystem of home apps and infrastructure 
+      Raspberry Pi Hole/Access Point project or GSMEssaging projects) I can have my own little ecosystem of home apps and infrastructure.
+    - If a can also get the air quality monitor MCP server and local AI model running, I would also likely be able to expose this outside of the home 
+      network onto a client on the linux phone.
 
 
 Defects
