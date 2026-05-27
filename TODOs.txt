@@ -8,6 +8,8 @@ Features To Implement
     - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
 6) Add a project in Dec 2021 for writing linux kernel module to blink LED
     - https://github.com/GregoryOrd/RaspberryPiKernelTinkering
+7) Consider linking to the ENCM 501 git repo and adding a section for that to the school projects page
+   or linking to the git repo from the section on that course.
 
 
 Defects
