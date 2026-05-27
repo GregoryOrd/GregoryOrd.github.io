@@ -12,6 +12,12 @@ Features To Implement
    or linking to the git repo from the section on that course.
 8) Consider adding notes about our capstone project to the school projects section.
     - https://github.com/GregoryOrd/SawbackCapstoneGroup
+9) Consider adding GregCall section to future projects
+    - https://github.com/GregoryOrd/GregCall
+10) Consider adding a Linux Phone section to future projects
+    - If a linux phone setup was acheived it might be possible to run clients for previous projects like GsMessaging, GregCall, and a ReceiptReader app 
+      on the linux phone. Then when the home networking setup improves (to do do things like expose endpoints or setup a VPN, like discuessed in the
+      Raspberry Pi Hole/Access Point project or GSMEssaging projects) I can have my own little ecosystem of home apps and infrastructure 
 
 
 Defects
