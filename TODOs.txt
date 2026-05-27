@@ -6,7 +6,8 @@ Features To Implement
 4) Update home page photos
 5) Consider adding this site as a personal project
     - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
-
+6) Add a project in Dec 2021 for writing linux kernel module to blink LED
+    - https://github.com/GregoryOrd/RaspberryPiKernelTinkering
 
 
 Defects
