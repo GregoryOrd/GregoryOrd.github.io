@@ -10,6 +10,8 @@ Features To Implement
     - https://github.com/GregoryOrd/RaspberryPiKernelTinkering
 7) Consider linking to the ENCM 501 git repo and adding a section for that to the school projects page
    or linking to the git repo from the section on that course.
+8) Consider adding notes about our capstone project to the school projects section.
+    - https://github.com/GregoryOrd/SawbackCapstoneGroup
 
 
 Defects
