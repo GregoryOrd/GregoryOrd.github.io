@@ -49,14 +49,14 @@
 
 
 							<tr class="expandableTableHeader  primaryAccent">
-								<th onclick="toggleHidden('2022ToPresentRow', '2022ToPresentCaret');">2022 to Present <i id="2022ToPresentCaret" class="fa fa-caret-right"></i></th>
+								<th onclick="toggleHidden('2022to2026Row', '2022to2026Caret');">2022 to 2026 <i id="2022to2026Caret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr>
 								<td>
-									<span class="2022ToPresentRow" id="ReceiptReader" hidden></span>
-									<span class="2022ToPresentRow" id="PiHoleAccessPoint" hidden></span>
-									<span class="2022ToPresentRow" id="HousingMarketMonitor" hidden></span>
-									<span class="2022ToPresentRow" id="GSMessaging" hidden></span>
+									<span class="2022to2026Row" id="ReceiptReader" hidden></span>
+									<span class="2022to2026Row" id="PiHoleAccessPoint" hidden></span>
+									<span class="2022to2026Row" id="HousingMarketMonitor" hidden></span>
+									<span class="2022to2026Row" id="GSMessaging" hidden></span>
 								</td>
 							</tr>
 							<tr class="expandableTableHeader  primaryAccent">
@@ -97,11 +97,13 @@
 
 		<script>
 			loadHtmlElement("../common/html/common-components.html", "common")
-			loadHtmlElement("AirMonitorMCPServer/AirMonitorMCPServer.html", "AirMonitorMCPServer")
-			loadHtmlElement("ReceiptReader/ReceiptReader.html", "ReceiptReader")
-			loadHtmlElement("PiHoleAccessPoint/PiHoleAccessPoint.html", "PiHoleAccessPoint")
-			loadHtmlElement("HousingMarketMonitor/HousingMarketMonitor.html", "HousingMarketMonitor")
-			loadHtmlElement("GSMessaging/GSMessaging.html", "GSMessaging")
+			
+			loadHtmlElement("FutureProjects/AirMonitorMCPServer/AirMonitorMCPServer.html", "AirMonitorMCPServer")
+			
+			loadHtmlElement("2022to2026/ReceiptReader/ReceiptReader.html", "ReceiptReader")
+			loadHtmlElement("2022to2026/PiHoleAccessPoint/PiHoleAccessPoint.html", "PiHoleAccessPoint")
+			loadHtmlElement("2022to2026/HousingMarketMonitor/HousingMarketMonitor.html", "HousingMarketMonitor")
+			loadHtmlElement("2022to2026/GSMessaging/GSMessaging.html", "GSMessaging")
 			
 			loadHtmlElement("2019to2021/GregWatch/GregWatch.html", "GregWatch")
 			loadHtmlElement("2019to2021/GregBuild/GregBuild.html", "GregBuild")
