@@ -1,7 +1,7 @@
 <table>
     <tbody>
         <tr id="PiHoleApProject" class="expandableTableHeader" onclick="toggleRow('PiHoleApProject', 'PiHoleApProjectContents');">
-            <th>Pi Hole Access Point - DNS Sinkhole Combined with WiFi Access Point (Start Date to End Date) <i id="PiHoleApProjectCaret" class="fa fa-caret-right"></i></th>
+            <th>Pi Hole Access Point - DNS Sinkhole Combined with WiFi Access Point (Jan 2026 to March 2026) <i id="PiHoleApProjectCaret" class="fa fa-caret-right"></i></th>
         </tr>	
         <tr class="PiHoleApProjectContents whiteBackground" hidden>
             <td class="projectsContent">
@@ -12,7 +12,25 @@
                     a wireless access point providing internet access by forwarding traffic through
                     to the ISP provided home modem/router.
                 </p>
-                <h3>Hardware Feasability/General Pi Hole Investigation</h3>
+                <p>
+                    This project didn't involve writing any code. Instead the project included system level research/investigation and 
+                    configuring software packages created by others.
+                </p>
+                <p>
+                    The original inspiration for this project came when I stumbled on some articles and videos online of people installing 
+                    their own DNS sinkholes on various hardware using <a href="https://pi-hole.net/">PiHole software</a>. I thought it seemed 
+                    like an interesting thing to try out, so I did a little research on hardware requirements and possible configurations of the
+                    software.
+                </p>
+                <p>
+                    A DNS sinkhole is a DNS server that only returns successful DNS results for approved DNS queries. For the PiHole project,
+                    block lists can be setup, kind of like a firewall for DNS queries. If a domain name is on the block list, the DNS sinkhole return 
+                    a DNS failure result. If a domain name is not on the block list, the DNS sinkhole can either query its own cache, or forward the 
+                    DNS query to another DNS server to get an address for the domain name. If the block list contains advertising or data collection 
+                    domains, then the application that is querying those domains won't receive a valid address for the domain and won't be able to 
+                    show to user the advertisement or collect their data.
+                </p>
+                <h3>General Pi Hole Investigation</h3>
                 <image-carousel
                     carousel-id="FeasabilityCarousel"
                     images='[
@@ -26,6 +44,54 @@
                     data-bs-interval="3000"
                     caption="Notes about PiHole project and hardware requirements."
                 ></image-carousel>
+                <p>
+                    I installed and configured the PiHole software on my Raspberry Pi in the standard way as describe by the documentation and 
+                    community tutorials. In most of these common setups, the strategy to get devices on the local network to send their DNS queries
+                    is to either tell the network's router that the DNS sinkhole device is the DNS server that should be used, or tell each device 
+                    individually which DNS server to use.
+                </p>
+                <p>
+                    When I tried to configure my home router to use my Raspberry Pi as its DNS server, it didn't really work. Setting the DNS server 
+                    individually on each device in the network at the operating system level also seemed brittle to me. So the solution I instead 
+                    thought of was to let the Raspberry Pi also become a network access point. Then each device could simply connect to the WiFi network
+                    created by the Raspberry Pi and all of the traffic would therefore have to flow through it and its DNS sinkhole.
+                </p>
+                <p>
+                    So I did some research and wrote some notes about using linux daemons like dnsmasq, dhcpd, and hostapd to setup an 
+                    access point on a network interface. I also investigated how a firewall (in this case iptables) would need to be configured 
+                    to support this.
+                </p>
+                <h3>Access Point Notes</h3>
+                <image-carousel
+                    carousel-id="AccessPointCarousel"
+                    images='[
+                        {"src":"PiHoleAccessPoint/AccessPointNotes/PiHoleWithAccessPointNotes1.jpeg"},
+                        {"src":"PiHoleAccessPoint/AccessPointNotes/PiHoleWithAccessPointNotes2.jpeg"},
+                        {"src":"PiHoleAccessPoint/AccessPointNotes/SecondRouterFunctions.jpeg"}
+                    ]'
+                    min-height="70vh"
+                    min-width="30vw"
+                    height="70vh"
+                    data-bs-interval="3000"
+                    caption="Notes on setting up an access point and features that might be useful in a second router/access point"
+                ></image-carousel>
+                <p>
+                    The hardware that I had for this project was a Raspberry Pi Zero W. That meant it I only had one wireless hardware interface.
+                    So to forward any IP traffic from a device, to the Raspberry Pi, to the home network router, to the internet, Raspberry Pi's 
+                    operating system had to put everything through the same wireless chip. With some linux system configuration, this was possible 
+                    but it did not perform very well.
+                </p>
+                <p>
+                    I didn't do a full analysis on this problem to properly prove that this was too much load for the single wireless chip,
+                    but I had a hunch. So I started looking at ways to add hardware for a second network interface. I quickly found a USB/ETH Hat 
+                    that would fit my Raspberry Pi and provide an ethernet interface.
+                </p>
+                <p>
+                    Adding the ethernet interface simplified the linux system configuration and took some load off of the wireless chip.
+                    With that interface added, the wireless chip provided the access point to a device, and took the input IP packets.
+                    Then the wireless network interface forwarded those packets to the ethernet interface and the ethernet interface become 
+                    responsible for interfacing with the home router.
+                </p>
                 <h3>Hardware Photos</h3>
                 <image-carousel
                     carousel-id="HardwareCarousel"
@@ -42,31 +108,31 @@
                     data-bs-interval="3000"
                     caption="The Raspberry Pi Zero Wireless and the ETH/USB Hat."
                 ></image-carousel>
-                <h3>Access Point Notes</h3>
-                <image-carousel
-                    carousel-id="AccessPointCarousel"
-                    images='[
-                        {"src":"PiHoleAccessPoint/AccessPointNotes/PiHoleWithAccessPointNotes1.jpeg"},
-                        {"src":"PiHoleAccessPoint/AccessPointNotes/PiHoleWithAccessPointNotes2.jpeg"},
-                        {"src":"PiHoleAccessPoint/AccessPointNotes/SecondRouterFunctions.jpeg"}
-                    ]'
-                    min-height="70vh"
-                    min-width="30vw"
-                    height="70vh"
-                    data-bs-interval="3000"
-                    caption="Project Web UI, Email Notification, and the webpage from which the data is scrapped."
-                ></image-carousel>
                 <h3>Future Work</h3>
                 <p>
+                    This project was a good proof of concept, but the hardware used proved to be limited for use as an access point.
+                    To make this project usable in the future, better hardware needs to be investigated and used for providing the access point.
+                    For the simple load of only a few devices, the DNS sinkhole software seemed to be performant enough. So the future work will 
+                    be to get invest in better hardware that is specifically designed to be a wireless access point. 
                 </p>
                 <h3>Project Risks</h3>
                 <p>
+                    Security Risk - Someone within range of a wifi signal could try to connect to or attack the access point.
+                                    I suppose this is the same risk as would be faced by the home network router, but it would mean
+                                    that we need to take consideration to ensure the Raspberry Pi access point is as secure as the ISP 
+                                    provided router access point. If we setup better hardware for the access point as discussed in the future work 
+                                    section, we can likely also setup a well trusted router operating system to give us better protection against 
+                                    this risk.
                 </p>
                 <p>
                 </p>
                 <h3>Lessons Learned</h3>
                 <ul>
-                    <li>Add Lessons Learned</li>
+                    <li>Learned what a DNS sinkhole is</li>
+                    <li>Learned a bit about tuning WiFi channels</li>
+                    <li>Learned there are different versions of WiFi which different data rates</li>
+                    <li>Did some reading on different hardware data rates</li>
+                    <li>Learned that data rates and performance are important for networking infrastructure projects</li>
                 </ul>
             </td>
         </tr>
