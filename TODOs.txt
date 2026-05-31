@@ -35,7 +35,7 @@ Styling
 
 Refactors
 -----------
-1) Organize personal projects folders into the same date based categories as is used in the table in the page.
+Nothing right now
 
 
 Tests
