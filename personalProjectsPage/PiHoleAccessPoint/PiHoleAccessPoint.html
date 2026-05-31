@@ -6,7 +6,7 @@
         <tr class="PiHoleApProjectContents whiteBackground" hidden>
             <td class="projectsContent">
             <br />
-            <h3>Project Description</h3>
+            <h4><u>Project Description</u></h4>
                 <p>
                     A project turning a Raspberry Pi zero into both a DNS sinkhole and 
                     a wireless access point providing internet access by forwarding traffic through
@@ -30,7 +30,7 @@
                     domains, then the application that is querying those domains won't receive a valid address for the domain and won't be able to 
                     show to user the advertisement or collect their data.
                 </p>
-                <h3>General Pi Hole Investigation</h3>
+                <h4><u>General Pi Hole Investigation</u></h4>
                 <image-carousel
                     carousel-id="FeasabilityCarousel"
                     images='[
@@ -61,7 +61,7 @@
                     access point on a network interface. I also investigated how a firewall (in this case iptables) would need to be configured 
                     to support this.
                 </p>
-                <h3>Access Point Notes</h3>
+                <h4><u>Access Point Notes</u></h4>
                 <image-carousel
                     carousel-id="AccessPointCarousel"
                     images='[
@@ -92,7 +92,7 @@
                     Then the wireless network interface forwarded those packets to the ethernet interface and the ethernet interface become 
                     responsible for interfacing with the home router.
                 </p>
-                <h3>Hardware Photos</h3>
+                <h4><u>Hardware Photos</u></h4>
                 <image-carousel
                     carousel-id="HardwareCarousel"
                     images='[
@@ -108,14 +108,14 @@
                     data-bs-interval="3000"
                     caption="The Raspberry Pi Zero Wireless and the ETH/USB Hat."
                 ></image-carousel>
-                <h3>Future Work</h3>
+                <h4><u>Future Work</u></h4>
                 <p>
                     This project was a good proof of concept, but the hardware used proved to be limited for use as an access point.
                     To make this project usable in the future, better hardware needs to be investigated and used for providing the access point.
                     For the simple load of only a few devices, the DNS sinkhole software seemed to be performant enough. So the future work will 
                     be to get invest in better hardware that is specifically designed to be a wireless access point. 
                 </p>
-                <h3>Project Risks</h3>
+                <h4><u>Project Risks</u></h4>
                 <p>
                     Security Risk - Someone within range of a wifi signal could try to connect to or attack the access point.
                                     I suppose this is the same risk as would be faced by the home network router, but it would mean
@@ -126,7 +126,7 @@
                 </p>
                 <p>
                 </p>
-                <h3>Lessons Learned</h3>
+                <h4><u>Lessons Learned</u></h4>
                 <ul>
                     <li>Learned what a DNS sinkhole is</li>
                     <li>Learned a bit about tuning WiFi channels</li>

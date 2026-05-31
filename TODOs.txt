@@ -24,7 +24,13 @@ Features To Implement
 
 Defects
 ---------
-1) Styling looks better without underlines on headers for personal and school project write-ups
+Nothing right now
+
+
+Styling
+-----------
+1) Styling looks better without underlines on headers for personal and school project write-ups, but underlines help the 
+   headers stand out. Perhaps removal of underlines and some other styling to make the headers stand out more might be the best styling.
 
 
 Refactors
