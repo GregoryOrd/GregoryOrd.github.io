@@ -1,13 +1,93 @@
 <table>
     <tbody>
         <tr id="ReceiptReaderProject" class="expandableTableHeader" onclick="toggleRow('ReceiptReaderProject', 'ReceiptReaderProjectContents');">
-            <th>ReceiptReader - An OpenCV Based Receipt Reader and Historical Price Tracker (Start Date to End Date) <i id="ReceiptReaderProjectCaret" class="fa fa-caret-right"></i></th>
+            <th>ReceiptReader - An OpenCV Based Receipt Reader and Historical Price Tracker (April 2026) <i id="ReceiptReaderProjectCaret" class="fa fa-caret-right"></i></th>
         </tr>	
         <tr class="ReceiptReaderProjectContents whiteBackground" hidden>
             <td class="projectsContent">
-            <br />
-            <h4><u>Project Description</u></h4>
-                <p>A program using OpenCV to read receipts and store prices to a database for tracking price changes over time.</p>
+                <br />
+                <h4><u>Project Description</u></h4>
+                <p>The github repo for this project is here: <a href="https://github.com/GregoryOrd/ReceiptReader" target="_blank">https://github.com/GregoryOrd/ReceiptReader</a></p>
+                <p>A program using OpenCV to process images of receipts and store prices to a database for tracking price changes over time.</p>
+                <p>
+                    This project was designed with a classic client-server architecture using protobuf 
+                    messaging to allow a desktop GUI client to communicate with the server. 
+                    The plan will be to also add a REST API interface onto the server to also 
+                    support a web UI. 
+                </p>
+                <p>
+                    This project is the first personal project that I have tried using agentic coding to build.
+                    I wanted to run the coding agent with all tools allowed, but wanted to do so in a safe way
+                    that didn't allow the agent to accidently do any harm. To achieve this I setup a docker container 
+                    environment. Running the agent in a docker container limits
+                    the blast radius of any possible misbehaviour of a coding agent. So far in this 
+                    project, the agent has done well generating code and executing refactors when given 
+                    detailed step-by-step instructions of what to do.
+                </p>
+                <image-carousel
+                    carousel-id="FeasabilityCarousel"
+                    images='[
+                        {"src":"2022to2026/ReceiptReader/Walmart_March_21_2026.jpeg"},
+                        {"src":"2022to2026/ReceiptReader/Walmart_April_3_2026.jpeg"},
+                        {"src":"2022to2026/ReceiptReader/BananasPriceChart.png"},
+                        {"src":"2022to2026/ReceiptReader/BreadPriceChart.png"},
+                        {"src":"2022to2026/ReceiptReader/KefirPriceChart.png"}
+                    ]'
+                    min-height="40vh"
+                    min-width="30vw"
+                    height="40vh"
+                    data-bs-interval="3000"
+                    caption=""
+                ></image-carousel>
+                <h4><u>Future Work</u></h4>
+                <p>
+                    At the time of writing, this project still needs more work to make it user friendly.
+                    The desktop UI can be improved. The REST API and web UI need to be created. And if this 
+                    project lives long enough, I could also see a mobile phone user interface being useful.
+                </p>    
+                <p>
+                    Currently the project only supports processing receipts in one specific format, from one 
+                    specific store. Adding support for more receipt formats from more stores would greatly 
+                    extend the benefit and capabilities of this project.
+                </p>
+                <p>
+                    Also, with 
+                    so many items being purchased, better indication and sorting of which items have had the most 
+                    significant changes to price would be useful. Finally, some form of statistics to quantify change
+                    over time for groups of items (or of all items) could be added to create a sort of consumer price index
+                    or inflation watch capability. Finally, related to the risks listed below, more work can still 
+                    be done to implement error detection and correction for errors that come from incorrectly converting
+                    images into text with the OpenCV library.
+                </p>
+                <h4><u>Project Risks</u></h4>
+                <p>
+                    The main risk associated with this project, is related to the main idea of the project; using 
+                    computer vision to parse the input from photos. This type of input processing can have many small 
+                    errors that are hard to detect. For example, similarly shaped characters can sometimes be confused
+                    with each other, like '5' being incorrectly read as '6', or '6' being incorrectly read as '8'.
+                    In this application, those incorrect character reading happen happen both to the prices of items,
+                    and also the "item code" numbers that are used to identify items. The risk mitigation strategy 
+                    is going to be to try designing error detection and correction strategies that will alert users 
+                    when the system thinks there might have been an error so that the user can correct the error.
+                </p>
+                <p>
+                    Since there are so many items on a receipt, it would be very tough user experience to make the 
+                    user put them in one by one. Therefore, the benefit to the user experience of letting the user 
+                    submit only a single image outweighs the negatives of the risk of some errors from using computer 
+                    vision. 
+                </p>
+                <p>
+                    Another risk associated with this project is that it expects receipts to be in a known format.
+                    If at any time, the store that the receipts come from decides to change the format of the receipt,
+                    the abilitiy of the project to read receipts would break until a fix was implemented.
+                    This is a similar risk to other recent projects where we didn't have control of all parts of the 
+                    system and were at risk of somebody making a breaking change something with consulting or informing us.
+                </p>
+                <h4><u>Lessons Learned</u></h4>
+                <ul>
+                    <li>Computer Vision (specifically optical character recongition) can be brittle if you are not careful.</li>
+                    <li>Agentic coding can work quite well for some tasks (small project, clear instructions)</li>
+                </ul>
             </td>
         </tr>
         <tr class="ReceiptReaderProjectContents projectsContentLast" hidden>
