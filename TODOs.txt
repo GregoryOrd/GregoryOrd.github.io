@@ -1,23 +1,24 @@
 Features To Implement
 -----------------------
-1) Rewrite about section
-2) Update home page photos
-
-3) Consider adding this site as a personal project
-    - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
-
-4) Add a project in Dec 2021 for writing linux kernel module to blink LED
+1) Add a project in Dec 2021 for writing linux kernel module to blink LED
     - https://github.com/GregoryOrd/RaspberryPiKernelTinkering
 
-5) Consider adding notes about our capstone project to the school projects section.
+2) Consider adding notes about our capstone project to the school projects section.
     - https://github.com/GregoryOrd/SawbackCapstoneGroup
 
-6) Consider adding a Linux Phone section to future projects
+3) Consider adding a Linux Phone section to future projects
     - If a linux phone setup was acheived it might be possible to run clients for previous projects like GsMessaging, GregCall, and a ReceiptReader app 
       on the linux phone. Then when the home networking setup improves (to do do things like expose endpoints or setup a VPN, like discuessed in the
       Raspberry Pi Hole/Access Point project or GSMEssaging projects) I can have my own little ecosystem of home apps and infrastructure.
     - If a can also get the air quality monitor MCP server and local AI model running, I would also likely be able to expose this outside of the home 
       network onto a client on the linux phone.
+
+
+4) Consider adding this site as a personal project
+    - Include details of some of the HTML/javascript tricks used, like creating viewable-img as a custom HTML element type
+
+5) Rewrite about section
+6) Update home page photos
 
 7) For photos that are in a carousel, when they are opened in the image viewer, it would be nice to have 
     buttons in the image viewer to switch to the next or previous image in the carousel while staying in the image viewer modal.
