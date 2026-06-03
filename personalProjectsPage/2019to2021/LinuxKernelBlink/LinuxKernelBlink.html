@@ -7,6 +7,22 @@
             <td class="projectsContent">
                 <br />
                 <h4><u>Project Description</u></h4>
+                <p>
+                    This wasn't a full project, but rather a small exercise (following a 
+                    <a href="https://www.youtube.com/watch?v=lWzFFusYg6g&list=PLc7W4b0WHTAX4F1Byvs4Bp7c8yCDSiKa9" target="_blank">youtube tutorial</a>) 
+                    to learn how to write a Linux kernel module. 
+                </p>
+                <p>
+                    My github repo for this exercise is here: <a href="https://github.com/GregoryOrd/HosuingMarketMonitor" target="_blank">https://github.com/GregoryOrd/HosuingMarketMonitor</a>
+                    though much of this code in this repo was copied from the tutorial author.
+                </p>
+                <p>
+                    This kernel module was written to expose a GPIO driver on the procfs filesystem. The interface allowed a userspace program to write a line to the file 
+                    with format "%d,%d". The first integer respresented the GPIO pin number and the second integer represented the value to set that pin to (0 or 1). 
+                    With an LED connected to the GPIO pin, this allowed the userspace program to control the LED by writing to the procfs file. 
+                    As writes to this procfs file were happening, the kernel
+                    module would use printk to log the events to the kernel log, which could be viewed with the dmesg command.
+                </p>
                 <image-carousel
                     carousel-id="LinuxKernelBlinkCarousel"
                     images='[
@@ -20,10 +36,6 @@
                     data-bs-interval="3000"
                     caption=""
                 ></image-carousel>
-                <h4><u>Future Work</u></h4>
-                </p>
-                <h4><u>Project Risks</u></h4>
-                <h4><u>Lessons Learned</u></h4>
             </td>
         </tr>
         <tr class="LinuxKernelBlinkProjectContents projectsContentLast" hidden>
