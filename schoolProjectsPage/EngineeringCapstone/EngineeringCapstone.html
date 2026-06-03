@@ -1,0 +1,56 @@
+<table>
+    <tbody>
+        <tr id="EngineeringCapstone" class="expandableTableHeader primaryAccent" onclick="toggleRow('EngineeringCapstone', 'EngineeringCapstoneContents');">
+            <th>Engineering Capstone Project (Jan-Mar 2022) <i id="EngineeringCapstoneCaret" class="fa fa-caret-right"></i></th>
+        </tr>
+        <tr class="EngineeringCapstoneContents whiteBackground" hidden>
+            <td class="projectsContent">
+                <h4><u>Project Description</u></h4>
+                <p>
+                    As part of the engineering ciriculum at every Canadian university, students post complete a group capstone project in their final year.
+                    The capstone projects are sponsored by companies, and the company that my group worked with was a startup company hoping to use our work in their development
+                    of a penetrating radar (GPR) system. The company had an antenna some some electronics to control the antenna but needed to develop their signal processing 
+                    algorithm to process the antenna data.
+                <p>
+                    Our group of four students divided into pairs that this project. The first pair worked on improving things on the electronics and hardware side, 
+                    while the second pair (which I was part of) worked on the software side. For the software, we needed to create a signal processing 
+                    algorithm that could take the raw radar data and process it to create plots and determine the location of objects. The other member of my
+                    pair had a signal processing background and did most of the work designing the algorithm, while I implemented it in python.
+                </p>
+                <p>
+                    To take a "scan", the antenna was moved along a one dimensional line with measurements taken at regular intervals along the line.
+                    At each measurement location, the antenna would send out a radar signal and measure the reflected signal that came back to the antenna.
+                    For each of these locations we generated plots to visualize the raw signal in both the frequency and time domains.
+                </p>
+                <p>
+                    Some filtering and data processing was applied to each of these location plots, and then at the end we created a heat map 
+                    that combined the data from all of the individual location measurements to show reflected signal strength at each location along the line 
+                    with various two-way travel times. The two-way travel time is porportional to the depth of the object, so this heat map allowed us to visualize the 
+                    location of any objects that existed in the scan.
+                </p>
+                <image-carousel
+                    carousel-id="EngineeringCapstoneCarousel"
+                    images='[
+                        {"src":"EngineeringCapstone/001_bwr.jpeg"},
+                        {"src":"EngineeringCapstone/LinearSweep.png"},
+                        {"src":"EngineeringCapstone/TimeDomainReflection.png"},
+                        {"src":"EngineeringCapstone/WaveletTimeGainPlot.png"}
+                    ]'
+                    min-height="65vh"
+                    min-width="30vw"
+                    height="65vh"
+                    data-bs-interval="3000"
+                    caption="Frequency, Time Domain, and Location/Depth Heatmaps"
+                ></image-carousel>
+                <p>
+                    We never tested in a real-world scenario, but by the end of the project we were able to create a solution that worked in a lab test to 
+                    detect the depth and location of a pip buried in a sand box. In the first image above (the heatmap), you can see the pipe at around location 20 
+                    on the x-axis and around a two-way travel time of 40ns on the y-axis.
+                </p>
+            </td>
+        </tr>
+        <tr class="EngineeringCapstoneContents projectsContentLast" hidden>
+                <td class="projectsContentLast"></td>
+        </tr>
+    </tbody>
+</table>
