@@ -16,6 +16,11 @@ p{
 	margin-top: 10px;
 }
 
+.pageDescription{
+	text-align: left;
+	margin-top: 10px;
+}
+
 video{
 	border: solid;
 	border-width: 1px;
