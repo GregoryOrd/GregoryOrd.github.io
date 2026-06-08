@@ -1,10 +1,10 @@
 Features To Implement
 -----------------------
 1) Rewrite about section
-2) Update home page photos
 
-3) For photos that are in a carousel, when they are opened in the image viewer, it would be nice to have 
+2) For photos that are in a carousel, when they are opened in the image viewer, it would be nice to have 
     buttons in the image viewer to switch to the next or previous image in the carousel while staying in the image viewer modal.
+   - Alternatively, pause the image carousel when inside the image viewer
 
 Defects
 ---------
@@ -19,7 +19,8 @@ Styling
 
 Refactors
 -----------
-Nothing right now
+1) Use reusable carousel for home page
+    - Will likely need different styling than the other carousels
 
 
 Tests
