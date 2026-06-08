@@ -46,6 +46,15 @@
 
 
 							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('ThisWebsiteRow', 'ThisWebsiteCaret');">This Website<i id="ThisWebsiteCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr>
+								<td>
+									<span class="ThisWebsiteRow" id="ThisWebsite" hidden></span>
+								</td>
+							</tr>
+
+							<tr class="expandableTableHeader  primaryAccent">
 								<th onclick="toggleHidden('FutureRow', 'FutureCaret');">Future Project Ideas<i id="FutureCaret" class="fa fa-caret-right"></i></th>
 							</tr>
 							<tr>
@@ -108,6 +117,8 @@
 		<script>
 			loadHtmlElement("../common/html/common-components.html", "common")
 			
+			loadHtmlElement("ThisWebsite/ThisWebsite.html", "ThisWebsite")
+
 			loadHtmlElement("FutureProjects/LinuxPhone/LinuxPhone.html", "LinuxPhone")
 			loadHtmlElement("FutureProjects/GregCall/GregCall.html", "GregCall")
 			loadHtmlElement("FutureProjects/AirMonitorMCPServer/AirMonitorMCPServer.html", "AirMonitorMCPServer")

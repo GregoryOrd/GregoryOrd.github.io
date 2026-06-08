@@ -1,0 +1,49 @@
+<table>
+    <tbody>
+        <tr class="DinosInspireProjectContents whiteBackground projectsContentLast">
+            <td class="projectsContent projectsContent2ndLast">
+            <br />
+            <h4><u>Project Description</u></h4>
+                <p>
+                    I started working on this website in June 2019 while I was working at the Calgary Counselling Centre.
+                    I was hoping that it could be an opportunity to learn about HTML/CSS/Javascript and as be a good place 
+                    to show off my projects and experience when I started applying for internships for the next year.
+                    All of the HTML/CSS/Javascript in this website is writen by me, except for the Bootstrap 5 CSS classes and Font Awesome icons.
+                </p>
+                <p>
+                    Over time I have had more work experiences and completed more personal projects, so the site has needed to be updated.
+                    Some of the changes in layout over time are shown below. Originally the personal projects and work experience 
+                    sections were together. Then as more projects and experience were added, they were split apart to not have such a large page.
+                    Then as more time went on, even my personal projects were added, so that page was split up into groupings by ranges of years.
+                </p>
+                <p>
+                    As all of this has happened, the code has been cleaned up and refactored to make it easier to scale and maintain.
+                </p>
+                <p>
+                    Also, some of the interesting features of this website are the image carousels and the image viewer.
+                    Both of these features were built into custom HTML components that can be reused across this site simply by 
+                    using tags in the HTML (<code>&lt;image-carousel&gt;&lt;/image-carousel&gt;</code> and <code>&lt;viewable-img&gt;&lt;/viewable-img&gt;</code>).
+                    Most of the images throughout the project use this viewable image element and can be clicked on to open a view modal that allows the user 
+                    to zoom and pan around the image.
+                </p>
+                <image-carousel
+                    carousel-id="PersonalProjectsUpdatesCarousel"
+                    images='[
+                        {"src":"ThisWebsite/ProjectAndWorkExperienceTogether.png"},
+                        {"src":"ThisWebsite/PersonalProjects.png"},
+                        {"src":"ThisWebsite/PersonalProjectsGrouped.png"}
+                    ]'
+                    min-height="50%"
+                    min-width="30vw"
+                    height="50%"
+                    caption="Progression of the Personal Projects Page."
+                    data-bs-interval="5000"
+                ></image-carousel>
+                <br />
+            </td>
+        </tr>
+        <tr class="DinosInspireProjectContents projectsContentLast" hidden>
+                <td class="projectsContentLast"></td>
+        </tr>
+    </tbody>
+</table>
