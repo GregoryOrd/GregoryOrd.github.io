@@ -1,5 +1,7 @@
-#CarouselRow{
-	padding-top: 10.5vh;
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
 }
 
 #info{

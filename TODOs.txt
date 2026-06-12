@@ -17,8 +17,7 @@ Styling
 
 Refactors
 -----------
-1) Use reusable carousel for home page
-    - Will likely need different styling than the other carousels
+Nothing right now
 
 
 Tests
