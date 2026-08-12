@@ -1,0 +1,38 @@
+@import url('../common/style/colors.css');
+
+#solderTopViewModal .modal-content
+{
+    margin: 5% auto;
+}
+
+#solderSideViewModal .modal-content
+{
+    margin: 5% auto;
+}
+
+.projectGroupHeader {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: var(--color-accent-primary);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 1vh;
+    margin-top: 2vh;
+    background-color: var(--color-accent-primary);
+}
+
+.projectGroupCaret {
+
+    font-size: 1.5rem !important;
+    transition: transform 1.2s ease;
+}
+
+/* Adjust sizes for high-DPI screens */
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 1024px) and (min-resolution: 192dpi) {
+  p {
+    font-size: 17px;
+  }
+}

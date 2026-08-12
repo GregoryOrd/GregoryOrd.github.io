@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+		<title>Greg Ord's Software Development Porfolio</title>
+
+		<link rel="stylesheet" href="../common/style/bootstrapCdn/bootstrap5_3_3.min.css">
+		<link rel="stylesheet" href="../common/style/fontAwesomeCdn/4_7_0/main/font-awesome.min.css"/>
+		<link rel="stylesheet" href="personalProjects.css"/>
+		<link rel="stylesheet" href="../common/style/main.css"/>
+		<link rel="stylesheet" href="../common/style/responsive-utils.css"/>
+		<link rel="stylesheet" href="../common/style/common-components.css"/>
+		<link rel="stylesheet" href="../common/style/customHtmlElements/image-carousel.css"/>
+	</head>
+	<body>
+		<div id="common"></div>
+		<div class="container-fluid">
+			<section>
+				<div class="row" id="pageTitle">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<h1>Personal Projects</h1>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<h5 class="pageDescription">
+							I below is a list of open source projects that I have contributed to, and details of the contributions I have made.
+						</h5>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+			</section>
+			<section>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<table>
+						<tbody>
+
+
+							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('AirGradientRow', 'AirGradientCaret');">Air Gradient<i id="AirGradientCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr>
+								<td>
+									<span class="AirGradientRow" id="AirGradient" hidden></span>
+								</td>
+							</tr>
+
+							<tr class="expandableTableHeader  primaryAccent">
+								<th onclick="toggleHidden('ReticulumNetworkRow', 'ReticulumNetworkCaret');">Reticulum Network<i id="ReticulumNetworkCaret" class="fa fa-caret-right"></i></th>
+							</tr>
+							<tr>
+								<td>
+									<span class="ReticulumNetworkRow" id="ReticulumNetwork" hidden></span>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+			</section>
+		</div>
+ 		<script src="../common/js/bootstrapCdn/bootstrap5_3_3.bundle.min.js"></script>
+		<script src="../common/js/responsive.js"></script>
+		<script src="../common/js/toggleRow.js"></script>
+		<script src="../common/js/loadHtmlElement.js"></script>
+		<script src="../../common/js/showModal.js"></script>
+		<script type="module" src="../common/js/customHtmlElements/carousel.js"></script>
+		<script type="module" src="../common/js/customHtmlElements/viewable-img.js"></script>
+
+		<script>
+			loadHtmlElement("../common/html/common-components.html", "common")
+			
+			loadHtmlElement("AirGradient/AirGradient.html", "AirGradient")		
+			loadHtmlElement("ReticulumNetwork/ReticulumNetwork.html", "ReticulumNetwork")
+
+		</script>
+	</body>
+</html>
